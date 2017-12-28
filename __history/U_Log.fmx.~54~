@@ -1,0 +1,112 @@
+object Log: TLog
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 312
+  ClientWidth = 607
+  Position = DesktopCenter
+  StyleBook = DataModule1.Windows10
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object Edit2: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 1
+    Password = True
+    TextSettings.Font.Family = 'Candara'
+    TextSettings.Font.Size = 16.000000000000000000
+    Position.X = 48.000000000000000000
+    Position.Y = 136.000000000000000000
+    Size.Width = 505.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    TextPrompt = 'Mot de pass'
+    StyledSettings = [Style, FontColor]
+    object SpeedButton1: TSpeedButton
+      Cursor = crHandPoint
+      Position.X = 472.000000000000000000
+      Size.Width = 28.000000000000000000
+      Size.Height = 28.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'passwordeditbutton'
+      Text = 'SpeedButton1'
+    end
+  end
+  object Edit1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 0
+    TextSettings.Font.Family = 'Candara'
+    TextSettings.Font.Size = 16.000000000000000000
+    Position.X = 48.000000000000000000
+    Position.Y = 56.000000000000000000
+    Size.Width = 505.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    TextPrompt = 'Pseudo'
+    StyledSettings = [Style, FontColor]
+  end
+  object Button1: TButton
+    StyleName = 'StyleBook1'
+    Cursor = crHandPoint
+    StyledSettings = [Style, FontColor]
+    Position.X = 48.000000000000000000
+    Position.Y = 208.000000000000000000
+    Size.Width = 153.000000000000000000
+    Size.Height = 57.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Text = 'Valid'#233
+    TextSettings.Font.Family = 'Candara'
+    TextSettings.Font.Size = 16.000000000000000000
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    StyledSettings = [Style, FontColor]
+    Position.X = 400.000000000000000000
+    Position.Y = 208.000000000000000000
+    Size.Width = 153.000000000000000000
+    Size.Height = 57.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    Text = 'Annuler'
+    TextSettings.Font.Family = 'Candara'
+    TextSettings.Font.Size = 16.000000000000000000
+    OnClick = Button2Click
+  end
+  object Label1: TLabel
+    Cursor = crHandPoint
+    StyledSettings = [Style]
+    HitTest = True
+    Position.X = 48.000000000000000000
+    Position.Y = 176.000000000000000000
+    Size.Width = 225.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'buttonstylelabel'
+    TextSettings.Font.Family = 'FontAwesome'
+    TextSettings.Font.Size = 25.000000000000000000
+    TextSettings.FontColor = xFF44BCCA
+    Text = #62004
+    TabOrder = 5
+    OnClick = Label1Click
+  end
+  object Label2: TLabel
+    AutoTranslate = False
+    Cursor = crHandPoint
+    StyledSettings = [Style]
+    HitTest = True
+    Position.X = 80.000000000000000000
+    Position.Y = 179.000000000000000000
+    Size.Width = 233.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'listboxheaderlabel'
+    TextSettings.Font.Family = 'Candara'
+    TextSettings.Font.Size = 18.000000000000000000
+    TextSettings.FontColor = xFF44BCCA
+    Text = 'Cr'#233'e un nouvelle compte'
+    TabOrder = 4
+  end
+end

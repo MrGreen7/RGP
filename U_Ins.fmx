@@ -1,0 +1,89 @@
+object Ins: TIns
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 296
+  ClientWidth = 625
+  Position = DesktopCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Edit1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 2
+    TextSettings.Font.Family = 'Candara'
+    TextSettings.Font.Size = 16.000000000000000000
+    Position.X = 40.000000000000000000
+    Position.Y = 63.000000000000000000
+    Size.Width = 545.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TextPrompt = 'Nom'
+    StyledSettings = [Style, FontColor]
+  end
+  object Edit2: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 1
+    TextSettings.Font.Family = 'Candara'
+    TextSettings.Font.Size = 16.000000000000000000
+    Position.X = 40.000000000000000000
+    Position.Y = 108.000000000000000000
+    Size.Width = 545.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TextPrompt = 'Pseudo'
+    StyledSettings = [Style, FontColor]
+  end
+  object Edit3: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 0
+    TextSettings.Font.Family = 'Candara'
+    TextSettings.Font.Size = 16.000000000000000000
+    Position.X = 40.000000000000000000
+    Position.Y = 154.000000000000000000
+    Size.Width = 545.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TextPrompt = 'Mot de pass'
+    StyledSettings = [Style, FontColor]
+  end
+  object Button1: TButton
+    StyledSettings = [Style, FontColor]
+    Position.X = 40.000000000000000000
+    Position.Y = 227.000000000000000000
+    Size.Width = 113.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    Text = 'Valid'#233
+    TextSettings.Font.Family = 'Candara'
+    TextSettings.Font.Size = 16.000000000000000000
+  end
+  object Button2: TButton
+    StyledSettings = [Style, FontColor]
+    Position.X = 264.000000000000000000
+    Position.Y = 229.000000000000000000
+    Size.Width = 113.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    Text = 'Vid'#233
+    TextSettings.Font.Family = 'Candara'
+    TextSettings.Font.Size = 16.000000000000000000
+    OnClick = Button2Click
+  end
+  object Button3: TButton
+    StyledSettings = [Style, FontColor]
+    Position.X = 472.000000000000000000
+    Position.Y = 231.000000000000000000
+    Size.Width = 113.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    Text = 'Annuler'
+    TextSettings.Font.Family = 'Candara'
+    TextSettings.Font.Size = 16.000000000000000000
+    OnClick = Button3Click
+  end
+end

@@ -1,0 +1,85 @@
+inherited Main_LgXhdpiTb: TMain_LgXhdpiTb
+  ClientHeight = 829
+  ClientWidth = 480
+  DesignerMasterStyle = 0
+  inherited TabControl1: TTabControl
+    Size.Width = 480.000000000000000000
+    Size.Height = 829.000000000000000000
+    TabHeight = 49.000000000000000000
+    Sizes = (
+      480s
+      780s
+      480s
+      780s
+      480s
+      780s
+      480s
+      780s
+      480s
+      780s)
+    inherited TabItem1: TTabItem
+      CustomIcon.Height = 675
+      CustomIcon.Width = 675
+      Size.Width = 96.000000000000000000
+      Size.Height = 49.000000000000000000
+      ExplicitSize.cx = 247.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      inherited GroupBox1: TGroupBox
+        Position.X = 16.000000000000000000
+        Position.Y = 8.000000000000000000
+        inherited Grid1: TGrid
+          Viewport.Width = 607.000000000000000000
+          Viewport.Height = 270.000000000000000000
+        end
+      end
+      inherited GroupBox2: TGroupBox
+        Position.X = -138.000000000000000000
+        Position.Y = 8.000000000000000000
+        inherited Grid2: TGrid
+          Viewport.Width = 607.000000000000000000
+          Viewport.Height = 270.000000000000000000
+        end
+      end
+      inherited GroupBox4: TGroupBox
+        Position.X = -138.000000000000000000
+        Position.Y = 484.000000000000000000
+        inherited Grid4: TGrid
+          Viewport.Width = 607.000000000000000000
+          Viewport.Height = 263.000000000000000000
+        end
+      end
+      inherited GroupBox3: TGroupBox
+        Position.X = -24.000000000000000000
+        Position.Y = 484.000000000000000000
+        inherited Grid3: TGrid
+          Viewport.Width = 607.000000000000000000
+          Viewport.Height = 263.000000000000000000
+        end
+      end
+    end
+    inherited TabItem2: TTabItem
+      Size.Width = 96.000000000000000000
+      Size.Height = 49.000000000000000000
+      ExplicitSize.cx = 247.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+    end
+    inherited TabItem3: TTabItem
+      Size.Width = 96.000000000000000000
+      Size.Height = 49.000000000000000000
+      ExplicitSize.cx = 247.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+    end
+    inherited TabItem4: TTabItem
+      Size.Width = 96.000000000000000000
+      Size.Height = 49.000000000000000000
+      ExplicitSize.cx = 247.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+    end
+    inherited TabItem5: TTabItem
+      Size.Width = 96.000000000000000000
+      Size.Height = 49.000000000000000000
+      ExplicitSize.cx = 250.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+    end
+  end
+end

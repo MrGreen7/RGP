@@ -1,0 +1,223 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 645
+  ClientWidth = 1130
+  Position = DesktopCenter
+  Quality = HighQuality
+  WindowState = wsMaximized
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  ShowFullScreenIcon = True
+  DesignerMasterStyle = 0
+  object TabControl1: TTabControl
+    Align = Top
+    Size.Width = 1130.000000000000000000
+    Size.Height = 137.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'tabcontrolstyle'
+    TabIndex = 0
+    TabOrder = 0
+    TabPosition = PlatformDefault
+    Sizes = (
+      1130s
+      107s
+      1130s
+      107s)
+    object TabItem1: TTabItem
+      CustomIcon.TransparentColor = -16777194
+      CustomIcon = <
+        item
+        end>
+      TextSettings.Font.Family = 'Candara'
+      TextSettings.Font.Size = 16.000000000000000000
+      StyledSettings = [Style, FontColor]
+      HelpType = htKeyword
+      IsSelected = True
+      Size.Width = 62.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'tabitemstyle'
+      TabOrder = 0
+      Text = 'Acceil'
+      ExplicitSize.cx = 62.000000000000000000
+      ExplicitSize.cy = 30.000000000000000000
+      object Label3: TLabel
+        StyledSettings = [FontColor]
+        Position.X = 32.000000000000000000
+        Position.Y = 82.000000000000000000
+        Size.Width = 49.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 19.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        Text = 'Acceil'
+        TabOrder = 8
+      end
+      object Label1: TLabel
+        Cursor = crHandPoint
+        StyledSettings = [Style]
+        HitTest = True
+        Position.X = 32.000000000000000000
+        Position.Y = 5.000000000000000000
+        Size.Width = 49.000000000000000000
+        Size.Height = 47.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'FontAwesome'
+        TextSettings.Font.Size = 50.000000000000000000
+        TextSettings.FontColor = claCrimson
+        Text = #61461
+        TabOrder = 4
+      end
+      object Label2: TLabel
+        Cursor = crHandPoint
+        StyledSettings = [Style, FontColor]
+        HitTest = True
+        Position.X = 13.000000000000000000
+        Position.Y = 45.000000000000000000
+        Size.Width = 97.000000000000000000
+        Size.Height = 27.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 16.000000000000000000
+        Text = 'Page d'#39'acceil'
+        TabOrder = 5
+      end
+      object Label4: TLabel
+        Cursor = crHandPoint
+        StyledSettings = [Style]
+        HitTest = True
+        Position.X = 184.000000000000000000
+        Position.Y = 5.000000000000000000
+        Size.Width = 49.000000000000000000
+        Size.Height = 47.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'FontAwesome'
+        TextSettings.Font.Size = 40.000000000000000000
+        TextSettings.FontColor = claCrimson
+        Text = #62162
+        TabOrder = 2
+      end
+      object Label5: TLabel
+        Cursor = crHandPoint
+        StyledSettings = [Style, FontColor]
+        HitTest = True
+        Position.X = 175.000000000000000000
+        Position.Y = 45.000000000000000000
+        Size.Width = 60.000000000000000000
+        Size.Height = 27.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 16.000000000000000000
+        Text = 'Fen'#234'tres'
+        TabOrder = 3
+      end
+      object Label6: TLabel
+        Cursor = crHandPoint
+        StyledSettings = [Style]
+        HitTest = True
+        Position.X = 320.000000000000000000
+        Position.Y = 5.000000000000000000
+        Size.Width = 49.000000000000000000
+        Size.Height = 47.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'FontAwesome'
+        TextSettings.Font.Size = 40.000000000000000000
+        TextSettings.FontColor = claCrimson
+        Text = #61573
+        TabOrder = 0
+      end
+      object Label7: TLabel
+        Cursor = crHandPoint
+        StyledSettings = [Style, FontColor]
+        HitTest = True
+        Position.X = 300.000000000000000000
+        Position.Y = 45.000000000000000000
+        Size.Width = 82.000000000000000000
+        Size.Height = 27.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 16.000000000000000000
+        Text = 'Param'#234'tres'
+        TabOrder = 1
+      end
+      object Label8: TLabel
+        StyledSettings = [FontColor]
+        Position.X = 160.000000000000000000
+        Position.Y = 83.000000000000000000
+        Size.Width = 89.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 19.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        Text = 'Navigation'
+        TabOrder = 7
+      end
+      object Label9: TLabel
+        StyledSettings = [FontColor]
+        Position.X = 292.000000000000000000
+        Position.Y = 83.000000000000000000
+        Size.Width = 97.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 19.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        Text = 'Param'#234'tres'
+        TabOrder = 6
+      end
+    end
+    object TabItem2: TTabItem
+      CustomIcon = <
+        item
+        end>
+      TextSettings.Font.Family = 'Candara'
+      TextSettings.Font.Size = 16.000000000000000000
+      StyledSettings = [Style, FontColor]
+      IsSelected = False
+      Size.Width = 71.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Editeur'
+      ExplicitSize.cx = 71.000000000000000000
+      ExplicitSize.cy = 30.000000000000000000
+    end
+  end
+  object TabControl2: TTabControl
+    Align = Left
+    FullSize = True
+    Position.Y = 137.000000000000000000
+    Size.Width = 185.000000000000000000
+    Size.Height = 508.000000000000000000
+    Size.PlatformDefault = False
+    TabIndex = 0
+    TabOrder = 1
+    TabPosition = PlatformDefault
+    Sizes = (
+      185s
+      478s)
+    object Medical: TTabItem
+      CustomIcon = <
+        item
+        end>
+      TextSettings.Font.Family = 'Candara'
+      TextSettings.Font.Size = 16.000000000000000000
+      StyledSettings = [Style, FontColor]
+      IsSelected = True
+      Size.Width = 183.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Medical'
+      ExplicitSize.cx = 175.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+    end
+  end
+end

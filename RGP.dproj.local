@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2017/12/19 21:22:23.000.805,=C:\Users\Kacemo\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2017/12/20 10:52:12.000.164,=C:\Users\Kacemo\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2017/12/20 10:52:41.000.774,C:\Users\Kacemo\Desktop\New folder\Unit2.fmx=C:\Users\Kacemo\Documents\Embarcadero\Studio\Projects\Unit2.fmx</Transaction>
+    <Transaction>2017/12/20 10:52:41.000.774,C:\Users\Kacemo\Desktop\New folder\Unit2.pas=C:\Users\Kacemo\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2017/12/20 10:52:51.000.300,C:\Users\Kacemo\Desktop\New folder\RGP.dproj=C:\Users\Kacemo\Documents\Embarcadero\Studio\Projects\Project2.dproj</Transaction>
+    <Transaction>2017/12/20 16:30:20.000.232,=C:\Users\Kacemo\Desktop\New folder\Unit1.pas</Transaction>
+    <Transaction>2017/12/20 16:30:29.000.450,C:\Users\Kacemo\Desktop\New folder\Unit1.fmx=C:\Users\Kacemo\Desktop\New folder\U_Main.fmx</Transaction>
+    <Transaction>2017/12/20 16:30:29.000.450,C:\Users\Kacemo\Desktop\New folder\Unit1.pas=C:\Users\Kacemo\Desktop\New folder\U_Main.pas</Transaction>
+    <Transaction>2017/12/20 16:30:46.000.422,C:\Users\Kacemo\Desktop\New folder\Unit2.fmx=C:\Users\Kacemo\Desktop\New folder\U_Log.fmx</Transaction>
+    <Transaction>2017/12/20 16:30:46.000.422,C:\Users\Kacemo\Desktop\New folder\Unit2.pas=C:\Users\Kacemo\Desktop\New folder\U_Log.pas</Transaction>
+    <Transaction>2017/12/20 16:37:32.000.003,=C:\Users\Kacemo\Desktop\New folder\Unit1.pas</Transaction>
+    <Transaction>2017/12/20 16:37:40.000.931,C:\Users\Kacemo\Desktop\New folder\Unit1.pas=C:\Users\Kacemo\Desktop\New folder\U_Ins.pas</Transaction>
+    <Transaction>2017/12/20 16:37:40.000.931,C:\Users\Kacemo\Desktop\New folder\Unit1.fmx=C:\Users\Kacemo\Desktop\New folder\U_Ins.fmx</Transaction>
+    <Transaction>2017/12/20 17:27:11.000.163,=C:\Users\Kacemo\Desktop\New folder\Unit1.pas</Transaction>
+    <Transaction>2017/12/20 17:28:38.000.675,=C:\Users\Kacemo\Desktop\New folder\Unit1.pas</Transaction>
+    <Transaction>2017/12/20 17:28:59.000.240,C:\Users\Kacemo\Desktop\New folder\Unit1.pas=C:\Users\Kacemo\Desktop\New folder\U_DataModule.pas</Transaction>
+    <Transaction>2017/12/20 17:28:59.000.240,C:\Users\Kacemo\Desktop\New folder\Unit1.dfm=C:\Users\Kacemo\Desktop\New folder\U_DataModule.dfm</Transaction>
+    <Transaction>2017/12/26 12:11:04.000.152,=C:\Users\Kacemo\Desktop\New folder\fontawesome-webfont.ttf</Transaction>
+    <Transaction>2017/12/26 14:32:09.000.567,C:\Users\Kacemo\Desktop\New folder\fontawesome-webfont.ttf=</Transaction>
+    <Transaction>2017/12/26 15:13:53.000.356,=C:\Users\Kacemo\Desktop\New folder\fontawesome-webfont.ttf</Transaction>
+    <Transaction>2017/12/26 16:44:00.000.405,C:\Users\Kacemo\Desktop\New folder\fontawesome-webfont.ttf=</Transaction>
+    <Transaction>2017/12/27 16:00:39.000.235,=C:\Users\Kacemo\Desktop\New folder\Unit1.pas</Transaction>
+    <Transaction>2017/12/28 14:16:06.000.724,C:\Users\Kacemo\Desktop\New folder\U_Main.fmx=C:\Users\Kacemo\Desktop\New folder\U_MainB.fmx</Transaction>
+    <Transaction>2017/12/28 14:16:06.000.724,C:\Users\Kacemo\Desktop\New folder\U_Main.pas=C:\Users\Kacemo\Desktop\New folder\U_MainB.pas</Transaction>
+    <Transaction>2017/12/28 14:16:25.000.318,C:\Users\Kacemo\Desktop\New folder\Unit1.fmx=C:\Users\Kacemo\Desktop\New folder\U_Main.fmx</Transaction>
+    <Transaction>2017/12/28 14:16:25.000.318,C:\Users\Kacemo\Desktop\New folder\Unit1.pas=C:\Users\Kacemo\Desktop\New folder\U_Main.pas</Transaction>
+    <Transaction>2017/12/28 14:20:04.000.666,=C:\Users\Kacemo\Desktop\New folder\Unit1.pas</Transaction>
+    <Transaction>2017/12/28 14:20:17.000.406,C:\Users\Kacemo\Desktop\New folder\Unit1.pas=C:\Users\Kacemo\Desktop\New folder\U_Option.pas</Transaction>
+    <Transaction>2017/12/28 14:20:17.000.406,C:\Users\Kacemo\Desktop\New folder\Unit1.fmx=C:\Users\Kacemo\Desktop\New folder\U_Option.fmx</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5"/>
+	</ActiveMobileDevice>
+</BorlandProject>
