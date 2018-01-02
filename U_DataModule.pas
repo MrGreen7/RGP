@@ -36,16 +36,28 @@ implementation
 procedure TDataModule1.DataModuleCreate(Sender: TObject);
 var
   Path: String;
+  MyClass: TComponent;
 begin
   Path := ExpandFileName(GetCurrentDir() + '\Data.db');
   FDConnection1.Params.Add('Database=' + Path);
   FDConnection1.Connected := True;
+  
   try
-    FDCommand1.CommandText.Text :=
-      ('CREATE TABLE `User`(ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, Nom varchar(20), Pseudo varchar(10), Mot_de_pass varchar(12));');
-    FDCommand1.Execute();
-  except
+    FDQuery1.Close;
+    FDQuery1.SQL.Text:=('Select * From User');
+    FDQuery1.Active:=True;
+  Except
     on E: Exception do
+    Begin
+    FDQuery1.Close;
+    try
+      FDCommand1.CommandText.Text :=
+        ('CREATE TABLE `User`(ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, Nom varchar(20), Pseudo varchar(10), Mot_de_pass varchar(12));');
+      FDCommand1.Execute();
+      except
+        on E: Exception do
+          end;
+    End;
   end;
   With FDQuery1 do
   Begin

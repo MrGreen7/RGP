@@ -1,9 +1,9 @@
-object Form1: TForm1
+object Option: TOption
   Left = 0
   Top = 0
   Caption = 'Form1'
-  ClientHeight = 519
-  ClientWidth = 854
+  ClientHeight = 384
+  ClientWidth = 766
   Position = DesktopCenter
   FormFactor.Width = 320
   FormFactor.Height = 480

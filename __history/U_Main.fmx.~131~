@@ -1,0 +1,424 @@
+object Main: TMain
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 645
+  ClientWidth = 1164
+  Position = DesktopCenter
+  Quality = HighQuality
+  StyleBook = DataModule1.Windows10Grey
+  StyleLookup = 'panelstyle'
+  WindowState = wsMaximized
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  ShowFullScreenIcon = True
+  DesignerMasterStyle = 0
+  object TabControl1: TTabControl
+    Align = Top
+    ClipChildren = True
+    ClipParent = True
+    Size.Width = 1164.000000000000000000
+    Size.Height = 161.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'tabcontrolstyle'
+    TabIndex = 0
+    TabOrder = 0
+    TabPosition = PlatformDefault
+    Sizes = (
+      1164s
+      131s
+      1164s
+      131s)
+    object TabItem1: TTabItem
+      CustomIcon.TransparentColor = -16777194
+      CustomIcon = <
+        item
+        end>
+      TextSettings.Font.Family = 'FontAwesome'
+      TextSettings.Font.Size = 16.000000000000000000
+      StyledSettings = [Style, FontColor]
+      HelpType = htKeyword
+      IsSelected = True
+      Size.Width = 82.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'tabitemstyle'
+      TabOrder = 0
+      Text = #61461' Acceil'
+      ExplicitSize.cx = 62.000000000000000000
+      ExplicitSize.cy = 30.000000000000000000
+      object Panel4: TPanel
+        Align = Client
+        Size.Width = 1164.000000000000000000
+        Size.Height = 131.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+      end
+      object Panel1: TPanel
+        Size.Width = 137.000000000000000000
+        Size.Height = 131.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object Label1: TLabel
+          Cursor = crHandPoint
+          StyledSettings = [Style]
+          HitTest = True
+          Position.X = 44.000000000000000000
+          Position.Y = 5.000000000000000000
+          Size.Width = 49.000000000000000000
+          Size.Height = 47.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'FontAwesome'
+          TextSettings.Font.Size = 50.000000000000000000
+          TextSettings.FontColor = claCrimson
+          Text = #61461
+          TabOrder = 0
+          object ShadowEffect1: TShadowEffect
+            Distance = 3.000000000000000000
+            Direction = 45.000000000000000000
+            Softness = 0.300000011920929000
+            Opacity = 0.600000023841857900
+            ShadowColor = claBlack
+          end
+        end
+        object Label2: TLabel
+          Cursor = crHandPoint
+          StyledSettings = [Style, FontColor]
+          HitTest = True
+          Position.X = 20.000000000000000000
+          Position.Y = 44.000000000000000000
+          Size.Width = 97.000000000000000000
+          Size.Height = 28.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 16.000000000000000000
+          Text = 'Page d'#39'acceil'
+          TabOrder = 1
+          object ShadowEffect2: TShadowEffect
+            Distance = 3.000000000000000000
+            Direction = 45.000000000000000000
+            Softness = 0.300000011920929000
+            Opacity = 0.600000023841857900
+            ShadowColor = claBlack
+          end
+        end
+        object Label3: TLabel
+          StyledSettings = [FontColor]
+          Position.X = 44.000000000000000000
+          Position.Y = 97.000000000000000000
+          Size.Width = 49.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 19.000000000000000000
+          Text = 'Acceil'
+          TabOrder = 2
+        end
+      end
+      object Panel3: TPanel
+        Position.X = 136.000000000000000000
+        Size.Width = 137.000000000000000000
+        Size.Height = 131.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object Label4: TLabel
+          Cursor = crHandPoint
+          StyledSettings = [Style]
+          HitTest = True
+          Position.X = 40.000000000000000000
+          Position.Y = 4.000000000000000000
+          Size.Width = 49.000000000000000000
+          Size.Height = 47.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'FontAwesome'
+          TextSettings.Font.Size = 40.000000000000000000
+          TextSettings.FontColor = claCrimson
+          Text = #62162
+          TabOrder = 2
+          object ShadowEffect9: TShadowEffect
+            Distance = 3.000000000000000000
+            Direction = 45.000000000000000000
+            Softness = 0.300000011920929000
+            Opacity = 0.600000023841857900
+            ShadowColor = claBlack
+          end
+        end
+        object Label5: TLabel
+          Cursor = crHandPoint
+          StyledSettings = [Style, FontColor]
+          HitTest = True
+          Position.X = 35.000000000000000000
+          Position.Y = 44.000000000000000000
+          Size.Width = 60.000000000000000000
+          Size.Height = 27.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 16.000000000000000000
+          Text = 'Fen'#234'tres'
+          TabOrder = 3
+          object ShadowEffect7: TShadowEffect
+            Distance = 3.000000000000000000
+            Direction = 45.000000000000000000
+            Softness = 0.300000011920929000
+            Opacity = 0.600000023841857900
+            ShadowColor = claBlack
+          end
+        end
+        object Label8: TLabel
+          StyledSettings = [FontColor]
+          Position.X = 20.000000000000000000
+          Position.Y = 97.000000000000000000
+          Size.Width = 89.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 19.000000000000000000
+          Text = 'Navigation'
+          TabOrder = 4
+        end
+      end
+      object Panel2: TPanel
+        Position.X = 272.000000000000000000
+        Size.Width = 313.000000000000000000
+        Size.Height = 131.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        object Label6: TLabel
+          Cursor = crHandPoint
+          StyledSettings = [Style]
+          HitTest = True
+          Position.X = 44.000000000000000000
+          Position.Y = 5.000000000000000000
+          Size.Width = 49.000000000000000000
+          Size.Height = 47.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'FontAwesome'
+          TextSettings.Font.Size = 40.000000000000000000
+          TextSettings.FontColor = claCrimson
+          Text = #61573
+          TabOrder = 3
+          OnClick = Label6Click
+          object ShadowEffect4: TShadowEffect
+            Distance = 3.000000000000000000
+            Direction = 45.000000000000000000
+            Softness = 0.300000011920929000
+            Opacity = 0.600000023841857900
+            ShadowColor = claBlack
+          end
+        end
+        object Label7: TLabel
+          Cursor = crHandPoint
+          StyledSettings = [Style, FontColor]
+          HitTest = True
+          Position.X = 27.000000000000000000
+          Position.Y = 45.000000000000000000
+          Size.Width = 82.000000000000000000
+          Size.Height = 27.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 16.000000000000000000
+          Text = 'Param'#234'tres'
+          TabOrder = 4
+          OnClick = Label7Click
+          object ShadowEffect5: TShadowEffect
+            Distance = 3.000000000000000000
+            Direction = 45.000000000000000000
+            Softness = 0.300000011920929000
+            Opacity = 0.600000023841857900
+            ShadowColor = claBlack
+          end
+        end
+        object Label9: TLabel
+          StyledSettings = [FontColor]
+          Position.X = 108.000000000000000000
+          Position.Y = 97.000000000000000000
+          Size.Width = 97.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 19.000000000000000000
+          Text = 'Param'#234'tres'
+          TabOrder = 5
+        end
+        object Label12: TLabel
+          Cursor = crHandPoint
+          StyledSettings = [Style]
+          HitTest = True
+          Position.X = 220.000000000000000000
+          Position.Y = 5.000000000000000000
+          Size.Width = 37.000000000000000000
+          Size.Height = 47.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'FontAwesome'
+          TextSettings.Font.Size = 40.000000000000000000
+          TextSettings.FontColor = claCrimson
+          Text = #61688
+          TabOrder = 1
+          object ShadowEffect12: TShadowEffect
+            Distance = 3.000000000000000000
+            Direction = 45.000000000000000000
+            Softness = 0.300000011920929000
+            Opacity = 0.600000023841857900
+            ShadowColor = claBlack
+          end
+        end
+        object Label13: TLabel
+          Cursor = crHandPoint
+          StyledSettings = [Style, FontColor]
+          HitTest = True
+          Position.X = 195.000000000000000000
+          Position.Y = 45.000000000000000000
+          Size.Width = 102.000000000000000000
+          Size.Height = 49.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 16.000000000000000000
+          Text = 'Informations de la clinique'
+          TabOrder = 2
+          object ShadowEffect13: TShadowEffect
+            Distance = 3.000000000000000000
+            Direction = 45.000000000000000000
+            Softness = 0.300000011920929000
+            Opacity = 0.600000023841857900
+            ShadowColor = claBlack
+          end
+        end
+        object Line1: TLine
+          LineType = Diagonal
+          Position.X = 132.000000000000000000
+          Position.Y = 16.000000000000000000
+          RotationAngle = 32.000000000000000000
+          Size.Width = 50.000000000000000000
+          Size.Height = 80.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Thickness = 0.500000000000000000
+        end
+      end
+      object Panel7: TPanel
+        Position.X = 584.000000000000000000
+        Size.Width = 129.000000000000000000
+        Size.Height = 131.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        object Label10: TLabel
+          Cursor = crHandPoint
+          StyledSettings = [Style]
+          HitTest = True
+          Position.X = 46.000000000000000000
+          Position.Y = 5.000000000000000000
+          Size.Width = 37.000000000000000000
+          Size.Height = 47.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'FontAwesome'
+          TextSettings.Font.Size = 40.000000000000000000
+          TextSettings.FontColor = claCrimson
+          Text = #61530
+          TabOrder = 1
+          object ShadowEffect3: TShadowEffect
+            Distance = 3.000000000000000000
+            Direction = 45.000000000000000000
+            Softness = 0.300000011920929000
+            Opacity = 0.300000011920929000
+            ShadowColor = claSnow
+          end
+        end
+        object Label11: TLabel
+          Cursor = crHandPoint
+          StyledSettings = [Style, FontColor]
+          HitTest = True
+          Position.X = 29.000000000000000000
+          Position.Y = 45.000000000000000000
+          Size.Width = 70.000000000000000000
+          Size.Height = 27.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 16.000000000000000000
+          Text = #192' propos'
+          TabOrder = 2
+          object ShadowEffect6: TShadowEffect
+            Distance = 3.000000000000000000
+            Direction = 45.000000000000000000
+            Softness = 0.300000011920929000
+            Opacity = 0.300000011920929000
+            ShadowColor = claSnow
+          end
+        end
+        object Label14: TLabel
+          StyledSettings = [FontColor]
+          Position.X = 16.000000000000000000
+          Position.Y = 97.000000000000000000
+          Size.Width = 97.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 19.000000000000000000
+          Text = 'Information'
+          TabOrder = 3
+        end
+      end
+    end
+    object TabItem2: TTabItem
+      CustomIcon = <
+        item
+        end>
+      TextSettings.Font.Family = 'FontAwesome'
+      TextSettings.Font.Size = 16.000000000000000000
+      StyledSettings = [Style, FontColor]
+      IsSelected = False
+      Size.Width = 89.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = #61468' Editeur'
+      ExplicitSize.cx = 71.000000000000000000
+      ExplicitSize.cy = 30.000000000000000000
+      object Panel6: TPanel
+        Align = Client
+        Size.Width = 1164.000000000000000000
+        Size.Height = 131.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+      end
+    end
+  end
+  object TabControl2: TTabControl
+    Align = Left
+    FullSize = True
+    Position.Y = 161.000000000000000000
+    Size.Width = 185.000000000000000000
+    Size.Height = 484.000000000000000000
+    Size.PlatformDefault = False
+    TabIndex = 0
+    TabOrder = 1
+    TabPosition = PlatformDefault
+    Sizes = (
+      185s
+      456s)
+    object Medical: TTabItem
+      CustomIcon = <
+        item
+        end>
+      TextSettings.Font.Family = 'Candara'
+      TextSettings.Font.Size = 16.000000000000000000
+      StyledSettings = [Style, FontColor]
+      IsSelected = True
+      Size.Width = 185.000000000000000000
+      Size.Height = 28.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Medical'
+      ExplicitSize.cx = 175.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object Panel5: TPanel
+        Align = Client
+        Size.Width = 185.000000000000000000
+        Size.Height = 456.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+      end
+    end
+  end
+end

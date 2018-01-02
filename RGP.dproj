@@ -337,7 +337,7 @@
             <FormType>fmx</FormType>
         </DCCReference>
         <DCCReference Include="U_Option.pas">
-            <Form>Form1</Form>
+            <Form>Option</Form>
             <FormType>fmx</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">

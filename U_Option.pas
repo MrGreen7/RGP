@@ -4,10 +4,11 @@ interface
 
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
-  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs;
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.EditBox,
+  FMX.ComboTrackBar, FMX.Controls.Presentation, FMX.Edit, FMX.ComboEdit;
 
 type
-  TForm1 = class(TForm)
+  TOption = class(TForm)
   private
     { Private declarations }
   public
@@ -15,7 +16,7 @@ type
   end;
 
 var
-  Form1: TForm1;
+  Option: TOption;
 
 implementation
 

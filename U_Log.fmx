@@ -27,6 +27,13 @@ object Log: TLog
     TextSettings.FontColor = xFF44BCCA
     Text = 'Cr'#233'e un nouvelle compte'
     TabOrder = 4
+    object ShadowEffect2: TShadowEffect
+      Distance = 3.000000000000000000
+      Direction = 45.000000000000000000
+      Softness = 0.300000011920929000
+      Opacity = 0.300000011920929000
+      ShadowColor = claBlack
+    end
   end
   object Edit2: TEdit
     Touch.InteractiveGestures = [LongTap, DoubleTap]
@@ -108,5 +115,12 @@ object Log: TLog
     Text = #62004
     TabOrder = 5
     OnClick = Label1Click
+    object ShadowEffect1: TShadowEffect
+      Distance = 3.000000000000000000
+      Direction = 45.000000000000000000
+      Softness = 0.300000011920929000
+      Opacity = 0.400000005960464500
+      ShadowColor = claBlack
+    end
   end
 end
