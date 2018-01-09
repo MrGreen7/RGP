@@ -50,8 +50,10 @@ object Log: TLog
     StyledSettings = [Style, FontColor]
     OnChange = Edit2Change
     object SpeedButton1: TSpeedButton
+      Align = Right
       Cursor = crHandPoint
-      Position.X = 472.000000000000000000
+      Position.X = 477.000000000000000000
+      Position.Y = 2.000000000000000000
       Size.Width = 28.000000000000000000
       Size.Height = 28.000000000000000000
       Size.PlatformDefault = False
