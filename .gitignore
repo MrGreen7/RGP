@@ -1,6 +1,8 @@
 /Assets
 /__history
 /__recovery
+*.exe
+*.rsm
 *.ttf
 resources.txt
 resources.rc
