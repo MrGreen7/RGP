@@ -5,4 +5,5 @@
 resources.txt
 resources.rc
 Temp Typer.txt
-
+/Win32
+/Win64
