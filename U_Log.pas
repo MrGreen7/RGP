@@ -3,11 +3,10 @@ unit U_Log;
 interface
 
 uses
-  System.SysUtils, System.Types, System.UITypes, System.Classes,
-  System.Variants,
-  FMX.Controls.Presentation, FMX.StdCtrls, System.Actions, FMX.ActnList,
-  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Edit,
-  FMX.EditBox, FMX.NumberBox, windows, ShellApi, FMX.Platform.Win, FMX.Effects;
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Controls.Presentation, FMX.StdCtrls, System.Actions, FMX.ActnList, FMX.Types,
+  FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Edit, FMX.EditBox, FMX.NumberBox,
+  windows, ShellApi, FMX.platform.Win, FMX.Effects, IdHashMessageDigest;
 
 type
   TLog = class(TForm)
@@ -20,10 +19,14 @@ type
     Label2: TLabel;
     ShadowEffect1: TShadowEffect;
     ShadowEffect2: TShadowEffect;
+    InnerGlowEffect1: TInnerGlowEffect;
+    InnerGlowEffect2: TInnerGlowEffect;
     procedure Button2Click(Sender: TObject);
     procedure Label1Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure Edit1Change(Sender: TObject);
+    procedure Edit2Change(Sender: TObject);
   private
     { Private declarations }
   public
@@ -35,16 +38,27 @@ var
 
 implementation
 
-Uses U_Main, U_Ins, U_DataModule, Winapi.Messages;
+uses
+  U_Main, U_Ins, U_DataModule, Winapi.Messages;
 {$R *.fmx}
 {$R resources.RES}
 
+function Decrypt(Str: string): string;
+var
+  Md5: TIdHashMessageDigest5;
+  Hash: string;
+begin
+  Md5 := TIdHashMessageDigest5.Create;
+  Hash := Md5.HashStringAsHex(Str);
+  Result := Hash;
+end;
+
 function LoadResourceFont(const ResourceName, FontName: string): boolean;
 var
-  MyResStream: tResourceStream;
+  // MyResStream: tResourceStream;
   // FontsCount: integer;
   // hFont: tHandle;
-  Path: String;
+  Path: string;
   // isIxists: boolean;
 begin
   Path := GetEnvironmentVariable('AppData');
@@ -65,12 +79,47 @@ end;
 
 procedure TLog.Button1Click(Sender: TObject);
 begin
-  Main.Show;
+  if ((Edit1.Text = '') or (Edit2.Text = '')) then
+  begin
+    if ((Edit1.Text = '') and (Edit2.Text = '')) then
+    begin
+      MessageDlg('š''il vous plaît saisir votre pseudo et mot de pass', TMsgDlgType.mtWarning, [TMsgDlgBtn.mbRetry], 0);
+      InnerGlowEffect1.Enabled := True;
+      InnerGlowEffect2.Enabled := True;
+      Edit1.SetFocus;
+    end
+    else if (Edit1.Text = '') then
+    begin
+      MessageDlg('š''il vous plaît saisir votre pseudo', TMsgDlgType.mtWarning, [TMsgDlgBtn.mbRetry], 0);
+      InnerGlowEffect1.Enabled := True;
+      Edit1.SetFocus;
+    end
+    else
+    begin
+      MessageDlg('š''il vous plaît saisir votre mot de pass', TMsgDlgType.mtWarning, [TMsgDlgBtn.mbRetry], 0);
+      InnerGlowEffect2.Enabled := True;
+      Edit2.SetFocus;
+    end;
+  end
+  else
+  begin
+
+  end;
 end;
 
 procedure TLog.Button2Click(Sender: TObject);
 begin
   halt(0);
+end;
+
+procedure TLog.Edit1Change(Sender: TObject);
+begin
+  InnerGlowEffect1.Enabled := False;
+end;
+
+procedure TLog.Edit2Change(Sender: TObject);
+begin
+  InnerGlowEffect1.Enabled := False;
 end;
 
 procedure TLog.Label1Click(Sender: TObject);
@@ -84,3 +133,4 @@ begin
 end;
 
 end.
+
