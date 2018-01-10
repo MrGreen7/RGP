@@ -61,7 +61,7 @@ object Log: TLog
       Text = 'SpeedButton1'
     end
     object InnerGlowEffect2: TInnerGlowEffect
-      Softness = 0.400000005960464400
+      Softness = 0.400000005960464500
       GlowColor = xFFD7263D
       Opacity = 0.899999976158142100
       Enabled = False
@@ -81,7 +81,7 @@ object Log: TLog
     StyledSettings = [Style, FontColor]
     OnChange = Edit1Change
     object InnerGlowEffect1: TInnerGlowEffect
-      Softness = 0.400000005960464400
+      Softness = 0.400000005960464500
       GlowColor = xFFD7263D
       Opacity = 0.899999976158142100
       Enabled = False
@@ -104,6 +104,7 @@ object Log: TLog
   end
   object Button2: TButton
     StyledSettings = [Style, FontColor]
+    ModalResult = 2
     Position.X = 400.000000000000000000
     Position.Y = 208.000000000000000000
     Size.Width = 153.000000000000000000
@@ -113,7 +114,6 @@ object Log: TLog
     Text = 'Annuler'
     TextSettings.Font.Family = 'Candara'
     TextSettings.Font.Size = 16.000000000000000000
-    OnClick = Button2Click
   end
   object Label1: TLabel
     Cursor = crHandPoint
@@ -135,7 +135,7 @@ object Log: TLog
       Distance = 3.000000000000000000
       Direction = 45.000000000000000000
       Softness = 0.300000011920929000
-      Opacity = 0.400000005960464400
+      Opacity = 0.400000005960464500
       ShadowColor = claBlack
     end
   end

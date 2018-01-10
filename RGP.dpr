@@ -14,12 +14,8 @@ uses
 
 begin
   Application.Initialize;
-  Application.CreateForm(TLog, Log);
-  Application.CreateForm(TDataModule1, DataModule1);
   Application.CreateForm(TMain, Main);
-  Application.CreateForm(TMainB, MainB);
-  Application.CreateForm(TIns, Ins);
-  Application.CreateForm(TOption, Option);
+  Application.CreateForm(TDataModule1, DataModule1);
   Application.Run;
 
 end.

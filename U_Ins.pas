@@ -22,7 +22,6 @@ type
     InnerGlowEffect4: TInnerGlowEffect;
     SpeedButton1: TSpeedButton;
     SpeedButton2: TSpeedButton;
-    procedure Button3Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Edit1Change(Sender: TObject);
     procedure Edit2Change(Sender: TObject);
@@ -33,6 +32,7 @@ type
     procedure SpeedButton1MouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Single);
     procedure SpeedButton2MouseDown(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Single);
     procedure SpeedButton2MouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Single);
+    procedure Button3Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -60,7 +60,7 @@ end;
 
 procedure TIns.Button1Click(Sender: TObject);
 var
-  Pass: string;
+  HexPass: string;
 begin
   if ((Edit1.Text = '') or (Edit2.Text = '') or (Edit3.Text = '')) then
   begin
@@ -151,14 +151,14 @@ begin
         FieldByName('Nom').AsString := Edit1.Text;
         FieldByName('Pseudo').AsString := Edit2.Text;
         begin
-          Pass := Encrypt(Edit3.Text);
-          FieldByName('Mot_de_pass').AsString := Pass;
+          HexPass := Encrypt(Edit3.Text);
+          FieldByName('Mot_de_pass').AsString := HexPass;
         end;
         Post;
         Active := False;
         Button2.OnClick(Button2);
         MessageDlg('Votre compte a été engregistré', TMsgDlgType.mtConfirmation, [TMsgDlgBtn.mbOK], 0);
-        Ins.Close;
+        ModalResult:=mrCancel;
       end;
     end;
   end;
@@ -178,7 +178,7 @@ end;
 
 procedure TIns.Button3Click(Sender: TObject);
 begin
-  Ins.Close;
+  ModalResult:=mrCancel;
 end;
 
 procedure TIns.Edit1Change(Sender: TObject);

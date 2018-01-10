@@ -2,8 +2,8 @@ object Main: TMain
   Left = 0
   Top = 0
   Caption = 'Form1'
-  ClientHeight = 645
-  ClientWidth = 1164
+  ClientHeight = 658
+  ClientWidth = 1260
   Position = DesktopCenter
   Quality = HighQuality
   StyleBook = DataModule1.Windows10
@@ -13,12 +13,14 @@ object Main: TMain
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
   ShowFullScreenIcon = True
+  OnCloseQuery = FormCloseQuery
+  OnShow = FormShow
   DesignerMasterStyle = 0
   object TabControl1: TTabControl
     Align = Top
     ClipChildren = True
     ClipParent = True
-    Size.Width = 1164.000000000000000000
+    Size.Width = 1260.000000000000000000
     Size.Height = 161.000000000000000000
     Size.PlatformDefault = False
     StyleLookup = 'tabcontrolstyle'
@@ -26,9 +28,9 @@ object Main: TMain
     TabOrder = 0
     TabPosition = PlatformDefault
     Sizes = (
-      1164s
+      1260s
       131s
-      1164s
+      1260s
       131s)
     object TabItem1: TTabItem
       CustomIcon.TransparentColor = -16777194
@@ -50,7 +52,7 @@ object Main: TMain
       ExplicitSize.cy = 30.000000000000000000
       object Panel4: TPanel
         Align = Client
-        Size.Width = 1164.000000000000000000
+        Size.Width = 1260.000000000000000000
         Size.Height = 131.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 3
@@ -87,12 +89,13 @@ object Main: TMain
           StyledSettings = [Style, FontColor]
           HitTest = True
           Position.X = 20.000000000000000000
-          Position.Y = 44.000000000000000000
+          Position.Y = 8.000000000000000000
           Size.Width = 97.000000000000000000
-          Size.Height = 28.000000000000000000
+          Size.Height = 64.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.Family = 'Candara'
           TextSettings.Font.Size = 16.000000000000000000
+          TextSettings.VertAlign = Trailing
           Text = 'Page d'#39'acceil'
           TabOrder = 1
           object ShadowEffect2: TShadowEffect
@@ -149,12 +152,13 @@ object Main: TMain
           StyledSettings = [Style, FontColor]
           HitTest = True
           Position.X = 35.000000000000000000
-          Position.Y = 44.000000000000000000
+          Position.Y = 8.000000000000000000
           Size.Width = 60.000000000000000000
-          Size.Height = 27.000000000000000000
+          Size.Height = 63.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.Family = 'Candara'
           TextSettings.Font.Size = 16.000000000000000000
+          TextSettings.VertAlign = Trailing
           Text = 'Fen'#234'tres'
           TabOrder = 3
           object ShadowEffect7: TShadowEffect
@@ -198,7 +202,6 @@ object Main: TMain
           TextSettings.FontColor = claCrimson
           Text = #61573
           TabOrder = 3
-          OnClick = Label6Click
           object ShadowEffect4: TShadowEffect
             Distance = 3.000000000000000000
             Direction = 45.000000000000000000
@@ -212,12 +215,13 @@ object Main: TMain
           StyledSettings = [Style, FontColor]
           HitTest = True
           Position.X = 27.000000000000000000
-          Position.Y = 45.000000000000000000
+          Position.Y = 8.000000000000000000
           Size.Width = 82.000000000000000000
-          Size.Height = 27.000000000000000000
+          Size.Height = 64.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.Family = 'Candara'
           TextSettings.Font.Size = 16.000000000000000000
+          TextSettings.VertAlign = Trailing
           Text = 'Param'#234'tres'
           TabOrder = 4
           OnClick = Label7Click
@@ -268,12 +272,13 @@ object Main: TMain
           StyledSettings = [Style, FontColor]
           HitTest = True
           Position.X = 195.000000000000000000
-          Position.Y = 45.000000000000000000
+          Position.Y = 8.000000000000000000
           Size.Width = 102.000000000000000000
-          Size.Height = 49.000000000000000000
+          Size.Height = 86.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.Family = 'Candara'
           TextSettings.Font.Size = 16.000000000000000000
+          TextSettings.VertAlign = Trailing
           Text = 'Informations de la clinique'
           TabOrder = 2
           object ShadowEffect13: TShadowEffect
@@ -328,12 +333,13 @@ object Main: TMain
           StyledSettings = [Style, FontColor]
           HitTest = True
           Position.X = 29.000000000000000000
-          Position.Y = 45.000000000000000000
+          Position.Y = 8.000000000000000000
           Size.Width = 70.000000000000000000
-          Size.Height = 27.000000000000000000
+          Size.Height = 64.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.Family = 'Candara'
           TextSettings.Font.Size = 16.000000000000000000
+          TextSettings.VertAlign = Trailing
           Text = #192' propos'
           TabOrder = 2
           object ShadowEffect6: TShadowEffect
@@ -376,7 +382,7 @@ object Main: TMain
       ExplicitSize.cy = 30.000000000000000000
       object Panel6: TPanel
         Align = Client
-        Size.Width = 1164.000000000000000000
+        Size.Width = 1260.000000000000000000
         Size.Height = 131.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 3
@@ -388,14 +394,14 @@ object Main: TMain
     FullSize = True
     Position.Y = 161.000000000000000000
     Size.Width = 185.000000000000000000
-    Size.Height = 484.000000000000000000
+    Size.Height = 497.000000000000000000
     Size.PlatformDefault = False
     TabIndex = 0
     TabOrder = 1
     TabPosition = PlatformDefault
     Sizes = (
       185s
-      456s)
+      469s)
     object Medical: TTabItem
       CustomIcon = <
         item
@@ -415,7 +421,7 @@ object Main: TMain
       object Panel5: TPanel
         Align = Client
         Size.Width = 185.000000000000000000
-        Size.Height = 456.000000000000000000
+        Size.Height = 469.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 3
       end

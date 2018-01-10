@@ -3,12 +3,11 @@ unit U_Main;
 interface
 
 uses
-  System.SysUtils, System.Types, System.UITypes, System.Classes,
-  System.Variants,
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.TabControl,
-  FMX.StdCtrls, FMX.Controls.Presentation, FMX.Styles.Objects, FMX.Ani,
-  FMX.EditBox, FMX.ComboTrackBar, FMX.Edit, FMX.ComboEdit, FMX.Layouts,
-  FMX.ListBox, FMX.ExtCtrls, FMX.Effects, FMX.Objects;
+  FMX.StdCtrls, FMX.Controls.Presentation, FMX.Styles.Objects, FMX.Ani, FMX.EditBox,
+  FMX.ComboTrackBar, FMX.Edit, FMX.ComboEdit, FMX.Layouts, FMX.ListBox, FMX.ExtCtrls,
+  FMX.Effects, FMX.Objects;
 
 type
   TMain = class(TForm)
@@ -49,7 +48,8 @@ type
     ShadowEffect6: TShadowEffect;
     Label14: TLabel;
     Line1: TLine;
-    procedure Label6Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure Label7Click(Sender: TObject);
   private
     { Private declarations }
@@ -62,17 +62,32 @@ var
 
 implementation
 
-uses U_DataModule, U_Option;
+uses
+  U_DataModule, U_Option, U_Log;
 {$R *.fmx}
 
-procedure TMain.Label6Click(Sender: TObject);
+procedure TMain.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
 begin
-  Option.Show;
+  Halt(0);
+end;
+
+procedure TMain.FormShow(Sender: TObject);
+var
+  LogDlg: TLog;
+begin
+  LogDlg := TLog.Create(self);
+  if (LogDlg.ShowModal = mrCancel) then
+      Application.Terminate;
+  LogDlg.Free;
 end;
 
 procedure TMain.Label7Click(Sender: TObject);
+var
+  OptionDlg: TOption;
 begin
-  Option.Show;
+  OptionDlg := TOption.Create(self);
+  OptionDlg.ShowModal;
 end;
 
 end.
+
