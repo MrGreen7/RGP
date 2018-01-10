@@ -21,7 +21,6 @@ type
     ShadowEffect2: TShadowEffect;
     InnerGlowEffect1: TInnerGlowEffect;
     InnerGlowEffect2: TInnerGlowEffect;
-    procedure Button2Click(Sender: TObject);
     procedure Label1Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -78,6 +77,9 @@ begin
 end;
 
 procedure TLog.Button1Click(Sender: TObject);
+var
+  HexPass: string;
+  Msg: Integer;
 begin
   if ((Edit1.Text = '') or (Edit2.Text = '')) then
   begin
@@ -103,13 +105,35 @@ begin
   end
   else
   begin
-
+    HexPass := Decrypt(Edit2.Text);
+    with DataModule1.FDQuery1 do
+    begin
+      Active := False;
+      SQL.Text := ('SELECT * FROM User');
+      Active := True;
+      if not (Locate('Pseudo;Mot_de_pass', VarArrayOf([Edit1.Text, HexPass]), [])) then
+      begin
+        InnerGlowEffect1.Enabled := True;
+        InnerGlowEffect2.Enabled := True;
+        Msg := MessageDlg('Pseudo ou Mot de pass est incorrect !', TMsgDlgType.mtError, [TMsgDlgBtn.mbRetry, TMsgDlgBtn.mbCancel], 0);
+        if (Msg = mrRetry) then
+        begin
+          Edit1.Text := '';
+          Edit2.Text := '';
+          Edit1.SetFocus;
+          InnerGlowEffect1.Enabled := False;
+          InnerGlowEffect2.Enabled := False;
+        end
+        else
+          ModalResult := mrCancel;
+      end
+      else
+      begin
+        ShowMessage('Bienvenu Mr.'+Edit1.Text);
+        ModalResult := mrOk;
+      end;
+    end;
   end;
-end;
-
-procedure TLog.Button2Click(Sender: TObject);
-begin
-  halt(0);
 end;
 
 procedure TLog.Edit1Change(Sender: TObject);
@@ -123,8 +147,12 @@ begin
 end;
 
 procedure TLog.Label1Click(Sender: TObject);
+var
+  InsDlg: TIns;
 begin
-  Ins.Show;
+  InsDlg := TIns.Create(self);
+  if (InsDlg.ShowModal = mrCancel) then
+    InsDlg.Close;
 end;
 
 procedure TLog.FormCreate(Sender: TObject);

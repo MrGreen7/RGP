@@ -8,7 +8,8 @@ uses
   FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.Phys.SQLite,
   FireDAC.Phys.SQLiteDef, FireDAC.Stan.ExprFuncs, FireDAC.FMXUI.Wait, FireDAC.Stan.Param,
   FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt, Data.DB, FireDAC.Comp.DataSet,
-  FireDAC.Comp.Client, System.UITypes, FMX.Dialogs, FMX.Types, FMX.Controls;
+  FireDAC.Comp.Client, System.UITypes, FMX.Dialogs, FMX.Types, FMX.Controls,
+  IdHashMessageDigest;
 
 type
   TDataModule1 = class(TDataModule)
@@ -31,10 +32,19 @@ implementation
 
 {%CLASSGROUP 'FMX.Controls.TControl'}
 {$R *.dfm}
+function Encryt(Str: string): string;
+var
+  Md5: TIdHashMessageDigest5;
+  Hash: string;
+begin
+  Md5 := TIdHashMessageDigest5.Create;
+  Hash := Md5.HashStringAsHex(Str);
+  Result := Hash;
+end;
 
 procedure TDataModule1.DataModuleCreate(Sender: TObject);
 var
-  Path, DirPath: string;
+  Path, DirPath, HexPass: string;
 begin
   DirPath := GetEnvironmentVariable('AppData');
   CreateDir(DirPath + '\RGP_Data');
@@ -54,18 +64,18 @@ begin
         FDCommand1.Execute();
         with FDQuery1 do
         begin
+          HexPass:=Encryt('admin');
           SQL.Text := ('Select * From User');
           Active := True;
           Insert;
           FieldByName('Nom').AsString := ('Computer');
           FieldByName('Pseudo').AsString := ('admin');
-          FieldByName('Mot_de_pass').AsString := ('admin');
+          FieldByName('Mot_de_pass').AsString := HexPass;
           Post;
           Active := False;
         end;
       except
         on E: Exception do
-
       end;
     end;
   end;
