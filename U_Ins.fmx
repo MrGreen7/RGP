@@ -1,6 +1,8 @@
 object Ins: TIns
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = Single
   Caption = 'Inscription'
   ClientHeight = 314
   ClientWidth = 625

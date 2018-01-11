@@ -16,7 +16,7 @@ object Main: TMain
   OnCloseQuery = FormCloseQuery
   OnShow = FormShow
   DesignerMasterStyle = 0
-  object TabControl1: TTabControl
+  object HeaderT: TTabControl
     Align = Top
     ClipChildren = True
     ClipParent = True
@@ -31,8 +31,18 @@ object Main: TMain
       1260s
       131s
       1260s
+      131s
+      1260s
+      131s
+      1260s
+      131s
+      1260s
+      131s
+      1260s
+      131s
+      1260s
       131s)
-    object TabItem1: TTabItem
+    object H_Accueil: TTabItem
       CustomIcon.TransparentColor = -16777194
       CustomIcon = <
         item
@@ -98,6 +108,7 @@ object Main: TMain
           TextSettings.VertAlign = Trailing
           Text = 'Page d'#39'acceil'
           TabOrder = 1
+          OnClick = Label2Click
           object ShadowEffect2: TShadowEffect
             Distance = 3.000000000000000000
             Direction = 45.000000000000000000
@@ -161,6 +172,7 @@ object Main: TMain
           TextSettings.VertAlign = Trailing
           Text = 'Fen'#234'tres'
           TabOrder = 3
+          OnClick = Label5Click
           object ShadowEffect7: TShadowEffect
             Distance = 3.000000000000000000
             Direction = 45.000000000000000000
@@ -279,8 +291,9 @@ object Main: TMain
           TextSettings.Font.Family = 'Candara'
           TextSettings.Font.Size = 16.000000000000000000
           TextSettings.VertAlign = Trailing
-          Text = 'Informations de la clinique'
+          Text = 'Informations de la H'#244'pital'
           TabOrder = 2
+          OnClick = Label13Click
           object ShadowEffect13: TShadowEffect
             Distance = 3.000000000000000000
             Direction = 45.000000000000000000
@@ -364,7 +377,7 @@ object Main: TMain
         end
       end
     end
-    object TabItem2: TTabItem
+    object H_Editeur: TTabItem
       CustomIcon = <
         item
         end>
@@ -388,19 +401,144 @@ object Main: TMain
         TabOrder = 3
       end
     end
+    object H_Gen_Patient: TTabItem
+      CustomIcon = <
+        item
+        end>
+      TextSettings.Font.Family = 'FontAwesome'
+      TextSettings.Font.Size = 16.000000000000000000
+      StyledSettings = [Size, Style, FontColor]
+      IsSelected = False
+      Size.Width = 94.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = #61918' G'#233'n'#233'ral'
+      Visible = False
+      ExplicitSize.cx = 94.000000000000000000
+      ExplicitSize.cy = 30.000000000000000000
+      object Panel10: TPanel
+        Align = Client
+        Size.Width = 1260.000000000000000000
+        Size.Height = 131.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+      end
+    end
+    object H_Gen_RDV: TTabItem
+      CustomIcon = <
+        item
+        end>
+      TextSettings.Font.Family = 'FontAwesome'
+      TextSettings.Font.Size = 16.000000000000000000
+      StyledSettings = [Size, Style, FontColor]
+      IsSelected = False
+      Size.Width = 94.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = #61918' G'#233'n'#233'ral'
+      Visible = False
+      ExplicitSize.cx = 94.000000000000000000
+      ExplicitSize.cy = 30.000000000000000000
+      object Panel11: TPanel
+        Align = Client
+        Size.Width = 1260.000000000000000000
+        Size.Height = 131.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+      end
+    end
+    object H_Gen_Ordo: TTabItem
+      CustomIcon = <
+        item
+        end>
+      TextSettings.Font.Family = 'FontAwesome'
+      TextSettings.Font.Size = 16.000000000000000000
+      StyledSettings = [Size, Style, FontColor]
+      IsSelected = False
+      Size.Width = 94.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = #61918' G'#233'n'#233'ral'
+      Visible = False
+      ExplicitSize.cx = 94.000000000000000000
+      ExplicitSize.cy = 30.000000000000000000
+      object Panel9: TPanel
+        Align = Client
+        Size.Width = 1260.000000000000000000
+        Size.Height = 131.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+      end
+    end
+    object H_Gen_RechercheP: TTabItem
+      CustomIcon = <
+        item
+        end>
+      TextSettings.Font.Family = 'FontAwesome'
+      TextSettings.Font.Size = 16.000000000000000000
+      StyledSettings = [Size, Style, FontColor]
+      IsSelected = False
+      Size.Width = 94.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = #61918' G'#233'n'#233'ral'
+      Visible = False
+      ExplicitSize.cx = 94.000000000000000000
+      ExplicitSize.cy = 30.000000000000000000
+      object Panel12: TPanel
+        Align = Client
+        Size.Width = 1260.000000000000000000
+        Size.Height = 131.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+      end
+    end
+    object H_Gen_NouveauP: TTabItem
+      CustomIcon = <
+        item
+        end>
+      TextSettings.Font.Family = 'FontAwesome'
+      TextSettings.Font.Size = 16.000000000000000000
+      StyledSettings = [Size, Style, FontColor]
+      IsSelected = False
+      Size.Width = 94.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = #61918' G'#233'n'#233'ral'
+      Visible = False
+      ExplicitSize.cx = 94.000000000000000000
+      ExplicitSize.cy = 30.000000000000000000
+      object Panel13: TPanel
+        Align = Client
+        Size.Width = 1260.000000000000000000
+        Size.Height = 131.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+      end
+    end
   end
-  object TabControl2: TTabControl
+  object ListT: TTabControl
     Align = Left
     FullSize = True
     Position.Y = 161.000000000000000000
-    Size.Width = 185.000000000000000000
+    Size.Width = 201.000000000000000000
     Size.Height = 497.000000000000000000
     Size.PlatformDefault = False
     TabIndex = 0
     TabOrder = 1
     TabPosition = PlatformDefault
     Sizes = (
-      185s
+      201s
       469s)
     object Medical: TTabItem
       CustomIcon = <
@@ -410,7 +548,7 @@ object Main: TMain
       TextSettings.Font.Size = 16.000000000000000000
       StyledSettings = [Style, FontColor]
       IsSelected = True
-      Size.Width = 185.000000000000000000
+      Size.Width = 201.000000000000000000
       Size.Height = 28.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = ''
@@ -420,11 +558,354 @@ object Main: TMain
       ExplicitSize.cy = 26.000000000000000000
       object Panel5: TPanel
         Align = Client
-        Size.Width = 185.000000000000000000
+        Size.Width = 201.000000000000000000
         Size.Height = 469.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 3
+        object TreeView1: TTreeView
+          Align = Client
+          Size.Width = 201.000000000000000000
+          Size.Height = 469.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Viewport.Width = 197.000000000000000000
+          Viewport.Height = 465.000000000000000000
+          object T_Accueil: TTreeViewItem
+            Cursor = crHandPoint
+            StyledSettings = [Size, Style, FontColor]
+            TextSettings.Font.Family = 'FontAwesome'
+            TextSettings.Font.Size = 16.000000000000000000
+            IsChecked = False
+            IsExpanded = False
+            IsSelected = False
+            TabOrder = 0
+            Text = #61474' Page d'#39'acceuil'
+            OnClick = T_AccueilClick
+          end
+          object T_Patient: TTreeViewItem
+            StyledSettings = [Size, Style, FontColor]
+            TextSettings.Font.Family = 'FontAwesome'
+            TextSettings.Font.Size = 16.000000000000000000
+            IsChecked = False
+            IsExpanded = True
+            IsSelected = False
+            TabOrder = 1
+            Text = #61981' Patient'
+            OnClick = T_PatientClick
+            object Patient_Recherche: TTreeViewItem
+              StyledSettings = [Size, Style, FontColor]
+              TextSettings.Font.Family = 'FontAwesome'
+              TextSettings.Font.Size = 16.000000000000000000
+              IsChecked = False
+              IsExpanded = False
+              IsSelected = False
+              TabOrder = 0
+              Text = #61442' Recherche patient'
+              OnClick = Patient_RechercheClick
+            end
+            object New_Patient: TTreeViewItem
+              StyledSettings = [Size, Style, FontColor]
+              TextSettings.Font.Family = 'FontAwesome'
+              TextSettings.Font.Size = 16.000000000000000000
+              IsChecked = False
+              IsExpanded = False
+              IsSelected = False
+              TabOrder = 1
+              Text = #61870' Nouveau patient'
+              OnClick = New_PatientClick
+            end
+          end
+          object T_RDV: TTreeViewItem
+            StyledSettings = [Size, Style, FontColor]
+            TextSettings.Font.Family = 'FontAwesome'
+            TextSettings.Font.Size = 16.000000000000000000
+            IsChecked = False
+            IsExpanded = False
+            IsSelected = False
+            TabOrder = 2
+            Text = #61555' Rendez vous'
+            OnClick = T_RDVClick
+          end
+          object T_Ordo: TTreeViewItem
+            Cursor = crHandPoint
+            StyledSettings = [Size, Style, FontColor]
+            TextSettings.Font.Family = 'FontAwesome'
+            TextSettings.Font.Size = 16.000000000000000000
+            IsChecked = False
+            IsExpanded = False
+            IsSelected = False
+            TabOrder = 3
+            Text = #61680' Ordonnance'
+            OnClick = T_OrdoClick
+          end
+        end
       end
+    end
+  end
+  object MainT: TTabControl
+    Align = Client
+    Size.Width = 1059.000000000000000000
+    Size.Height = 497.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'tabcontrolstyle'
+    TabIndex = 0
+    TabOrder = 2
+    TabPosition = PlatformDefault
+    Sizes = (
+      1059s
+      471s
+      1059s
+      467s
+      1075s
+      467s
+      1075s
+      467s
+      1059s
+      467s
+      1059s
+      467s)
+    object P_Accueil: TTabItem
+      CustomIcon.Height = 470
+      CustomIcon.Width = 1600
+      CustomIcon = <
+        item
+          FileName = 'C:\Users\Kacemo\Desktop\RGP\Assets\Blood-Drop-1600x470.jpg'
+        end>
+      TextSettings.Font.Family = 'FontAwesome'
+      TextSettings.Font.Size = 16.000000000000000000
+      StyledSettings = [Size, Style, FontColor]
+      IsSelected = True
+      Size.Width = 141.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'tabitemcustom'
+      TabOrder = 0
+      Text = #61474' Page d'#39'acceuil'
+      OnClick = P_AccueilClick
+      ExplicitSize.cx = 141.000000000000000000
+      ExplicitSize.cy = 30.000000000000000000
+      object GroupBox1: TGroupBox
+        Padding.Left = 10.000000000000000000
+        Padding.Top = 25.000000000000000000
+        Padding.Right = 10.000000000000000000
+        Padding.Bottom = 10.000000000000000000
+        Size.Width = 529.000000000000000000
+        Size.Height = 233.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'GroupBox1'
+        TabOrder = 3
+        object StringGrid1: TStringGrid
+          Align = Client
+          CanFocus = True
+          ClipChildren = True
+          Size.Width = 509.000000000000000000
+          Size.Height = 198.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Viewport.Width = 505.000000000000000000
+          Viewport.Height = 173.000000000000000000
+        end
+      end
+      object GroupBox2: TGroupBox
+        Anchors = [akTop, akRight]
+        Padding.Left = 10.000000000000000000
+        Padding.Top = 25.000000000000000000
+        Padding.Right = 10.000000000000000000
+        Padding.Bottom = 10.000000000000000000
+        Position.X = 528.000000000000000000
+        Size.Width = 529.000000000000000000
+        Size.Height = 233.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'GroupBox1'
+        TabOrder = 2
+        object StringGrid2: TStringGrid
+          Align = Client
+          CanFocus = True
+          ClipChildren = True
+          Size.Width = 509.000000000000000000
+          Size.Height = 198.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Viewport.Width = 505.000000000000000000
+          Viewport.Height = 173.000000000000000000
+        end
+      end
+      object GroupBox3: TGroupBox
+        Anchors = [akLeft, akBottom]
+        Padding.Left = 10.000000000000000000
+        Padding.Top = 25.000000000000000000
+        Padding.Right = 10.000000000000000000
+        Padding.Bottom = 10.000000000000000000
+        Position.Y = 236.000000000000000000
+        Size.Width = 529.000000000000000000
+        Size.Height = 233.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'GroupBox1'
+        TabOrder = 1
+        object StringGrid3: TStringGrid
+          Align = Client
+          CanFocus = True
+          ClipChildren = True
+          Size.Width = 509.000000000000000000
+          Size.Height = 198.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Viewport.Width = 505.000000000000000000
+          Viewport.Height = 173.000000000000000000
+        end
+      end
+      object GroupBox4: TGroupBox
+        Anchors = [akRight, akBottom]
+        Padding.Left = 10.000000000000000000
+        Padding.Top = 25.000000000000000000
+        Padding.Right = 10.000000000000000000
+        Padding.Bottom = 10.000000000000000000
+        Position.X = 528.000000000000000000
+        Position.Y = 236.000000000000000000
+        Size.Width = 529.000000000000000000
+        Size.Height = 233.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'GroupBox1'
+        TabOrder = 0
+        object StringGrid4: TStringGrid
+          Align = Client
+          CanFocus = True
+          ClipChildren = True
+          Size.Width = 509.000000000000000000
+          Size.Height = 198.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Viewport.Width = 505.000000000000000000
+          Viewport.Height = 173.000000000000000000
+        end
+      end
+    end
+    object Patient: TTabItem
+      CustomIcon = <
+        item
+        end>
+      TextSettings.Font.Family = 'FontAwesome'
+      TextSettings.Font.Size = 16.000000000000000000
+      StyledSettings = [Size, Style, FontColor]
+      IsSelected = False
+      Size.Width = 88.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = #61981' Patient'
+      Visible = False
+      OnClick = PatientClick
+      ExplicitSize.cx = 88.000000000000000000
+      ExplicitSize.cy = 30.000000000000000000
+      object StringGrid5: TStringGrid
+        Align = Client
+        CanFocus = True
+        ClipChildren = True
+        Margins.Top = 5.000000000000000000
+        Size.Width = 1059.000000000000000000
+        Size.Height = 427.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Viewport.Width = 1055.000000000000000000
+        Viewport.Height = 402.000000000000000000
+      end
+      object Panel8: TPanel
+        Align = Bottom
+        Position.Y = 432.000000000000000000
+        Size.Width = 1059.000000000000000000
+        Size.Height = 35.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object Label15: TLabel
+          Align = Left
+          Hint = 'Numbre de Patient '
+          Size.Width = 105.000000000000000000
+          Size.Height = 35.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'toollabel'
+          Text = 'Patient N'
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 0
+        end
+      end
+    end
+    object RDV: TTabItem
+      CustomIcon = <
+        item
+        end>
+      TextSettings.Font.Family = 'FontAwesome'
+      TextSettings.Font.Size = 16.000000000000000000
+      StyledSettings = [Size, Style, FontColor]
+      IsSelected = False
+      Size.Width = 129.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = #61555' Rendez vous'
+      Visible = False
+      OnClick = RDVClick
+      ExplicitSize.cx = 129.000000000000000000
+      ExplicitSize.cy = 30.000000000000000000
+    end
+    object Ordonnance: TTabItem
+      CustomIcon = <
+        item
+        end>
+      TextSettings.Font.Family = 'FontAwesome'
+      TextSettings.Font.Size = 16.000000000000000000
+      StyledSettings = [Size, Style, FontColor]
+      IsSelected = False
+      Size.Width = 126.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = #61680' Ordonnance'
+      Visible = False
+      OnClick = OrdonnanceClick
+      ExplicitSize.cx = 126.000000000000000000
+      ExplicitSize.cy = 30.000000000000000000
+    end
+    object Recherche_Patient: TTabItem
+      CustomIcon = <
+        item
+        end>
+      TextSettings.Font.Family = 'FontAwesome'
+      TextSettings.Font.Size = 16.000000000000000000
+      StyledSettings = [Size, Style, FontColor]
+      IsSelected = False
+      Size.Width = 167.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = #61442' Recherche patient'
+      Visible = False
+      OnClick = Recherche_PatientClick
+      ExplicitSize.cx = 167.000000000000000000
+      ExplicitSize.cy = 30.000000000000000000
+    end
+    object Nouveau_Patient: TTabItem
+      CustomIcon = <
+        item
+        end>
+      TextSettings.Font.Family = 'FontAwesome'
+      TextSettings.Font.Size = 16.000000000000000000
+      StyledSettings = [Size, Style, FontColor]
+      IsSelected = False
+      Size.Width = 155.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = #61870' Nouveau patient'
+      Visible = False
+      OnClick = Nouveau_PatientClick
+      ExplicitSize.cx = 155.000000000000000000
+      ExplicitSize.cy = 30.000000000000000000
     end
   end
 end

@@ -7,14 +7,15 @@ uses
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.TabControl,
   FMX.StdCtrls, FMX.Controls.Presentation, FMX.Styles.Objects, FMX.Ani, FMX.EditBox,
   FMX.ComboTrackBar, FMX.Edit, FMX.ComboEdit, FMX.Layouts, FMX.ListBox, FMX.ExtCtrls,
-  FMX.Effects, FMX.Objects;
+  FMX.Effects, FMX.Objects, FMX.TreeView, System.Rtti, FMX.Grid.Style, FMX.ScrollBox,
+  FMX.Grid, U_Fenetre;
 
 type
   TMain = class(TForm)
-    TabControl1: TTabControl;
-    TabItem1: TTabItem;
-    TabItem2: TTabItem;
-    TabControl2: TTabControl;
+    HeaderT: TTabControl;
+    H_Accueil: TTabItem;
+    H_Editeur: TTabItem;
+    ListT: TTabControl;
     Medical: TTabItem;
     Label3: TLabel;
     Label1: TLabel;
@@ -48,9 +49,59 @@ type
     ShadowEffect6: TShadowEffect;
     Label14: TLabel;
     Line1: TLine;
+    MainT: TTabControl;
+    P_Accueil: TTabItem;
+    Patient: TTabItem;
+    RDV: TTabItem;
+    Ordonnance: TTabItem;
+    H_Gen_Patient: TTabItem;
+    H_Gen_RDV: TTabItem;
+    H_Gen_Ordo: TTabItem;
+    TreeView1: TTreeView;
+    T_Accueil: TTreeViewItem;
+    T_Patient: TTreeViewItem;
+    Patient_Recherche: TTreeViewItem;
+    T_RDV: TTreeViewItem;
+    T_Ordo: TTreeViewItem;
+    New_Patient: TTreeViewItem;
+    GroupBox1: TGroupBox;
+    GroupBox2: TGroupBox;
+    GroupBox3: TGroupBox;
+    GroupBox4: TGroupBox;
+    StringGrid1: TStringGrid;
+    StringGrid2: TStringGrid;
+    StringGrid3: TStringGrid;
+    StringGrid4: TStringGrid;
+    StringGrid5: TStringGrid;
+    Panel8: TPanel;
+    Label15: TLabel;
+    Panel9: TPanel;
+    Panel10: TPanel;
+    Panel11: TPanel;
+    Recherche_Patient: TTabItem;
+    Nouveau_Patient: TTabItem;
+    H_Gen_RechercheP: TTabItem;
+    H_Gen_NouveauP: TTabItem;
+    Panel12: TPanel;
+    Panel13: TPanel;
     procedure FormShow(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure Label7Click(Sender: TObject);
+    procedure P_AccueilClick(Sender: TObject);
+    procedure PatientClick(Sender: TObject);
+    procedure RDVClick(Sender: TObject);
+    procedure OrdonnanceClick(Sender: TObject);
+    procedure T_AccueilClick(Sender: TObject);
+    procedure T_PatientClick(Sender: TObject);
+    procedure T_RDVClick(Sender: TObject);
+    procedure T_OrdoClick(Sender: TObject);
+    procedure Label5Click(Sender: TObject);
+    procedure Label2Click(Sender: TObject);
+    procedure Recherche_PatientClick(Sender: TObject);
+    procedure Nouveau_PatientClick(Sender: TObject);
+    procedure Patient_RechercheClick(Sender: TObject);
+    procedure New_PatientClick(Sender: TObject);
+    procedure Label13Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -63,7 +114,7 @@ var
 implementation
 
 uses
-  U_DataModule, U_Option, U_Log;
+  U_DataModule, U_Option, U_Log, U_Entreprise;
 {$R *.fmx}
 
 procedure TMain.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
@@ -75,10 +126,42 @@ procedure TMain.FormShow(Sender: TObject);
 var
   LogDlg: TLog;
 begin
+  P_Accueil.IsSelected := True;
   LogDlg := TLog.Create(self);
   if (LogDlg.ShowModal = mrCancel) then
-      Application.Terminate;
+    Application.Terminate;
   LogDlg.Free;
+end;
+
+procedure TMain.Label13Click(Sender: TObject);
+var
+  EntrepriseDlg : TEntreprise;
+begin
+  EntrepriseDlg := TEntreprise.Create(self);
+  if (EntrepriseDlg.ShowModal = mrCancel) then
+    EntrepriseDlg.Free;
+end;
+
+procedure TMain.Label2Click(Sender: TObject);
+begin
+  H_Accueil.Visible := True;
+  H_Accueil.IsSelected := True;
+  Patient.Visible := False;
+  RDV.Visible := False;
+  Ordonnance.Visible := False;
+  H_Gen_Patient.Visible := False;
+  H_Gen_RDV.Visible := False;
+  H_Gen_Ordo.Visible := False;
+  H_Gen_NouveauP.Visible := False;
+  H_Gen_RechercheP.Visible := False;
+end;
+
+procedure TMain.Label5Click(Sender: TObject);
+var
+  FenetreDlg: TFenetre;
+begin
+  FenetreDlg := TFenetre.Create(self);
+  FenetreDlg.ShowModal;
 end;
 
 procedure TMain.Label7Click(Sender: TObject);
@@ -87,6 +170,111 @@ var
 begin
   OptionDlg := TOption.Create(self);
   OptionDlg.ShowModal;
+end;
+
+procedure TMain.New_PatientClick(Sender: TObject);
+begin
+  Nouveau_Patient.Visible := True;
+  Nouveau_Patient.OnClick(Patient);
+  Nouveau_Patient.IsSelected := True;
+end;
+
+procedure TMain.Nouveau_PatientClick(Sender: TObject);
+begin
+  H_Gen_Patient.Visible := False;
+  H_Gen_Ordo.Visible := False;
+  H_Gen_RDV.Visible := False;
+  H_Accueil.IsSelected := False;
+  H_Gen_NouveauP.Visible := True;
+  H_Gen_RechercheP.Visible := False;
+  H_Gen_NouveauP.IsSelected := True;
+end;
+
+procedure TMain.OrdonnanceClick(Sender: TObject);
+begin
+  H_Gen_Patient.Visible := False;
+  H_Gen_Ordo.Visible := True;
+  H_Gen_Ordo.IsSelected := True;
+  H_Gen_RDV.Visible := False;
+  H_Gen_RechercheP.Visible := False;
+  H_Gen_NouveauP.Visible := False;
+end;
+
+procedure TMain.PatientClick(Sender: TObject);
+begin
+  H_Gen_Patient.Visible := True;
+  H_Gen_Patient.IsSelected := True;
+  H_Gen_Ordo.Visible := False;
+  H_Gen_RDV.Visible := False;
+  H_Gen_RechercheP.Visible := False;
+  H_Gen_NouveauP.Visible := False;
+end;
+
+procedure TMain.Patient_RechercheClick(Sender: TObject);
+begin
+  Recherche_Patient.Visible := True;
+  Recherche_Patient.OnClick(Patient);
+  Recherche_Patient.IsSelected := True;
+end;
+
+procedure TMain.P_AccueilClick(Sender: TObject);
+begin
+  H_Gen_Patient.Visible := False;
+  H_Gen_Ordo.Visible := False;
+  H_Gen_RDV.Visible := False;
+  H_Accueil.IsSelected := True;
+  H_Gen_RechercheP.Visible := False;
+  H_Gen_NouveauP.Visible := False;
+end;
+
+procedure TMain.RDVClick(Sender: TObject);
+begin
+  H_Gen_Patient.Visible := False;
+  H_Gen_Ordo.Visible := False;
+  H_Gen_RDV.Visible := True;
+  H_Gen_RDV.IsSelected := True;
+  H_Gen_RechercheP.Visible := False;
+  H_Gen_NouveauP.Visible := False;
+end;
+
+procedure TMain.Recherche_PatientClick(Sender: TObject);
+begin
+  H_Gen_Patient.Visible := False;
+  H_Gen_Ordo.Visible := False;
+  H_Gen_RDV.Visible := False;
+  H_Accueil.IsSelected := False;
+  H_Gen_NouveauP.Visible := False;
+  H_Gen_RechercheP.Visible := True;
+  H_Gen_RechercheP.IsSelected := True;
+
+end;
+
+procedure TMain.T_AccueilClick(Sender: TObject);
+begin
+  P_Accueil.Visible := True;
+  P_Accueil.OnClick(P_Accueil);
+  P_Accueil.IsSelected := True;
+end;
+
+procedure TMain.T_OrdoClick(Sender: TObject);
+begin
+  Ordonnance.Visible := True;
+  Ordonnance.OnClick(Ordonnance);
+  Ordonnance.IsSelected := True;
+end;
+
+procedure TMain.T_PatientClick(Sender: TObject);
+begin
+  Patient.Visible := True;
+  Patient.OnClick(Patient);
+  Patient.IsSelected := True;
+end;
+
+procedure TMain.T_RDVClick(Sender: TObject);
+begin
+  RDV.Visible := True;
+  RDV.OnClick(RDV);
+  RDV.IsSelected := True;
 end;
 
 end.

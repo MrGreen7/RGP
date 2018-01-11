@@ -18,6 +18,8 @@ type
     FDQuery1: TFDQuery;
     Windows10: TStyleBook;
     Windows10Grey: TStyleBook;
+    FDConnection2: TFDConnection;
+    FDQuery2: TFDQuery;
     procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }

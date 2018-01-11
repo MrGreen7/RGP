@@ -8,7 +8,9 @@ uses
   U_Ins in 'U_Ins.pas' {Ins},
   U_DataModule in 'U_DataModule.pas' {DataModule1: TDataModule},
   U_Main in 'U_Main.pas' {Main},
-  U_Option in 'U_Option.pas' {Option};
+  U_Option in 'U_Option.pas' {Option},
+  U_Fenetre in 'U_Fenetre.pas' {Fenetre},
+  U_Entreprise in 'U_Entreprise.pas' {Entreprise};
 
 {$R *.res}
 
