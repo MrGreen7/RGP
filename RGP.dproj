@@ -6,7 +6,7 @@
         <MainSource>RGP.dpr</MainSource>
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Debug</Config>
-        <Platform Condition="'$(Platform)'==''">iOSDevice64</Platform>
+        <Platform Condition="'$(Platform)'==''">Win64</Platform>
         <TargetedPlatforms>1119</TargetedPlatforms>
         <AppType>Application</AppType>
     </PropertyGroup>
@@ -348,6 +348,10 @@
         </DCCReference>
         <DCCReference Include="U_Entreprise.pas">
             <Form>Entreprise</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="U_SplashScreen.pas">
+            <Form>SplashScreen</Form>
             <FormType>fmx</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">

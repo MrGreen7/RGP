@@ -19,7 +19,8 @@ type
     Windows10: TStyleBook;
     Windows10Grey: TStyleBook;
     FDConnection2: TFDConnection;
-    FDQuery2: TFDQuery;
+    FDQ_Wilaya: TFDQuery;
+    FDQ_Commune: TFDQuery;
     procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }
@@ -46,13 +47,16 @@ end;
 
 procedure TDataModule1.DataModuleCreate(Sender: TObject);
 var
-  Path, DirPath, HexPass: string;
+  Path, PathInf, DirPath, HexPass: string;
 begin
   DirPath := GetEnvironmentVariable('AppData');
   CreateDir(DirPath + '\RGP_Data');
   Path := (DirPath + '\RGP_Data\Data.db');
+  PathInf := ExpandFileName(GetCurrentDir()+'/../../Alg_info.db');
   FDConnection1.Params.Add('Database=' + Path);
+  FDConnection2.Params.Add('Database=' + PathInf);
   FDConnection1.Connected := True;
+  FDConnection2.Connected := True;
   try
     FDQuery1.Close;
     FDQuery1.SQL.Text := ('Select * From User');

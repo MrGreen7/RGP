@@ -72,28 +72,6 @@ object Main: TMain
         Size.Height = 131.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 1
-        object Label1: TLabel
-          Cursor = crHandPoint
-          StyledSettings = [Style]
-          HitTest = True
-          Position.X = 44.000000000000000000
-          Position.Y = 5.000000000000000000
-          Size.Width = 49.000000000000000000
-          Size.Height = 47.000000000000000000
-          Size.PlatformDefault = False
-          TextSettings.Font.Family = 'FontAwesome'
-          TextSettings.Font.Size = 50.000000000000000000
-          TextSettings.FontColor = claCrimson
-          Text = #61461
-          TabOrder = 0
-          object ShadowEffect1: TShadowEffect
-            Distance = 3.000000000000000000
-            Direction = 45.000000000000000000
-            Softness = 0.300000011920929000
-            Opacity = 0.600000023841857900
-            ShadowColor = claBlack
-          end
-        end
         object Label2: TLabel
           Cursor = crHandPoint
           StyledSettings = [Style, FontColor]
@@ -108,13 +86,46 @@ object Main: TMain
           TextSettings.VertAlign = Trailing
           Text = 'Page d'#39'acceil'
           TabOrder = 1
-          OnClick = Label2Click
           object ShadowEffect2: TShadowEffect
             Distance = 3.000000000000000000
             Direction = 45.000000000000000000
-            Softness = 0.300000011920929000
+            Softness = 0.200000002980232200
             Opacity = 0.600000023841857900
             ShadowColor = claBlack
+          end
+        end
+        object Label1: TLabel
+          Cursor = crHandPoint
+          StyledSettings = [Style]
+          HitTest = True
+          Position.X = 24.000000000000000000
+          Position.Y = 5.000000000000000000
+          Size.Width = 89.000000000000000000
+          Size.Height = 68.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'FontAwesome'
+          TextSettings.Font.Size = 50.000000000000000000
+          TextSettings.FontColor = claCrimson
+          TextSettings.HorzAlign = Center
+          TextSettings.VertAlign = Leading
+          Text = #61461
+          TabOrder = 0
+          OnClick = Label1Click
+          object ShadowEffect1: TShadowEffect
+            Distance = 3.000000000000000000
+            Direction = 45.000000000000000000
+            Softness = 0.200000002980232200
+            Opacity = 0.600000023841857900
+            ShadowColor = claBlack
+          end
+          object ColorAnimation1: TColorAnimation
+            Delay = 0.200000002980232200
+            Duration = 0.699999988079071000
+            PropertyName = 'TextSettings.FontColor'
+            StartValue = claCrimson
+            StopValue = claDarkgray
+            Trigger = 'IsMouseOver=true'
+            TriggerInverse = 'IsMouseOver=false'
           end
         end
         object Label3: TLabel
@@ -136,47 +147,24 @@ object Main: TMain
         Size.Height = 131.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
-        object Label4: TLabel
-          Cursor = crHandPoint
-          StyledSettings = [Style]
-          HitTest = True
-          Position.X = 40.000000000000000000
-          Position.Y = 4.000000000000000000
-          Size.Width = 49.000000000000000000
-          Size.Height = 47.000000000000000000
-          Size.PlatformDefault = False
-          TextSettings.Font.Family = 'FontAwesome'
-          TextSettings.Font.Size = 40.000000000000000000
-          TextSettings.FontColor = claCrimson
-          Text = #62162
-          TabOrder = 2
-          object ShadowEffect9: TShadowEffect
-            Distance = 3.000000000000000000
-            Direction = 45.000000000000000000
-            Softness = 0.300000011920929000
-            Opacity = 0.600000023841857900
-            ShadowColor = claBlack
-          end
-        end
         object Label5: TLabel
           Cursor = crHandPoint
           StyledSettings = [Style, FontColor]
           HitTest = True
           Position.X = 35.000000000000000000
-          Position.Y = 8.000000000000000000
+          Position.Y = 40.000000000000000000
           Size.Width = 60.000000000000000000
-          Size.Height = 63.000000000000000000
+          Size.Height = 31.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.Family = 'Candara'
           TextSettings.Font.Size = 16.000000000000000000
           TextSettings.VertAlign = Trailing
           Text = 'Fen'#234'tres'
           TabOrder = 3
-          OnClick = Label5Click
           object ShadowEffect7: TShadowEffect
             Distance = 3.000000000000000000
             Direction = 45.000000000000000000
-            Softness = 0.300000011920929000
+            Softness = 0.200000002980232200
             Opacity = 0.600000023841857900
             ShadowColor = claBlack
           end
@@ -193,6 +181,31 @@ object Main: TMain
           Text = 'Navigation'
           TabOrder = 4
         end
+        object Label4: TLabel
+          Cursor = crHandPoint
+          StyledSettings = [Style]
+          HitTest = True
+          Position.X = 32.000000000000000000
+          Position.Y = 4.000000000000000000
+          Size.Width = 65.000000000000000000
+          Size.Height = 69.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'FontAwesome'
+          TextSettings.Font.Size = 40.000000000000000000
+          TextSettings.FontColor = claCrimson
+          TextSettings.HorzAlign = Center
+          TextSettings.VertAlign = Leading
+          Text = #62162
+          TabOrder = 2
+          OnClick = Label4Click
+          object ShadowEffect9: TShadowEffect
+            Distance = 3.000000000000000000
+            Direction = 45.000000000000000000
+            Softness = 0.200000002980232200
+            Opacity = 0.600000023841857900
+            ShadowColor = claBlack
+          end
+        end
       end
       object Panel2: TPanel
         Position.X = 272.000000000000000000
@@ -200,47 +213,24 @@ object Main: TMain
         Size.Height = 131.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 2
-        object Label6: TLabel
-          Cursor = crHandPoint
-          StyledSettings = [Style]
-          HitTest = True
-          Position.X = 44.000000000000000000
-          Position.Y = 5.000000000000000000
-          Size.Width = 49.000000000000000000
-          Size.Height = 47.000000000000000000
-          Size.PlatformDefault = False
-          TextSettings.Font.Family = 'FontAwesome'
-          TextSettings.Font.Size = 40.000000000000000000
-          TextSettings.FontColor = claCrimson
-          Text = #61573
-          TabOrder = 3
-          object ShadowEffect4: TShadowEffect
-            Distance = 3.000000000000000000
-            Direction = 45.000000000000000000
-            Softness = 0.300000011920929000
-            Opacity = 0.600000023841857900
-            ShadowColor = claBlack
-          end
-        end
         object Label7: TLabel
           Cursor = crHandPoint
           StyledSettings = [Style, FontColor]
           HitTest = True
           Position.X = 27.000000000000000000
-          Position.Y = 8.000000000000000000
+          Position.Y = 40.000000000000000000
           Size.Width = 82.000000000000000000
-          Size.Height = 64.000000000000000000
+          Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.Family = 'Candara'
           TextSettings.Font.Size = 16.000000000000000000
           TextSettings.VertAlign = Trailing
           Text = 'Param'#234'tres'
           TabOrder = 4
-          OnClick = Label7Click
           object ShadowEffect5: TShadowEffect
             Distance = 3.000000000000000000
             Direction = 45.000000000000000000
-            Softness = 0.300000011920929000
+            Softness = 0.200000002980232200
             Opacity = 0.600000023841857900
             ShadowColor = claBlack
           end
@@ -257,48 +247,25 @@ object Main: TMain
           Text = 'Param'#234'tres'
           TabOrder = 5
         end
-        object Label12: TLabel
-          Cursor = crHandPoint
-          StyledSettings = [Style]
-          HitTest = True
-          Position.X = 220.000000000000000000
-          Position.Y = 5.000000000000000000
-          Size.Width = 37.000000000000000000
-          Size.Height = 47.000000000000000000
-          Size.PlatformDefault = False
-          TextSettings.Font.Family = 'FontAwesome'
-          TextSettings.Font.Size = 40.000000000000000000
-          TextSettings.FontColor = claCrimson
-          Text = #61688
-          TabOrder = 1
-          object ShadowEffect12: TShadowEffect
-            Distance = 3.000000000000000000
-            Direction = 45.000000000000000000
-            Softness = 0.300000011920929000
-            Opacity = 0.500000000000000000
-            ShadowColor = claBlack
-          end
-        end
         object Label13: TLabel
           Cursor = crHandPoint
           StyledSettings = [Style, FontColor]
           HitTest = True
           Position.X = 195.000000000000000000
-          Position.Y = 8.000000000000000000
+          Position.Y = 48.000000000000000000
           Size.Width = 102.000000000000000000
-          Size.Height = 86.000000000000000000
+          Size.Height = 46.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.Family = 'Candara'
           TextSettings.Font.Size = 16.000000000000000000
           TextSettings.VertAlign = Trailing
           Text = 'Informations de la H'#244'pital'
           TabOrder = 2
-          OnClick = Label13Click
           object ShadowEffect13: TShadowEffect
             Distance = 3.000000000000000000
             Direction = 45.000000000000000000
-            Softness = 0.300000011920929000
-            Opacity = 0.500000000000000000
+            Softness = 0.200000002980232200
+            Opacity = 0.600000023841857900
             ShadowColor = claBlack
           end
         end
@@ -312,6 +279,56 @@ object Main: TMain
           Size.PlatformDefault = False
           Stroke.Thickness = 0.500000000000000000
         end
+        object Label6: TLabel
+          Cursor = crHandPoint
+          StyledSettings = [Style]
+          HitTest = True
+          Position.X = 24.000000000000000000
+          Position.Y = 5.000000000000000000
+          Size.Width = 89.000000000000000000
+          Size.Height = 68.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'FontAwesome'
+          TextSettings.Font.Size = 40.000000000000000000
+          TextSettings.FontColor = claCrimson
+          TextSettings.HorzAlign = Center
+          TextSettings.VertAlign = Leading
+          Text = #61573
+          TabOrder = 3
+          OnClick = Label6Click
+          object ShadowEffect4: TShadowEffect
+            Distance = 3.000000000000000000
+            Direction = 45.000000000000000000
+            Softness = 0.200000002980232200
+            Opacity = 0.600000023841857900
+            ShadowColor = claBlack
+          end
+        end
+        object Label12: TLabel
+          Cursor = crHandPoint
+          StyledSettings = [Style]
+          HitTest = True
+          Position.X = 184.000000000000000000
+          Position.Y = 5.000000000000000000
+          Size.Width = 105.000000000000000000
+          Size.Height = 92.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'FontAwesome'
+          TextSettings.Font.Size = 40.000000000000000000
+          TextSettings.FontColor = claCrimson
+          TextSettings.HorzAlign = Center
+          TextSettings.VertAlign = Leading
+          Text = #61688
+          TabOrder = 1
+          OnClick = Label12Click
+          object ShadowEffect12: TShadowEffect
+            Distance = 3.000000000000000000
+            Direction = 45.000000000000000000
+            Softness = 0.200000002980232200
+            Opacity = 0.600000023841857900
+            ShadowColor = claBlack
+          end
+        end
       end
       object Panel7: TPanel
         Position.X = 584.000000000000000000
@@ -319,36 +336,14 @@ object Main: TMain
         Size.Height = 131.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 4
-        object Label10: TLabel
-          Cursor = crHandPoint
-          StyledSettings = [Style]
-          HitTest = True
-          Position.X = 46.000000000000000000
-          Position.Y = 5.000000000000000000
-          Size.Width = 37.000000000000000000
-          Size.Height = 47.000000000000000000
-          Size.PlatformDefault = False
-          TextSettings.Font.Family = 'FontAwesome'
-          TextSettings.Font.Size = 40.000000000000000000
-          TextSettings.FontColor = claCrimson
-          Text = #61530
-          TabOrder = 1
-          object ShadowEffect3: TShadowEffect
-            Distance = 3.000000000000000000
-            Direction = 45.000000000000000000
-            Softness = 0.300000011920929000
-            Opacity = 0.600000023841857900
-            ShadowColor = claBlack
-          end
-        end
         object Label11: TLabel
           Cursor = crHandPoint
           StyledSettings = [Style, FontColor]
           HitTest = True
           Position.X = 29.000000000000000000
-          Position.Y = 8.000000000000000000
+          Position.Y = 48.000000000000000000
           Size.Width = 70.000000000000000000
-          Size.Height = 64.000000000000000000
+          Size.Height = 24.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.Family = 'Candara'
           TextSettings.Font.Size = 16.000000000000000000
@@ -358,7 +353,7 @@ object Main: TMain
           object ShadowEffect6: TShadowEffect
             Distance = 3.000000000000000000
             Direction = 45.000000000000000000
-            Softness = 0.300000011920929000
+            Softness = 0.200000002980232200
             Opacity = 0.600000023841857900
             ShadowColor = claBlack
           end
@@ -374,6 +369,30 @@ object Main: TMain
           TextSettings.Font.Size = 19.000000000000000000
           Text = 'Information'
           TabOrder = 3
+        end
+        object Label10: TLabel
+          Cursor = crHandPoint
+          StyledSettings = [Style]
+          HitTest = True
+          Position.X = 24.000000000000000000
+          Position.Y = 5.000000000000000000
+          Size.Width = 73.000000000000000000
+          Size.Height = 68.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'FontAwesome'
+          TextSettings.Font.Size = 40.000000000000000000
+          TextSettings.FontColor = claCrimson
+          TextSettings.HorzAlign = Center
+          TextSettings.VertAlign = Leading
+          Text = #61530
+          TabOrder = 1
+          object ShadowEffect3: TShadowEffect
+            Distance = 3.000000000000000000
+            Direction = 45.000000000000000000
+            Softness = 0.200000002980232200
+            Opacity = 0.600000023841857900
+            ShadowColor = claBlack
+          end
         end
       end
     end
@@ -572,9 +591,10 @@ object Main: TMain
           Viewport.Height = 465.000000000000000000
           object T_Accueil: TTreeViewItem
             Cursor = crHandPoint
-            StyledSettings = [Size, Style, FontColor]
+            StyledSettings = [Size, Style]
             TextSettings.Font.Family = 'FontAwesome'
             TextSettings.Font.Size = 16.000000000000000000
+            TextSettings.FontColor = xFFD7263D
             IsChecked = False
             IsExpanded = False
             IsSelected = False
@@ -583,9 +603,10 @@ object Main: TMain
             OnClick = T_AccueilClick
           end
           object T_Patient: TTreeViewItem
-            StyledSettings = [Size, Style, FontColor]
+            StyledSettings = [Size, Style]
             TextSettings.Font.Family = 'FontAwesome'
             TextSettings.Font.Size = 16.000000000000000000
+            TextSettings.FontColor = xFF0197F6
             IsChecked = False
             IsExpanded = True
             IsSelected = False
@@ -593,9 +614,10 @@ object Main: TMain
             Text = #61981' Patient'
             OnClick = T_PatientClick
             object Patient_Recherche: TTreeViewItem
-              StyledSettings = [Size, Style, FontColor]
+              StyledSettings = [Size, Style]
               TextSettings.Font.Family = 'FontAwesome'
               TextSettings.Font.Size = 16.000000000000000000
+              TextSettings.FontColor = xFFB6006B
               IsChecked = False
               IsExpanded = False
               IsSelected = False
@@ -604,9 +626,10 @@ object Main: TMain
               OnClick = Patient_RechercheClick
             end
             object New_Patient: TTreeViewItem
-              StyledSettings = [Size, Style, FontColor]
+              StyledSettings = [Size, Style]
               TextSettings.Font.Family = 'FontAwesome'
               TextSettings.Font.Size = 16.000000000000000000
+              TextSettings.FontColor = xFFF46063
               IsChecked = False
               IsExpanded = False
               IsSelected = False
@@ -616,9 +639,10 @@ object Main: TMain
             end
           end
           object T_RDV: TTreeViewItem
-            StyledSettings = [Size, Style, FontColor]
+            StyledSettings = [Size, Style]
             TextSettings.Font.Family = 'FontAwesome'
             TextSettings.Font.Size = 16.000000000000000000
+            TextSettings.FontColor = xFF6DB425
             IsChecked = False
             IsExpanded = False
             IsSelected = False
@@ -628,9 +652,10 @@ object Main: TMain
           end
           object T_Ordo: TTreeViewItem
             Cursor = crHandPoint
-            StyledSettings = [Size, Style, FontColor]
+            StyledSettings = [Size, Style]
             TextSettings.Font.Family = 'FontAwesome'
             TextSettings.Font.Size = 16.000000000000000000
+            TextSettings.FontColor = xFF5E0D60
             IsChecked = False
             IsExpanded = False
             IsSelected = False
@@ -673,7 +698,8 @@ object Main: TMain
         end>
       TextSettings.Font.Family = 'FontAwesome'
       TextSettings.Font.Size = 16.000000000000000000
-      StyledSettings = [Size, Style, FontColor]
+      TextSettings.FontColor = xFFD7263D
+      StyledSettings = [Size, Style]
       IsSelected = True
       Size.Width = 141.000000000000000000
       Size.Height = 26.000000000000000000
@@ -786,7 +812,8 @@ object Main: TMain
         end>
       TextSettings.Font.Family = 'FontAwesome'
       TextSettings.Font.Size = 16.000000000000000000
-      StyledSettings = [Size, Style, FontColor]
+      TextSettings.FontColor = xFF0197F6
+      StyledSettings = [Size, Style]
       IsSelected = False
       Size.Width = 88.000000000000000000
       Size.Height = 30.000000000000000000
@@ -837,7 +864,8 @@ object Main: TMain
         end>
       TextSettings.Font.Family = 'FontAwesome'
       TextSettings.Font.Size = 16.000000000000000000
-      StyledSettings = [Size, Style, FontColor]
+      TextSettings.FontColor = xFF6DB425
+      StyledSettings = [Size, Style]
       IsSelected = False
       Size.Width = 129.000000000000000000
       Size.Height = 30.000000000000000000
@@ -856,7 +884,8 @@ object Main: TMain
         end>
       TextSettings.Font.Family = 'FontAwesome'
       TextSettings.Font.Size = 16.000000000000000000
-      StyledSettings = [Size, Style, FontColor]
+      TextSettings.FontColor = xFF5E0D60
+      StyledSettings = [Size, Style]
       IsSelected = False
       Size.Width = 126.000000000000000000
       Size.Height = 30.000000000000000000
@@ -875,7 +904,8 @@ object Main: TMain
         end>
       TextSettings.Font.Family = 'FontAwesome'
       TextSettings.Font.Size = 16.000000000000000000
-      StyledSettings = [Size, Style, FontColor]
+      TextSettings.FontColor = xFFB6006B
+      StyledSettings = [Size, Style]
       IsSelected = False
       Size.Width = 167.000000000000000000
       Size.Height = 30.000000000000000000
@@ -894,7 +924,8 @@ object Main: TMain
         end>
       TextSettings.Font.Family = 'FontAwesome'
       TextSettings.Font.Size = 16.000000000000000000
-      StyledSettings = [Size, Style, FontColor]
+      TextSettings.FontColor = xFFF46063
+      StyledSettings = [Size, Style]
       IsSelected = False
       Size.Width = 155.000000000000000000
       Size.Height = 30.000000000000000000

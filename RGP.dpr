@@ -10,7 +10,8 @@ uses
   U_Main in 'U_Main.pas' {Main},
   U_Option in 'U_Option.pas' {Option},
   U_Fenetre in 'U_Fenetre.pas' {Fenetre},
-  U_Entreprise in 'U_Entreprise.pas' {Entreprise};
+  U_Entreprise in 'U_Entreprise.pas' {Entreprise},
+  U_SplashScreen in 'U_SplashScreen.pas' {SplashScreen};
 
 {$R *.res}
 
@@ -18,6 +19,7 @@ begin
   Application.Initialize;
   Application.CreateForm(TMain, Main);
   Application.CreateForm(TDataModule1, DataModule1);
+  Application.CreateForm(TSplashScreen, SplashScreen);
   Application.Run;
-
 end.
+

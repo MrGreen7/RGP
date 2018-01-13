@@ -28,7 +28,7 @@ object Fenetre: TFenetre
       Size.PlatformDefault = False
       TextSettings.Font.Family = 'FontAwesome'
       TextSettings.Font.Size = 32.000000000000000000
-      TextSettings.FontColor = claCrimson
+      TextSettings.FontColor = xFFD7263D
       TextSettings.HorzAlign = Center
       Text = #61474
       TabOrder = 0
@@ -104,7 +104,7 @@ object Fenetre: TFenetre
       Size.PlatformDefault = False
       TextSettings.Font.Family = 'FontAwesome'
       TextSettings.Font.Size = 32.000000000000000000
-      TextSettings.FontColor = claCrimson
+      TextSettings.FontColor = xFFF46063
       TextSettings.HorzAlign = Center
       Text = #61870
       TabOrder = 0
@@ -160,7 +160,7 @@ object Fenetre: TFenetre
       Size.PlatformDefault = False
       TextSettings.Font.Family = 'FontAwesome'
       TextSettings.Font.Size = 32.000000000000000000
-      TextSettings.FontColor = claCrimson
+      TextSettings.FontColor = xFFB6006B
       TextSettings.HorzAlign = Center
       Text = #61442
       TabOrder = 0
@@ -216,7 +216,7 @@ object Fenetre: TFenetre
       Size.PlatformDefault = False
       TextSettings.Font.Family = 'FontAwesome'
       TextSettings.Font.Size = 32.000000000000000000
-      TextSettings.FontColor = claCrimson
+      TextSettings.FontColor = xFF5E0D60
       TextSettings.HorzAlign = Center
       Text = #61680
       TabOrder = 0
@@ -272,7 +272,7 @@ object Fenetre: TFenetre
       Size.PlatformDefault = False
       TextSettings.Font.Family = 'FontAwesome'
       TextSettings.Font.Size = 32.000000000000000000
-      TextSettings.FontColor = claCrimson
+      TextSettings.FontColor = xFF6DB425
       TextSettings.HorzAlign = Center
       Text = #61555
       TabOrder = 0
@@ -328,7 +328,7 @@ object Fenetre: TFenetre
       Size.PlatformDefault = False
       TextSettings.Font.Family = 'FontAwesome'
       TextSettings.Font.Size = 32.000000000000000000
-      TextSettings.FontColor = claCrimson
+      TextSettings.FontColor = xFF0197F6
       TextSettings.HorzAlign = Center
       Text = #61981
       TabOrder = 0
@@ -370,6 +370,7 @@ object Fenetre: TFenetre
   end
   object Label14: TLabel
     Anchors = [akRight, akBottom]
+    Cursor = crHandPoint
     StyledSettings = [Style]
     HitTest = True
     Position.X = 312.000000000000000000
@@ -384,5 +385,15 @@ object Fenetre: TFenetre
     Text = #61641
     TabOrder = 8
     OnClick = Label14Click
+    object ColorAnimation1: TColorAnimation
+      AnimationType = Out
+      Delay = 0.200000002980232200
+      Duration = 0.500000000000000000
+      PropertyName = 'TextSettings.FontColor'
+      StartValue = xFFD7263D
+      StopValue = xFF448FA3
+      Trigger = 'IsMouseOver=true'
+      TriggerInverse = 'IsMouseOver=false'
+    end
   end
 end

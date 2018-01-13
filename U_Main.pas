@@ -84,9 +84,9 @@ type
     H_Gen_NouveauP: TTabItem;
     Panel12: TPanel;
     Panel13: TPanel;
+    ColorAnimation1: TColorAnimation;
     procedure FormShow(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
-    procedure Label7Click(Sender: TObject);
     procedure P_AccueilClick(Sender: TObject);
     procedure PatientClick(Sender: TObject);
     procedure RDVClick(Sender: TObject);
@@ -95,13 +95,14 @@ type
     procedure T_PatientClick(Sender: TObject);
     procedure T_RDVClick(Sender: TObject);
     procedure T_OrdoClick(Sender: TObject);
-    procedure Label5Click(Sender: TObject);
-    procedure Label2Click(Sender: TObject);
     procedure Recherche_PatientClick(Sender: TObject);
     procedure Nouveau_PatientClick(Sender: TObject);
     procedure Patient_RechercheClick(Sender: TObject);
     procedure New_PatientClick(Sender: TObject);
-    procedure Label13Click(Sender: TObject);
+    procedure Label1Click(Sender: TObject);
+    procedure Label4Click(Sender: TObject);
+    procedure Label6Click(Sender: TObject);
+    procedure Label12Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -116,10 +117,15 @@ implementation
 uses
   U_DataModule, U_Option, U_Log, U_Entreprise;
 {$R *.fmx}
+{$R resources.RES}
 
 procedure TMain.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+var
+  Msg: Integer;
 begin
-  Halt(0);
+  Msg := MessageDlg('Vous etez sure !', TMsgDlgType.mtConfirmation, [TMsgDlgBtn.mbYes, TMsgDlgBtn.mbNo], 0);
+  if (Msg = mrNo) then
+    CanClose := False;
 end;
 
 procedure TMain.FormShow(Sender: TObject);
@@ -133,19 +139,21 @@ begin
   LogDlg.Free;
 end;
 
-procedure TMain.Label13Click(Sender: TObject);
+procedure TMain.Label12Click(Sender: TObject);
 var
-  EntrepriseDlg : TEntreprise;
+  EntrepriseDlg: TEntreprise;
 begin
   EntrepriseDlg := TEntreprise.Create(self);
   if (EntrepriseDlg.ShowModal = mrCancel) then
     EntrepriseDlg.Free;
 end;
 
-procedure TMain.Label2Click(Sender: TObject);
+procedure TMain.Label1Click(Sender: TObject);
 begin
   H_Accueil.Visible := True;
   H_Accueil.IsSelected := True;
+  P_Accueil.Visible:=True;
+  P_Accueil.IsSelected:=True;
   Patient.Visible := False;
   RDV.Visible := False;
   Ordonnance.Visible := False;
@@ -156,7 +164,7 @@ begin
   H_Gen_RechercheP.Visible := False;
 end;
 
-procedure TMain.Label5Click(Sender: TObject);
+procedure TMain.Label4Click(Sender: TObject);
 var
   FenetreDlg: TFenetre;
 begin
@@ -164,7 +172,7 @@ begin
   FenetreDlg.ShowModal;
 end;
 
-procedure TMain.Label7Click(Sender: TObject);
+procedure TMain.Label6Click(Sender: TObject);
 var
   OptionDlg: TOption;
 begin

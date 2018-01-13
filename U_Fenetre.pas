@@ -41,6 +41,7 @@ type
     Btn_RechercheP: TButton;
     Btn_NouveauP: TButton;
     Label14: TLabel;
+    ColorAnimation1: TColorAnimation;
     procedure Btn_PatientClick(Sender: TObject);
     procedure Fla_PatientFinish(Sender: TObject);
     procedure FormShow(Sender: TObject);
@@ -171,11 +172,13 @@ end;
 
 procedure TFenetre.Label14Click(Sender: TObject);
 begin
+  Btn_Accueil.OnClick(Btn_Accueil);
   Btn_RDV.OnClick(Btn_RDV);
   Btn_Patient.OnClick(Btn_Patient);
   Btn_NouveauP.OnClick(Btn_NouveauP);
   Btn_Ordonnace.OnClick(Btn_Ordonnace);
   Btn_RechercheP.OnClick(Btn_RechercheP);
+  Fla_Accueil.OnFinish(Fla_Accueil);
   Fla_RDV.OnFinish(Fla_RDV);
   Fla_Patient.OnFinish(Fla_Patient);
   Fla_NouveauP.OnFinish(Fla_NouveauP);
