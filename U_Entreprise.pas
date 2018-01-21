@@ -85,10 +85,10 @@ interface
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Controls.Presentation,
-  FMX.StdCtrls, FMX.ListBox, FMX.Edit, FMX.TabControl;
+  FMX.StdCtrls, FMX.ListBox, FMX.Edit, FMX.TabControl,U_Base_Form;
 
 type
-  TEntreprise = class(TForm)
+  TEntreprise = class(TBase_Form)
     GroupBox1: TGroupBox;
     ComboBox1: TComboBox;
     Label1: TLabel;

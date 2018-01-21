@@ -6,10 +6,10 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.EditBox,
   FMX.ComboTrackBar, FMX.Controls.Presentation, FMX.Edit, FMX.ComboEdit,
-  FMX.StdCtrls, FMX.Layouts, FMX.TreeView;
+  FMX.StdCtrls, FMX.Layouts, FMX.TreeView,U_Base_Form;
 
 type
-  TOption = class(TForm)
+  TOption = class(TBase_Form)
     Panel1: TPanel;
     TreeView1: TTreeView;
     TreeView2: TTreeView;

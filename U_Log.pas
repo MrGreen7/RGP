@@ -6,10 +6,10 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Controls.Presentation, FMX.StdCtrls, System.Actions, FMX.ActnList, FMX.Types,
   FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Edit, FMX.EditBox, FMX.NumberBox,
-  windows, ShellApi, FMX.platform.Win, FMX.Effects, IdHashMessageDigest;
+  windows, ShellApi, FMX.platform.Win, FMX.Effects, IdHashMessageDigest,U_Base_Form;
 
 type
-  TLog = class(TForm)
+  TLog = class(TBase_Form)
     Button1: TButton;
     Button2: TButton;
     Edit1: TEdit;
@@ -26,6 +26,8 @@ type
     procedure FormCreate(Sender: TObject);
     procedure Edit1Change(Sender: TObject);
     procedure Edit2Change(Sender: TObject);
+    procedure SpeedButton1MouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Single);
+    procedure SpeedButton1MouseDown(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Single);
   private
     { Private declarations }
   public
@@ -129,7 +131,7 @@ begin
       end
       else
       begin
-        ShowMessage('Bienvenu Mr.'+Edit1.Text);
+        ShowMessage('Bienvenu Mr.' + Edit1.Text);
         ModalResult := mrOk;
       end;
     end;
@@ -153,6 +155,16 @@ begin
   InsDlg := TIns.Create(self);
   if (InsDlg.ShowModal = mrCancel) then
     InsDlg.Close;
+end;
+
+procedure TLog.SpeedButton1MouseDown(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Single);
+begin
+  Edit2.Password := False;
+end;
+
+procedure TLog.SpeedButton1MouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Single);
+begin
+  Edit2.Password := True;
 end;
 
 procedure TLog.FormCreate(Sender: TObject);

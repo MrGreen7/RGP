@@ -8,10 +8,10 @@ uses
   FMX.StdCtrls, FMX.Controls.Presentation, FMX.Styles.Objects, FMX.Ani, FMX.EditBox,
   FMX.ComboTrackBar, FMX.Edit, FMX.ComboEdit, FMX.Layouts, FMX.ListBox, FMX.ExtCtrls,
   FMX.Effects, FMX.Objects, FMX.TreeView, System.Rtti, FMX.Grid.Style, FMX.ScrollBox,
-  FMX.Grid, U_Fenetre;
+  FMX.Grid, U_Fenetre,U_Base_Form;
 
 type
-  TMain = class(TForm)
+  TMain = class(TBase_Form)
     HeaderT: TTabControl;
     H_Accueil: TTabItem;
     H_Editeur: TTabItem;

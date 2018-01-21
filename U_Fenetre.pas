@@ -5,10 +5,10 @@ interface
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Controls.Presentation,
-  FMX.StdCtrls, FMX.Ani;
+  FMX.StdCtrls, FMX.Ani,U_Base_Form;
 
 type
-  TFenetre = class(TForm)
+  TFenetre = class(TBase_Form)
     F_Accueil: TPanel;
     Label1: TLabel;
     Label2: TLabel;

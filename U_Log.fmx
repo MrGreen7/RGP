@@ -8218,6 +8218,8 @@ object Log: TLog
       Size.PlatformDefault = False
       StyleLookup = 'passwordeditbutton'
       Text = 'SpeedButton1'
+      OnMouseDown = SpeedButton1MouseDown
+      OnMouseUp = SpeedButton1MouseUp
     end
     object InnerGlowEffect2: TInnerGlowEffect
       Softness = 0.400000005960464400

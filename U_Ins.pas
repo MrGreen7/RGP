@@ -5,10 +5,10 @@ interface
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.StdCtrls, FMX.Controls.Presentation,
-  FMX.Edit, FMX.Effects, IdHashMessageDigest;
+  FMX.Edit, FMX.Effects, IdHashMessageDigest, U_Base_Form;
 
 type
-  TIns = class(TForm)
+  TIns = class(TBase_Form)
     Edit1: TEdit;
     Edit2: TEdit;
     Edit3: TEdit;
@@ -158,7 +158,7 @@ begin
         Active := False;
         Button2.OnClick(Button2);
         MessageDlg('Votre compte a été engregistré', TMsgDlgType.mtConfirmation, [TMsgDlgBtn.mbOK], 0);
-        ModalResult:=mrCancel;
+        ModalResult := mrCancel;
       end;
     end;
   end;
@@ -178,7 +178,7 @@ end;
 
 procedure TIns.Button3Click(Sender: TObject);
 begin
-  ModalResult:=mrCancel;
+  ModalResult := mrCancel;
 end;
 
 procedure TIns.Edit1Change(Sender: TObject);
