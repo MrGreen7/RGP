@@ -8,7 +8,7 @@ uses
   FMX.StdCtrls, FMX.Controls.Presentation, FMX.Styles.Objects, FMX.Ani, FMX.EditBox,
   FMX.ComboTrackBar, FMX.Edit, FMX.ComboEdit, FMX.Layouts, FMX.ListBox, FMX.ExtCtrls,
   FMX.Effects, FMX.Objects, FMX.TreeView, System.Rtti, FMX.Grid.Style, FMX.ScrollBox,
-  FMX.Grid, U_Fenetre,U_Base_Form;
+  FMX.Grid, U_Fenetre, U_Base_Form, FMX.Calendar, FMX.DateTimeCtrls;
 
 type
   TMain = class(TBase_Form)
@@ -64,10 +64,10 @@ type
     T_RDV: TTreeViewItem;
     T_Ordo: TTreeViewItem;
     New_Patient: TTreeViewItem;
-    GroupBox1: TGroupBox;
-    GroupBox2: TGroupBox;
-    GroupBox3: TGroupBox;
-    GroupBox4: TGroupBox;
+    GrouBox1_Table: TGroupBox;
+    GrouBox2_Table: TGroupBox;
+    GrouBox3_Table: TGroupBox;
+    GrouBox4_Table: TGroupBox;
     StringGrid1: TStringGrid;
     StringGrid2: TStringGrid;
     StringGrid3: TStringGrid;
@@ -89,6 +89,28 @@ type
     ColorAnimation3: TColorAnimation;
     ColorAnimation4: TColorAnimation;
     ColorAnimation5: TColorAnimation;
+    ImageControl1: TImageControl;
+    GroupBox_Info: TGroupBox;
+    GroupBox_Liens: TGroupBox;
+    TabControl_NouveauP: TTabControl;
+    TabItem1: TTabItem;
+    TabItem2: TTabItem;
+    Label16: TLabel;
+    Label17: TLabel;
+    Label18: TLabel;
+    Label19: TLabel;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    DateEdit1: TDateEdit;
+    ComboBox1: TComboBox;
+    Label20: TLabel;
+    Label21: TLabel;
+    Label22: TLabel;
+    Label23: TLabel;
+    Edit3: TEdit;
+    Edit4: TEdit;
+    ComboBox2: TComboBox;
+    DateEdit2: TDateEdit;
     procedure FormShow(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure P_AccueilClick(Sender: TObject);
@@ -107,8 +129,12 @@ type
     procedure Label4Click(Sender: TObject);
     procedure Label6Click(Sender: TObject);
     procedure Label12Click(Sender: TObject);
+    procedure FormResize(Sender: TObject);
+    procedure FormPaint(Sender: TObject; Canvas: TCanvas; const ARect: TRectF);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
+    WidthX, HeightX: Integer;
   public
     { Public declarations }
   end;
@@ -119,7 +145,7 @@ var
 implementation
 
 uses
-  U_DataModule, U_Option, U_Log, U_Entreprise;
+  U_DataModule, U_Option, U_Log, U_Entreprise, Winapi.Windows;
 {$R *.fmx}
 {$R resources.RES}
 
@@ -143,6 +169,58 @@ begin
   LogDlg.Free;
 end;
 
+procedure TMain.FormCreate(Sender: TObject);
+begin
+  WidthX := 1280;
+  HeightX := 688;
+end;
+
+procedure TMain.FormPaint(Sender: TObject; Canvas: TCanvas; const ARect: TRectF);
+begin
+  WidthX := Main.Width;
+  HeightX := Main.Height;
+end;
+
+procedure TMain.FormResize(Sender: TObject);
+begin
+  // Minmum Size for MainForm -- U_Main.pas --
+  if ((Main.Width <= 1260) or (Main.Height <= 658)) then
+  begin
+    Main.Width := 1280;
+    Main.Height := 688;
+    GroupBox_Info.Width := 608;
+    Mouse_Event(MOUSEEVENTF_ABSOLUTE or MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+  end;
+  // Resize Break Points
+  if ((Main.Width >= 1600) or (Main.Height = 800)) then
+  begin
+    if Main.Width >= 1600 then
+      GroupBox_Info.Width := 940;
+    if Main.Height >= 800 then
+      TabControl_NouveauP.Height := 460;
+  end
+  else if ((Main.Width >= 1280) or (Main.Height = 688)) then
+  begin
+    if (Main.Width <= 1600) then
+    begin
+      WidthX := Main.Width - WidthX;
+      //if Width <= Main.Width then
+      Label23.Text := IntToStr(WidthX);
+      GroupBox_Info.Width := GroupBox_Info.Width + WidthX;
+    end;
+    if Main.Height <= 800 then
+    begin
+      HeightX := Main.Height - HeightX;
+      TabControl_NouveauP.Height := TabControl_NouveauP.Height + HeightX;
+    end;
+  end
+  else
+  begin
+    GroupBox_Info.Width := 608;
+    TabControl_NouveauP.Height := 275;
+  end;
+end;
+
 procedure TMain.Label12Click(Sender: TObject);
 var
   EntrepriseDlg: TEntreprise;
@@ -156,8 +234,8 @@ procedure TMain.Label1Click(Sender: TObject);
 begin
   H_Accueil.Visible := True;
   H_Accueil.IsSelected := True;
-  P_Accueil.Visible:=True;
-  P_Accueil.IsSelected:=True;
+  P_Accueil.Visible := True;
+  P_Accueil.IsSelected := True;
   Patient.Visible := False;
   RDV.Visible := False;
   Ordonnance.Visible := False;
