@@ -105,7 +105,7 @@ object Main: TMain
           Size.PlatformDefault = False
           TextSettings.Font.Family = 'FontAwesome'
           TextSettings.Font.Size = 50.000000000000000000
-          TextSettings.FontColor = claCrimson
+          TextSettings.FontColor = xFFD11149
           TextSettings.HorzAlign = Center
           TextSettings.VertAlign = Leading
           Text = #61461
@@ -120,10 +120,10 @@ object Main: TMain
           end
           object ColorAnimation1: TColorAnimation
             Delay = 0.200000002980232200
-            Duration = 0.699999988079071000
+            Duration = 0.500000000000000000
             PropertyName = 'TextSettings.FontColor'
-            StartValue = claCrimson
-            StopValue = claDarkgray
+            StartValue = xFFD11149
+            StopValue = xFF0197F6
             Trigger = 'IsMouseOver=true'
             TriggerInverse = 'IsMouseOver=false'
           end
@@ -192,7 +192,7 @@ object Main: TMain
           Size.PlatformDefault = False
           TextSettings.Font.Family = 'FontAwesome'
           TextSettings.Font.Size = 40.000000000000000000
-          TextSettings.FontColor = claCrimson
+          TextSettings.FontColor = xFF97E9A5
           TextSettings.HorzAlign = Center
           TextSettings.VertAlign = Leading
           Text = #62162
@@ -204,6 +204,15 @@ object Main: TMain
             Softness = 0.200000002980232200
             Opacity = 0.600000023841857900
             ShadowColor = claBlack
+          end
+          object ColorAnimation2: TColorAnimation
+            Delay = 0.200000002980232200
+            Duration = 0.500000000000000000
+            PropertyName = 'TextSettings.FontColor'
+            StartValue = xFF97E9A5
+            StopValue = xFF0197F6
+            Trigger = 'IsMouseOver=true'
+            TriggerInverse = 'IsMouseOver=false'
           end
         end
       end
@@ -290,7 +299,7 @@ object Main: TMain
           Size.PlatformDefault = False
           TextSettings.Font.Family = 'FontAwesome'
           TextSettings.Font.Size = 40.000000000000000000
-          TextSettings.FontColor = claCrimson
+          TextSettings.FontColor = xFF448FA3
           TextSettings.HorzAlign = Center
           TextSettings.VertAlign = Leading
           Text = #61573
@@ -302,6 +311,15 @@ object Main: TMain
             Softness = 0.200000002980232200
             Opacity = 0.600000023841857900
             ShadowColor = claBlack
+          end
+          object ColorAnimation3: TColorAnimation
+            Delay = 0.200000002980232200
+            Duration = 0.500000000000000000
+            PropertyName = 'TextSettings.FontColor'
+            StartValue = xFF448FA3
+            StopValue = xFF0197F6
+            Trigger = 'IsMouseOver=true'
+            TriggerInverse = 'IsMouseOver=false'
           end
         end
         object Label12: TLabel
@@ -315,7 +333,7 @@ object Main: TMain
           Size.PlatformDefault = False
           TextSettings.Font.Family = 'FontAwesome'
           TextSettings.Font.Size = 40.000000000000000000
-          TextSettings.FontColor = claCrimson
+          TextSettings.FontColor = xFF0F7A7B
           TextSettings.HorzAlign = Center
           TextSettings.VertAlign = Leading
           Text = #61688
@@ -327,6 +345,15 @@ object Main: TMain
             Softness = 0.200000002980232200
             Opacity = 0.600000023841857900
             ShadowColor = claBlack
+          end
+          object ColorAnimation4: TColorAnimation
+            Delay = 0.200000002980232200
+            Duration = 0.500000000000000000
+            PropertyName = 'TextSettings.FontColor'
+            StartValue = xFF0F7A7B
+            StopValue = xFF0197F6
+            Trigger = 'IsMouseOver=true'
+            TriggerInverse = 'IsMouseOver=false'
           end
         end
       end
@@ -381,7 +408,7 @@ object Main: TMain
           Size.PlatformDefault = False
           TextSettings.Font.Family = 'FontAwesome'
           TextSettings.Font.Size = 40.000000000000000000
-          TextSettings.FontColor = claCrimson
+          TextSettings.FontColor = xFFD7263D
           TextSettings.HorzAlign = Center
           TextSettings.VertAlign = Leading
           Text = #61530
@@ -392,6 +419,15 @@ object Main: TMain
             Softness = 0.200000002980232200
             Opacity = 0.600000023841857900
             ShadowColor = claBlack
+          end
+          object ColorAnimation5: TColorAnimation
+            Delay = 0.200000002980232200
+            Duration = 0.500000000000000000
+            PropertyName = 'TextSettings.FontColor'
+            StartValue = xFFD7263D
+            StopValue = xFF0197F6
+            Trigger = 'IsMouseOver=true'
+            TriggerInverse = 'IsMouseOver=false'
           end
         end
       end
@@ -711,6 +747,7 @@ object Main: TMain
       ExplicitSize.cx = 141.000000000000000000
       ExplicitSize.cy = 30.000000000000000000
       object GroupBox1: TGroupBox
+        StyledSettings = [Size, Style, FontColor, Other]
         Padding.Left = 10.000000000000000000
         Padding.Top = 25.000000000000000000
         Padding.Right = 10.000000000000000000
@@ -718,7 +755,9 @@ object Main: TMain
         Size.Width = 529.000000000000000000
         Size.Height = 233.000000000000000000
         Size.PlatformDefault = False
-        Text = 'GroupBox1'
+        Text = 'Les 10 derni'#232'res ordonnance'
+        TextSettings.Font.Family = 'FontAwesome'
+        TextSettings.Font.Size = 16.000000000000000000
         TabOrder = 3
         object StringGrid1: TStringGrid
           Align = Client
@@ -742,7 +781,7 @@ object Main: TMain
         Size.Width = 529.000000000000000000
         Size.Height = 233.000000000000000000
         Size.PlatformDefault = False
-        Text = 'GroupBox1'
+        Text = 'Les 10 derni'#232'res groupage'
         TabOrder = 2
         object StringGrid2: TStringGrid
           Align = Client
@@ -766,7 +805,7 @@ object Main: TMain
         Size.Width = 529.000000000000000000
         Size.Height = 233.000000000000000000
         Size.PlatformDefault = False
-        Text = 'GroupBox1'
+        Text = 'Les 10 prochaine rendez-vous'
         TabOrder = 1
         object StringGrid3: TStringGrid
           Align = Client
@@ -791,7 +830,7 @@ object Main: TMain
         Size.Width = 529.000000000000000000
         Size.Height = 233.000000000000000000
         Size.PlatformDefault = False
-        Text = 'GroupBox1'
+        Text = 'Les 10 derni'#232'res patient ajouter'
         TabOrder = 0
         object StringGrid4: TStringGrid
           Align = Client

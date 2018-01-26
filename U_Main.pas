@@ -85,6 +85,10 @@ type
     Panel12: TPanel;
     Panel13: TPanel;
     ColorAnimation1: TColorAnimation;
+    ColorAnimation2: TColorAnimation;
+    ColorAnimation3: TColorAnimation;
+    ColorAnimation4: TColorAnimation;
+    ColorAnimation5: TColorAnimation;
     procedure FormShow(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure P_AccueilClick(Sender: TObject);
