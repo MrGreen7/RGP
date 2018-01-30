@@ -6187,7 +6187,7 @@ object Ins: TIns
     StyledSettings = [Style]
     OnChange = Edit1Change
     object InnerGlowEffect1: TInnerGlowEffect
-      Softness = 0.400000005960464500
+      Softness = 0.400000005960464400
       GlowColor = xFFD7263D
       Opacity = 0.899999976158142100
       Enabled = False
@@ -6207,7 +6207,7 @@ object Ins: TIns
     StyledSettings = [Style, FontColor]
     OnChange = Edit2Change
     object InnerGlowEffect2: TInnerGlowEffect
-      Softness = 0.400000005960464500
+      Softness = 0.400000005960464400
       GlowColor = xFFD7263D
       Opacity = 0.899999976158142100
       Enabled = False
@@ -6229,7 +6229,7 @@ object Ins: TIns
     StyledSettings = [Style, FontColor]
     OnChange = Edit3Change
     object InnerGlowEffect3: TInnerGlowEffect
-      Softness = 0.400000005960464500
+      Softness = 0.400000005960464400
       GlowColor = xFFD7263D
       Opacity = 0.899999976158142100
       Enabled = False
@@ -6303,7 +6303,7 @@ object Ins: TIns
     StyledSettings = [Style, FontColor]
     OnChange = Edit4Change
     object InnerGlowEffect4: TInnerGlowEffect
-      Softness = 0.400000005960464500
+      Softness = 0.400000005960464400
       GlowColor = xFFD7263D
       Opacity = 0.899999976158142100
       Enabled = False

@@ -4,7 +4,7 @@ object Entreprise: TEntreprise
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = Single
   Caption = #61688' Entreprise'
-  ClientHeight = 532
+  ClientHeight = 550
   ClientWidth = 742
   Position = DesktopCenter
   FormFactor.Width = 320
@@ -90,14 +90,14 @@ object Entreprise: TEntreprise
     Position.X = 8.000000000000000000
     Position.Y = 160.000000000000000000
     Size.Width = 726.000000000000000000
-    Size.Height = 369.000000000000000000
+    Size.Height = 385.000000000000000000
     Size.PlatformDefault = False
     TabIndex = 0
     TabOrder = 1
     TabPosition = PlatformDefault
     Sizes = (
       726s
-      343s)
+      359s)
     object TabItem1: TTabItem
       CustomIcon = <
         item
@@ -234,7 +234,7 @@ object Entreprise: TEntreprise
         Align = Top
         Position.Y = 177.000000000000000000
         Size.Width = 726.000000000000000000
-        Size.Height = 168.000000000000000000
+        Size.Height = 176.000000000000000000
         Size.PlatformDefault = False
         Text = 'Contact'
         TabOrder = 1
@@ -302,6 +302,7 @@ object Entreprise: TEntreprise
         object Edit4: TEdit
           Touch.InteractiveGestures = [LongTap, DoubleTap]
           TabOrder = 6
+          FilterChar = '+0123456789'
           Position.X = 96.000000000000000000
           Position.Y = 40.000000000000000000
           Size.Width = 257.000000000000000000
@@ -311,6 +312,7 @@ object Entreprise: TEntreprise
         object Edit5: TEdit
           Touch.InteractiveGestures = [LongTap, DoubleTap]
           TabOrder = 8
+          FilterChar = '+0123456789'
           Position.X = 96.000000000000000000
           Position.Y = 68.000000000000000000
           Size.Width = 257.000000000000000000
@@ -329,6 +331,7 @@ object Entreprise: TEntreprise
         object Edit7: TEdit
           Touch.InteractiveGestures = [LongTap, DoubleTap]
           TabOrder = 7
+          FilterChar = '+0123456789'
           Position.X = 512.000000000000000000
           Position.Y = 32.000000000000000000
           Size.Width = 161.000000000000000000
@@ -346,7 +349,7 @@ object Entreprise: TEntreprise
         end
       end
       object Button1: TButton
-        Position.X = 416.000000000000000000
+        Position.X = 440.000000000000000000
         Position.Y = 310.000000000000000000
         Size.Width = 96.000000000000000000
         Size.Height = 27.000000000000000000
@@ -355,7 +358,7 @@ object Entreprise: TEntreprise
         Text = 'Ok'
       end
       object Button2: TButton
-        Position.X = 576.000000000000000000
+        Position.X = 600.000000000000000000
         Position.Y = 310.000000000000000000
         Size.Width = 96.000000000000000000
         Size.Height = 27.000000000000000000

@@ -321,10 +321,6 @@
             <Form>Log</Form>
             <FormType>fmx</FormType>
         </DCCReference>
-        <DCCReference Include="U_MainB.pas">
-            <Form>MainB</Form>
-            <FormType>fmx</FormType>
-        </DCCReference>
         <DCCReference Include="U_Ins.pas">
             <Form>Ins</Form>
             <FormType>fmx</FormType>
@@ -348,10 +344,6 @@
         </DCCReference>
         <DCCReference Include="U_Entreprise.pas">
             <Form>Entreprise</Form>
-            <FormType>fmx</FormType>
-        </DCCReference>
-        <DCCReference Include="U_SplashScreen.pas">
-            <Form>SplashScreen</Form>
             <FormType>fmx</FormType>
         </DCCReference>
         <DCCReference Include="U_Base_Form.pas">
