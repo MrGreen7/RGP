@@ -8,7 +8,7 @@ uses
   FMX.StdCtrls, FMX.Controls.Presentation, FMX.Styles.Objects, FMX.Ani, FMX.EditBox,
   FMX.ComboTrackBar, FMX.Edit, FMX.ComboEdit, FMX.Layouts, FMX.ListBox, FMX.ExtCtrls,
   FMX.Effects, FMX.Objects, FMX.TreeView, System.Rtti, FMX.Grid.Style, FMX.ScrollBox,
-  FMX.Grid, U_Fenetre, U_Base_Form, FMX.Calendar, FMX.DateTimeCtrls;
+  FMX.Grid, U_Fenetre, U_Base_Form, FMX.Calendar, FMX.DateTimeCtrls, FMX.Memo;
 
 type
   TMain = class(TBase_Form)
@@ -163,6 +163,62 @@ type
     Label21: TLabel;
     GroupBox3: TGroupBox;
     GroupBox4: TGroupBox;
+    Hemos_Label1: TLabel;
+    Hemos_Edit1: TEdit;
+    Hemos_ComboBox1: TComboBox;
+    Hemos_Edit2: TEdit;
+    Hemos_Label2: TLabel;
+    Hemos_ComboBox2: TComboBox;
+    Hemos_Edit3: TEdit;
+    Hemos_Label3: TLabel;
+    Label23: TLabel;
+    Label24: TLabel;
+    Label25: TLabel;
+    Hemos_Edit4: TEdit;
+    Edit1: TEdit;
+    Label16: TLabel;
+    Label17: TLabel;
+    GroupBox5: TGroupBox;
+    Memo1: TMemo;
+    ComboBox1: TComboBox;
+    ListBoxItem3: TListBoxItem;
+    ListBoxItem4: TListBoxItem;
+    Label22: TLabel;
+    TabControl1: TTabControl;
+    TabItem8: TTabItem;
+    TabItem9: TTabItem;
+    GroupBox6: TGroupBox;
+    CheckBox1: TCheckBox;
+    RadioButton1: TRadioButton;
+    RadioButton2: TRadioButton;
+    GroupBox7: TGroupBox;
+    CheckBox2: TCheckBox;
+    CheckBox3: TCheckBox;
+    GroupBox8: TGroupBox;
+    CheckBox4: TCheckBox;
+    GroupBox9: TGroupBox;
+    CheckBox5: TCheckBox;
+    GroupBox10: TGroupBox;
+    CheckBox6: TCheckBox;
+    GroupBox11: TGroupBox;
+    CheckBox7: TCheckBox;
+    CheckBox8: TCheckBox;
+    GroupBox12: TGroupBox;
+    CheckBox9: TCheckBox;
+    GroupBox13: TGroupBox;
+    CheckBox11: TCheckBox;
+    CheckBox12: TCheckBox;
+    CheckBox13: TCheckBox;
+    CheckBox10: TCheckBox;
+    CheckBox14: TCheckBox;
+    CheckBox15: TCheckBox;
+    GroupBox15: TGroupBox;
+    CheckBox17: TCheckBox;
+    CheckBox18: TCheckBox;
+    CheckBox19: TCheckBox;
+    CheckBox20: TCheckBox;
+    GroupBox16: TGroupBox;
+    GroupBox17: TGroupBox;
     procedure FormShow(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure P_AccueilClick(Sender: TObject);
@@ -184,6 +240,8 @@ type
     procedure FormResize(Sender: TObject);
     procedure FormPaint(Sender: TObject; Canvas: TCanvas; const ARect: TRectF);
     procedure FormCreate(Sender: TObject);
+    procedure Hemos_Edit1Change(Sender: TObject);
+    procedure Hemos_Edit2Change(Sender: TObject);
   private
     { Private declarations }
     WidthX, HeightX: Integer;
@@ -200,6 +258,29 @@ uses
   U_DataModule, U_Option, U_Log, U_Entreprise, Winapi.Windows;
 {$R *.fmx}
 {$R resources.RES}
+
+procedure TMain.Hemos_Edit1Change(Sender: TObject);
+begin
+  if (Hemos_Edit1.Text <> '') then
+    Hemos_Combobox1.Enabled := True
+  else
+  begin
+    Hemos_ComboBox1.Enabled := False;
+    Hemos_ComboBox1.ItemIndex := -1;
+  end;
+end;
+
+procedure TMain.Hemos_Edit2Change(Sender: TObject);
+begin
+  if (Hemos_Edit2.Text <> '') then
+    Hemos_Combobox2.Enabled := True
+  else
+  begin
+    Hemos_ComboBox2.Enabled := False;
+    Hemos_ComboBox2.ItemIndex := -1;
+  end;
+
+end;
 
 procedure TMain.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
 var
@@ -292,12 +373,47 @@ begin
       AC_Combobox3.Width := 360;
       AC_Combobox4.Width := 360;
       //  Position
-      AC_Edit8.Position.X:=640;
-      AC_Edit9.Position.X:=640;
+      AC_Edit8.Position.X := 640;
+      AC_Edit9.Position.X := 640;
       AC_Combobox4.Position.X := 640;
-      AC_Label5.Position.X:= 539;
-      AC_Label6.Position.X:= 539;
-      AC_Label7.Position.X:= 539;
+      AC_Label5.Position.X := 539;
+      AC_Label6.Position.X := 539;
+      AC_Label7.Position.X := 539;
+    end;
+    //------------------------| Hemogramme |--------------------
+      //LEFT
+    begin
+      Hemog_Label1.Position.X := 10;
+      Hemog_Label2.Position.X := 10;
+      Hemog_Label3.Position.X := 10;
+      Hemog_Label4.Position.X := 10;
+
+      Hemog_Edit1.Position.X := 104;
+      Hemog_Edit2.Position.X := 104;
+      Hemog_Edit3.Position.X := 104;
+      Hemog_Edit4.Position.X := 104;
+
+      Hemog_Edit1.Width := 417;
+      Hemog_Edit2.Width := 417;
+      Hemog_Edit3.Width := 417;
+      Hemog_Edit4.Width := 417;
+    end;
+      //Right
+    begin
+      Hemog_Label5.Position.X := 525;
+      Hemog_Label6.Position.X := 525;
+      Hemog_Label7.Position.X := 525;
+      Hemog_Label8.Position.X := 525;
+
+      Hemog_Edit5.Position.X := 626;
+      Hemog_Edit6.Position.X := 626;
+      Hemog_Edit7.Position.X := 626;
+      Hemog_Edit8.Position.X := 626;
+
+      Hemog_Edit5.Width := 417;
+      Hemog_Edit6.Width := 417;
+      Hemog_Edit7.Width := 417;
+      Hemog_Edit8.Width := 417;
     end;
     if Main.Height >= 700 then
       TabControl_NouveauP.Height := 460;
@@ -337,12 +453,48 @@ begin
       AC_Combobox3.Width := 217;
       AC_Combobox4.Width := 217;
       //  Position
-      AC_Edit8.Position.X:=440;
-      AC_Edit9.Position.X:=440;
+      AC_Edit8.Position.X := 440;
+      AC_Edit9.Position.X := 440;
       AC_Combobox4.Position.X := 440;
-      AC_Label5.Position.X:= 339;
-      AC_Label6.Position.X:= 339;
-      AC_Label7.Position.X:= 339;
+      AC_Label5.Position.X := 339;
+      AC_Label6.Position.X := 339;
+      AC_Label7.Position.X := 339;
+      //------------------------| Hemogramme |--------------------
+      //LEFT
+      begin
+        Hemog_Label1.Position.X := 10;
+        Hemog_Label2.Position.X := 10;
+        Hemog_Label3.Position.X := 10;
+        Hemog_Label4.Position.X := 10;
+
+        Hemog_Edit1.Position.X := 104;
+        Hemog_Edit2.Position.X := 104;
+        Hemog_Edit3.Position.X := 104;
+        Hemog_Edit4.Position.X := 104;
+
+        Hemog_Edit1.Width := 417;
+        Hemog_Edit2.Width := 417;
+        Hemog_Edit3.Width := 417;
+        Hemog_Edit4.Width := 417;
+      end;
+      //Right
+      begin
+        Hemog_Label5.Position.X := 525;
+        Hemog_Label6.Position.X := 525;
+        Hemog_Label7.Position.X := 525;
+        Hemog_Label8.Position.X := 525;
+
+        Hemog_Edit5.Position.X := 626;
+        Hemog_Edit6.Position.X := 626;
+        Hemog_Edit7.Position.X := 626;
+        Hemog_Edit8.Position.X := 626;
+
+        Hemog_Edit5.Width := 417;
+        Hemog_Edit6.Width := 417;
+        Hemog_Edit7.Width := 417;
+        Hemog_Edit8.Width := 417;
+      end;
+
       if Main.Height <= 700 then
         TabControl_NouveauP.Height := 275;
     end;

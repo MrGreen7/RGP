@@ -4,6 +4,20 @@ object Base_Form: TBase_Form
   Caption = 'Form1'
   ClientHeight = 480
   ClientWidth = 640
+  Fill.Kind = Gradient
+  Fill.Gradient.Points = <
+    item
+      Color = xFFEF8B8B
+      Offset = 0.000000000000000000
+    end
+    item
+      Color = xFFCCEEEB
+      Offset = 0.456521749496460000
+    end>
+  Fill.Gradient.StartPosition.X = 0.500000000000000000
+  Fill.Gradient.StartPosition.Y = 1.000000000000000000
+  Fill.Gradient.StopPosition.X = 0.499999970197677600
+  Fill.Gradient.StopPosition.Y = 0.000000000000000000
   Position = DesktopCenter
   StyleBook = DataModule1.Windows10
   FormFactor.Width = 320
