@@ -11,6 +11,8 @@ object Entreprise: TEntreprise
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
   OnCreate = FormCreate
+  OnClose = FormClose
+  OnShow = FormShow
   DesignerMasterStyle = 0
   object GroupBox1: TGroupBox
     Position.X = -1.000000000000000000
@@ -158,6 +160,7 @@ object Entreprise: TEntreprise
           TabOrder = 7
         end
         object ComboBox2: TComboBox
+          ItemHeight = 30.000000000000000000
           Position.X = 104.000000000000000000
           Position.Y = 32.000000000000000000
           Size.Width = 249.000000000000000000
@@ -167,6 +170,7 @@ object Entreprise: TEntreprise
           OnChange = ComboBox2Change
         end
         object ComboBox3: TComboBox
+          ItemHeight = 30.000000000000000000
           Position.X = 512.000000000000000000
           Position.Y = 32.000000000000000000
           Size.Width = 161.000000000000000000
@@ -217,6 +221,7 @@ object Entreprise: TEntreprise
           TextSettings.HorzAlign = Center
           Position.X = 256.000000000000000000
           Position.Y = 76.000000000000000000
+          HitTest = False
           OnChange = Edit_Code_WilayaChange
         end
         object Edit_Code_Postal: TEdit
@@ -228,6 +233,7 @@ object Entreprise: TEntreprise
           TextSettings.HorzAlign = Center
           Position.X = 576.000000000000000000
           Position.Y = 76.000000000000000000
+          HitTest = False
         end
       end
       object GroupBox3: TGroupBox
@@ -302,6 +308,7 @@ object Entreprise: TEntreprise
         object Edit4: TEdit
           Touch.InteractiveGestures = [LongTap, DoubleTap]
           TabOrder = 6
+          MaxLength = 9
           FilterChar = '+0123456789'
           Position.X = 96.000000000000000000
           Position.Y = 40.000000000000000000
@@ -309,7 +316,7 @@ object Entreprise: TEntreprise
           Size.Height = 22.000000000000000000
           Size.PlatformDefault = False
         end
-        object Edit5: TEdit
+        object Edit6: TEdit
           Touch.InteractiveGestures = [LongTap, DoubleTap]
           TabOrder = 8
           FilterChar = '+0123456789'
@@ -319,7 +326,7 @@ object Entreprise: TEntreprise
           Size.Height = 22.000000000000000000
           Size.PlatformDefault = False
         end
-        object Edit6: TEdit
+        object Edit8: TEdit
           Touch.InteractiveGestures = [LongTap, DoubleTap]
           TabOrder = 10
           Position.X = 96.000000000000000000
@@ -328,9 +335,10 @@ object Entreprise: TEntreprise
           Size.Height = 22.000000000000000000
           Size.PlatformDefault = False
         end
-        object Edit7: TEdit
+        object Edit5: TEdit
           Touch.InteractiveGestures = [LongTap, DoubleTap]
           TabOrder = 7
+          MaxLength = 13
           FilterChar = '+0123456789'
           Position.X = 512.000000000000000000
           Position.Y = 32.000000000000000000
@@ -338,7 +346,7 @@ object Entreprise: TEntreprise
           Size.Height = 22.000000000000000000
           Size.PlatformDefault = False
         end
-        object Edit8: TEdit
+        object Edit7: TEdit
           Touch.InteractiveGestures = [LongTap, DoubleTap]
           TabOrder = 9
           Position.X = 512.000000000000000000
@@ -349,13 +357,14 @@ object Entreprise: TEntreprise
         end
       end
       object Button1: TButton
-        Position.X = 440.000000000000000000
+        Position.X = 256.000000000000000000
         Position.Y = 310.000000000000000000
         Size.Width = 96.000000000000000000
         Size.Height = 27.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 2
         Text = 'Ok'
+        OnClick = Button1Click
       end
       object Button2: TButton
         Position.X = 600.000000000000000000
@@ -366,6 +375,16 @@ object Entreprise: TEntreprise
         TabOrder = 3
         Text = 'Annuler'
         OnClick = Button2Click
+      end
+      object Button3: TButton
+        Position.X = 428.000000000000000000
+        Position.Y = 310.000000000000000000
+        Size.Width = 96.000000000000000000
+        Size.Height = 27.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        Text = 'Edit'
+        OnClick = Button3Click
       end
     end
   end

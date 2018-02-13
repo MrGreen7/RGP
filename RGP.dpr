@@ -10,7 +10,8 @@ uses
   U_Option in 'U_Option.pas' {Option},
   U_Fenetre in 'U_Fenetre.pas' {Fenetre},
   U_Entreprise in 'U_Entreprise.pas' {Entreprise},
-  U_Base_Form in 'U_Base_Form.pas' {Base_Form};
+  U_Base_Form in 'U_Base_Form.pas' {Base_Form},
+  U_Base_Print in 'U_Base_Print.pas' {Base_Print};
 
 {$R *.res}
 
@@ -19,6 +20,7 @@ begin
   Application.CreateForm(TMain, Main);
   Application.CreateForm(TDataModule1, DataModule1);
   Application.CreateForm(TBase_Form, Base_Form);
+  Application.CreateForm(TBase_Print, Base_Print);
   Application.Run;
 end.
 

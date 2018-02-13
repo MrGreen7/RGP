@@ -255,7 +255,7 @@ var
 implementation
 
 uses
-  U_DataModule, U_Option, U_Log, U_Entreprise, Winapi.Windows;
+  U_Option, U_Log, U_Entreprise, Winapi.Windows;
 {$R *.fmx}
 {$R resources.RES}
 

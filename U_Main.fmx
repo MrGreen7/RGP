@@ -1,7 +1,7 @@
 object Main: TMain
   Left = 0
   Top = 0
-  Caption = 'Form1'
+  Caption = 'Main'
   ClientHeight = 658
   ClientWidth = 1260
   Position = DesktopCenter
@@ -1933,6 +1933,8 @@ object Main: TMain
               StyleLookup = ''
               TabOrder = 0
               Text = 'La s'#233'rologie viral'
+              ExplicitSize.cx = 140.000000000000000000
+              ExplicitSize.cy = 30.000000000000000000
               object GroupBox6: TGroupBox
                 Align = Left
                 Size.Width = 297.000000000000000000
@@ -2031,6 +2033,8 @@ object Main: TMain
               StyleLookup = ''
               TabOrder = 0
               Text = 'La s'#233'rologie bact'#233'rienne | Parasitaire'
+              ExplicitSize.cx = 279.000000000000000000
+              ExplicitSize.cy = 30.000000000000000000
               object GroupBox16: TGroupBox
                 Align = Left
                 Padding.Left = 10.000000000000000000

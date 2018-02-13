@@ -350,6 +350,10 @@
             <Form>Base_Form</Form>
             <FormType>fmx</FormType>
         </DCCReference>
+        <DCCReference Include="U_Base_Print.pas">
+            <Form>Base_Print</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

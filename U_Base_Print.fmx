@@ -1,0 +1,53 @@
+object Base_Print: TBase_Print
+  Left = 0
+  Top = 0
+  BorderStyle = Single
+  Caption = 'Base_Print'
+  ClientHeight = 700
+  ClientWidth = 794
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Base_ToolBar: TToolBar
+    Size.Width = 794.000000000000000000
+    Size.Height = 57.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Base_Print_Button: TButton
+      Position.X = 108.000000000000000000
+      Position.Y = 12.000000000000000000
+      Size.Width = 105.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Print'
+      OnClick = Base_Print_ButtonClick
+    end
+    object Base_Cancel_Button: TButton
+      Position.X = 580.000000000000000000
+      Position.Y = 12.000000000000000000
+      Size.Width = 105.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Annuler'
+      OnClick = Base_Cancel_ButtonClick
+    end
+  end
+  object Base_ScrollBox: TScrollBox
+    Align = Client
+    Size.Width = 794.000000000000000000
+    Size.Height = 643.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    OnMouseWheel = Base_ScrollBoxMouseWheel
+    OnCalcContentBounds = Base_ScrollBoxCalcContentBounds
+    Viewport.Width = 794.000000000000000000
+    Viewport.Height = 643.000000000000000000
+  end
+  object Base_PrintDialog: TPrintDialog
+    Left = 320
+    Top = 8
+  end
+end
