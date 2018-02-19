@@ -1,0 +1,301 @@
+object Frame3: TFrame3
+  Size.Width = 1059.000000000000000000
+  Size.Height = 275.000000000000000000
+  Size.PlatformDefault = False
+  OnResize = FrameResize
+  object L_Top: TLayout
+    Align = Top
+    Size.Width = 1059.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Label32: TLabel
+      Position.X = 421.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 216.000000000000000000
+      Size.Height = 23.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'La num'#233'ration de formale sanguine NFS'
+      TabOrder = 8
+    end
+  end
+  object Layout_Frame3: TLayout
+    Align = Client
+    Size.Width = 1059.000000000000000000
+    Size.Height = 242.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object L_Left: TLayout
+      Align = Left
+      Size.Width = 528.000000000000000000
+      Size.Height = 242.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object Hemog_Edit4: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akRight]
+        TabOrder = 6
+        MaxLength = 30
+        Position.X = 95.000000000000000000
+        Position.Y = 200.000000000000000000
+        Size.Width = 417.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Volume globulaire moyen'
+        object Hemog_LabelEdit4: TLabel
+          Align = Right
+          StyledSettings = [Family, Style, FontColor]
+          Position.X = 400.000000000000000000
+          Size.Width = 17.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          Text = #181#179
+          TabOrder = 0
+        end
+      end
+      object Hemog_Label4: TLabel
+        Anchors = [akLeft]
+        Hint = 'Volume globulaire moyen'
+        Position.X = 15.000000000000000000
+        Position.Y = 200.000000000000000000
+        Size.Width = 45.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'VGM'
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 23
+      end
+      object Hemog_Label3: TLabel
+        Anchors = [akLeft]
+        Position.X = 15.000000000000000000
+        Position.Y = 138.000000000000000000
+        Size.Width = 79.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'H'#233'matocrite'
+        TabOrder = 24
+      end
+      object Hemog_Edit3: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akRight]
+        TabOrder = 4
+        MaxLength = 30
+        Position.X = 95.000000000000000000
+        Position.Y = 138.000000000000000000
+        Size.Width = 417.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        object Hemog_LabelEdit3: TLabel
+          Align = Right
+          StyledSettings = [Family, Style, FontColor]
+          Position.X = 400.000000000000000000
+          Size.Width = 17.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          Text = '%'
+          TabOrder = 0
+        end
+      end
+      object Hemog_Edit2: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akRight]
+        TabOrder = 2
+        MaxLength = 30
+        Position.X = 95.000000000000000000
+        Position.Y = 76.000000000000000000
+        Size.Width = 417.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        object Hemog_LabelEdit2: TLabel
+          Align = Right
+          StyledSettings = [Family, Style, FontColor]
+          Position.X = 360.000000000000000000
+          Size.Width = 57.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'g/100ml'
+          TabOrder = 0
+        end
+      end
+      object Hemog_Label2: TLabel
+        Anchors = [akLeft]
+        Position.X = 15.000000000000000000
+        Position.Y = 76.000000000000000000
+        Size.Width = 79.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'H'#233'moglobin'
+        TabOrder = 26
+      end
+      object Hemog_Label1: TLabel
+        Anchors = [akLeft]
+        Position.X = 15.000000000000000000
+        Position.Y = 15.000000000000000000
+        Size.Width = 77.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'H'#233'maties'
+        TabOrder = 28
+      end
+      object Hemog_Edit1: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akRight]
+        TabOrder = 0
+        MaxLength = 30
+        Position.X = 95.000000000000000000
+        Position.Y = 15.000000000000000000
+        Size.Width = 417.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        object Hemog_LabelEdit1: TLabel
+          Align = Right
+          StyledSettings = [Family, Style, FontColor]
+          Position.X = 336.000000000000000000
+          Size.Width = 81.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'millions/mm3'
+          TabOrder = 0
+        end
+      end
+    end
+    object L_Right: TLayout
+      Align = Right
+      Position.X = 531.000000000000000000
+      Size.Width = 528.000000000000000000
+      Size.Height = 242.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object Hemog_Edit6: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akRight]
+        TabOrder = 1
+        MaxLength = 30
+        Position.X = 95.000000000000000000
+        Position.Y = 138.000000000000000000
+        Size.Width = 417.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Teneur corpusculaire moyenne en h'#233'moglobine'
+        object Label19: TLabel
+          Align = Right
+          StyledSettings = [Family, Style, FontColor]
+          Position.X = 400.000000000000000000
+          Size.Width = 17.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          Text = '%'
+          TabOrder = 0
+        end
+      end
+      object Hemog_Label6: TLabel
+        Anchors = [akLeft]
+        Position.X = 15.000000000000000000
+        Position.Y = 76.000000000000000000
+        Size.Width = 101.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'CCMH'
+        TabOrder = 19
+      end
+      object Hemog_Edit5: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akRight]
+        TabOrder = 0
+        MaxLength = 30
+        Position.X = 95.000000000000000000
+        Position.Y = 15.000000000000000000
+        Size.Width = 417.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Concentration corpusculaire moyenne en h'#233'moglobine'
+        object Label18: TLabel
+          Align = Right
+          StyledSettings = [Family, Style, FontColor]
+          Position.X = 400.000000000000000000
+          Size.Width = 17.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          Text = #961'g'
+          TabOrder = 0
+        end
+      end
+      object Hemog_Label5: TLabel
+        Anchors = [akLeft]
+        Position.X = 15.000000000000000000
+        Position.Y = 15.000000000000000000
+        Size.Width = 77.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'TCMH'
+        TabOrder = 20
+      end
+      object Hemog_Label7: TLabel
+        Anchors = [akLeft]
+        Position.X = 15.000000000000000000
+        Position.Y = 138.000000000000000000
+        Size.Width = 82.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Leucocytes'
+        TabOrder = 18
+      end
+      object Hemog_Edit7: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akRight]
+        TabOrder = 2
+        MaxLength = 30
+        Position.X = 95.000000000000000000
+        Position.Y = 76.000000000000000000
+        Size.Width = 417.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        object Label20: TLabel
+          Align = Right
+          StyledSettings = [Family, Style, FontColor]
+          Position.X = 352.000000000000000000
+          Size.Width = 65.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'mm3 * 10'#179
+          TabOrder = 0
+        end
+      end
+      object Hemog_Edit8: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akRight]
+        TabOrder = 3
+        MaxLength = 30
+        Position.X = 95.000000000000000000
+        Position.Y = 200.000000000000000000
+        Size.Width = 417.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        object Label21: TLabel
+          Align = Right
+          StyledSettings = [Family, Style, FontColor]
+          Position.X = 400.000000000000000000
+          Size.Width = 17.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          Text = '%'
+          TabOrder = 0
+        end
+      end
+      object Hemog_Label8: TLabel
+        Anchors = [akLeft]
+        Hint = 'Volume globulaire moyen'
+        Position.X = 15.000000000000000000
+        Position.Y = 200.000000000000000000
+        Size.Width = 82.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'R'#233'ticulocytes'
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 17
+      end
+    end
+  end
+end

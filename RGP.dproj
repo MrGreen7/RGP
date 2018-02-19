@@ -354,6 +354,31 @@
             <Form>Base_Print</Form>
             <FormType>fmx</FormType>
         </DCCReference>
+        <DCCReference Include="U_Frame_Inf_Principale.pas">
+            <Form>Frame1</Form>
+            <FormType>fmx</FormType>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="U_Frame_Information.pas">
+            <Form>Frame2</Form>
+            <FormType>fmx</FormType>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="U_Frame_Hemogramme.pas">
+            <Form>Frame3</Form>
+            <FormType>fmx</FormType>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="U_Frame_Hemostase.pas">
+            <Form>Frame4</Form>
+            <FormType>fmx</FormType>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="U_Frame_Serologie.pas">
+            <Form>Frame5</Form>
+            <FormType>fmx</FormType>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

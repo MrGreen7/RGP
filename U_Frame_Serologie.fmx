@@ -1,0 +1,324 @@
+object Frame5: TFrame5
+  Size.Width = 1059.000000000000000000
+  Size.Height = 275.000000000000000000
+  Size.PlatformDefault = False
+  object TabControl1: TTabControl
+    Align = Client
+    Margins.Top = 5.000000000000000000
+    Margins.Bottom = 5.000000000000000000
+    Size.Width = 1059.000000000000000000
+    Size.Height = 265.000000000000000000
+    Size.PlatformDefault = False
+    TabIndex = 1
+    TabOrder = 0
+    TabPosition = Bottom
+    Sizes = (
+      1059s
+      239s
+      1059s
+      239s)
+    object TabItem8: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 109.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'La s'#233'rologie viral'
+      ExplicitSize.cx = 140.000000000000000000
+      ExplicitSize.cy = 30.000000000000000000
+      object GroupBox6: TGroupBox
+        Align = Left
+        Size.Width = 297.000000000000000000
+        Size.Height = 239.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'La s'#233'rologie de l'#39'h'#233'patite A'
+        TabOrder = 3
+        object CheckBox1: TCheckBox
+          Position.X = 92.000000000000000000
+          Position.Y = 65.000000000000000000
+          TabOrder = 0
+          Text = 'Anti-VHA'
+        end
+        object RadioButton1: TRadioButton
+          Position.X = 50.000000000000000000
+          Position.Y = 121.000000000000000000
+          Size.Width = 61.000000000000000000
+          Size.Height = 24.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          Text = 'IgM'
+        end
+        object RadioButton2: TRadioButton
+          Position.X = 186.000000000000000000
+          Position.Y = 121.000000000000000000
+          Size.Width = 61.000000000000000000
+          Size.Height = 24.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Text = 'IgG'
+        end
+      end
+      object GroupBox7: TGroupBox
+        Align = Left
+        Position.X = 297.000000000000000000
+        Size.Width = 224.000000000000000000
+        Size.Height = 239.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'La s'#233'rologie de l'#39'h'#233'patite B'
+        TabOrder = 0
+        object CheckBox2: TCheckBox
+          Position.X = 16.000000000000000000
+          Position.Y = 49.000000000000000000
+          TabOrder = 2
+          Text = 'Anti-VHB'
+        end
+        object CheckBox3: TCheckBox
+          Position.X = 16.000000000000000000
+          Position.Y = 137.000000000000000000
+          Size.Width = 120.000000000000000000
+          Size.Height = 24.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Text = 'Antig'#232'ne HBs'
+        end
+      end
+      object GroupBox8: TGroupBox
+        Align = Left
+        Position.X = 521.000000000000000000
+        Size.Width = 224.000000000000000000
+        Size.Height = 239.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'La s'#233'rologie de l'#39'h'#233'patite C'
+        TabOrder = 2
+        object CheckBox4: TCheckBox
+          Position.X = 20.000000000000000000
+          Position.Y = 93.000000000000000000
+          TabOrder = 1
+          Text = 'Anti-VHC'
+        end
+      end
+      object GroupBox9: TGroupBox
+        Align = Left
+        Position.X = 745.000000000000000000
+        Size.Width = 297.000000000000000000
+        Size.Height = 239.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'La s'#233'rologie du VIH / Sida'
+        TabOrder = 1
+        object CheckBox5: TCheckBox
+          Position.X = 36.000000000000000000
+          Position.Y = 93.000000000000000000
+          TabOrder = 1
+          Text = 'Anti-VIH'
+        end
+      end
+    end
+    object TabItem9: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 214.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'La s'#233'rologie bact'#233'rienne | Parasitaire'
+      ExplicitSize.cx = 279.000000000000000000
+      ExplicitSize.cy = 30.000000000000000000
+      object GroupBox16: TGroupBox
+        Align = Left
+        Padding.Left = 10.000000000000000000
+        Padding.Top = 10.000000000000000000
+        Padding.Right = 10.000000000000000000
+        Padding.Bottom = 10.000000000000000000
+        Size.Width = 777.000000000000000000
+        Size.Height = 239.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'La s'#233'rologie bact'#233'rienne'
+        TabOrder = 0
+        object GroupBox10: TGroupBox
+          Align = Left
+          Margins.Top = 20.000000000000000000
+          Position.X = 10.000000000000000000
+          Position.Y = 30.000000000000000000
+          Size.Width = 249.000000000000000000
+          Size.Height = 199.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'La mononucl'#233'ose infectieuse'
+          TabOrder = 0
+          object CheckBox6: TCheckBox
+            Position.X = 116.000000000000000000
+            Position.Y = 35.000000000000000000
+            TabOrder = 1
+            Text = 'Anti-EBV'
+          end
+          object CheckBox11: TCheckBox
+            Position.X = 20.000000000000000000
+            Position.Y = 35.000000000000000000
+            Size.Width = 120.000000000000000000
+            Size.Height = 24.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            Text = 'IgG-VCA'
+          end
+          object CheckBox12: TCheckBox
+            Position.X = 20.000000000000000000
+            Position.Y = 107.000000000000000000
+            Size.Width = 120.000000000000000000
+            Size.Height = 24.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 2
+            Text = 'IgG-EBNA'
+          end
+          object CheckBox13: TCheckBox
+            Position.X = 116.000000000000000000
+            Position.Y = 107.000000000000000000
+            Size.Width = 120.000000000000000000
+            Size.Height = 24.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 3
+            Text = 'IgG-EA'
+          end
+        end
+        object GroupBox11: TGroupBox
+          Margins.Top = 20.000000000000000000
+          Position.X = 512.000000000000000000
+          Position.Y = 30.000000000000000000
+          Size.Width = 255.000000000000000000
+          Size.Height = 99.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'salmonelloses (fi'#232'vre typho'#239'de)'
+          TabOrder = 1
+          object CheckBox7: TCheckBox
+            Position.X = 16.000000000000000000
+            Position.Y = 25.000000000000000000
+            TabOrder = 0
+            Text = 'Anti-O'
+          end
+          object CheckBox8: TCheckBox
+            Position.X = 16.000000000000000000
+            Position.Y = 57.000000000000000000
+            Size.Width = 120.000000000000000000
+            Size.Height = 24.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            Text = 'Anti-H'
+          end
+        end
+        object GroupBox12: TGroupBox
+          Margins.Top = 20.000000000000000000
+          Position.X = 512.000000000000000000
+          Position.Y = 128.000000000000000000
+          Size.Width = 257.000000000000000000
+          Size.Height = 65.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'La s'#233'rologie de la syphilis'
+          TabOrder = 2
+          object CheckBox9: TCheckBox
+            Position.X = 20.000000000000000000
+            Position.Y = 35.000000000000000000
+            TabOrder = 0
+            Text = 'Anti-VHC'
+          end
+        end
+        object GroupBox13: TGroupBox
+          Align = Left
+          Margins.Top = 20.000000000000000000
+          Position.X = 259.000000000000000000
+          Position.Y = 30.000000000000000000
+          Size.Width = 254.000000000000000000
+          Size.Height = 199.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'La s'#233'rologie de la rub'#233'ole'
+          TabOrder = 3
+          object CheckBox10: TCheckBox
+            Position.X = 28.000000000000000000
+            Position.Y = 42.000000000000000000
+            Size.Width = 165.000000000000000000
+            Size.Height = 19.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            Text = 'Anticorps type IgM'
+          end
+          object CheckBox14: TCheckBox
+            Position.X = 28.000000000000000000
+            Position.Y = 82.000000000000000000
+            Size.Width = 157.000000000000000000
+            Size.Height = 24.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            Text = 'Anticorps type IgA'
+          end
+          object CheckBox15: TCheckBox
+            Position.X = 28.000000000000000000
+            Position.Y = 122.000000000000000000
+            Size.Width = 165.000000000000000000
+            Size.Height = 24.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 2
+            Text = 'Anticorps type IgG'
+          end
+        end
+      end
+      object GroupBox17: TGroupBox
+        Align = Right
+        Padding.Left = 10.000000000000000000
+        Padding.Top = 20.000000000000000000
+        Padding.Right = 10.000000000000000000
+        Padding.Bottom = 10.000000000000000000
+        Position.X = 784.000000000000000000
+        Size.Width = 275.000000000000000000
+        Size.Height = 239.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'La s'#233'rologie parasitaire'
+        TabOrder = 1
+        object GroupBox15: TGroupBox
+          Align = Client
+          Size.Width = 255.000000000000000000
+          Size.Height = 209.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'La s'#233'rologie de la toxoplasmose'
+          TabOrder = 0
+          object CheckBox17: TCheckBox
+            Position.X = 12.000000000000000000
+            Position.Y = 44.000000000000000000
+            TabOrder = 0
+            Text = 'Anti-EBV'
+          end
+          object CheckBox18: TCheckBox
+            Position.X = 12.000000000000000000
+            Position.Y = 108.000000000000000000
+            Size.Width = 120.000000000000000000
+            Size.Height = 24.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 2
+            Text = 'IgG-VCA'
+          end
+          object CheckBox19: TCheckBox
+            Position.X = 116.000000000000000000
+            Position.Y = 44.000000000000000000
+            Size.Width = 120.000000000000000000
+            Size.Height = 24.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            Text = 'IgG-EBNA'
+          end
+          object CheckBox20: TCheckBox
+            Position.X = 116.000000000000000000
+            Position.Y = 108.000000000000000000
+            Size.Width = 120.000000000000000000
+            Size.Height = 24.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 3
+            Text = 'IgG-EA'
+          end
+        end
+      end
+    end
+  end
+end

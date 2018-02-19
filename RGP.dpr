@@ -11,16 +11,21 @@ uses
   U_Fenetre in 'U_Fenetre.pas' {Fenetre},
   U_Entreprise in 'U_Entreprise.pas' {Entreprise},
   U_Base_Form in 'U_Base_Form.pas' {Base_Form},
-  U_Base_Print in 'U_Base_Print.pas' {Base_Print};
+  U_Base_Print in 'U_Base_Print.pas' {Base_Print},
+  U_Frame_Inf_Principale in 'U_Frame_Inf_Principale.pas' {Frame1: TFrame},
+  U_Frame_Information in 'U_Frame_Information.pas' {Frame2: TFrame},
+  U_Frame_Hemogramme in 'U_Frame_Hemogramme.pas' {Frame3: TFrame},
+  U_Frame_Hemostase in 'U_Frame_Hemostase.pas' {Frame4: TFrame},
+  U_Frame_Serologie in 'U_Frame_Serologie.pas' {Frame5: TFrame};
 
 {$R *.res}
 
 begin
   Application.Initialize;
-  Application.CreateForm(TMain, Main);
-  Application.CreateForm(TDataModule1, DataModule1);
-  Application.CreateForm(TBase_Form, Base_Form);
-  Application.CreateForm(TBase_Print, Base_Print);
-  Application.Run;
+  AApplication.CreateForm(TMain, Main);
+  AApplication.CreateForm(TDataModule1, DataModule1);
+  AApplication.CreateForm(TBase_Form, Base_Form);
+  AApplication.CreateForm(TBase_Print, Base_Print);
+  ication.Run;
 end.
 

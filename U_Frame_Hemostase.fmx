@@ -1,0 +1,270 @@
+object Frame4: TFrame4
+  Size.Width = 1059.000000000000000000
+  Size.Height = 275.000000000000000000
+  Size.PlatformDefault = False
+  object GroupBox3: TGroupBox
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 275.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'L'#39'exploration de l'#39'h'#233'mostatse'
+    TabOrder = 1
+    object L_Left: TLayout
+      Align = Left
+      Margins.Top = 20.000000000000000000
+      Position.Y = 20.000000000000000000
+      Size.Width = 319.000000000000000000
+      Size.Height = 255.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 9
+      object Hemos_Edit1: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akRight]
+        TabOrder = 0
+        FilterChar = '0123456789'
+        Position.X = 62.000000000000000000
+        Position.Y = 20.000000000000000000
+        Size.Width = 240.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Temps de saignement'
+        object Label23: TLabel
+          Align = Right
+          StyledSettings = [Family, Style, FontColor]
+          Position.X = 184.000000000000000000
+          Size.Width = 56.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'VU/5min'
+          TabOrder = 0
+        end
+      end
+      object Hemos_Label1: TLabel
+        Anchors = [akLeft]
+        Position.X = 18.000000000000000000
+        Position.Y = 17.381818771362300000
+        Size.Width = 29.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'TS'
+        TabOrder = 12
+      end
+      object Hemos_Label2: TLabel
+        Anchors = [akLeft]
+        Position.X = 18.000000000000000000
+        Position.Y = 110.000000000000000000
+        Size.Width = 29.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'TCK'
+        TabOrder = 11
+      end
+      object Hemos_Edit2: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akRight]
+        TabOrder = 1
+        FilterChar = '0123456789'
+        Position.X = 62.000000000000000000
+        Position.Y = 120.000000000000000000
+        Size.Width = 240.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Temps dec'#233'paline kaolin'
+        object Label24: TLabel
+          Align = Right
+          StyledSettings = [Style, FontColor]
+          Position.X = 192.000000000000000000
+          Size.Width = 48.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          Text = '%/30sec'
+          TabOrder = 0
+        end
+      end
+      object Hemos_Edit3: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akRight]
+        TabOrder = 2
+        FilterChar = '0123456789'
+        Position.X = 62.000000000000000000
+        Position.Y = 200.000000000000000000
+        Size.Width = 240.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Temps de prothrombine'
+        object Label25: TLabel
+          Align = Right
+          StyledSettings = [Family, Style, FontColor]
+          Position.X = 192.000000000000000000
+          Size.Width = 48.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          Text = '%/30sec'
+          TabOrder = 0
+        end
+      end
+      object Hemos_Label3: TLabel
+        Anchors = [akLeft]
+        Position.X = 18.000000000000000000
+        Position.Y = 200.000000000000000000
+        Size.Width = 29.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'TP'
+        TabOrder = 10
+      end
+    end
+    object L_Right: TLayout
+      Align = Right
+      Margins.Top = 20.000000000000000000
+      Position.X = 321.000000000000000000
+      Position.Y = 20.000000000000000000
+      Size.Width = 319.000000000000000000
+      Size.Height = 255.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 8
+      object Hemos_ComboBox1: TComboBox
+        Anchors = [akLeft, akRight]
+        Enabled = False
+        Items.Strings = (
+          'Gingival ou '#224' l'#39'oreille'
+          'Vaccinostyle ou aiguille'
+          'Scarification franche'
+          'Goutte de sang '#233'pong'#233'e sans toucher les bords de la plaie')
+        ItemWidth = 425.000000000000000000
+        ItemHeight = 25.000000000000000000
+        Position.X = 47.000000000000000000
+        Position.Y = 20.000000000000000000
+        Size.Width = 225.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+      end
+      object Hemos_ComboBox2: TComboBox
+        Anchors = [akLeft, akRight]
+        Enabled = False
+        Items.Strings = (
+          'Tube citrate'
+          'Tube t'#233'moin')
+        Position.X = 47.000000000000000000
+        Position.Y = 120.000000000000000000
+        Size.Width = 225.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+      end
+      object Hemos_Edit4: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akRight]
+        TabOrder = 5
+        ReadOnly = True
+        Text = 'IDEM'
+        TextSettings.HorzAlign = Center
+        Position.X = 47.000000000000000000
+        Position.Y = 200.000000000000000000
+        Size.Width = 225.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+  end
+  object GroupBox4: TGroupBox
+    Align = Right
+    Position.X = 640.000000000000000000
+    Size.Width = 419.000000000000000000
+    Size.Height = 275.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Vitesse de s'#233'dimentation'
+    TabOrder = 0
+    object L_topVs: TLayout
+      Align = Top
+      Size.Width = 419.000000000000000000
+      Size.Height = 105.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 17
+      object Label17: TLabel
+        Anchors = [akLeft, akTop, akRight]
+        Position.X = 9.000000000000000000
+        Position.Y = 37.000000000000000000
+        Size.Width = 29.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'VS'
+        TabOrder = 16
+      end
+      object Edit1: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akTop, akRight]
+        TabOrder = 18
+        FilterChar = '0123456789'
+        Position.X = 48.000000000000000000
+        Position.Y = 37.000000000000000000
+        Size.Width = 185.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        object Label16: TLabel
+          Align = Right
+          StyledSettings = [Family, Style, FontColor]
+          Position.X = 128.000000000000000000
+          Size.Width = 57.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          Text = '100mm/h'
+          TabOrder = 0
+        end
+      end
+      object Label22: TLabel
+        Position.X = 245.000000000000000000
+        Position.Y = 37.000000000000000000
+        Size.Width = 45.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Sexe'
+        TabOrder = 7
+      end
+      object ComboBox1: TComboBox
+        Position.X = 291.000000000000000000
+        Position.Y = 37.000000000000000000
+        Size.Width = 118.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 5
+        object ListBoxItem3: TListBoxItem
+          TextSettings.Font.Family = 'FontAwesome'
+          TextSettings.Font.Size = 36.000000000000000000
+          TabOrder = 0
+          Text = #61827' - Homme'
+        end
+        object ListBoxItem4: TListBoxItem
+          TextSettings.Font.Family = 'FontAwesome'
+          TextSettings.Font.Size = 36.000000000000000000
+          TabOrder = 1
+          Text = #61826' - Femme'
+        end
+      end
+    end
+    object GroupBox5: TGroupBox
+      Align = Client
+      Size.Width = 419.000000000000000000
+      Size.Height = 170.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Note'
+      TabOrder = 15
+      object Memo1: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        Align = Client
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 25.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Margins.Bottom = 10.000000000000000000
+        Size.Width = 399.000000000000000000
+        Size.Height = 135.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Viewport.Width = 395.000000000000000000
+        Viewport.Height = 131.000000000000000000
+      end
+    end
+  end
+end
