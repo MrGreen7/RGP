@@ -3,12 +3,18 @@ unit U_Main;
 interface
 
 uses
-  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  System.SysUtils, System.Types, System.UITypes, System.Classes,
+  System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.TabControl,
-  FMX.StdCtrls, FMX.Controls.Presentation, FMX.Styles.Objects, FMX.Ani, FMX.EditBox,
-  FMX.ComboTrackBar, FMX.Edit, FMX.ComboEdit, FMX.Layouts, FMX.ListBox, FMX.ExtCtrls,
-  FMX.Effects, FMX.Objects, FMX.TreeView, System.Rtti, FMX.Grid.Style, FMX.ScrollBox,
-  FMX.Grid, U_Fenetre, U_Base_Form, FMX.Calendar, FMX.DateTimeCtrls, FMX.Memo;
+  FMX.StdCtrls, FMX.Controls.Presentation, FMX.Styles.Objects, FMX.Ani,
+  FMX.EditBox,
+  FMX.ComboTrackBar, FMX.Edit, FMX.ComboEdit, FMX.Layouts, FMX.ListBox,
+  FMX.ExtCtrls,
+  FMX.Effects, FMX.Objects, FMX.TreeView, System.Rtti, FMX.Grid.Style,
+  FMX.ScrollBox,
+  FMX.Grid, U_Fenetre, U_Base_Form, FMX.Calendar, FMX.DateTimeCtrls, FMX.Memo,
+  U_Frame_Inf_Principale, U_Frame_Information, U_Frame_Hemogramme,
+  U_Frame_Hemostase, U_Frame_Biochimic, U_Frame_Serologie;
 
 type
   TMain = class(TBase_Form)
@@ -64,14 +70,6 @@ type
     T_RDV: TTreeViewItem;
     T_Ordo: TTreeViewItem;
     New_Patient: TTreeViewItem;
-    GrouBox1_Table: TGroupBox;
-    GrouBox2_Table: TGroupBox;
-    GrouBox3_Table: TGroupBox;
-    GrouBox4_Table: TGroupBox;
-    StringGrid1: TStringGrid;
-    StringGrid2: TStringGrid;
-    StringGrid3: TStringGrid;
-    StringGrid4: TStringGrid;
     StringGrid5: TStringGrid;
     Panel8: TPanel;
     Label15: TLabel;
@@ -97,6 +95,22 @@ type
     TabItem4: TTabItem;
     TabItem5: TTabItem;
     TabItem7: TTabItem;
+    Frame_Principale: TFrame1;
+    Frame_Information: TFrame2;
+    Frame_Hemogramme: TFrame3;
+    Frame_Hemostase: TFrame4;
+    Frame_Biochimic: TFrame6;
+    Frame_Serologie: TFrame5;
+    L_Left_P_Accueil: TLayout;
+    L_Right_P_Accueil: TLayout;
+    GrouBox1_Table: TGroupBox;
+    StringGrid1: TStringGrid;
+    GrouBox3_Table: TGroupBox;
+    StringGrid3: TStringGrid;
+    GrouBox2_Table: TGroupBox;
+    StringGrid2: TStringGrid;
+    GrouBox4_Table: TGroupBox;
+    StringGrid4: TStringGrid;
     procedure FormShow(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure P_AccueilClick(Sender: TObject);
@@ -118,8 +132,7 @@ type
     procedure FormResize(Sender: TObject);
     procedure FormPaint(Sender: TObject; Canvas: TCanvas; const ARect: TRectF);
     procedure FormCreate(Sender: TObject);
-    procedure Hemos_Edit1Change(Sender: TObject);
-    procedure Hemos_Edit2Change(Sender: TObject);
+    procedure P_AccueilResize(Sender: TObject);
   private
     { Private declarations }
     WidthX, HeightX: Integer;
@@ -137,34 +150,12 @@ uses
 {$R *.fmx}
 {$R resources.RES}
 
-procedure TMain.Hemos_Edit1Change(Sender: TObject);
-begin
-  if (Hemos_Edit1.Text <> '') then
-    Hemos_Combobox1.Enabled := True
-  else
-  begin
-    Hemos_ComboBox1.Enabled := False;
-    Hemos_ComboBox1.ItemIndex := -1;
-  end;
-end;
-
-procedure TMain.Hemos_Edit2Change(Sender: TObject);
-begin
-  if (Hemos_Edit2.Text <> '') then
-    Hemos_Combobox2.Enabled := True
-  else
-  begin
-    Hemos_ComboBox2.Enabled := False;
-    Hemos_ComboBox2.ItemIndex := -1;
-  end;
-
-end;
-
 procedure TMain.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
 var
   Msg: Integer;
 begin
-  Msg := MessageDlg('Vous etez sure !', TMsgDlgType.mtConfirmation, [TMsgDlgBtn.mbYes, TMsgDlgBtn.mbNo], 0);
+  Msg := MessageDlg('Vous etez sure !', TMsgDlgType.mtConfirmation,
+    [TMsgDlgBtn.mbYes, TMsgDlgBtn.mbNo], 0);
   if (Msg = mrNo) then
     CanClose := False;
 end;
@@ -186,7 +177,8 @@ begin
   HeightX := 688;
 end;
 
-procedure TMain.FormPaint(Sender: TObject; Canvas: TCanvas; const ARect: TRectF);
+procedure TMain.FormPaint(Sender: TObject; Canvas: TCanvas;
+  const ARect: TRectF);
 begin
   WidthX := Main.Width;
   HeightX := Main.Height;
@@ -194,11 +186,21 @@ end;
 
 procedure TMain.FormResize(Sender: TObject);
 begin
+  // Frame resize
+  Frame_Principale.OnResize(Frame_Principale);
+  Frame_Information.OnResize(Frame_Information);
+  Frame_Hemogramme.OnResize(Frame_Hemogramme);
+  Frame_Hemostase.OnResize(Frame_Hemostase);
+  Frame_Biochimic.OnResize(Frame_Biochimic);
+  Frame_Serologie.OnResize(Frame_Serologie);
+
+  //
+    P_Accueil.OnResize(P_Accueil);
   // Minmum Size for MainForm -- U_Main.pas --
 
   if ((Main.Width <= 1260) or (Main.Height <= 660)) then
   begin
-  // Setting Main form Sizes
+    // Setting Main form Sizes
     if (Main.Width <= 1260) then
     begin
       Main.Width := 1260;
@@ -207,210 +209,10 @@ begin
     if (Main.Height <= 660) then
     begin
       Main.Height := 660;
-      TabControl_NouveauP.Height := 275;
       Mouse_Event(MOUSEEVENTF_ABSOLUTE or MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
     end;
-  //Setting Groupbox_info size
   end;
 
-  // Resize Break Points
-
-  //---------------------------| MAX |----------------------------------
-  if ((Main.Width > 1615) or (Main.Height >= 900)) then
-  begin
-    if Main.Width > 1615 then
-    begin
-      GroupBox_Info.Width := 940;
-    // ------------------------| Information Principale |--------------------
-    //Components Position in The X-axis
-      IP_Edit3.Position.X := 550;
-      IP_Edit4.Position.X := 550;
-      IP_Combobox2.Position.X := 550;
-      IP_DateEdit2.Position.X := 550;
-      IP_Label5.Position.X := 452;
-      IP_Label6.Position.X := 452;
-      IP_Label7.Position.X := 452;
-      IP_Label8.Position.X := 452;
-    //Setting Components sizing -- Groupbox_info
-      IP_Edit1.Width := 360;
-      IP_Edit2.Width := 360;
-      IP_Edit3.Width := 360;
-      IP_Edit4.Width := 360;
-      IP_Combobox1.Width := 360;
-      IP_Combobox2.Width := 360;
-      IP_DateEdit1.Width := 360;
-      IP_DateEdit2.Width := 360;
-
-    //------------------------| Adresse et Contact |--------------------
-      //  Width
-      AC_Edit5.Width := 888;
-      AC_Edit6.Width := 360;
-      AC_Edit7.Width := 360;
-      AC_Edit8.Width := 360;
-      AC_Edit9.Width := 360;
-      AC_Combobox3.Width := 360;
-      AC_Combobox4.Width := 360;
-      //  Position
-      AC_Edit8.Position.X := 640;
-      AC_Edit9.Position.X := 640;
-      AC_Combobox4.Position.X := 640;
-      AC_Label5.Position.X := 539;
-      AC_Label6.Position.X := 539;
-      AC_Label7.Position.X := 539;
-    end;
-    //------------------------| Hemogramme |--------------------
-      //LEFT
-    begin
-      Hemog_Label1.Position.X := 10;
-      Hemog_Label2.Position.X := 10;
-      Hemog_Label3.Position.X := 10;
-      Hemog_Label4.Position.X := 10;
-
-      Hemog_Edit1.Position.X := 104;
-      Hemog_Edit2.Position.X := 104;
-      Hemog_Edit3.Position.X := 104;
-      Hemog_Edit4.Position.X := 104;
-
-      Hemog_Edit1.Width := 417;
-      Hemog_Edit2.Width := 417;
-      Hemog_Edit3.Width := 417;
-      Hemog_Edit4.Width := 417;
-    end;
-      //Right
-    begin
-      Hemog_Label5.Position.X := 525;
-      Hemog_Label6.Position.X := 525;
-      Hemog_Label7.Position.X := 525;
-      Hemog_Label8.Position.X := 525;
-
-      Hemog_Edit5.Position.X := 626;
-      Hemog_Edit6.Position.X := 626;
-      Hemog_Edit7.Position.X := 626;
-      Hemog_Edit8.Position.X := 626;
-
-      Hemog_Edit5.Width := 417;
-      Hemog_Edit6.Width := 417;
-      Hemog_Edit7.Width := 417;
-      Hemog_Edit8.Width := 417;
-    end;
-    if Main.Height >= 700 then
-      TabControl_NouveauP.Height := 460;
-  end
-  else if ((Main.Width > 1260) and (Main.Width <= 1615)) then
-  begin
-    //----------------------| MIN |------------------------------
-    if ((Main.Width > 1261) and (Main.Width <= 1281)) then
-    begin
-      //Components Position in The X-axis
-      IP_Edit3.Position.X := 394;
-      IP_Edit4.Position.X := 394;
-      IP_Combobox2.Position.X := 394;
-      IP_DateEdit2.Position.X := 394;
-      IP_Label5.Position.X := 290;
-      IP_Label6.Position.X := 290;
-      IP_Label7.Position.X := 290;
-      IP_Label8.Position.X := 290;
-
-      //Components sizing
-      GroupBox_Info.Width := 608;
-      IP_Edit1.Width := 200;
-      IP_Edit2.Width := 200;
-      IP_Edit3.Width := 200;
-      IP_Edit4.Width := 200;
-      IP_Combobox1.Width := 200;
-      IP_Combobox2.Width := 200;
-      IP_DateEdit1.Width := 200;
-      IP_DateEdit2.Width := 200;
-      //------------------------| Adresse et Contact |--------------------
-      //  Width
-      AC_Edit5.Width := 545;
-      AC_Edit6.Width := 217;
-      AC_Edit7.Width := 217;
-      AC_Edit8.Width := 217;
-      AC_Edit9.Width := 217;
-      AC_Combobox3.Width := 217;
-      AC_Combobox4.Width := 217;
-      //  Position
-      AC_Edit8.Position.X := 440;
-      AC_Edit9.Position.X := 440;
-      AC_Combobox4.Position.X := 440;
-      AC_Label5.Position.X := 339;
-      AC_Label6.Position.X := 339;
-      AC_Label7.Position.X := 339;
-      //------------------------| Hemogramme |--------------------
-      //LEFT
-      begin
-        Hemog_Label1.Position.X := 10;
-        Hemog_Label2.Position.X := 10;
-        Hemog_Label3.Position.X := 10;
-        Hemog_Label4.Position.X := 10;
-
-        Hemog_Edit1.Position.X := 104;
-        Hemog_Edit2.Position.X := 104;
-        Hemog_Edit3.Position.X := 104;
-        Hemog_Edit4.Position.X := 104;
-
-        Hemog_Edit1.Width := 417;
-        Hemog_Edit2.Width := 417;
-        Hemog_Edit3.Width := 417;
-        Hemog_Edit4.Width := 417;
-      end;
-      //Right
-      begin
-        Hemog_Label5.Position.X := 525;
-        Hemog_Label6.Position.X := 525;
-        Hemog_Label7.Position.X := 525;
-        Hemog_Label8.Position.X := 525;
-
-        Hemog_Edit5.Position.X := 626;
-        Hemog_Edit6.Position.X := 626;
-        Hemog_Edit7.Position.X := 626;
-        Hemog_Edit8.Position.X := 626;
-
-        Hemog_Edit5.Width := 417;
-        Hemog_Edit6.Width := 417;
-        Hemog_Edit7.Width := 417;
-        Hemog_Edit8.Width := 417;
-      end;
-
-      if Main.Height <= 700 then
-        TabControl_NouveauP.Height := 275;
-    end;
-    //-----------------------| MID |----------------------------------
-    {else if ((Main.Width < 1615) and (Edit3.Width <= 360)) then
-    begin
-      WidthX := Main.Width - WidthX;
-      GroupBox_Info.Width := GroupBox_Info.Width + WidthX;
-      //Position on runtime
-      begin
-        Edit3.Position.X := Edit3.Position.X + (WidthX / 2.4);
-        Edit4.Position.X := Edit4.Position.X + (WidthX / 2.4);
-        Combobox2.Position.X := Combobox2.Position.X + (WidthX / 2.4);
-        DateEdit2.Position.X := DateEdit2.Position.X + (WidthX / 2.4);
-        Label20.Position.X := Label20.Position.X + (WidthX / 2.4);
-        Label21.Position.X := Label21.Position.X + (WidthX / 2.4);
-        Label22.Position.X := Label22.Position.X + (WidthX / 2.4);
-        Label23.Position.X := Label23.Position.X + (WidthX / 2.4);
-      end;
-      //Width Resize on Runtime
-      begin
-        Edit1.Width := Edit1.Width + (WidthX / 2.4);
-        Edit2.Width := Edit2.Width + (WidthX / 2.4);
-        Edit3.Width := Edit3.Width + (WidthX / 2.4);
-        Edit4.Width := Edit4.Width + (WidthX / 2.4);
-        Combobox1.Width := Combobox1.Width + (WidthX / 2.4);
-        Combobox2.Width := Combobox2.Width + (WidthX / 2.4);
-        DateEdit1.Width := DateEdit1.Width + (WidthX / 2.4);
-        DateEdit2.Width := DateEdit2.Width + (WidthX / 2.4);
-      end;
-    end;  }
-  end;
-  {
-  else if ((Main.Height >= 660) and (Main.Height <= 900)) then
-  begin
-    HeightX := Main.Height - HeightX;
-    TabControl_NouveauP.Height := TabControl_NouveauP.Height + HeightX;
-  end; }
 end;
 
 procedure TMain.Label12Click(Sender: TObject);
@@ -511,6 +313,19 @@ begin
   H_Gen_NouveauP.Visible := False;
 end;
 
+procedure TMain.P_AccueilResize(Sender: TObject);
+begin
+  inherited;
+  //Width
+  L_Left_P_Accueil.Width := MainT.Width / 2;
+  L_Right_P_Accueil.Width := MainT.Width / 2;
+  //Height
+  GrouBox1_Table.Height := L_Left_P_Accueil.Height / 2;
+  GrouBox2_Table.Height := L_Right_P_Accueil.Height / 2;
+  GrouBox3_Table.Height := L_Left_P_Accueil.Height / 2;
+  GrouBox4_Table.Height := L_Right_P_Accueil.Height / 2;
+end;
+
 procedure TMain.RDVClick(Sender: TObject);
 begin
   H_Gen_Patient.Visible := False;
@@ -562,5 +377,4 @@ begin
 end;
 
 end.
-
 

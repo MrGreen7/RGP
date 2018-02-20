@@ -2,6 +2,7 @@ object Frame5: TFrame5
   Size.Width = 1059.000000000000000000
   Size.Height = 275.000000000000000000
   Size.PlatformDefault = False
+  OnResize = FrameResize
   object TabControl1: TTabControl
     Align = Client
     Margins.Top = 5.000000000000000000
@@ -38,12 +39,14 @@ object Frame5: TFrame5
         Text = 'La s'#233'rologie de l'#39'h'#233'patite A'
         TabOrder = 3
         object CheckBox1: TCheckBox
+          Anchors = []
           Position.X = 92.000000000000000000
           Position.Y = 65.000000000000000000
           TabOrder = 0
           Text = 'Anti-VHA'
         end
         object RadioButton1: TRadioButton
+          Anchors = []
           Position.X = 50.000000000000000000
           Position.Y = 121.000000000000000000
           Size.Width = 61.000000000000000000
@@ -53,6 +56,7 @@ object Frame5: TFrame5
           Text = 'IgM'
         end
         object RadioButton2: TRadioButton
+          Anchors = []
           Position.X = 186.000000000000000000
           Position.Y = 121.000000000000000000
           Size.Width = 61.000000000000000000
@@ -71,12 +75,14 @@ object Frame5: TFrame5
         Text = 'La s'#233'rologie de l'#39'h'#233'patite B'
         TabOrder = 0
         object CheckBox2: TCheckBox
+          Anchors = []
           Position.X = 16.000000000000000000
           Position.Y = 49.000000000000000000
           TabOrder = 2
           Text = 'Anti-VHB'
         end
         object CheckBox3: TCheckBox
+          Anchors = []
           Position.X = 16.000000000000000000
           Position.Y = 137.000000000000000000
           Size.Width = 120.000000000000000000
@@ -95,6 +101,7 @@ object Frame5: TFrame5
         Text = 'La s'#233'rologie de l'#39'h'#233'patite C'
         TabOrder = 2
         object CheckBox4: TCheckBox
+          Anchors = []
           Position.X = 20.000000000000000000
           Position.Y = 93.000000000000000000
           TabOrder = 1
@@ -110,6 +117,7 @@ object Frame5: TFrame5
         Text = 'La s'#233'rologie du VIH / Sida'
         TabOrder = 1
         object CheckBox5: TCheckBox
+          Anchors = []
           Position.X = 36.000000000000000000
           Position.Y = 93.000000000000000000
           TabOrder = 1
@@ -131,53 +139,55 @@ object Frame5: TFrame5
       ExplicitSize.cx = 279.000000000000000000
       ExplicitSize.cy = 30.000000000000000000
       object GroupBox16: TGroupBox
-        Align = Left
+        Align = Client
         Padding.Left = 10.000000000000000000
         Padding.Top = 10.000000000000000000
         Padding.Right = 10.000000000000000000
         Padding.Bottom = 10.000000000000000000
-        Size.Width = 777.000000000000000000
+        Size.Width = 784.000000000000000000
         Size.Height = 239.000000000000000000
         Size.PlatformDefault = False
         Text = 'La s'#233'rologie bact'#233'rienne'
         TabOrder = 0
         object GroupBox10: TGroupBox
-          Align = Left
+          Align = Client
           Margins.Top = 20.000000000000000000
-          Position.X = 10.000000000000000000
-          Position.Y = 30.000000000000000000
-          Size.Width = 249.000000000000000000
+          Size.Width = 256.000000000000000000
           Size.Height = 199.000000000000000000
           Size.PlatformDefault = False
           Text = 'La mononucl'#233'ose infectieuse'
           TabOrder = 0
           object CheckBox6: TCheckBox
-            Position.X = 116.000000000000000000
-            Position.Y = 35.000000000000000000
+            Anchors = []
+            Position.X = 124.032127380371100000
+            Position.Y = 33.000000000000000000
             TabOrder = 1
             Text = 'Anti-EBV'
           end
           object CheckBox11: TCheckBox
-            Position.X = 20.000000000000000000
-            Position.Y = 35.000000000000000000
-            Size.Width = 120.000000000000000000
+            Anchors = []
+            Position.X = 12.616465568542480000
+            Position.Y = 33.000000000000000000
+            Size.Width = 93.000000000000000000
             Size.Height = 24.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
             Text = 'IgG-VCA'
           end
           object CheckBox12: TCheckBox
-            Position.X = 20.000000000000000000
-            Position.Y = 107.000000000000000000
-            Size.Width = 120.000000000000000000
+            Anchors = []
+            Position.X = 12.616465568542480000
+            Position.Y = 143.000000000000000000
+            Size.Width = 93.000000000000000000
             Size.Height = 24.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 2
             Text = 'IgG-EBNA'
           end
           object CheckBox13: TCheckBox
-            Position.X = 116.000000000000000000
-            Position.Y = 107.000000000000000000
+            Anchors = []
+            Position.X = 124.032127380371100000
+            Position.Y = 143.000000000000000000
             Size.Width = 120.000000000000000000
             Size.Height = 24.000000000000000000
             Size.PlatformDefault = False
@@ -185,60 +195,20 @@ object Frame5: TFrame5
             Text = 'IgG-EA'
           end
         end
-        object GroupBox11: TGroupBox
-          Margins.Top = 20.000000000000000000
-          Position.X = 512.000000000000000000
-          Position.Y = 30.000000000000000000
-          Size.Width = 255.000000000000000000
-          Size.Height = 99.000000000000000000
-          Size.PlatformDefault = False
-          Text = 'salmonelloses (fi'#232'vre typho'#239'de)'
-          TabOrder = 1
-          object CheckBox7: TCheckBox
-            Position.X = 16.000000000000000000
-            Position.Y = 25.000000000000000000
-            TabOrder = 0
-            Text = 'Anti-O'
-          end
-          object CheckBox8: TCheckBox
-            Position.X = 16.000000000000000000
-            Position.Y = 57.000000000000000000
-            Size.Width = 120.000000000000000000
-            Size.Height = 24.000000000000000000
-            Size.PlatformDefault = False
-            TabOrder = 1
-            Text = 'Anti-H'
-          end
-        end
-        object GroupBox12: TGroupBox
-          Margins.Top = 20.000000000000000000
-          Position.X = 512.000000000000000000
-          Position.Y = 128.000000000000000000
-          Size.Width = 257.000000000000000000
-          Size.Height = 65.000000000000000000
-          Size.PlatformDefault = False
-          Text = 'La s'#233'rologie de la syphilis'
-          TabOrder = 2
-          object CheckBox9: TCheckBox
-            Position.X = 20.000000000000000000
-            Position.Y = 35.000000000000000000
-            TabOrder = 0
-            Text = 'Anti-VHC'
-          end
-        end
         object GroupBox13: TGroupBox
           Align = Left
           Margins.Top = 20.000000000000000000
-          Position.X = 259.000000000000000000
+          Position.X = 10.000000000000000000
           Position.Y = 30.000000000000000000
           Size.Width = 254.000000000000000000
           Size.Height = 199.000000000000000000
           Size.PlatformDefault = False
           Text = 'La s'#233'rologie de la rub'#233'ole'
-          TabOrder = 3
+          TabOrder = 1
           object CheckBox10: TCheckBox
-            Position.X = 28.000000000000000000
-            Position.Y = 42.000000000000000000
+            Anchors = []
+            Position.X = 44.000000000000000000
+            Position.Y = 28.000000000000000000
             Size.Width = 165.000000000000000000
             Size.Height = 19.000000000000000000
             Size.PlatformDefault = False
@@ -246,8 +216,9 @@ object Frame5: TFrame5
             Text = 'Anticorps type IgM'
           end
           object CheckBox14: TCheckBox
-            Position.X = 28.000000000000000000
-            Position.Y = 82.000000000000000000
+            Anchors = []
+            Position.X = 44.000000000000000000
+            Position.Y = 88.000000000000000000
             Size.Width = 157.000000000000000000
             Size.Height = 24.000000000000000000
             Size.PlatformDefault = False
@@ -255,13 +226,65 @@ object Frame5: TFrame5
             Text = 'Anticorps type IgA'
           end
           object CheckBox15: TCheckBox
-            Position.X = 28.000000000000000000
-            Position.Y = 122.000000000000000000
+            Anchors = []
+            Position.X = 44.000000000000000000
+            Position.Y = 148.000000000000000000
             Size.Width = 165.000000000000000000
             Size.Height = 24.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 2
             Text = 'Anticorps type IgG'
+          end
+        end
+        object Layout1: TLayout
+          Align = Right
+          Margins.Top = 20.000000000000000000
+          Position.X = 520.000000000000000000
+          Position.Y = 30.000000000000000000
+          Size.Width = 254.000000000000000000
+          Size.Height = 199.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          object GroupBox11: TGroupBox
+            Align = Top
+            Size.Width = 254.000000000000000000
+            Size.Height = 105.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'salmonelloses (fi'#232'vre typho'#239'de)'
+            TabOrder = 1
+            object CheckBox7: TCheckBox
+              Anchors = []
+              Position.X = 16.000000000000000000
+              Position.Y = 27.090909957885740000
+              TabOrder = 0
+              Text = 'Anti-O'
+            end
+            object CheckBox8: TCheckBox
+              Anchors = []
+              Position.X = 16.000000000000000000
+              Position.Y = 61.181819915771480000
+              Size.Width = 120.000000000000000000
+              Size.Height = 24.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 1
+              Text = 'Anti-H'
+            end
+          end
+          object GroupBox12: TGroupBox
+            Align = Bottom
+            Position.Y = 104.000000000000000000
+            Size.Width = 254.000000000000000000
+            Size.Height = 95.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'La s'#233'rologie de la syphilis'
+            TabOrder = 2
+            object CheckBox9: TCheckBox
+              Anchors = []
+              Position.X = 60.000000000000000000
+              Position.Y = 38.000000000000000000
+              TabOrder = 0
+              Text = 'Anti-VHC'
+            end
           end
         end
       end
@@ -285,21 +308,27 @@ object Frame5: TFrame5
           Text = 'La s'#233'rologie de la toxoplasmose'
           TabOrder = 0
           object CheckBox17: TCheckBox
+            Anchors = []
             Position.X = 12.000000000000000000
             Position.Y = 44.000000000000000000
+            Size.Width = 101.000000000000000000
+            Size.Height = 19.000000000000000000
+            Size.PlatformDefault = False
             TabOrder = 0
             Text = 'Anti-EBV'
           end
           object CheckBox18: TCheckBox
+            Anchors = []
             Position.X = 12.000000000000000000
             Position.Y = 108.000000000000000000
-            Size.Width = 120.000000000000000000
+            Size.Width = 101.000000000000000000
             Size.Height = 24.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 2
             Text = 'IgG-VCA'
           end
           object CheckBox19: TCheckBox
+            Anchors = []
             Position.X = 116.000000000000000000
             Position.Y = 44.000000000000000000
             Size.Width = 120.000000000000000000
@@ -309,6 +338,7 @@ object Frame5: TFrame5
             Text = 'IgG-EBNA'
           end
           object CheckBox20: TCheckBox
+            Anchors = []
             Position.X = 116.000000000000000000
             Position.Y = 108.000000000000000000
             Size.Width = 120.000000000000000000

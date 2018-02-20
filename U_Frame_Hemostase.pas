@@ -36,6 +36,9 @@ type
     Hemos_Edit3: TEdit;
     Label25: TLabel;
     Hemos_Label3: TLabel;
+    procedure Hemos_Edit1Change(Sender: TObject);
+    procedure Hemos_Edit2Change(Sender: TObject);
+    procedure FrameResize(Sender: TObject);
   private
     { Private declarations }
   public
@@ -46,4 +49,31 @@ implementation
 
 {$R *.fmx}
 
+procedure TFrame4.FrameResize(Sender: TObject);
+begin
+  L_Right.Width := GroupBox3.Width / 2;
+  L_Left.Width := GroupBox3.Width / 2;
+end;
+
+procedure TFrame4.Hemos_Edit1Change(Sender: TObject);
+begin
+  if (Hemos_Edit1.Text <> '') then
+    Hemos_Combobox1.Enabled := True
+  else
+  begin
+    Hemos_Combobox1.Enabled := False;
+    Hemos_Combobox1.ItemIndex := -1;
+  end;
+end;
+
+procedure TFrame4.Hemos_Edit2Change(Sender: TObject);
+begin
+  if (Hemos_Edit2.Text <> '') then
+    Hemos_Combobox2.Enabled := True
+  else
+  begin
+    Hemos_Combobox2.Enabled := False;
+    Hemos_Combobox2.ItemIndex := -1;
+  end;
+end;
 end.

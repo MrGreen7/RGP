@@ -5,7 +5,7 @@ interface
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants, 
   FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
-  FMX.Controls.Presentation, FMX.TabControl;
+  FMX.Controls.Presentation, FMX.TabControl, FMX.Layouts;
 
 type
   TFrame5 = class(TFrame)
@@ -29,11 +29,6 @@ type
     CheckBox11: TCheckBox;
     CheckBox12: TCheckBox;
     CheckBox13: TCheckBox;
-    GroupBox11: TGroupBox;
-    CheckBox7: TCheckBox;
-    CheckBox8: TCheckBox;
-    GroupBox12: TGroupBox;
-    CheckBox9: TCheckBox;
     GroupBox13: TGroupBox;
     CheckBox10: TCheckBox;
     CheckBox14: TCheckBox;
@@ -44,6 +39,13 @@ type
     CheckBox18: TCheckBox;
     CheckBox19: TCheckBox;
     CheckBox20: TCheckBox;
+    Layout1: TLayout;
+    GroupBox11: TGroupBox;
+    CheckBox7: TCheckBox;
+    CheckBox8: TCheckBox;
+    GroupBox12: TGroupBox;
+    CheckBox9: TCheckBox;
+    procedure FrameResize(Sender: TObject);
   private
     { Private declarations }
   public
@@ -53,5 +55,20 @@ type
 implementation
 
 {$R *.fmx}
+
+procedure TFrame5.FrameResize(Sender: TObject);
+begin
+    //Viral
+  GroupBox6.Width := TabControl1.Width / 4;
+  GroupBox7.Width := TabControl1.Width / 4;
+  GroupBox8.Width := TabControl1.Width / 4;
+  GroupBox9.Width := TabControl1.Width / 4;
+  //Bact / Para
+  GroupBox10.Width := GroupBox16.Width / 3;
+  GroupBox11.Width := GroupBox16.Width / 3;
+  Layout1.Width := GroupBox16.Width / 3;
+  GroupBox11.Height := (Layout1.Height) / 2;
+  GroupBox12.Height := (Layout1.Height) / 2;
+end;
 
 end.
