@@ -14,7 +14,7 @@ uses
   FMX.ScrollBox,
   FMX.Grid, U_Fenetre, U_Base_Form, FMX.Calendar, FMX.DateTimeCtrls, FMX.Memo,
   U_Frame_Inf_Principale, U_Frame_Information, U_Frame_Hemogramme,
-  U_Frame_Hemostase, U_Frame_Biochimic, U_Frame_Serologie;
+  U_Frame_Hemostase, U_Frame_Biochimic, U_Frame_Serologie, FMX.Filter.Effects;
 
 type
   TMain = class(TBase_Form)
@@ -71,8 +71,6 @@ type
     T_Ordo: TTreeViewItem;
     New_Patient: TTreeViewItem;
     StringGrid5: TStringGrid;
-    Panel8: TPanel;
-    Label15: TLabel;
     Panel9: TPanel;
     Panel10: TPanel;
     Panel11: TPanel;
@@ -111,7 +109,12 @@ type
     StringGrid2: TStringGrid;
     GrouBox4_Table: TGroupBox;
     StringGrid4: TStringGrid;
-    procedure FormShow(Sender: TObject);
+    StringGrid6: TStringGrid;
+    L_Top_Ordonnance: TLayout;
+    Layout1: TLayout;
+    Layout2: TLayout;
+    Edit1: TEdit;
+    StringGrid7: TStringGrid;
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure P_AccueilClick(Sender: TObject);
     procedure PatientClick(Sender: TObject);
@@ -133,6 +136,9 @@ type
     procedure FormPaint(Sender: TObject; Canvas: TCanvas; const ARect: TRectF);
     procedure FormCreate(Sender: TObject);
     procedure P_AccueilResize(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure Frame_PrincipaleButton2Click(Sender: TObject);
+    procedure Frame_PrincipaleButton1Click(Sender: TObject);
   private
     { Private declarations }
     WidthX, HeightX: Integer;
@@ -146,7 +152,7 @@ var
 implementation
 
 uses
-  U_Option, U_Log, U_Entreprise, Winapi.Windows;
+  U_Option, U_Log, U_Entreprise, Winapi.Windows, U_DataModule;
 {$R *.fmx}
 {$R resources.RES}
 
@@ -160,19 +166,8 @@ begin
     CanClose := False;
 end;
 
-procedure TMain.FormShow(Sender: TObject);
-var
-  LogDlg: TLog;
-begin
-  P_Accueil.IsSelected := True;
-  LogDlg := TLog.Create(self);
-  if (LogDlg.ShowModal = mrCancel) then
-    Application.Terminate;
-  LogDlg.Free;
-end;
-
 procedure TMain.FormCreate(Sender: TObject);
-begin
+Begin
   WidthX := 1280;
   HeightX := 688;
 end;
@@ -195,7 +190,7 @@ begin
   Frame_Serologie.OnResize(Frame_Serologie);
 
   //
-    P_Accueil.OnResize(P_Accueil);
+  P_Accueil.OnResize(P_Accueil);
   // Minmum Size for MainForm -- U_Main.pas --
 
   if ((Main.Width <= 1260) or (Main.Height <= 660)) then
@@ -213,6 +208,46 @@ begin
     end;
   end;
 
+end;
+
+procedure TMain.FormShow(Sender: TObject);
+var
+  LogDlg: TLog;
+begin
+  P_Accueil.IsSelected := True;
+  LogDlg := TLog.Create(self);
+  if (LogDlg.ShowModal = mrCancel) then
+    Application.Terminate;
+  LogDlg.Free;
+end;
+
+procedure TMain.Frame_PrincipaleButton1Click(Sender: TObject);
+begin
+  inherited;
+  if (Frame_Principale.SetEdit = True) then
+  Begin
+    with DataModule1.FDQuery1 do
+    Begin
+      Active := False;
+      SQl.Clear;
+      SQl.Text := ('Select * From Patient');
+      Active := True;
+      Insert;
+      Frame_Principale.Insert;
+      Frame_Information.Insert;
+      Post;
+      SQl.Clear;
+      Active := False;
+    End;
+  end;
+end;
+
+procedure TMain.Frame_PrincipaleButton2Click(Sender: TObject);
+begin
+  inherited;
+  Frame_Principale.Clear();
+  if (TabItem1.IsSelected = True) then
+    Frame_Information.Clear;
 end;
 
 procedure TMain.Label12Click(Sender: TObject);
@@ -316,10 +351,10 @@ end;
 procedure TMain.P_AccueilResize(Sender: TObject);
 begin
   inherited;
-  //Width
+  // Width
   L_Left_P_Accueil.Width := MainT.Width / 2;
   L_Right_P_Accueil.Width := MainT.Width / 2;
-  //Height
+  // Height
   GrouBox1_Table.Height := L_Left_P_Accueil.Height / 2;
   GrouBox2_Table.Height := L_Right_P_Accueil.Height / 2;
   GrouBox3_Table.Height := L_Left_P_Accueil.Height / 2;

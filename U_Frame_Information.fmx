@@ -1,167 +1,29 @@
 object Frame2: TFrame2
-  Size.Width = 1059.000000000000000000
-  Size.Height = 275.000000000000000000
+  Size.Width = 1057.000000000000000000
+  Size.Height = 270.000000000000000000
   Size.PlatformDefault = False
   OnResize = FrameResize
   object GroupBox1: TGroupBox
     Align = Client
-    Size.Width = 680.000000000000000000
-    Size.Height = 275.000000000000000000
+    Padding.Top = 10.000000000000000000
+    Size.Width = 678.000000000000000000
+    Size.Height = 270.000000000000000000
     Size.PlatformDefault = False
     Text = 'Adresse et contact'
     TabOrder = 0
-    object L_Right: TLayout
-      Align = Right
-      Position.X = 337.000000000000000000
-      Position.Y = 65.000000000000000000
-      Size.Width = 343.000000000000000000
-      Size.Height = 210.000000000000000000
-      Size.PlatformDefault = False
-      TabOrder = 5
-      object AC_ComboBox4: TComboBox
-        Anchors = [akLeft, akRight]
-        Position.X = 90.000000000000000000
-        Position.Y = 10.000000000000000000
-        Size.Width = 217.000000000000000000
-        Size.Height = 32.000000000000000000
-        Size.PlatformDefault = False
-        TabOrder = 20
-      end
-      object AC_Edit8: TEdit
-        Touch.InteractiveGestures = [LongTap, DoubleTap]
-        Anchors = [akLeft, akRight]
-        TabOrder = 21
-        FilterChar = '+0123456789'
-        Position.X = 90.000000000000000000
-        Position.Y = 90.000000000000000000
-        Size.Width = 217.000000000000000000
-        Size.Height = 32.000000000000000000
-        Size.PlatformDefault = False
-      end
-      object AC_Edit9: TEdit
-        Touch.InteractiveGestures = [LongTap, DoubleTap]
-        Anchors = [akLeft, akRight]
-        TabOrder = 22
-        FilterChar = '+0123456789'
-        Position.X = 90.000000000000000000
-        Position.Y = 170.000000000000000000
-        Size.Width = 217.000000000000000000
-        Size.Height = 32.000000000000000000
-        Size.PlatformDefault = False
-      end
-      object AC_Label5: TLabel
-        Anchors = [akLeft]
-        Position.X = 10.000000000000000000
-        Position.Y = 10.000000000000000000
-        Size.Width = 85.000000000000000000
-        Size.Height = 33.000000000000000000
-        Size.PlatformDefault = False
-        Text = 'Commune'
-        TabOrder = 23
-      end
-      object AC_Label6: TLabel
-        Anchors = [akLeft]
-        Position.X = 10.000000000000000000
-        Position.Y = 90.000000000000000000
-        Size.Width = 53.000000000000000000
-        Size.Height = 33.000000000000000000
-        Size.PlatformDefault = False
-        Text = 'Mobile'
-        TabOrder = 24
-      end
-      object AC_Label7: TLabel
-        Anchors = [akLeft]
-        Position.X = 10.000000000000000000
-        Position.Y = 170.000000000000000000
-        Size.Width = 49.000000000000000000
-        Size.Height = 33.000000000000000000
-        Size.PlatformDefault = False
-        Text = 'Fax'
-        TabOrder = 25
-      end
-    end
-    object L_Left: TLayout
-      Align = Left
-      Position.Y = 65.000000000000000000
-      Size.Width = 343.000000000000000000
-      Size.Height = 210.000000000000000000
-      Size.PlatformDefault = False
-      TabOrder = 7
-      object AC_ComboBox3: TComboBox
-        Anchors = [akLeft, akRight]
-        Position.X = 90.000000000000000000
-        Position.Y = 10.000000000000000000
-        Size.Width = 217.000000000000000000
-        Size.Height = 32.000000000000000000
-        Size.PlatformDefault = False
-        TabOrder = 0
-      end
-      object AC_Edit6: TEdit
-        Touch.InteractiveGestures = [LongTap, DoubleTap]
-        Anchors = [akLeft, akRight]
-        TabOrder = 1
-        FilterChar = '+0123456789'
-        Position.X = 90.000000000000000000
-        Position.Y = 90.000000000000000000
-        Size.Width = 217.000000000000000000
-        Size.Height = 32.000000000000000000
-        Size.PlatformDefault = False
-      end
-      object AC_Edit7: TEdit
-        Touch.InteractiveGestures = [LongTap, DoubleTap]
-        Anchors = [akLeft, akRight]
-        TabOrder = 2
-        Position.X = 90.000000000000000000
-        Position.Y = 170.000000000000000000
-        Size.Width = 217.000000000000000000
-        Size.Height = 32.000000000000000000
-        Size.PlatformDefault = False
-      end
-      object AC_Label2: TLabel
-        Anchors = [akLeft]
-        Position.X = 10.000000000000000000
-        Position.Y = 10.000000000000000000
-        Size.Width = 49.000000000000000000
-        Size.Height = 33.000000000000000000
-        Size.PlatformDefault = False
-        Text = 'Wilaya'
-        TabOrder = 3
-      end
-      object AC_Label3: TLabel
-        Anchors = [akLeft]
-        Position.X = 10.000000000000000000
-        Position.Y = 90.000000000000000000
-        Size.Width = 77.000000000000000000
-        Size.Height = 33.000000000000000000
-        Size.PlatformDefault = False
-        Text = 'T'#233'lephone'
-        TabOrder = 4
-      end
-      object AC_Label4: TLabel
-        Anchors = [akLeft]
-        Position.X = 10.000000000000000000
-        Position.Y = 170.000000000000000000
-        Size.Width = 49.000000000000000000
-        Size.Height = 33.000000000000000000
-        Size.PlatformDefault = False
-        Text = 'Email'
-        TabOrder = 5
-      end
-    end
-    object L_Top: TLayout
+    object L_Top_1: TLayout
       Align = Top
-      Margins.Top = 15.000000000000000000
-      Position.Y = 15.000000000000000000
-      Size.Width = 680.000000000000000000
-      Size.Height = 50.000000000000000000
+      Position.Y = 10.000000000000000000
+      Size.Width = 678.000000000000000000
+      Size.Height = 65.000000000000000000
       Size.PlatformDefault = False
-      TabOrder = 6
-      object AC_Edit5: TEdit
+      TabOrder = 0
+      object AC_Edit1: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
         TabOrder = 0
-        Position.X = 88.000000000000000000
-        Position.Y = 10.000000000000000000
+        Position.X = 90.000000000000000000
+        Position.Y = 17.799999237060550000
         Size.Width = 556.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
@@ -169,7 +31,7 @@ object Frame2: TFrame2
       object AC_Label1: TLabel
         Anchors = [akLeft]
         Position.X = 15.000000000000000000
-        Position.Y = 9.000000000000000000
+        Position.Y = 16.649999618530270000
         Size.Width = 69.000000000000000000
         Size.Height = 33.000000000000000000
         Size.PlatformDefault = False
@@ -177,16 +39,206 @@ object Frame2: TFrame2
         TabOrder = 1
       end
     end
+    object L_Top_2: TLayout
+      Align = Top
+      Position.Y = 75.000000000000000000
+      Size.Width = 678.000000000000000000
+      Size.Height = 65.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object L_Right_2: TLayout
+        Align = Right
+        Position.X = 339.000000000000000000
+        Size.Width = 339.000000000000000000
+        Size.Height = 65.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        object AC_Label5: TLabel
+          Anchors = [akLeft]
+          Position.X = 15.000000000000000000
+          Position.Y = 16.000000000000000000
+          Size.Width = 85.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Commune'
+          TabOrder = 15
+        end
+        object AC_ComboBox2: TComboBox
+          Anchors = [akLeft, akRight]
+          Position.X = 90.000000000000000000
+          Position.Y = 17.000000000000000000
+          Size.Width = 217.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 12
+        end
+      end
+      object L_Left_2: TLayout
+        Align = Left
+        Size.Width = 339.000000000000000000
+        Size.Height = 65.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object AC_Label2: TLabel
+          Anchors = [akLeft]
+          Position.X = 15.000000000000000000
+          Position.Y = 16.000000000000000000
+          Size.Width = 49.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Wilaya'
+          TabOrder = 2
+        end
+        object AC_ComboBox1: TComboBox
+          Anchors = [akLeft, akRight]
+          Position.X = 90.000000000000000000
+          Position.Y = 17.000000000000000000
+          Size.Width = 217.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+        end
+      end
+    end
+    object L_Top_3: TLayout
+      Align = Top
+      Position.Y = 140.000000000000000000
+      Size.Width = 678.000000000000000000
+      Size.Height = 65.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object L_Left_3: TLayout
+        Align = Left
+        Size.Width = 339.000000000000000000
+        Size.Height = 65.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        object AC_Edit2: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Anchors = [akLeft, akRight]
+          TabOrder = 0
+          FilterChar = '+0123456789'
+          Position.X = 90.000000000000000000
+          Position.Y = 17.000000000000000000
+          Size.Width = 217.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object AC_Label3: TLabel
+          Anchors = [akLeft]
+          Position.X = 15.000000000000000000
+          Position.Y = 16.000000000000000000
+          Size.Width = 77.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'T'#233'lephone'
+          TabOrder = 2
+        end
+      end
+      object L_Right_3: TLayout
+        Align = Right
+        Position.X = 339.000000000000000000
+        Size.Width = 339.000000000000000000
+        Size.Height = 65.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        object AC_Label6: TLabel
+          Anchors = [akLeft]
+          Position.X = 15.000000000000000000
+          Position.Y = 16.000000000000000000
+          Size.Width = 53.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Mobile'
+          TabOrder = 18
+        end
+        object AC_Edit4: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Anchors = [akLeft, akRight]
+          TabOrder = 16
+          FilterChar = '+0123456789'
+          Position.X = 90.000000000000000000
+          Position.Y = 17.000000000000000000
+          Size.Width = 217.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+        end
+      end
+    end
+    object L_Top_4: TLayout
+      Align = Top
+      Position.Y = 205.000000000000000000
+      Size.Width = 678.000000000000000000
+      Size.Height = 65.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      object L_Left_4: TLayout
+        Align = Left
+        Size.Width = 339.000000000000000000
+        Size.Height = 65.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 5
+        object AC_Edit3: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Anchors = [akLeft, akRight]
+          TabOrder = 0
+          Position.X = 90.000000000000000000
+          Position.Y = 17.000000000000000000
+          Size.Width = 217.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object AC_Label4: TLabel
+          Anchors = [akLeft]
+          Position.X = 15.000000000000000000
+          Position.Y = 16.000000000000000000
+          Size.Width = 49.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Email'
+          TabOrder = 1
+        end
+      end
+      object L_Right_4: TLayout
+        Align = Right
+        Position.X = 339.000000000000000000
+        Size.Width = 339.000000000000000000
+        Size.Height = 65.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 6
+        object AC_Label7: TLabel
+          Anchors = [akLeft]
+          Position.X = 15.000000000000000000
+          Position.Y = 16.000000000000000000
+          Size.Width = 49.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Fax'
+          TabOrder = 15
+        end
+        object AC_Edit5: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Anchors = [akLeft, akRight]
+          TabOrder = 14
+          FilterChar = '+0123456789'
+          Position.X = 90.000000000000000000
+          Position.Y = 17.000000000000000000
+          Size.Width = 217.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+        end
+      end
+    end
   end
   object GroupBox2: TGroupBox
     Align = Right
-    Position.X = 680.000000000000000000
+    Position.X = 678.000000000000000000
     Size.Width = 379.000000000000000000
-    Size.Height = 275.000000000000000000
+    Size.Height = 270.000000000000000000
     Size.PlatformDefault = False
     Text = 'Autres'
     TabOrder = 1
-    object ComboBox5: TComboBox
+    object AC_ComboBox3: TComboBox
       Items.Strings = (
         'A+'
         'A-'

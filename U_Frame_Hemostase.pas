@@ -3,7 +3,8 @@ unit U_Frame_Hemostase;
 interface
 
 uses
-  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants, 
+  System.SysUtils, System.Types, System.UITypes, System.Classes,
+  System.Variants,
   FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
   FMX.ListBox, FMX.ScrollBox, FMX.Memo, FMX.Edit, FMX.Controls.Presentation,
   FMX.Layouts;
@@ -18,10 +19,6 @@ type
     Label17: TLabel;
     Edit1: TEdit;
     Label16: TLabel;
-    Label22: TLabel;
-    ComboBox1: TComboBox;
-    ListBoxItem3: TListBoxItem;
-    ListBoxItem4: TListBoxItem;
     L_Left: TLayout;
     L_Right: TLayout;
     Hemos_ComboBox1: TComboBox;
@@ -39,6 +36,9 @@ type
     procedure Hemos_Edit1Change(Sender: TObject);
     procedure Hemos_Edit2Change(Sender: TObject);
     procedure FrameResize(Sender: TObject);
+    procedure Clear;
+    procedure Insert;
+    procedure Edit;
   private
     { Private declarations }
   public
@@ -47,7 +47,49 @@ type
 
 implementation
 
+Uses
+  U_DataModule;
 {$R *.fmx}
+
+procedure TFrame4.Clear;
+begin
+  Hemos_Edit1.Text := '';
+  Hemos_Edit2.Text := '';
+  Hemos_Edit3.Text := '';
+  Hemos_Edit4.Text := '';
+  Hemos_ComboBox1.ItemIndex := -1;
+  Hemos_ComboBox2.ItemIndex := -1;
+end;
+
+procedure TFrame4.Insert;
+begin
+  With DataModule1.FDQuery1 do
+  Begin
+    FieldByName('').AsString := Hemos_Edit1.Text;
+    FieldByName('').AsString := Hemos_Edit2.Text;
+    FieldByName('').AsString := Hemos_Edit3.Text;
+    FieldByName('').AsString := Hemos_Edit4.Text;
+    if (Hemos_ComboBox1.ItemIndex <> -1) then
+      FieldByName('').AsString := Hemos_Combobox1.Selected.Text;
+    if (Hemos_ComboBox2.ItemIndex <> -1) then
+      FieldByName('').AsString := Hemos_Combobox2.Selected.Text;
+  End;
+end;
+
+procedure TFrame4.Edit;
+begin
+  With DataModule1.FDQuery1 do
+  Begin
+    FieldByName('').AsString := Hemos_Edit1.Text;
+    FieldByName('').AsString := Hemos_Edit2.Text;
+    FieldByName('').AsString := Hemos_Edit3.Text;
+    FieldByName('').AsString := Hemos_Edit4.Text;
+    if (Hemos_ComboBox1.ItemIndex <> -1) then
+      FieldByName('').AsString := Hemos_Combobox1.Selected.Text;
+    if (Hemos_ComboBox2.ItemIndex <> -1) then
+      FieldByName('').AsString := Hemos_Combobox2.Selected.Text;
+  End;
+end;
 
 procedure TFrame4.FrameResize(Sender: TObject);
 begin
@@ -58,22 +100,23 @@ end;
 procedure TFrame4.Hemos_Edit1Change(Sender: TObject);
 begin
   if (Hemos_Edit1.Text <> '') then
-    Hemos_Combobox1.Enabled := True
+    Hemos_ComboBox1.Enabled := True
   else
   begin
-    Hemos_Combobox1.Enabled := False;
-    Hemos_Combobox1.ItemIndex := -1;
+    Hemos_ComboBox1.Enabled := False;
+    Hemos_ComboBox1.ItemIndex := -1;
   end;
 end;
 
 procedure TFrame4.Hemos_Edit2Change(Sender: TObject);
 begin
   if (Hemos_Edit2.Text <> '') then
-    Hemos_Combobox2.Enabled := True
+    Hemos_ComboBox2.Enabled := True
   else
   begin
-    Hemos_Combobox2.Enabled := False;
-    Hemos_Combobox2.ItemIndex := -1;
+    Hemos_ComboBox2.Enabled := False;
+    Hemos_ComboBox2.ItemIndex := -1;
   end;
 end;
+
 end.

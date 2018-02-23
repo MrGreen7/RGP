@@ -1,6 +1,6 @@
 object Frame1: TFrame1
   Size.Width = 1059.000000000000000000
-  Size.Height = 191.000000000000000000
+  Size.Height = 200.000000000000000000
   Size.PlatformDefault = False
   OnResize = FrameResize
   object ImageControl1: TImageControl
@@ -12,215 +12,304 @@ object Frame1: TFrame1
     Position.X = 10.000000000000000000
     Position.Y = 10.000000000000000000
     Size.Width = 140.000000000000000000
-    Size.Height = 151.000000000000000000
+    Size.Height = 160.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
   end
   object GroupBox_Info: TGroupBox
     Align = Client
+    Padding.Left = 5.000000000000000000
+    Padding.Top = 20.000000000000000000
+    Padding.Right = 5.000000000000000000
     Size.Width = 608.000000000000000000
-    Size.Height = 191.000000000000000000
+    Size.Height = 200.000000000000000000
     Size.PlatformDefault = False
     Text = 'Information principale'
     TabOrder = 1
-    object L_Right: TLayout
-      Align = Right
-      Margins.Left = 5.000000000000000000
-      Margins.Top = 20.000000000000000000
-      Margins.Right = 5.000000000000000000
-      Position.X = 300.000000000000000000
-      Position.Y = 20.000000000000000000
-      Size.Width = 303.000000000000000000
-      Size.Height = 171.000000000000000000
+    object Layout_Top_1: TLayout
+      Align = Top
+      Position.X = 5.000000000000000000
+      Position.Y = 140.000000000000000000
+      Size.Width = 598.000000000000000000
+      Size.Height = 40.000000000000000000
       Size.PlatformDefault = False
-      TabOrder = 0
-      object IP_ComboBox2: TComboBox
-        Anchors = [akLeft, akRight]
-        Position.X = 85.000000000000000000
-        Position.Y = 135.000000000000000000
-        Size.Width = 200.000000000000000000
-        Size.Height = 32.000000000000000000
+      TabOrder = 3
+      object Layout_Right1: TLayout
+        Align = Right
+        Position.X = 295.000000000000000000
+        Size.Width = 303.000000000000000000
+        Size.Height = 40.000000000000000000
         Size.PlatformDefault = False
-        TabOrder = 0
-        object ListBoxItem1: TListBoxItem
-          TextSettings.Font.Family = 'FontAwesome'
-          TextSettings.Font.Size = 36.000000000000000000
-          TabOrder = 0
-          Text = #61827' - Homme'
-        end
-        object ListBoxItem2: TListBoxItem
-          TextSettings.Font.Family = 'FontAwesome'
-          TextSettings.Font.Size = 36.000000000000000000
-          TabOrder = 1
-          Text = #61826' - Femme'
-        end
-      end
-      object IP_DateEdit2: TDateEdit
-        Date = 43126.000000000000000000
-        Anchors = [akLeft, akRight]
-        Position.X = 85.000000000000000000
-        Position.Y = 5.000000000000000000
-        Size.Width = 200.000000000000000000
-        Size.Height = 32.000000000000000000
-        Size.PlatformDefault = False
-        TabOrder = 1
-      end
-      object IP_Edit3: TEdit
-        Touch.InteractiveGestures = [LongTap, DoubleTap]
-        Anchors = [akLeft, akRight]
-        TabOrder = 2
-        Position.X = 85.000000000000000000
-        Position.Y = 91.000000000000000000
-        Size.Width = 200.000000000000000000
-        Size.Height = 32.000000000000000000
-        Size.PlatformDefault = False
-      end
-      object IP_Edit4: TEdit
-        Touch.InteractiveGestures = [LongTap, DoubleTap]
-        Anchors = [akLeft, akRight]
-        TabOrder = 3
-        Position.X = 85.000000000000000000
-        Position.Y = 48.000000000000000000
-        Size.Width = 200.000000000000000000
-        Size.Height = 32.000000000000000000
-        Size.PlatformDefault = False
-      end
-      object IP_Label5: TLabel
-        Anchors = [akLeft]
-        Position.X = 10.000000000000000000
-        Position.Y = 5.000000000000000000
-        Size.Width = 61.000000000000000000
-        Size.Height = 32.000000000000000000
-        Size.PlatformDefault = False
-        Text = 'Admit le'
-        TabOrder = 4
-      end
-      object IP_Label6: TLabel
-        Anchors = [akLeft]
-        Position.X = 10.000000000000000000
-        Position.Y = 48.000000000000000000
-        Size.Width = 55.000000000000000000
-        Size.Height = 32.000000000000000000
-        Size.PlatformDefault = False
-        Text = 'Pr'#233'nom'
-        TabOrder = 5
-      end
-      object IP_Label7: TLabel
-        Anchors = [akLeft]
-        Position.X = 10.000000000000000000
-        Position.Y = 91.000000000000000000
-        Size.Width = 79.000000000000000000
-        Size.Height = 32.000000000000000000
-        Size.PlatformDefault = False
-        Text = 'Lieu de naiss.'
-        TabOrder = 6
-      end
-      object IP_Label8: TLabel
-        Anchors = [akLeft]
-        Position.X = 10.000000000000000000
-        Position.Y = 135.000000000000000000
-        Size.Width = 45.000000000000000000
-        Size.Height = 32.000000000000000000
-        Size.PlatformDefault = False
-        Text = 'Sexe'
         TabOrder = 7
+        object IP_Label8: TLabel
+          Anchors = [akLeft]
+          Position.X = 10.000000000000000000
+          Position.Y = 3.710144996643066000
+          Size.Width = 45.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Sexe'
+          TabOrder = 0
+        end
+        object IP_ComboBox2: TComboBox
+          Anchors = [akLeft, akRight]
+          Items.Strings = (
+            'Homme'
+            'Femme')
+          Position.X = 90.000000000000000000
+          Position.Y = 3.710144996643066000
+          Size.Width = 207.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 6
+        end
+      end
+      object Layout_Left_1: TLayout
+        Align = Left
+        Size.Width = 303.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 5
+        object IP_Label4: TLabel
+          Anchors = [akLeft]
+          Position.X = 10.000000000000000000
+          Position.Y = 4.289855003356934000
+          Size.Width = 55.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          Text = #201'tat civil'
+          TabOrder = 3
+        end
+        object IP_ComboBox1: TComboBox
+          Anchors = [akLeft, akRight]
+          Items.Strings = (
+            'C'#233'libataire'
+            'Mari'#233'(e)'
+            'Divorc'#233'(e)'
+            'Veuf(ve)')
+          Position.X = 90.000000000000000000
+          Position.Y = 4.289855003356934000
+          Size.Width = 207.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 5
+        end
       end
     end
-    object L_Left: TLayout
-      Align = Left
-      Margins.Left = 5.000000000000000000
-      Margins.Top = 20.000000000000000000
-      Margins.Right = 5.000000000000000000
+    object Layout_Top_3: TLayout
+      Align = Top
       Position.X = 5.000000000000000000
-      Position.Y = 20.000000000000000000
-      Size.Width = 303.000000000000000000
-      Size.Height = 171.000000000000000000
+      Position.Y = 100.000000000000000000
+      Size.Width = 598.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object Layout_Right3: TLayout
+        Align = Right
+        Position.X = 295.000000000000000000
+        Size.Width = 303.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 5
+        object IP_Label7: TLabel
+          Anchors = [akLeft]
+          Position.X = 10.000000000000000000
+          Position.Y = 4.000000000000000000
+          Size.Width = 71.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Type'
+          TabOrder = 2
+        end
+        object IP_ComboBox3: TComboBox
+          Anchors = [akLeft, akRight]
+          Items.Strings = (
+            'Interne'
+            'Externe')
+          Position.X = 90.000000000000000000
+          Position.Y = 4.000000000000000000
+          Size.Width = 207.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 6
+          OnChange = IP_ComboBox3Change
+          object InnerGlowEffect3Combo3: TInnerGlowEffect
+            Softness = 0.400000005960464400
+            GlowColor = xFFD7263D
+            Opacity = 0.899999976158142100
+            Enabled = False
+          end
+        end
+      end
+      object Layout_Left_3: TLayout
+        Align = Left
+        Size.Width = 303.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        object IP_Label3: TLabel
+          Anchors = [akLeft]
+          Position.X = 10.000000000000000000
+          Position.Y = 3.710144996643066000
+          Size.Width = 40.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'N'#233' le'
+          TabOrder = 8
+        end
+        object IP_DateEdit1: TDateEdit
+          Date = 43152.000000000000000000
+          Anchors = [akLeft, akRight]
+          Position.X = 90.000000000000000000
+          Position.Y = 3.710144758224487000
+          Size.Width = 207.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+        end
+      end
+    end
+    object Layout_Top_4: TLayout
+      Align = Top
+      Position.X = 5.000000000000000000
+      Position.Y = 60.000000000000000000
+      Size.Width = 598.000000000000000000
+      Size.Height = 40.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 1
-      object IP_ComboBox1: TComboBox
-        Anchors = [akLeft, akRight]
-        Items.Strings = (
-          'C'#233'libataire'
-          'Mari'#233'(e)'
-          'Divorc'#233'(e)'
-          'Veuf(ve)')
-        Position.X = 85.000000000000000000
-        Position.Y = 135.000000000000000000
-        Size.Width = 200.000000000000000000
-        Size.Height = 32.000000000000000000
+      object Layout_Right4: TLayout
+        Align = Right
+        Position.X = 295.000000000000000000
+        Size.Width = 303.000000000000000000
+        Size.Height = 40.000000000000000000
         Size.PlatformDefault = False
-        TabOrder = 0
+        TabOrder = 3
+        object IP_Label6: TLabel
+          Anchors = [akLeft]
+          Position.X = 10.000000000000000000
+          Position.Y = 3.574468135833740000
+          Size.Width = 55.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Pr'#233'nom'
+          TabOrder = 3
+        end
+        object IP_Edit3: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Anchors = [akLeft, akRight]
+          TabOrder = 2
+          Position.X = 90.000000000000000000
+          Position.Y = 4.425531864166260000
+          Size.Width = 207.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          OnChange = IP_Edit3Change
+          object InnerGlowEffectEdit3: TInnerGlowEffect
+            Softness = 0.400000005960464400
+            GlowColor = xFFD7263D
+            Opacity = 0.899999976158142100
+            Enabled = False
+          end
+        end
       end
-      object IP_DateEdit1: TDateEdit
-        Date = 43126.000000000000000000
-        Anchors = [akLeft, akRight]
-        Position.X = 85.000000000000000000
-        Position.Y = 91.000000000000000000
-        Size.Width = 200.000000000000000000
-        Size.Height = 32.000000000000000000
+      object Layout_Left_4: TLayout
+        Align = Left
+        Size.Width = 303.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        object IP_Label2: TLabel
+          Position.X = 10.000000000000000000
+          Position.Y = 8.000000000000000000
+          Size.Width = 33.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Nom'
+          TabOrder = 12
+        end
+        object IP_Edit2: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Anchors = [akLeft, akRight]
+          TabOrder = 1
+          Position.X = 90.000000000000000000
+          Position.Y = 3.574468135833740000
+          Size.Width = 207.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          OnChange = IP_Edit2Change
+          object InnerGlowEffectEdit2: TInnerGlowEffect
+            Softness = 0.400000005960464400
+            GlowColor = xFFD7263D
+            Opacity = 0.899999976158142100
+            Enabled = False
+          end
+        end
+      end
+    end
+    object Layout_Top_2: TLayout
+      Align = Top
+      Position.X = 5.000000000000000000
+      Position.Y = 20.000000000000000000
+      Size.Width = 598.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object Layout_Right2: TLayout
+        Align = Right
+        Position.X = 295.000000000000000000
+        Size.Width = 303.000000000000000000
+        Size.Height = 40.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 1
+        object IP_Label5: TLabel
+          Anchors = [akLeft]
+          Position.X = 10.000000000000000000
+          Position.Y = 3.710144996643066000
+          Size.Width = 61.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Admit le'
+          TabOrder = 3
+        end
+        object IP_DateEdit2: TDateEdit
+          Date = 43126.000000000000000000
+          Anchors = [akLeft, akRight]
+          Position.X = 90.000000000000000000
+          Position.Y = 3.710144996643066000
+          Size.Width = 207.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+        end
       end
-      object IP_Edit1: TEdit
-        Touch.InteractiveGestures = [LongTap, DoubleTap]
-        Anchors = [akLeft, akRight]
-        TabOrder = 2
-        Position.X = 85.000000000000000000
-        Position.Y = 48.000000000000000000
-        Size.Width = 200.000000000000000000
-        Size.Height = 32.000000000000000000
+      object Layout_Left_2: TLayout
+        Align = Left
+        Size.Width = 303.000000000000000000
+        Size.Height = 40.000000000000000000
         Size.PlatformDefault = False
-      end
-      object IP_Edit2: TEdit
-        Touch.InteractiveGestures = [LongTap, DoubleTap]
-        Anchors = [akLeft, akRight]
-        TabOrder = 3
-        ReadOnly = True
-        Position.X = 85.000000000000000000
-        Position.Y = 5.000000000000000000
-        Size.Width = 200.000000000000000000
-        Size.Height = 32.000000000000000000
-        Size.PlatformDefault = False
-      end
-      object IP_Label1: TLabel
-        Anchors = [akLeft]
-        Position.X = 10.000000000000000000
-        Position.Y = 5.000000000000000000
-        Size.Width = 49.000000000000000000
-        Size.Height = 32.000000000000000000
-        Size.PlatformDefault = False
-        Text = 'Code'
-        TabOrder = 4
-      end
-      object IP_Label2: TLabel
-        Anchors = [akLeft]
-        Position.X = 10.000000000000000000
-        Position.Y = 48.000000000000000000
-        Size.Width = 49.000000000000000000
-        Size.Height = 32.000000000000000000
-        Size.PlatformDefault = False
-        Text = 'Nom'
-        TabOrder = 5
-      end
-      object IP_Label3: TLabel
-        Anchors = [akLeft]
-        Position.X = 10.000000000000000000
-        Position.Y = 91.000000000000000000
-        Size.Width = 49.000000000000000000
-        Size.Height = 32.000000000000000000
-        Size.PlatformDefault = False
-        Text = 'N'#233' le'
-        TabOrder = 6
-      end
-      object IP_Label4: TLabel
-        Anchors = [akLeft]
-        Position.X = 10.000000000000000000
-        Position.Y = 135.000000000000000000
-        Size.Width = 55.000000000000000000
-        Size.Height = 32.000000000000000000
-        Size.PlatformDefault = False
-        Text = #201'tat civil'
-        TabOrder = 7
+        TabOrder = 0
+        object IP_Label1: TLabel
+          Anchors = [akLeft]
+          Position.X = 10.000000000000000000
+          Position.Y = 4.289855003356934000
+          Size.Width = 49.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Code'
+          TabOrder = 12
+        end
+        object IP_Edit1: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Anchors = [akLeft, akRight]
+          TabOrder = 0
+          ReadOnly = True
+          Position.X = 90.000000000000000000
+          Position.Y = 4.289855003356934000
+          HitTest = False
+          Size.Width = 207.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+        end
       end
     end
   end
@@ -228,9 +317,27 @@ object Frame1: TFrame1
     Align = Right
     Position.X = 768.000000000000000000
     Size.Width = 291.000000000000000000
-    Size.Height = 191.000000000000000000
+    Size.Height = 200.000000000000000000
     Size.PlatformDefault = False
     Text = 'Liens'
     TabOrder = 3
+    object Button1: TButton
+      Position.X = 73.000000000000000000
+      Position.Y = 27.000000000000000000
+      Size.Width = 145.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'OK'
+    end
+    object Button2: TButton
+      Position.X = 73.000000000000000000
+      Position.Y = 131.000000000000000000
+      Size.Width = 145.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Vid'#233
+    end
   end
 end

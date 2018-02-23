@@ -1,6 +1,6 @@
 object Frame5: TFrame5
   Size.Width = 1059.000000000000000000
-  Size.Height = 275.000000000000000000
+  Size.Height = 276.000000000000000000
   Size.PlatformDefault = False
   OnResize = FrameResize
   object TabControl1: TTabControl
@@ -8,21 +8,21 @@ object Frame5: TFrame5
     Margins.Top = 5.000000000000000000
     Margins.Bottom = 5.000000000000000000
     Size.Width = 1059.000000000000000000
-    Size.Height = 265.000000000000000000
+    Size.Height = 266.000000000000000000
     Size.PlatformDefault = False
-    TabIndex = 1
+    TabIndex = 0
     TabOrder = 0
     TabPosition = Bottom
     Sizes = (
       1059s
-      239s
+      240s
       1059s
-      239s)
+      240s)
     object TabItem8: TTabItem
       CustomIcon = <
         item
         end>
-      IsSelected = False
+      IsSelected = True
       Size.Width = 109.000000000000000000
       Size.Height = 26.000000000000000000
       Size.PlatformDefault = False
@@ -34,58 +34,66 @@ object Frame5: TFrame5
       object GroupBox6: TGroupBox
         Align = Left
         Size.Width = 297.000000000000000000
-        Size.Height = 239.000000000000000000
+        Size.Height = 240.000000000000000000
         Size.PlatformDefault = False
         Text = 'La s'#233'rologie de l'#39'h'#233'patite A'
         TabOrder = 3
-        object CheckBox1: TCheckBox
+        object RB_HA_IgM: TRadioButton
           Anchors = []
-          Position.X = 92.000000000000000000
-          Position.Y = 65.000000000000000000
-          TabOrder = 0
-          Text = 'Anti-VHA'
-        end
-        object RadioButton1: TRadioButton
-          Anchors = []
+          Enabled = False
           Position.X = 50.000000000000000000
-          Position.Y = 121.000000000000000000
-          Size.Width = 61.000000000000000000
-          Size.Height = 24.000000000000000000
-          Size.PlatformDefault = False
-          TabOrder = 2
-          Text = 'IgM'
-        end
-        object RadioButton2: TRadioButton
-          Anchors = []
-          Position.X = 186.000000000000000000
-          Position.Y = 121.000000000000000000
+          Position.Y = 148.669448852539100000
           Size.Width = 61.000000000000000000
           Size.Height = 24.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 1
+          Text = 'IgM'
+        end
+        object RB_HA_IgG: TRadioButton
+          Anchors = []
+          Enabled = False
+          Position.X = 186.000000000000000000
+          Position.Y = 148.669448852539100000
+          Size.Width = 61.000000000000000000
+          Size.Height = 24.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
           Text = 'IgG'
+        end
+        object CB_HA_Anit_VHA: TCheckBox
+          Position.X = 112.000000000000000000
+          Position.Y = 62.000000000000000000
+          Size.Width = 73.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          Text = 'Anit-VHA'
+          OnChange = CB_HA_Anit_VHAChange
         end
       end
       object GroupBox7: TGroupBox
         Align = Left
         Position.X = 297.000000000000000000
         Size.Width = 224.000000000000000000
-        Size.Height = 239.000000000000000000
+        Size.Height = 240.000000000000000000
         Size.PlatformDefault = False
         Text = 'La s'#233'rologie de l'#39'h'#233'patite B'
         TabOrder = 0
-        object CheckBox2: TCheckBox
+        object CB_HB_Anti_VHB: TCheckBox
           Anchors = []
-          Position.X = 16.000000000000000000
-          Position.Y = 49.000000000000000000
+          Position.X = 61.000000000000000000
+          Position.Y = 63.303348541259760000
+          Size.Width = 85.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
           TabOrder = 2
           Text = 'Anti-VHB'
         end
-        object CheckBox3: TCheckBox
+        object CB_HB_Antigene_BHs: TCheckBox
           Anchors = []
-          Position.X = 16.000000000000000000
-          Position.Y = 137.000000000000000000
-          Size.Width = 120.000000000000000000
+          Position.X = 61.000000000000000000
+          Position.Y = 151.682006835937500000
+          Size.Width = 101.000000000000000000
           Size.Height = 24.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 1
@@ -96,14 +104,17 @@ object Frame5: TFrame5
         Align = Left
         Position.X = 521.000000000000000000
         Size.Width = 224.000000000000000000
-        Size.Height = 239.000000000000000000
+        Size.Height = 240.000000000000000000
         Size.PlatformDefault = False
         Text = 'La s'#233'rologie de l'#39'h'#233'patite C'
         TabOrder = 2
-        object CheckBox4: TCheckBox
+        object CB_HC_Anti_VHC: TCheckBox
           Anchors = []
-          Position.X = 20.000000000000000000
-          Position.Y = 93.000000000000000000
+          Position.X = 73.000000000000000000
+          Position.Y = 110.500000000000000000
+          Size.Width = 77.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
           TabOrder = 1
           Text = 'Anti-VHC'
         end
@@ -111,15 +122,18 @@ object Frame5: TFrame5
       object GroupBox9: TGroupBox
         Align = Left
         Position.X = 745.000000000000000000
-        Size.Width = 297.000000000000000000
-        Size.Height = 239.000000000000000000
+        Size.Width = 312.000000000000000000
+        Size.Height = 240.000000000000000000
         Size.PlatformDefault = False
         Text = 'La s'#233'rologie du VIH / Sida'
         TabOrder = 1
-        object CheckBox5: TCheckBox
+        object CB_VIH_Anti_VIH: TCheckBox
           Anchors = []
-          Position.X = 36.000000000000000000
-          Position.Y = 93.000000000000000000
+          Position.X = 119.500000000000000000
+          Position.Y = 110.500000000000000000
+          Size.Width = 73.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
           TabOrder = 1
           Text = 'Anti-VIH'
         end
@@ -129,7 +143,7 @@ object Frame5: TFrame5
       CustomIcon = <
         item
         end>
-      IsSelected = True
+      IsSelected = False
       Size.Width = 214.000000000000000000
       Size.Height = 26.000000000000000000
       Size.PlatformDefault = False
@@ -145,51 +159,57 @@ object Frame5: TFrame5
         Padding.Right = 10.000000000000000000
         Padding.Bottom = 10.000000000000000000
         Size.Width = 784.000000000000000000
-        Size.Height = 239.000000000000000000
+        Size.Height = 240.000000000000000000
         Size.PlatformDefault = False
         Text = 'La s'#233'rologie bact'#233'rienne'
         TabOrder = 0
         object GroupBox10: TGroupBox
           Align = Client
           Margins.Top = 20.000000000000000000
-          Size.Width = 256.000000000000000000
-          Size.Height = 199.000000000000000000
+          Size.Width = 301.000000000000000000
+          Size.Height = 200.000000000000000000
           Size.PlatformDefault = False
           Text = 'La mononucl'#233'ose infectieuse'
           TabOrder = 0
-          object CheckBox6: TCheckBox
+          object CB_MI_Anti_EBV: TCheckBox
             Anchors = []
-            Position.X = 124.032127380371100000
-            Position.Y = 33.000000000000000000
+            Hint = 'anti-Epstein-Barr virus '
+            Position.X = 181.000000000000000000
+            Position.Y = 28.221105575561520000
+            Size.Width = 80.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
             TabOrder = 1
             Text = 'Anti-EBV'
+            ParentShowHint = False
+            ShowHint = True
           end
-          object CheckBox11: TCheckBox
+          object CB_MI_VCA: TCheckBox
             Anchors = []
-            Position.X = 12.616465568542480000
-            Position.Y = 33.000000000000000000
-            Size.Width = 93.000000000000000000
-            Size.Height = 24.000000000000000000
+            Position.X = 48.000000000000000000
+            Position.Y = 140.783920288085900000
+            Size.Width = 77.000000000000000000
+            Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
             Text = 'IgG-VCA'
           end
-          object CheckBox12: TCheckBox
+          object CB_MI_EBNA: TCheckBox
             Anchors = []
-            Position.X = 12.616465568542480000
-            Position.Y = 143.000000000000000000
-            Size.Width = 93.000000000000000000
-            Size.Height = 24.000000000000000000
+            Position.X = 40.000000000000000000
+            Position.Y = 28.221105575561520000
+            Size.Width = 77.000000000000000000
+            Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 2
             Text = 'IgG-EBNA'
           end
-          object CheckBox13: TCheckBox
+          object CB_MI_EA: TCheckBox
             Anchors = []
-            Position.X = 124.032127380371100000
-            Position.Y = 143.000000000000000000
-            Size.Width = 120.000000000000000000
-            Size.Height = 24.000000000000000000
+            Position.X = 181.000000000000000000
+            Position.Y = 140.783920288085900000
+            Size.Width = 64.000000000000000000
+            Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 3
             Text = 'IgG-EA'
@@ -201,151 +221,101 @@ object Frame5: TFrame5
           Position.X = 10.000000000000000000
           Position.Y = 30.000000000000000000
           Size.Width = 254.000000000000000000
-          Size.Height = 199.000000000000000000
+          Size.Height = 200.000000000000000000
           Size.PlatformDefault = False
           Text = 'La s'#233'rologie de la rub'#233'ole'
-          TabOrder = 1
-          object CheckBox10: TCheckBox
+          TabOrder = 2
+          object CB_RUB_IgM: TCheckBox
             Anchors = []
-            Position.X = 44.000000000000000000
-            Position.Y = 28.000000000000000000
-            Size.Width = 165.000000000000000000
-            Size.Height = 19.000000000000000000
+            Position.X = 60.000000000000000000
+            Position.Y = 24.201005935668940000
+            Size.Width = 133.000000000000000000
+            Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
             Text = 'Anticorps type IgM'
           end
-          object CheckBox14: TCheckBox
+          object CB_RUB_IgA: TCheckBox
             Anchors = []
-            Position.X = 44.000000000000000000
-            Position.Y = 88.000000000000000000
-            Size.Width = 157.000000000000000000
-            Size.Height = 24.000000000000000000
+            Position.X = 60.000000000000000000
+            Position.Y = 84.502510070800780000
+            Size.Width = 125.000000000000000000
+            Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 1
             Text = 'Anticorps type IgA'
           end
-          object CheckBox15: TCheckBox
+          object CB_RUB_IgG: TCheckBox
             Anchors = []
-            Position.X = 44.000000000000000000
-            Position.Y = 148.000000000000000000
-            Size.Width = 165.000000000000000000
-            Size.Height = 24.000000000000000000
+            Position.X = 60.000000000000000000
+            Position.Y = 144.804016113281200000
+            Size.Width = 125.000000000000000000
+            Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 2
             Text = 'Anticorps type IgG'
           end
         end
-        object Layout1: TLayout
-          Align = Right
+        object GroupBox11: TGroupBox
+          Align = Left
           Margins.Top = 20.000000000000000000
-          Position.X = 520.000000000000000000
+          Position.X = 264.000000000000000000
           Position.Y = 30.000000000000000000
-          Size.Width = 254.000000000000000000
-          Size.Height = 199.000000000000000000
+          Size.Width = 209.000000000000000000
+          Size.Height = 200.000000000000000000
           Size.PlatformDefault = False
-          TabOrder = 2
-          object GroupBox11: TGroupBox
-            Align = Top
-            Size.Width = 254.000000000000000000
-            Size.Height = 105.000000000000000000
+          Text = 'salmonelloses (fi'#232'vre typho'#239'de)'
+          TabOrder = 1
+          object CB_SFT_Anti_O: TCheckBox
+            Anchors = []
+            Position.X = 70.000000000000000000
+            Position.Y = 50.331657409667970000
+            Size.Width = 69.000000000000000000
+            Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
-            Text = 'salmonelloses (fi'#232'vre typho'#239'de)'
-            TabOrder = 1
-            object CheckBox7: TCheckBox
-              Anchors = []
-              Position.X = 16.000000000000000000
-              Position.Y = 27.090909957885740000
-              TabOrder = 0
-              Text = 'Anti-O'
-            end
-            object CheckBox8: TCheckBox
-              Anchors = []
-              Position.X = 16.000000000000000000
-              Position.Y = 61.181819915771480000
-              Size.Width = 120.000000000000000000
-              Size.Height = 24.000000000000000000
-              Size.PlatformDefault = False
-              TabOrder = 1
-              Text = 'Anti-H'
-            end
+            TabOrder = 0
+            Text = 'Anti-O'
           end
-          object GroupBox12: TGroupBox
-            Align = Bottom
-            Position.Y = 104.000000000000000000
-            Size.Width = 254.000000000000000000
-            Size.Height = 95.000000000000000000
+          object CB_SFT_Anti_H: TCheckBox
+            Anchors = []
+            Position.X = 70.000000000000000000
+            Position.Y = 117.668342590332000000
+            Size.Width = 61.000000000000000000
+            Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
-            Text = 'La s'#233'rologie de la syphilis'
-            TabOrder = 2
-            object CheckBox9: TCheckBox
-              Anchors = []
-              Position.X = 60.000000000000000000
-              Position.Y = 38.000000000000000000
-              TabOrder = 0
-              Text = 'Anti-VHC'
-            end
+            TabOrder = 1
+            Text = 'Anti-H'
           end
         end
       end
       object GroupBox17: TGroupBox
         Align = Right
         Padding.Left = 10.000000000000000000
-        Padding.Top = 20.000000000000000000
+        Padding.Top = 30.000000000000000000
         Padding.Right = 10.000000000000000000
         Padding.Bottom = 10.000000000000000000
         Position.X = 784.000000000000000000
         Size.Width = 275.000000000000000000
-        Size.Height = 239.000000000000000000
+        Size.Height = 240.000000000000000000
         Size.PlatformDefault = False
         Text = 'La s'#233'rologie parasitaire'
         TabOrder = 1
         object GroupBox15: TGroupBox
           Align = Client
           Size.Width = 255.000000000000000000
-          Size.Height = 209.000000000000000000
+          Size.Height = 200.000000000000000000
           Size.PlatformDefault = False
           Text = 'La s'#233'rologie de la toxoplasmose'
           TabOrder = 0
-          object CheckBox17: TCheckBox
+          object CB_Toxo_Anti_IgM: TCheckBox
             Anchors = []
-            Position.X = 12.000000000000000000
-            Position.Y = 44.000000000000000000
-            Size.Width = 101.000000000000000000
-            Size.Height = 19.000000000000000000
+            Position.X = 89.000000000000000000
+            Position.Y = 84.502510070800780000
+            Size.Width = 76.000000000000000000
+            Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
-            Text = 'Anti-EBV'
-          end
-          object CheckBox18: TCheckBox
-            Anchors = []
-            Position.X = 12.000000000000000000
-            Position.Y = 108.000000000000000000
-            Size.Width = 101.000000000000000000
-            Size.Height = 24.000000000000000000
-            Size.PlatformDefault = False
-            TabOrder = 2
-            Text = 'IgG-VCA'
-          end
-          object CheckBox19: TCheckBox
-            Anchors = []
-            Position.X = 116.000000000000000000
-            Position.Y = 44.000000000000000000
-            Size.Width = 120.000000000000000000
-            Size.Height = 24.000000000000000000
-            Size.PlatformDefault = False
-            TabOrder = 1
-            Text = 'IgG-EBNA'
-          end
-          object CheckBox20: TCheckBox
-            Anchors = []
-            Position.X = 116.000000000000000000
-            Position.Y = 108.000000000000000000
-            Size.Width = 120.000000000000000000
-            Size.Height = 24.000000000000000000
-            Size.PlatformDefault = False
-            TabOrder = 3
-            Text = 'IgG-EA'
+            Text = 'Anti-IgM'
           end
         end
       end

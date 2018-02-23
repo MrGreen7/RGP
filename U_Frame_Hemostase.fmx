@@ -67,7 +67,7 @@ object Frame4: TFrame4
         TabOrder = 1
         FilterChar = '0123456789'
         Position.X = 62.000000000000000000
-        Position.Y = 120.000000000000000000
+        Position.Y = 110.000000000000000000
         Size.Width = 240.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
@@ -193,56 +193,27 @@ object Frame4: TFrame4
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
         Text = 'VS'
-        TabOrder = 16
+        TabOrder = 14
       end
       object Edit1: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akTop, akRight]
-        TabOrder = 18
+        TabOrder = 16
         FilterChar = '0123456789'
         Position.X = 48.000000000000000000
         Position.Y = 37.000000000000000000
-        Size.Width = 185.000000000000000000
+        Size.Width = 345.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
         object Label16: TLabel
           Align = Right
           StyledSettings = [Family, Style, FontColor]
-          Position.X = 128.000000000000000000
+          Position.X = 288.000000000000000000
           Size.Width = 57.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
           Text = '100mm/h'
           TabOrder = 0
-        end
-      end
-      object Label22: TLabel
-        Position.X = 245.000000000000000000
-        Position.Y = 37.000000000000000000
-        Size.Width = 45.000000000000000000
-        Size.Height = 32.000000000000000000
-        Size.PlatformDefault = False
-        Text = 'Sexe'
-        TabOrder = 7
-      end
-      object ComboBox1: TComboBox
-        Position.X = 291.000000000000000000
-        Position.Y = 37.000000000000000000
-        Size.Width = 118.000000000000000000
-        Size.Height = 32.000000000000000000
-        Size.PlatformDefault = False
-        TabOrder = 5
-        object ListBoxItem3: TListBoxItem
-          TextSettings.Font.Family = 'FontAwesome'
-          TextSettings.Font.Size = 36.000000000000000000
-          TabOrder = 0
-          Text = #61827' - Homme'
-        end
-        object ListBoxItem4: TListBoxItem
-          TextSettings.Font.Family = 'FontAwesome'
-          TextSettings.Font.Size = 36.000000000000000000
-          TabOrder = 1
-          Text = #61826' - Femme'
         end
       end
     end

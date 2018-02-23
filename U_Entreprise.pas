@@ -131,7 +131,6 @@ type
     procedure ComboBox3Change(Sender: TObject);
     procedure Edit_Code_WilayaChange(Sender: TObject);
     procedure Button1Click(Sender: TObject);
-    procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormShow(Sender: TObject);
     procedure Button3Click(Sender: TObject);
   private
@@ -153,8 +152,6 @@ uses
 
 procedure WiliyaLoad(const Combo: TComboBox);
 begin
-  // Open Entreprise.db
-  DataModule1.FDCn_Entreprise.Connected := True;
   // Open Alg
   with DataModule1.FDQ_Wilaya do
   begin
@@ -214,9 +211,9 @@ begin
       FieldByName('Libelle').AsString := Edit1.Text;
       FieldByName('Libelle_Sec').AsString := Edit2.Text;
       FieldByName('Adresse').AsString := Edit3.Text;
-      FieldByName('Telephone').Value := Edit4.Text;
-      FieldByName('Mobile').Value := Edit5.Text;
-      FieldByName('Fax').Value := Edit6.Text;
+      FieldByName('Telephone').AsString := Edit4.Text;
+      FieldByName('Mobile').AsString := Edit5.Text;
+      FieldByName('Fax').AsString := Edit6.Text;
       FieldByName('Email').AsString := Edit7.Text;
       FieldByName('Web').AsString := Edit8.Text;
       FieldByName('Code_de_Wilaya').Value := Edit_Code_Wilaya.Text;
@@ -302,11 +299,6 @@ begin
   CommuneLoad(Edit_Code_Wilaya, ComboBox3);
 end;
 
-procedure TEntreprise.FormClose(Sender: TObject; var Action: TCloseAction);
-begin
-  DataModule1.FDCn_Entreprise.Connected := False;
-end;
-
 procedure TEntreprise.FormCreate(Sender: TObject);
 begin
   WiliyaLoad(ComboBox2);
@@ -335,9 +327,9 @@ begin
       Edit1.Text := FieldByName('Libelle').AsString;
       Edit2.Text := FieldByName('Libelle_Sec').AsString;
       Edit3.Text := FieldByName('Adresse').AsString;
-      Edit4.Text := FieldByName('Telephone').Value;
-      Edit5.Text := FieldByName('Mobile').Value;
-      Edit6.Text := FieldByName('Fax').Value;
+      Edit4.Text := FieldByName('Telephone').AsString;
+      Edit5.Text := FieldByName('Mobile').AsString;
+      Edit6.Text := FieldByName('Fax').AsString;
       Edit7.Text := FieldByName('Email').AsString;
       Edit8.Text := FieldByName('Web').AsString;
       Edit_Code_Wilaya.Text := FieldByName('Code_de_Wilaya').Value;

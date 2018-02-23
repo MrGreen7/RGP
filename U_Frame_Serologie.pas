@@ -12,40 +12,35 @@ type
     TabControl1: TTabControl;
     TabItem8: TTabItem;
     GroupBox6: TGroupBox;
-    CheckBox1: TCheckBox;
-    RadioButton1: TRadioButton;
-    RadioButton2: TRadioButton;
+    RB_HA_IgM: TRadioButton;
+    RB_HA_IgG: TRadioButton;
     GroupBox7: TGroupBox;
-    CheckBox2: TCheckBox;
-    CheckBox3: TCheckBox;
+    CB_HB_Anti_VHB: TCheckBox;
+    CB_HB_Antigene_BHs: TCheckBox;
     GroupBox8: TGroupBox;
-    CheckBox4: TCheckBox;
+    CB_HC_Anti_VHC: TCheckBox;
     GroupBox9: TGroupBox;
-    CheckBox5: TCheckBox;
+    CB_VIH_Anti_VIH: TCheckBox;
     TabItem9: TTabItem;
     GroupBox16: TGroupBox;
     GroupBox10: TGroupBox;
-    CheckBox6: TCheckBox;
-    CheckBox11: TCheckBox;
-    CheckBox12: TCheckBox;
-    CheckBox13: TCheckBox;
+    CB_MI_Anti_EBV: TCheckBox;
+    CB_MI_VCA: TCheckBox;
+    CB_MI_EBNA: TCheckBox;
+    CB_MI_EA: TCheckBox;
     GroupBox13: TGroupBox;
-    CheckBox10: TCheckBox;
-    CheckBox14: TCheckBox;
-    CheckBox15: TCheckBox;
+    CB_RUB_IgM: TCheckBox;
+    CB_RUB_IgA: TCheckBox;
+    CB_RUB_IgG: TCheckBox;
     GroupBox17: TGroupBox;
     GroupBox15: TGroupBox;
-    CheckBox17: TCheckBox;
-    CheckBox18: TCheckBox;
-    CheckBox19: TCheckBox;
-    CheckBox20: TCheckBox;
-    Layout1: TLayout;
+    CB_Toxo_Anti_IgM: TCheckBox;
+    CB_HA_Anit_VHA: TCheckBox;
     GroupBox11: TGroupBox;
-    CheckBox7: TCheckBox;
-    CheckBox8: TCheckBox;
-    GroupBox12: TGroupBox;
-    CheckBox9: TCheckBox;
+    CB_SFT_Anti_O: TCheckBox;
+    CB_SFT_Anti_H: TCheckBox;
     procedure FrameResize(Sender: TObject);
+    procedure CB_HA_Anit_VHAChange(Sender: TObject);
   private
     { Private declarations }
   public
@@ -56,19 +51,26 @@ implementation
 
 {$R *.fmx}
 
+procedure TFrame5.CB_HA_Anit_VHAChange(Sender: TObject);
+begin
+  if (CB_HA_Anit_VHA.IsChecked = True) then
+  Begin
+    RB_HA_IgM.Enabled := True;
+    RB_HA_IgG.Enabled := True;
+  End;
+end;
+
 procedure TFrame5.FrameResize(Sender: TObject);
 begin
-    //Viral
+  //Viral
   GroupBox6.Width := TabControl1.Width / 4;
   GroupBox7.Width := TabControl1.Width / 4;
   GroupBox8.Width := TabControl1.Width / 4;
   GroupBox9.Width := TabControl1.Width / 4;
-  //Bact / Para
+  //Bact | Para
   GroupBox10.Width := GroupBox16.Width / 3;
   GroupBox11.Width := GroupBox16.Width / 3;
-  Layout1.Width := GroupBox16.Width / 3;
-  GroupBox11.Height := (Layout1.Height) / 2;
-  GroupBox12.Height := (Layout1.Height) / 2;
+  GroupBox13.Width := GroupBox16.Width / 3;
 end;
 
 end.

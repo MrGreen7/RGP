@@ -11,7 +11,6 @@ object Entreprise: TEntreprise
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
   OnCreate = FormCreate
-  OnClose = FormClose
   OnShow = FormShow
   DesignerMasterStyle = 0
   object GroupBox1: TGroupBox

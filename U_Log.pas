@@ -3,10 +3,15 @@ unit U_Log;
 interface
 
 uses
-  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
-  FMX.Controls.Presentation, FMX.StdCtrls, System.Actions, FMX.ActnList, FMX.Types,
-  FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Edit, FMX.EditBox, FMX.NumberBox,
-  windows, ShellApi, FMX.platform.Win, FMX.Effects, IdHashMessageDigest,U_Base_Form;
+  System.SysUtils, System.Types, System.UITypes, System.Classes,
+  System.Variants,
+  FMX.Controls.Presentation, FMX.StdCtrls, System.Actions, FMX.ActnList,
+  FMX.Types,
+  FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Edit, FMX.EditBox,
+  FMX.NumberBox,
+  windows, ShellApi, FMX.platform.Win, FMX.Effects, IdHashMessageDigest,
+  U_Base_Form,
+  FMX.Ani;
 
 type
   TLog = class(TBase_Form)
@@ -18,16 +23,18 @@ type
     SpeedButton1: TSpeedButton;
     Label2: TLabel;
     ShadowEffect1: TShadowEffect;
-    ShadowEffect2: TShadowEffect;
     InnerGlowEffect1: TInnerGlowEffect;
     InnerGlowEffect2: TInnerGlowEffect;
+    ShadowEffect3: TShadowEffect;
     procedure Label1Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure Edit1Change(Sender: TObject);
     procedure Edit2Change(Sender: TObject);
-    procedure SpeedButton1MouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Single);
-    procedure SpeedButton1MouseDown(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Single);
+    procedure SpeedButton1MouseUp(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Single);
+    procedure SpeedButton1MouseDown(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Single);
   private
     { Private declarations }
   public
@@ -87,20 +94,23 @@ begin
   begin
     if ((Edit1.Text = '') and (Edit2.Text = '')) then
     begin
-      MessageDlg('š''il vous plaît saisir votre pseudo et mot de pass', TMsgDlgType.mtWarning, [TMsgDlgBtn.mbRetry], 0);
+      MessageDlg('š''il vous plaît saisir votre pseudo et mot de pass',
+        TMsgDlgType.mtWarning, [TMsgDlgBtn.mbRetry], 0);
       InnerGlowEffect1.Enabled := True;
       InnerGlowEffect2.Enabled := True;
       Edit1.SetFocus;
     end
     else if (Edit1.Text = '') then
     begin
-      MessageDlg('š''il vous plaît saisir votre pseudo', TMsgDlgType.mtWarning, [TMsgDlgBtn.mbRetry], 0);
+      MessageDlg('š''il vous plaît saisir votre pseudo', TMsgDlgType.mtWarning,
+        [TMsgDlgBtn.mbRetry], 0);
       InnerGlowEffect1.Enabled := True;
       Edit1.SetFocus;
     end
     else
     begin
-      MessageDlg('š''il vous plaît saisir votre mot de pass', TMsgDlgType.mtWarning, [TMsgDlgBtn.mbRetry], 0);
+      MessageDlg('š''il vous plaît saisir votre mot de pass',
+        TMsgDlgType.mtWarning, [TMsgDlgBtn.mbRetry], 0);
       InnerGlowEffect2.Enabled := True;
       Edit2.SetFocus;
     end;
@@ -113,11 +123,13 @@ begin
       Active := False;
       SQL.Text := ('SELECT * FROM User');
       Active := True;
-      if not (Locate('Pseudo;Mot_de_pass', VarArrayOf([Edit1.Text, HexPass]), [])) then
+      if not(Locate('Pseudo;Mot_de_pass', VarArrayOf([Edit1.Text, HexPass]), []))
+      then
       begin
         InnerGlowEffect1.Enabled := True;
         InnerGlowEffect2.Enabled := True;
-        Msg := MessageDlg('Pseudo ou Mot de pass est incorrect !', TMsgDlgType.mtError, [TMsgDlgBtn.mbRetry, TMsgDlgBtn.mbCancel], 0);
+        Msg := MessageDlg('Pseudo ou Mot de pass est incorrect !',
+          TMsgDlgType.mtError, [TMsgDlgBtn.mbRetry, TMsgDlgBtn.mbCancel], 0);
         if (Msg = mrRetry) then
         begin
           Edit1.Text := '';
@@ -157,12 +169,14 @@ begin
     InsDlg.Close;
 end;
 
-procedure TLog.SpeedButton1MouseDown(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Single);
+procedure TLog.SpeedButton1MouseDown(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Single);
 begin
   Edit2.Password := False;
 end;
 
-procedure TLog.SpeedButton1MouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Single);
+procedure TLog.SpeedButton1MouseUp(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Single);
 begin
   Edit2.Password := True;
 end;
@@ -173,4 +187,3 @@ begin
 end;
 
 end.
-

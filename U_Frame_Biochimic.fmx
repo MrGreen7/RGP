@@ -16,10 +16,10 @@ object Frame6: TFrame6
       Size.Height = 275.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
-      object Edit1: TEdit
+      object Bio_Edit11: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
-        TabOrder = 12
+        TabOrder = 0
         Position.X = 76.000000000000000000
         Position.Y = 16.000000000000000000
         Size.Width = 125.000000000000000000
@@ -54,10 +54,10 @@ object Frame6: TFrame6
         ShowHint = True
         TabOrder = 14
       end
-      object Edit2: TEdit
+      object Bio_Edit12: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
-        TabOrder = 9
+        TabOrder = 2
         Position.X = 76.000000000000000000
         Position.Y = 70.000000000000000000
         Size.Width = 125.000000000000000000
@@ -90,12 +90,12 @@ object Frame6: TFrame6
         Text = 'C: until 650   A: 70-300'
         ParentShowHint = False
         ShowHint = True
-        TabOrder = 11
+        TabOrder = 12
       end
-      object Edit3: TEdit
+      object Bio_Edit13: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
-        TabOrder = 6
+        TabOrder = 4
         Position.X = 76.000000000000000000
         Position.Y = 124.000000000000000000
         Size.Width = 125.000000000000000000
@@ -128,12 +128,12 @@ object Frame6: TFrame6
         Text = '73-100'
         ParentShowHint = False
         ShowHint = True
-        TabOrder = 8
+        TabOrder = 10
       end
-      object Edit4: TEdit
+      object Bio_Edit14: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
-        TabOrder = 3
+        TabOrder = 5
         Position.X = 76.000000000000000000
         Position.Y = 178.000000000000000000
         Size.Width = 125.000000000000000000
@@ -165,12 +165,12 @@ object Frame6: TFrame6
         TextSettings.HorzAlign = Center
         ParentShowHint = False
         ShowHint = True
-        TabOrder = 5
+        TabOrder = 8
       end
-      object Edit5: TEdit
+      object Bio_Edit15: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
-        TabOrder = 0
+        TabOrder = 7
         Position.X = 76.000000000000000000
         Position.Y = 232.000000000000000000
         Size.Width = 125.000000000000000000
@@ -203,7 +203,7 @@ object Frame6: TFrame6
         Text = '2-10'
         ParentShowHint = False
         ShowHint = True
-        TabOrder = 2
+        TabOrder = 3
       end
       object Label51: TLabel
         Anchors = [akLeft]
@@ -233,7 +233,7 @@ object Frame6: TFrame6
         Text = 'PAL'
         ParentShowHint = False
         ShowHint = True
-        TabOrder = 10
+        TabOrder = 11
       end
       object Label53: TLabel
         Anchors = [akLeft]
@@ -245,7 +245,7 @@ object Frame6: TFrame6
         Size.PlatformDefault = False
         TextSettings.Font.Size = 11.000000000000000000
         Text = 'TP'
-        TabOrder = 7
+        TabOrder = 9
       end
       object Label54: TLabel
         Anchors = [akLeft]
@@ -260,7 +260,7 @@ object Frame6: TFrame6
         Text = 'INR'
         ParentShowHint = False
         ShowHint = True
-        TabOrder = 4
+        TabOrder = 6
       end
       object Label55: TLabel
         Anchors = [akLeft]
@@ -282,10 +282,10 @@ object Frame6: TFrame6
       Size.Height = 275.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 1
-      object Edit6: TEdit
+      object Bio_Edit16: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
-        TabOrder = 9
+        TabOrder = 0
         Position.X = 76.000000000000000000
         Position.Y = 16.000000000000000000
         Size.Width = 125.000000000000000000
@@ -320,10 +320,10 @@ object Frame6: TFrame6
         ShowHint = True
         TabOrder = 11
       end
-      object Edit7: TEdit
+      object Bio_Edit17: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
-        TabOrder = 6
+        TabOrder = 2
         Position.X = 76.000000000000000000
         Position.Y = 70.000000000000000000
         Size.Width = 125.000000000000000000
@@ -355,12 +355,12 @@ object Frame6: TFrame6
         TextSettings.HorzAlign = Center
         ParentShowHint = False
         ShowHint = True
-        TabOrder = 8
+        TabOrder = 9
       end
-      object Edit8: TEdit
+      object Bio_Edit18: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
-        TabOrder = 3
+        TabOrder = 4
         Position.X = 76.000000000000000000
         Position.Y = 124.000000000000000000
         Size.Width = 125.000000000000000000
@@ -393,12 +393,12 @@ object Frame6: TFrame6
         Text = '80-106'
         ParentShowHint = False
         ShowHint = True
-        TabOrder = 5
+        TabOrder = 7
       end
-      object Edit9: TEdit
+      object Bio_Edit19: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
-        TabOrder = 0
+        TabOrder = 5
         Position.X = 76.000000000000000000
         Position.Y = 178.000000000000000000
         Size.Width = 125.000000000000000000
@@ -431,7 +431,7 @@ object Frame6: TFrame6
         Text = '35-50'
         ParentShowHint = False
         ShowHint = True
-        TabOrder = 2
+        TabOrder = 3
       end
       object Label56: TLabel
         Anchors = [akLeft]
@@ -455,7 +455,7 @@ object Frame6: TFrame6
         Size.PlatformDefault = False
         TextSettings.Font.Size = 11.000000000000000000
         Text = 'ASLO'
-        TabOrder = 7
+        TabOrder = 8
       end
       object Label58: TLabel
         Anchors = [akLeft]
@@ -467,7 +467,7 @@ object Frame6: TFrame6
         Size.PlatformDefault = False
         TextSettings.Font.Size = 11.000000000000000000
         Text = 'Calc'#233'mie'
-        TabOrder = 4
+        TabOrder = 6
       end
       object Label59: TLabel
         Anchors = [akLeft]
@@ -488,10 +488,10 @@ object Frame6: TFrame6
       Size.Height = 275.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 2
-      object Edit11: TEdit
+      object Bio_Edit1: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
-        TabOrder = 12
+        TabOrder = 0
         Position.X = 76.000000000000000000
         Position.Y = 16.000000000000000000
         Size.Width = 125.000000000000000000
@@ -526,10 +526,10 @@ object Frame6: TFrame6
         ShowHint = True
         TabOrder = 14
       end
-      object Edit12: TEdit
+      object Bio_Edit2: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
-        TabOrder = 9
+        TabOrder = 2
         Position.X = 76.000000000000000000
         Position.Y = 70.000000000000000000
         Size.Width = 125.000000000000000000
@@ -562,12 +562,12 @@ object Frame6: TFrame6
         Text = '0.15-.40'
         ParentShowHint = False
         ShowHint = True
-        TabOrder = 11
+        TabOrder = 12
       end
-      object Edit13: TEdit
+      object Bio_Edit3: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
-        TabOrder = 6
+        TabOrder = 4
         Position.X = 76.000000000000000000
         Position.Y = 124.000000000000000000
         Size.Width = 125.000000000000000000
@@ -600,12 +600,12 @@ object Frame6: TFrame6
         Text = '07-14'
         ParentShowHint = False
         ShowHint = True
-        TabOrder = 8
+        TabOrder = 10
       end
-      object Edit14: TEdit
+      object Bio_Edit4: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
-        TabOrder = 3
+        TabOrder = 6
         Position.X = 76.000000000000000000
         Position.Y = 178.000000000000000000
         Size.Width = 125.000000000000000000
@@ -638,12 +638,12 @@ object Frame6: TFrame6
         Text = '1.40-2.20'
         ParentShowHint = False
         ShowHint = True
-        TabOrder = 5
+        TabOrder = 8
       end
-      object Edit15: TEdit
+      object Bio_Edit5: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
-        TabOrder = 0
+        TabOrder = 7
         Position.X = 76.000000000000000000
         Position.Y = 232.000000000000000000
         Size.Width = 125.000000000000000000
@@ -676,7 +676,7 @@ object Frame6: TFrame6
         Text = '1.10-1.50'
         ParentShowHint = False
         ShowHint = True
-        TabOrder = 2
+        TabOrder = 3
       end
       object Label41: TLabel
         Anchors = [akLeft]
@@ -700,7 +700,7 @@ object Frame6: TFrame6
         Size.PlatformDefault = False
         TextSettings.Font.Size = 11.000000000000000000
         Text = 'Ur'#233'e sanguine'
-        TabOrder = 10
+        TabOrder = 11
       end
       object Label43: TLabel
         Anchors = [akLeft]
@@ -712,7 +712,7 @@ object Frame6: TFrame6
         Size.PlatformDefault = False
         TextSettings.Font.Size = 11.000000000000000000
         Text = 'Cr'#233'atinine'
-        TabOrder = 7
+        TabOrder = 9
       end
       object Label44: TLabel
         Anchors = [akLeft]
@@ -724,7 +724,7 @@ object Frame6: TFrame6
         Size.PlatformDefault = False
         TextSettings.Font.Size = 11.000000000000000000
         Text = 'Cholest'#233'rol'
-        TabOrder = 4
+        TabOrder = 5
       end
       object Label45: TLabel
         Anchors = [akLeft]
@@ -746,10 +746,10 @@ object Frame6: TFrame6
       Size.Height = 275.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 3
-      object Edit16: TEdit
+      object Bio_Edit6: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
-        TabOrder = 12
+        TabOrder = 0
         Position.X = 76.000000000000000000
         Position.Y = 16.000000000000000000
         Size.Width = 125.000000000000000000
@@ -784,10 +784,10 @@ object Frame6: TFrame6
         ShowHint = True
         TabOrder = 14
       end
-      object Edit17: TEdit
+      object Bio_Edit7: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
-        TabOrder = 9
+        TabOrder = 2
         Position.X = 76.000000000000000000
         Position.Y = 70.000000000000000000
         Size.Width = 125.000000000000000000
@@ -820,12 +820,12 @@ object Frame6: TFrame6
         Text = 'INF a 0.30'
         ParentShowHint = False
         ShowHint = True
-        TabOrder = 11
+        TabOrder = 12
       end
-      object Edit18: TEdit
+      object Bio_Edit8: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
-        TabOrder = 6
+        TabOrder = 4
         Position.X = 76.000000000000000000
         Position.Y = 124.000000000000000000
         Size.Width = 125.000000000000000000
@@ -858,12 +858,12 @@ object Frame6: TFrame6
         Text = 'F : 25-60   M: 37-70'
         ParentShowHint = False
         ShowHint = True
-        TabOrder = 8
+        TabOrder = 10
       end
-      object Edit19: TEdit
+      object Bio_Edit9: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
-        TabOrder = 3
+        TabOrder = 6
         Position.X = 76.000000000000000000
         Position.Y = 178.000000000000000000
         Size.Width = 125.000000000000000000
@@ -896,17 +896,18 @@ object Frame6: TFrame6
         Text = '< 6'
         ParentShowHint = False
         ShowHint = True
-        TabOrder = 5
+        TabOrder = 8
       end
-      object Edit20: TEdit
+      object Bio_Edit10: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
-        TabOrder = 0
+        TabOrder = 7
         Position.X = 76.000000000000000000
         Position.Y = 232.000000000000000000
         Size.Width = 125.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        OnChange = Bio_Edit10Change
         object Label39: TLabel
           Align = Right
           StyledSettings = [Family, Style, FontColor]
@@ -934,7 +935,7 @@ object Frame6: TFrame6
         Text = 'F: until 31   M: until 38'
         ParentShowHint = False
         ShowHint = True
-        TabOrder = 2
+        TabOrder = 3
       end
       object Label46: TLabel
         Anchors = [akLeft]
@@ -964,7 +965,7 @@ object Frame6: TFrame6
         Text = 'LDL'
         ParentShowHint = False
         ShowHint = True
-        TabOrder = 10
+        TabOrder = 11
       end
       object Label48: TLabel
         Anchors = [akLeft]
@@ -976,7 +977,7 @@ object Frame6: TFrame6
         Size.PlatformDefault = False
         TextSettings.Font.Size = 11.000000000000000000
         Text = 'Acide urique'
-        TabOrder = 7
+        TabOrder = 9
       end
       object Label49: TLabel
         Anchors = [akLeft]
@@ -991,7 +992,7 @@ object Frame6: TFrame6
         Text = 'CRP'
         ParentShowHint = False
         ShowHint = True
-        TabOrder = 4
+        TabOrder = 5
       end
       object Label50: TLabel
         Anchors = [akLeft]
