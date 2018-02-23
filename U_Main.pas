@@ -219,6 +219,7 @@ begin
   if (LogDlg.ShowModal = mrCancel) then
     Application.Terminate;
   LogDlg.Free;
+//  Frame_Information.WiliyaLoad(Frame_Information.AC_Combobox1);
 end;
 
 procedure TMain.Frame_PrincipaleButton1Click(Sender: TObject);
@@ -239,6 +240,14 @@ begin
       SQl.Clear;
       Active := False;
     End;
+    if (Frame_Hemogramme.IsSet = True) then
+      Frame_Hemogramme.Insert;
+    if (Frame_Hemostase.IsSet = True) then
+      Frame_Hemostase.Insert;
+    if (Frame_Serologie.IsSet = True) then
+      Frame_Serologie.Insert;
+    if (Frame_Biochimic.IsSet = True) then
+      Frame_Biochimic.Insert;
   end;
 end;
 
@@ -248,6 +257,14 @@ begin
   Frame_Principale.Clear();
   if (TabItem1.IsSelected = True) then
     Frame_Information.Clear;
+  if (TabItem2.IsSelected = True) then
+    Frame_Hemogramme.Clear;
+  if (TabItem3.IsSelected = True) then
+    Frame_Hemostase.Clear;
+  if (TabItem4.IsSelected = True) then
+    Frame_Biochimic.Clear;
+  if (TabItem5.IsSelected = True) then
+    Frame_Serologie.Clear;
 end;
 
 procedure TMain.Label12Click(Sender: TObject);

@@ -20,6 +20,7 @@ object Frame6: TFrame6
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
         TabOrder = 0
+        MaxLength = 8
         Position.X = 76.000000000000000000
         Position.Y = 16.000000000000000000
         Size.Width = 125.000000000000000000
@@ -58,6 +59,7 @@ object Frame6: TFrame6
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
         TabOrder = 2
+        MaxLength = 8
         Position.X = 76.000000000000000000
         Position.Y = 70.000000000000000000
         Size.Width = 125.000000000000000000
@@ -96,6 +98,7 @@ object Frame6: TFrame6
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
         TabOrder = 4
+        MaxLength = 8
         Position.X = 76.000000000000000000
         Position.Y = 124.000000000000000000
         Size.Width = 125.000000000000000000
@@ -134,6 +137,7 @@ object Frame6: TFrame6
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
         TabOrder = 5
+        MaxLength = 8
         Position.X = 76.000000000000000000
         Position.Y = 178.000000000000000000
         Size.Width = 125.000000000000000000
@@ -171,6 +175,7 @@ object Frame6: TFrame6
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
         TabOrder = 7
+        MaxLength = 8
         Position.X = 76.000000000000000000
         Position.Y = 232.000000000000000000
         Size.Width = 125.000000000000000000
@@ -286,6 +291,7 @@ object Frame6: TFrame6
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
         TabOrder = 0
+        MaxLength = 8
         Position.X = 76.000000000000000000
         Position.Y = 16.000000000000000000
         Size.Width = 125.000000000000000000
@@ -324,6 +330,7 @@ object Frame6: TFrame6
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
         TabOrder = 2
+        MaxLength = 8
         Position.X = 76.000000000000000000
         Position.Y = 70.000000000000000000
         Size.Width = 125.000000000000000000
@@ -361,6 +368,7 @@ object Frame6: TFrame6
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
         TabOrder = 4
+        MaxLength = 8
         Position.X = 76.000000000000000000
         Position.Y = 124.000000000000000000
         Size.Width = 125.000000000000000000
@@ -399,6 +407,7 @@ object Frame6: TFrame6
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
         TabOrder = 5
+        MaxLength = 8
         Position.X = 76.000000000000000000
         Position.Y = 178.000000000000000000
         Size.Width = 125.000000000000000000
@@ -492,6 +501,7 @@ object Frame6: TFrame6
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
         TabOrder = 0
+        MaxLength = 8
         Position.X = 76.000000000000000000
         Position.Y = 16.000000000000000000
         Size.Width = 125.000000000000000000
@@ -530,6 +540,7 @@ object Frame6: TFrame6
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
         TabOrder = 2
+        MaxLength = 8
         Position.X = 76.000000000000000000
         Position.Y = 70.000000000000000000
         Size.Width = 125.000000000000000000
@@ -568,6 +579,7 @@ object Frame6: TFrame6
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
         TabOrder = 4
+        MaxLength = 8
         Position.X = 76.000000000000000000
         Position.Y = 124.000000000000000000
         Size.Width = 125.000000000000000000
@@ -606,6 +618,7 @@ object Frame6: TFrame6
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
         TabOrder = 6
+        MaxLength = 8
         Position.X = 76.000000000000000000
         Position.Y = 178.000000000000000000
         Size.Width = 125.000000000000000000
@@ -644,6 +657,7 @@ object Frame6: TFrame6
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
         TabOrder = 7
+        MaxLength = 8
         Position.X = 76.000000000000000000
         Position.Y = 232.000000000000000000
         Size.Width = 125.000000000000000000
@@ -750,6 +764,7 @@ object Frame6: TFrame6
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
         TabOrder = 0
+        MaxLength = 8
         Position.X = 76.000000000000000000
         Position.Y = 16.000000000000000000
         Size.Width = 125.000000000000000000
@@ -788,6 +803,7 @@ object Frame6: TFrame6
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
         TabOrder = 2
+        MaxLength = 8
         Position.X = 76.000000000000000000
         Position.Y = 70.000000000000000000
         Size.Width = 125.000000000000000000
@@ -826,6 +842,7 @@ object Frame6: TFrame6
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
         TabOrder = 4
+        MaxLength = 8
         Position.X = 76.000000000000000000
         Position.Y = 124.000000000000000000
         Size.Width = 125.000000000000000000
@@ -864,6 +881,7 @@ object Frame6: TFrame6
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
         TabOrder = 6
+        MaxLength = 8
         Position.X = 76.000000000000000000
         Position.Y = 178.000000000000000000
         Size.Width = 125.000000000000000000
@@ -902,12 +920,12 @@ object Frame6: TFrame6
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Anchors = [akLeft, akRight]
         TabOrder = 7
+        MaxLength = 8
         Position.X = 76.000000000000000000
         Position.Y = 232.000000000000000000
         Size.Width = 125.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
-        OnChange = Bio_Edit10Change
         object Label39: TLabel
           Align = Right
           StyledSettings = [Family, Style, FontColor]

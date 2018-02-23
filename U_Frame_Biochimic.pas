@@ -3,7 +3,8 @@ unit U_Frame_Biochimic;
 interface
 
 uses
-  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants, 
+  System.SysUtils, System.Types, System.UITypes, System.Classes,
+  System.Variants,
   FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
   FMX.Controls.Presentation, FMX.Edit, FMX.Layouts;
 
@@ -94,7 +95,7 @@ type
     procedure Clear;
     procedure Insert;
     procedure Edit;
-    procedure Bio_Edit10Change(Sender: TObject);
+    function IsSet: Boolean;
   private
     { Private declarations }
   public
@@ -102,13 +103,27 @@ type
   end;
 
 implementation
+
 Uses
   U_DataModule;
 {$R *.fmx}
 
-procedure TFrame6.Bio_Edit10Change(Sender: TObject);
+function TFrame6.IsSet;
 begin
-  Label50.Text := Bio_Edit10.Name;
+  if ((Bio_Edit1.Text = '') and (Bio_Edit2.Text = '') and (Bio_Edit3.Text = '')
+    and (Bio_Edit4.Text = '') and (Bio_Edit5.Text = '') and
+    (Bio_Edit6.Text = '') and (Bio_Edit7.Text = '') and (Bio_Edit8.Text = '')
+    and (Bio_Edit9.Text = '') and (Bio_Edit10.Text = '') and
+    (Bio_Edit11.Text = '') and (Bio_Edit12.Text = '') and (Bio_Edit13.Text = '')
+    and (Bio_Edit14.Text = '') and (Bio_Edit15.Text = '') and
+    (Bio_Edit16.Text = '') and (Bio_Edit17.Text = '') and (Bio_Edit18.Text = '')
+    and (Bio_Edit19.Text = '')) then
+  begin
+    result := False;
+  end
+  else
+    result := True;
+
 end;
 
 procedure TFrame6.Clear;
@@ -138,6 +153,11 @@ procedure TFrame6.Insert;
 begin
   With DataModule1.FDQuery1 do
   Begin
+    Active := False;
+    SQL.Clear;
+    SQL.Text := 'Select * From Biochimie';
+    Active := True;
+    Insert;
     FieldByName('Glycemie').AsString := Bio_Edit1.Text;
     FieldByName('Uree_Sang').AsString := Bio_Edit2.Text;
     FieldByName('Createnine').AsString := Bio_Edit3.Text;
@@ -157,6 +177,9 @@ begin
     FieldByName('ASLO').AsString := Bio_Edit17.Text;
     FieldByName('Calcemie').AsString := Bio_Edit18.Text;
     FieldByName('Albuminemie').AsString := Bio_Edit19.Text;
+    Post;
+    Active := False;
+    SQL.Clear;
   End;
 end;
 
@@ -164,6 +187,11 @@ procedure TFrame6.Edit;
 begin
   With DataModule1.FDQuery1 do
   Begin
+    Active := False;
+    SQL.Clear;
+    SQL.Text := 'Select * From Biochimie';
+    Active := True;
+    Edit;
     FieldByName('Glycemie').AsString := Bio_Edit1.Text;
     FieldByName('Uree_Sang').AsString := Bio_Edit2.Text;
     FieldByName('Createnine').AsString := Bio_Edit3.Text;
@@ -183,6 +211,9 @@ begin
     FieldByName('ASLO').AsString := Bio_Edit17.Text;
     FieldByName('Calcemie').AsString := Bio_Edit18.Text;
     FieldByName('Albuminemie').AsString := Bio_Edit19.Text;
+    Post;
+    Active := False;
+    SQL.Clear;
   End;
 end;
 
@@ -195,4 +226,3 @@ begin
 end;
 
 end.
-

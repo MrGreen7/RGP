@@ -82,7 +82,7 @@ object Frame5: TFrame5
         object CB_HB_Anti_VHB: TCheckBox
           Anchors = []
           Position.X = 61.000000000000000000
-          Position.Y = 63.303348541259760000
+          Position.Y = 63.303344726562500000
           Size.Width = 85.000000000000000000
           Size.Height = 19.000000000000000000
           Size.PlatformDefault = False
@@ -175,7 +175,7 @@ object Frame5: TFrame5
             Anchors = []
             Hint = 'anti-Epstein-Barr virus '
             Position.X = 181.000000000000000000
-            Position.Y = 28.221105575561520000
+            Position.Y = 28.221107482910160000
             Size.Width = 80.000000000000000000
             Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
@@ -197,7 +197,7 @@ object Frame5: TFrame5
           object CB_MI_EBNA: TCheckBox
             Anchors = []
             Position.X = 40.000000000000000000
-            Position.Y = 28.221105575561520000
+            Position.Y = 28.221107482910160000
             Size.Width = 77.000000000000000000
             Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
@@ -228,7 +228,7 @@ object Frame5: TFrame5
           object CB_RUB_IgM: TCheckBox
             Anchors = []
             Position.X = 60.000000000000000000
-            Position.Y = 24.201005935668940000
+            Position.Y = 24.201004028320310000
             Size.Width = 133.000000000000000000
             Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
@@ -279,7 +279,7 @@ object Frame5: TFrame5
           object CB_SFT_Anti_H: TCheckBox
             Anchors = []
             Position.X = 70.000000000000000000
-            Position.Y = 117.668342590332000000
+            Position.Y = 117.668334960937500000
             Size.Width = 61.000000000000000000
             Size.Height = 32.000000000000000000
             Size.PlatformDefault = False

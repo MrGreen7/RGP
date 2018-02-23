@@ -157,7 +157,7 @@ end;
 
 procedure TLog.Edit2Change(Sender: TObject);
 begin
-  InnerGlowEffect1.Enabled := False;
+  InnerGlowEffect2.Enabled := False;
 end;
 
 procedure TLog.Label1Click(Sender: TObject);

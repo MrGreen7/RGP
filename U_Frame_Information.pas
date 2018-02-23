@@ -38,12 +38,17 @@ type
     L_Right_4: TLayout;
     AC_Label7: TLabel;
     AC_Edit5: TEdit;
+    Wilaya_Code: TEdit;
     procedure WiliyaLoad(const Combo: TComboBox);
-    procedure CommuneLoad(const Edit: TEdit; const Combo: TComboBox);
+    procedure CommuneLoad(const Combo: TComboBox);
     procedure Insert();
     procedure Edit();
     procedure Clear();
     procedure FrameResize(Sender: TObject);
+    function IsSet: Boolean;
+    procedure AC_ComboBox1Change(Sender: TObject);
+    procedure Wilaya_CodeChange(Sender: TObject);
+    procedure AC_ComboBox1MouseEnter(Sender: TObject);
   private
     { Private declarations }
   public
@@ -55,6 +60,24 @@ implementation
 Uses
   U_DataModule;
 {$R *.fmx}
+
+function TFrame2.IsSet;
+begin
+  if ((AC_Edit1.Text = '') and (AC_Edit2.Text = '') and (AC_Edit3.Text = '') and
+    (AC_Edit4.Text = '') and (AC_Edit5.Text = '') and
+    (AC_ComboBox1.Selected.Text = '') and (AC_ComboBox2.Selected.Text = '') and
+    (AC_ComboBox3.Selected.Text = '')) then
+  Begin
+    Result := False;
+  End
+  else
+    Result := True;
+end;
+
+procedure TFrame2.Wilaya_CodeChange(Sender: TObject);
+begin
+  CommuneLoad(AC_ComboBox2);
+end;
 
 procedure TFrame2.WiliyaLoad(const Combo: TComboBox);
 begin
@@ -75,11 +98,11 @@ begin
   end;
 end;
 
-procedure TFrame2.CommuneLoad(const Edit: TEdit; const Combo: TComboBox);
+procedure TFrame2.CommuneLoad(const Combo: TComboBox);
 var
   Code_P: string;
 begin
-  Code_P := Edit.Text; // Edit_Code_Wiliya
+  Code_P := Wilaya_Code.Text; // Edit_Code_Wiliya
   Combo.Items.Clear; // Combobox3
   with DataModule1.FDQ_Commune do
   begin
@@ -134,6 +157,27 @@ begin
   End;
 end;
 
+procedure TFrame2.AC_ComboBox1Change(Sender: TObject);
+begin
+  with DataModule1.FDQ_Wilaya do
+  begin
+    Active := False;
+    SQL.Clear;
+    SQL.Text := ('SELECT Code_Wilaya, Nom FROM wilayas');
+    Active := True;
+    Locate('Nom', AC_ComboBox1.Selected.Text, []);
+    Wilaya_Code.Text := FieldByName('Code_Wilaya').AsString;
+    SQL.Clear;
+    Active := False;
+  end;
+end;
+
+procedure TFrame2.AC_ComboBox1MouseEnter(Sender: TObject);
+begin
+  if (AC_ComboBox1.ItemIndex = -1) then
+    WiliyaLoad(AC_ComboBox1);
+end;
+
 procedure TFrame2.Clear;
 Begin
   AC_Edit1.Text := '';
@@ -141,8 +185,8 @@ Begin
   AC_Edit3.Text := '';
   AC_Edit4.Text := '';
   AC_Edit5.Text := '';
-  AC_ComboBox1.ItemIndex := -1;
-  AC_ComboBox2.ItemIndex := -1;
+  AC_ComboBox1.ItemIndex := 0;
+  AC_ComboBox2.ItemIndex := 0;
   AC_ComboBox3.ItemIndex := -1;
 End;
 

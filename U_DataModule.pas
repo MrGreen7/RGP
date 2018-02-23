@@ -70,7 +70,7 @@ begin
   Hemogramme :=
     ('CREATE TABLE `Hemogramme` (`HemoG_ID`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,`Hematies`	INTEGER,`Hemoglobine`	INTEGER,`Hematocrite`	INTEGER,`VGM`	INTEGER,`TCMH`	INTEGER,`CCMH`	INTEGER,`Leucocytes`	INTEGER,`Reticulocytes`	INTEGER);');
   Hemostase_VS :=
-    ('CREATE TABLE `Hemostase-VS` (`HemoS_VS_ID`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,`TS`	INTEGER,`TCK`	INTEGER,`TP`	INTEGER,`VS`	INTEGER,`Note`	BLOB);');
+    ('CREATE TABLE `Hemostase_VS` (`HemoS_VS_ID`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,`TS`	INTEGER,`TCK`	INTEGER,`TP`	INTEGER,`VS`	INTEGER,`Note`	BLOB);');
   Serologie :=
     ('CREATE TABLE `Serologie` (`Serologie_ID`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,`HA_Anti-VHA`	boolean,`HA_IgG`	boolean,'
     + '`HA_IgM`	boolean,`HB_Anti-VHB`	Boolean,`HB_Antigene_HBs`	boolean,`HC_Anit-VHC`	boolean,`VIH_Anti-VIH`	boolean,`RUB_Anti_M`	boolean,`RUB_Anti_A`	boolean,`RUB_Anti_G`	boolean,`Salm_Anti_H`	boolean,`Salm_Anti_O`	boolean,'

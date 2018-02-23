@@ -137,6 +137,9 @@ end;
 
 procedure TFrame1.Clear();
 Begin
+  InnerGlowEffect3Combo3.Enabled := False;
+  InnerGlowEffectEdit2.Enabled := False;
+  InnerGlowEffectEdit3.Enabled := False;
   IP_Edit1.Text := '';
   IP_Edit2.Text := '';
   IP_Edit3.Text := '';

@@ -43,6 +43,7 @@ type
     procedure Clear;
     procedure Insert;
     procedure Edit;
+    function IsSet: Boolean;
   private
     { Private declarations }
   public
@@ -54,6 +55,19 @@ implementation
 Uses
   U_DataModule;
 {$R *.fmx}
+
+function TFrame3.IsSet;
+begin
+  if ((Hemog_Edit1.Text = '') and (Hemog_Edit2.Text = '') and
+    (Hemog_Edit3.Text = '') and (Hemog_Edit4.Text = '') and
+    (Hemog_Edit5.Text = '') and (Hemog_Edit6.Text = '') and
+    (Hemog_Edit7.Text = '') and (Hemog_Edit8.Text = '')) then
+  Begin
+    result := False;
+  End
+  else
+    result := True;
+end;
 
 procedure TFrame3.Clear;
 begin
@@ -71,6 +85,11 @@ procedure TFrame3.Insert;
 begin
   With DataModule1.FDQuery1 do
   Begin
+    Active := False;
+    SQL.Clear;
+    SQL.Text := 'Select * From Hemogramme';
+    Active := True;
+    Insert;
     FieldByName('Hematies').AsString := Hemog_Edit1.Text;
     FieldByName('Hemoglobine').AsString := Hemog_Edit2.Text;
     FieldByName('Hematocrite').AsString := Hemog_Edit3.Text;
@@ -79,6 +98,9 @@ begin
     FieldByName('CCMH').AsString := Hemog_Edit6.Text;
     FieldByName('leucocytes').AsString := Hemog_Edit7.Text;
     FieldByName('Reticulocytes').AsString := Hemog_Edit8.Text;
+    Post;
+    Active := False;
+    SQL.Clear;
   End;
 end;
 
@@ -87,6 +109,11 @@ begin
 
   With DataModule1.FDQuery1 do
   Begin
+    Active := False;
+    SQL.Clear;
+    SQL.Text := 'Select * From Hemogramme';
+    Active := True;
+    Edit;
     FieldByName('Hematies').AsString := Hemog_Edit1.Text;
     FieldByName('Hemoglobine').AsString := Hemog_Edit2.Text;
     FieldByName('Hematocrite').AsString := Hemog_Edit3.Text;
@@ -95,6 +122,9 @@ begin
     FieldByName('CCMH').AsString := Hemog_Edit6.Text;
     FieldByName('leucocytes').AsString := Hemog_Edit7.Text;
     FieldByName('Reticulocytes').AsString := Hemog_Edit8.Text;
+    Post;
+    Active := False;
+    SQL.Clear;
   End;
 end;
 

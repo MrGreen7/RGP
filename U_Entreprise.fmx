@@ -3,7 +3,7 @@ object Entreprise: TEntreprise
   Top = 0
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = Single
-  Caption = #61688' Entreprise'
+  Caption = #61688' '#201'taplisement'
   ClientHeight = 550
   ClientWidth = 742
   Position = DesktopCenter

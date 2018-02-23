@@ -626,8 +626,8 @@ object Main: TMain
           Size.Height = 503.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 0
-          Viewport.Width = 201.000000000000000000
-          Viewport.Height = 503.000000000000000000
+          Viewport.Width = 197.000000000000000000
+          Viewport.Height = 499.000000000000000000
           object T_Accueil: TTreeViewItem
             Cursor = crHandPoint
             StyledSettings = [Size, Style]
@@ -778,8 +778,8 @@ object Main: TMain
             Size.Height = 198.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
-            Viewport.Width = 508.000000000000000000
-            Viewport.Height = 198.000000000000000000
+            Viewport.Width = 504.000000000000000000
+            Viewport.Height = 173.000000000000000000
           end
         end
         object GrouBox3_Table: TGroupBox
@@ -802,8 +802,8 @@ object Main: TMain
             Size.Height = 198.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
-            Viewport.Width = 508.000000000000000000
-            Viewport.Height = 198.000000000000000000
+            Viewport.Width = 504.000000000000000000
+            Viewport.Height = 173.000000000000000000
           end
         end
       end
@@ -833,8 +833,8 @@ object Main: TMain
             Size.Height = 198.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
-            Viewport.Width = 508.000000000000000000
-            Viewport.Height = 198.000000000000000000
+            Viewport.Width = 504.000000000000000000
+            Viewport.Height = 173.000000000000000000
           end
         end
         object GrouBox4_Table: TGroupBox
@@ -857,8 +857,8 @@ object Main: TMain
             Size.Height = 198.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
-            Viewport.Width = 508.000000000000000000
-            Viewport.Height = 198.000000000000000000
+            Viewport.Width = 504.000000000000000000
+            Viewport.Height = 173.000000000000000000
           end
         end
       end
@@ -890,8 +890,8 @@ object Main: TMain
         Size.Height = 496.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
-        Viewport.Width = 1059.000000000000000000
-        Viewport.Height = 496.000000000000000000
+        Viewport.Width = 1055.000000000000000000
+        Viewport.Height = 471.000000000000000000
       end
     end
     object Recherche_Patient: TTabItem
@@ -930,8 +930,8 @@ object Main: TMain
           Size.Height = 288.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 0
-          Viewport.Width = 1039.000000000000000000
-          Viewport.Height = 288.000000000000000000
+          Viewport.Width = 1035.000000000000000000
+          Viewport.Height = 263.000000000000000000
         end
       end
       object Layout2: TLayout
@@ -1085,12 +1085,12 @@ object Main: TMain
                 end
                 inherited Hemog_Label4: TLabel
                   Position.Y = 196.429763793945300000
-                  TabOrder = 14
+                  TabOrder = 13
                 end
                 inherited Hemog_Label3: TLabel
                   Position.Y = 135.556594848632800000
                   Size.Width = 98.000000000000000000
-                  TabOrder = 15
+                  TabOrder = 14
                 end
                 inherited Hemog_Edit3: TEdit
                   TabOrder = 2
@@ -1104,14 +1104,14 @@ object Main: TMain
                 inherited Hemog_Edit2: TEdit
                   TabOrder = 1
                   Position.X = 110.000000000000000000
-                  Position.Y = 74.479339599609380000
+                  Position.Y = 74.479339599609370000
                   Size.Width = 410.000000000000000000
                   inherited Hemog_LabelEdit2: TLabel
                     Position.X = 353.000000000000000000
                   end
                 end
                 inherited Hemog_Label2: TLabel
-                  Position.Y = 74.933975219726560000
+                  Position.Y = 74.933975219726570000
                   Size.Width = 98.000000000000000000
                   TabOrder = 23
                 end
@@ -1140,7 +1140,7 @@ object Main: TMain
                   end
                 end
                 inherited Hemog_Label6: TLabel
-                  Position.Y = 74.479339599609380000
+                  Position.Y = 74.479339599609370000
                 end
                 inherited Hemog_Edit5: TEdit
                   Position.X = 110.000000000000000000
@@ -1159,7 +1159,7 @@ object Main: TMain
                 inherited Hemog_Edit7: TEdit
                   TabOrder = 1
                   Position.X = 110.000000000000000000
-                  Position.Y = 74.479339599609380000
+                  Position.Y = 74.479339599609370000
                   Size.Width = 410.000000000000000000
                   inherited Label20: TLabel
                     Position.X = 345.000000000000000000
@@ -1199,53 +1199,20 @@ object Main: TMain
             Size.Width = 1059.000000000000000000
             Size.Height = 271.000000000000000000
             Size.PlatformDefault = False
-            inherited GroupBox3: TGroupBox
+            inherited Layout_Frame: TLayout
               Size.Height = 271.000000000000000000
-              inherited L_Left: TLayout
-                Size.Height = 251.000000000000000000
-                inherited Hemos_Edit1: TEdit
-                  Position.Y = 19.435291290283200000
-                end
-                inherited Hemos_Label1: TLabel
-                  Position.Y = 16.858184814453130000
-                end
-                inherited Hemos_Label2: TLabel
-                  Position.Y = 108.023529052734400000
-                end
-                inherited Hemos_Edit2: TEdit
-                  Position.Y = 107.175933837890600000
-                end
-                inherited Hemos_Edit3: TEdit
-                  Position.Y = 196.611770629882800000
-                end
-                inherited Hemos_Label3: TLabel
-                  Position.Y = 196.611770629882800000
-                end
+              inherited GroupBox3: TGroupBox
+                Size.Height = 271.000000000000000000
               end
-              inherited L_Right: TLayout
-                Size.Height = 251.000000000000000000
-                inherited Hemos_ComboBox1: TComboBox
-                  Position.Y = 19.435291290283200000
-                  TabOrder = 0
-                end
-                inherited Hemos_ComboBox2: TComboBox
-                  Position.Y = 107.175933837890600000
-                  TabOrder = 1
-                end
-                inherited Hemos_Edit4: TEdit
-                  TabOrder = 3
-                  Position.Y = 196.611770629882800000
-                end
-              end
-            end
-            inherited GroupBox4: TGroupBox
-              Size.Height = 271.000000000000000000
-              inherited GroupBox5: TGroupBox
-                Size.Height = 166.000000000000000000
-                inherited Memo1: TMemo
-                  Size.Height = 131.000000000000000000
-                  Viewport.Width = 399.000000000000000000
-                  Viewport.Height = 131.000000000000000000
+              inherited GroupBox4: TGroupBox
+                Size.Height = 271.000000000000000000
+                inherited GroupBox5: TGroupBox
+                  Size.Height = 166.000000000000000000
+                  inherited Memo1: TMemo
+                    Size.Height = 131.000000000000000000
+                    Viewport.Width = 502.000000000000000000
+                    Viewport.Height = 123.000000000000000000
+                  end
                 end
               end
             end
@@ -1277,13 +1244,13 @@ object Main: TMain
                 Size.Height = 266.000000000000000000
                 TabOrder = 3
                 inherited Bio_Edit11: TEdit
-                  Position.Y = 14.952728271484380000
+                  Position.Y = 14.952728271484370000
                   inherited Label1: TLabel
                     TextSettings.Font.Family = '16'
                   end
                 end
                 inherited Label2: TLabel
-                  Position.Y = 14.952728271484380000
+                  Position.Y = 14.952728271484370000
                   TextSettings.Font.Family = '16'
                 end
                 inherited Bio_Edit12: TEdit
@@ -1332,7 +1299,7 @@ object Main: TMain
                   TabOrder = 6
                 end
                 inherited Label51: TLabel
-                  Position.Y = 14.952728271484380000
+                  Position.Y = 14.952728271484370000
                   TextSettings.Font.Family = '16'
                 end
                 inherited Label52: TLabel
@@ -1360,13 +1327,13 @@ object Main: TMain
                 Size.Height = 266.000000000000000000
                 TabOrder = 2
                 inherited Bio_Edit16: TEdit
-                  Position.Y = 14.952728271484380000
+                  Position.Y = 14.952728271484370000
                   inherited Label11: TLabel
                     TextSettings.Font.Family = '16'
                   end
                 end
                 inherited Label12: TLabel
-                  Position.Y = 14.952728271484380000
+                  Position.Y = 14.952728271484370000
                   TextSettings.Font.Family = '16'
                 end
                 inherited Bio_Edit17: TEdit
@@ -1404,7 +1371,7 @@ object Main: TMain
                   TabOrder = 5
                 end
                 inherited Label56: TLabel
-                  Position.Y = 14.952728271484380000
+                  Position.Y = 14.952728271484370000
                   TextSettings.Font.Family = '16'
                 end
                 inherited Label57: TLabel
@@ -1427,13 +1394,13 @@ object Main: TMain
                 Size.Height = 266.000000000000000000
                 TabOrder = 0
                 inherited Bio_Edit1: TEdit
-                  Position.Y = 14.952728271484380000
+                  Position.Y = 14.952728271484370000
                   inherited Label21: TLabel
                     TextSettings.Font.Family = '16'
                   end
                 end
                 inherited Label22: TLabel
-                  Position.Y = 14.952728271484380000
+                  Position.Y = 14.952728271484370000
                   TextSettings.Font.Family = '16'
                 end
                 inherited Bio_Edit2: TEdit
@@ -1482,7 +1449,7 @@ object Main: TMain
                   TabOrder = 6
                 end
                 inherited Label41: TLabel
-                  Position.Y = 14.952728271484380000
+                  Position.Y = 14.952728271484370000
                   TextSettings.Font.Family = '16'
                 end
                 inherited Label42: TLabel
@@ -1510,13 +1477,13 @@ object Main: TMain
                 Size.Height = 266.000000000000000000
                 TabOrder = 1
                 inherited Bio_Edit6: TEdit
-                  Position.Y = 14.952728271484380000
+                  Position.Y = 14.952728271484370000
                   inherited Label31: TLabel
                     TextSettings.Font.Family = '16'
                   end
                 end
                 inherited Label32: TLabel
-                  Position.Y = 14.952728271484380000
+                  Position.Y = 14.952728271484370000
                   TextSettings.Font.Family = '16'
                 end
                 inherited Bio_Edit7: TEdit
@@ -1565,7 +1532,7 @@ object Main: TMain
                   TabOrder = 6
                 end
                 inherited Label46: TLabel
-                  Position.Y = 14.952728271484380000
+                  Position.Y = 14.952728271484370000
                   TextSettings.Font.Family = '16'
                 end
                 inherited Label47: TLabel
@@ -1610,14 +1577,12 @@ object Main: TMain
             Size.PlatformDefault = False
             inherited TabControl1: TTabControl
               Size.Height = 261.000000000000000000
-              TabIndex = 1
               Sizes = (
                 1059s
                 231s
                 1059s
                 231s)
               inherited TabItem8: TTabItem
-                IsSelected = False
                 Size.Width = 140.000000000000000000
                 Size.Height = 30.000000000000000000
                 ExplicitSize.cx = 140.000000000000000000
@@ -1640,7 +1605,7 @@ object Main: TMain
                 inherited GroupBox7: TGroupBox
                   Size.Height = 231.000000000000000000
                   inherited CB_HB_Anti_VHB: TCheckBox
-                    Position.Y = 65.339279174804690000
+                    Position.Y = 65.339279174804680000
                     Size.Width = 100.000000000000000000
                   end
                   inherited CB_HB_Antigene_BHs: TCheckBox
@@ -1666,7 +1631,6 @@ object Main: TMain
                 end
               end
               inherited TabItem9: TTabItem
-                IsSelected = True
                 Size.Width = 279.000000000000000000
                 Size.Height = 30.000000000000000000
                 ExplicitSize.cx = 279.000000000000000000
@@ -1677,7 +1641,7 @@ object Main: TMain
                     Size.Height = 191.000000000000000000
                     inherited CB_MI_Anti_EBV: TCheckBox
                       Position.X = 167.000000000000000000
-                      Position.Y = 48.891021728515630000
+                      Position.Y = 48.891021728515620000
                       Size.Width = 100.000000000000000000
                     end
                     inherited CB_MI_VCA: TCheckBox
@@ -1703,13 +1667,13 @@ object Main: TMain
                     Size.Height = 191.000000000000000000
                     inherited CB_RUB_IgM: TCheckBox
                       Position.X = 45.000000000000000000
-                      Position.Y = 41.647438049316410000
+                      Position.Y = 41.647438049316400000
                       Size.Width = 165.000000000000000000
                       Size.Height = 22.000000000000000000
                     end
                     inherited CB_RUB_IgA: TCheckBox
                       Position.X = 45.000000000000000000
-                      Position.Y = 95.519233703613280000
+                      Position.Y = 95.519233703613290000
                       Size.Width = 165.000000000000000000
                       Size.Height = 22.000000000000000000
                     end
@@ -1774,8 +1738,8 @@ object Main: TMain
             Size.Height = 211.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
-            Viewport.Width = 1039.000000000000000000
-            Viewport.Height = 211.000000000000000000
+            Viewport.Width = 1035.000000000000000000
+            Viewport.Height = 186.000000000000000000
           end
           object L_Top_Ordonnance: TLayout
             Align = Top
@@ -1814,6 +1778,10 @@ object Main: TMain
               end
             end
             inherited Layout_Left_1: TLayout
+              inherited IP_Label4: TLabel
+                Position.Y = 4.000000000000000000
+                Size.Width = 63.000000000000000000
+              end
               inherited IP_ComboBox1: TComboBox
                 Position.Y = 4.289855957031250000
               end
@@ -1838,7 +1806,7 @@ object Main: TMain
                 Size.Width = 79.000000000000000000
               end
               inherited IP_Edit3: TEdit
-                Position.Y = 4.425531387329102000
+                Position.Y = 4.425531387329101000
               end
             end
             inherited Layout_Left_4: TLayout

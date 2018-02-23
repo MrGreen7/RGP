@@ -159,6 +159,7 @@ object Frame1: TFrame1
         end
         object IP_DateEdit1: TDateEdit
           Date = 43152.000000000000000000
+          DateFormatKind = Long
           Anchors = [akLeft, akRight]
           Position.X = 90.000000000000000000
           Position.Y = 3.710144758224487000
@@ -273,6 +274,7 @@ object Frame1: TFrame1
         end
         object IP_DateEdit2: TDateEdit
           Date = 43126.000000000000000000
+          DateFormatKind = Long
           Anchors = [akLeft, akRight]
           Position.X = 90.000000000000000000
           Position.Y = 3.710144996643066000
