@@ -185,8 +185,10 @@ Begin
   AC_Edit3.Text := '';
   AC_Edit4.Text := '';
   AC_Edit5.Text := '';
-  AC_ComboBox1.ItemIndex := 0;
-  AC_ComboBox2.ItemIndex := 0;
+  if (AC_ComboBox1.ItemIndex <> -1) then
+    AC_ComboBox1.ItemIndex := 0;
+  if (AC_ComboBox2.ItemIndex <> -1) then
+    AC_ComboBox2.ItemIndex := 0;
   AC_ComboBox3.ItemIndex := -1;
 End;
 

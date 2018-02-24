@@ -14,7 +14,9 @@ uses
   FMX.ScrollBox,
   FMX.Grid, U_Fenetre, U_Base_Form, FMX.Calendar, FMX.DateTimeCtrls, FMX.Memo,
   U_Frame_Inf_Principale, U_Frame_Information, U_Frame_Hemogramme,
-  U_Frame_Hemostase, U_Frame_Biochimic, U_Frame_Serologie, FMX.Filter.Effects;
+  U_Frame_Hemostase, U_Frame_Biochimic, U_Frame_Serologie, FMX.Filter.Effects,
+  Data.Bind.EngExt, FMX.Bind.DBEngExt, FMX.Bind.Grid, System.Bindings.Outputs,
+  FMX.Bind.Editors, Data.Bind.Components, Data.Bind.Grid, Data.Bind.DBScope;
 
 type
   TMain = class(TBase_Form)
@@ -106,7 +108,6 @@ type
     GrouBox3_Table: TGroupBox;
     StringGrid3: TStringGrid;
     GrouBox2_Table: TGroupBox;
-    StringGrid2: TStringGrid;
     GrouBox4_Table: TGroupBox;
     StringGrid4: TStringGrid;
     StringGrid6: TStringGrid;
@@ -115,6 +116,78 @@ type
     Layout2: TLayout;
     Edit1: TEdit;
     StringGrid7: TStringGrid;
+    Layout_Exit_Patient: TLayout;
+    Label15: TLabel;
+    Label16: TLabel;
+    ColorAnimation6: TColorAnimation;
+    ShadowEffect8: TShadowEffect;
+    ShadowEffect10: TShadowEffect;
+    Layout_Exit_RechercheP: TLayout;
+    Label17: TLabel;
+    ShadowEffect11: TShadowEffect;
+    Label18: TLabel;
+    ColorAnimation7: TColorAnimation;
+    ShadowEffect14: TShadowEffect;
+    Layout3: TLayout;
+    Label19: TLabel;
+    ShadowEffect15: TShadowEffect;
+    Label20: TLabel;
+    ColorAnimation8: TColorAnimation;
+    ShadowEffect16: TShadowEffect;
+    Layout4: TLayout;
+    Label21: TLabel;
+    ShadowEffect17: TShadowEffect;
+    Label22: TLabel;
+    ColorAnimation9: TColorAnimation;
+    ShadowEffect18: TShadowEffect;
+    Label_Refresh1: TLabel;
+    ColorAnimation10: TColorAnimation;
+    FloatAnimation1: TFloatAnimation;
+    Label23: TLabel;
+    ColorAnimation11: TColorAnimation;
+    FloatAnimation2: TFloatAnimation;
+    Label24: TLabel;
+    ColorAnimation12: TColorAnimation;
+    FloatAnimation3: TFloatAnimation;
+    Label25: TLabel;
+    ColorAnimation13: TColorAnimation;
+    FloatAnimation4: TFloatAnimation;
+    StringGrid2: TStringGrid;
+    BindSourceDB1: TBindSourceDB;
+    BindingsList1: TBindingsList;
+    LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource;
+    BindSourceDB2: TBindSourceDB;
+    LinkGridToDataSourceBindSourceDB2: TLinkGridToDataSource;
+    Label26: TLabel;
+    ColorAnimation14: TColorAnimation;
+    FloatAnimation5: TFloatAnimation;
+    BindSourceDB3: TBindSourceDB;
+    LinkGridToDataSourceBindSourceDB3: TLinkGridToDataSource;
+    Layout5: TLayout;
+    Label27: TLabel;
+    Label28: TLabel;
+    ShadowEffect19: TShadowEffect;
+    ShadowEffect20: TShadowEffect;
+    ColorAnimation15: TColorAnimation;
+    TabItem8: TTabItem;
+    Frame11: TFrame1;
+    TabControl1: TTabControl;
+    TabItem9: TTabItem;
+    Frame21: TFrame2;
+    TabItem10: TTabItem;
+    Frame31: TFrame3;
+    TabItem11: TTabItem;
+    Frame41: TFrame4;
+    TabItem12: TTabItem;
+    Frame61: TFrame6;
+    TabItem13: TTabItem;
+    Frame51: TFrame5;
+    TabItem14: TTabItem;
+    StringGrid8: TStringGrid;
+    Layout6: TLayout;
+    TabItem15: TTabItem;
+    Label29: TLabel;
+    Label30: TLabel;
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure P_AccueilClick(Sender: TObject);
     procedure PatientClick(Sender: TObject);
@@ -137,8 +210,18 @@ type
     procedure FormCreate(Sender: TObject);
     procedure P_AccueilResize(Sender: TObject);
     procedure FormShow(Sender: TObject);
-    procedure Frame_PrincipaleButton2Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
     procedure Frame_PrincipaleButton1Click(Sender: TObject);
+    procedure Label15Click(Sender: TObject);
+    procedure Label18Click(Sender: TObject);
+    procedure Label20Click(Sender: TObject);
+    procedure Label22Click(Sender: TObject);
+    procedure Label23Click(Sender: TObject);
+    procedure Label25Click(Sender: TObject);
+    procedure Label26Click(Sender: TObject);
+    procedure Frame11Button2Click(Sender: TObject);
+    procedure Frame11Button1Click(Sender: TObject);
+    procedure StringGrid5CellClick(const Column: TColumn; const Row: Integer);
   private
     { Private declarations }
     WidthX, HeightX: Integer;
@@ -219,7 +302,48 @@ begin
   if (LogDlg.ShowModal = mrCancel) then
     Application.Terminate;
   LogDlg.Free;
-//  Frame_Information.WiliyaLoad(Frame_Information.AC_Combobox1);
+  // Frame_Information.WiliyaLoad(Frame_Information.AC_Combobox1);
+end;
+
+procedure TMain.Frame11Button1Click(Sender: TObject);
+begin
+  inherited;
+  if (Frame_Principale.SetEdit = True) then
+  Begin
+    with DataModule1.FDQuery1 do
+    Begin
+      Active := False;
+      SQl.Clear;
+      SQl.Text := ('Select * From Patient');
+      Active := True;
+      Edit;
+      Frame_Principale.Insert;
+      Frame_Information.Insert;
+      Post;
+      SQl.Clear;
+      Active := False;
+    End;
+    Frame_Hemogramme.Edit;
+    Frame_Hemostase.Edit;
+    Frame_Serologie.Edit;
+    Frame_Biochimic.Edit;
+  end;
+end;
+
+procedure TMain.Frame11Button2Click(Sender: TObject);
+begin
+  inherited;
+  Frame_Principale.Clear();
+  if (TabItem1.IsSelected = True) then
+    Frame_Information.Clear;
+  if (TabItem2.IsSelected = True) then
+    Frame_Hemogramme.Clear;
+  if (TabItem3.IsSelected = True) then
+    Frame_Hemostase.Clear;
+  if (TabItem4.IsSelected = True) then
+    Frame_Biochimic.Clear;
+  if (TabItem5.IsSelected = True) then
+    Frame_Serologie.Clear;
 end;
 
 procedure TMain.Frame_PrincipaleButton1Click(Sender: TObject);
@@ -251,7 +375,7 @@ begin
   end;
 end;
 
-procedure TMain.Frame_PrincipaleButton2Click(Sender: TObject);
+procedure TMain.Button2Click(Sender: TObject);
 begin
   inherited;
   Frame_Principale.Clear();
@@ -276,6 +400,22 @@ begin
     EntrepriseDlg.Free;
 end;
 
+procedure TMain.Label15Click(Sender: TObject);
+begin
+  inherited;
+  Patient.Visible := False;
+  H_Gen_Patient.Visible := False;
+  H_Accueil.IsSelected := True;
+end;
+
+procedure TMain.Label18Click(Sender: TObject);
+begin
+  inherited;
+  Recherche_Patient.Visible := False;
+  H_Gen_RechercheP.Visible := False;
+  H_Accueil.IsSelected := True;
+end;
+
 procedure TMain.Label1Click(Sender: TObject);
 begin
   H_Accueil.Visible := True;
@@ -292,6 +432,40 @@ begin
   H_Gen_Ordo.Visible := False;
   H_Gen_NouveauP.Visible := False;
   H_Gen_RechercheP.Visible := False;
+end;
+
+procedure TMain.Label20Click(Sender: TObject);
+begin
+  inherited;
+  Nouveau_Patient.Visible := False;
+  H_Gen_NouveauP.Visible := False;
+  H_Accueil.IsSelected := True;
+end;
+
+procedure TMain.Label22Click(Sender: TObject);
+begin
+  inherited;
+  RDV.Visible := False;
+  H_Gen_RDV.Visible := False;
+  H_Accueil.IsSelected := True;
+end;
+
+procedure TMain.Label23Click(Sender: TObject);
+begin
+  inherited;
+  DataModule1.FDQ_Groupage.Refresh;
+end;
+
+procedure TMain.Label25Click(Sender: TObject);
+begin
+  inherited;
+  DataModule1.FDQ_Patient.Refresh;
+end;
+
+procedure TMain.Label26Click(Sender: TObject);
+begin
+  inherited;
+  DataModule1.FDQ_Patient_Table.Refresh;
 end;
 
 procedure TMain.Label4Click(Sender: TObject);
@@ -398,6 +572,16 @@ begin
   H_Gen_RechercheP.Visible := True;
   H_Gen_RechercheP.IsSelected := True;
 
+end;
+
+procedure TMain.StringGrid5CellClick(const Column: TColumn; const Row: Integer);
+Var
+  TRow, TCol: Integer;
+begin
+  inherited;
+  TRow := StringGrid5.Row;
+  TCol := StringGrid5.Col;
+  Label30.Text := StringGrid5.Cells[TCol, TRow];
 end;
 
 procedure TMain.T_AccueilClick(Sender: TObject);

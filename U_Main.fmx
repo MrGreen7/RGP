@@ -27,7 +27,7 @@ object Main: TMain
     Size.Height = 161.000000000000000000
     Size.PlatformDefault = False
     StyleLookup = 'tabcontrolstyle'
-    TabIndex = 0
+    TabIndex = 2
     TabOrder = 0
     TabPosition = PlatformDefault
     Sizes = (
@@ -54,7 +54,7 @@ object Main: TMain
       TextSettings.Font.Size = 16.000000000000000000
       StyledSettings = [Style, FontColor]
       HelpType = htKeyword
-      IsSelected = True
+      IsSelected = False
       Size.Width = 82.000000000000000000
       Size.Height = 30.000000000000000000
       Size.PlatformDefault = False
@@ -466,14 +466,13 @@ object Main: TMain
       TextSettings.Font.Family = 'FontAwesome'
       TextSettings.Font.Size = 16.000000000000000000
       StyledSettings = [Size, Style, FontColor]
-      IsSelected = False
+      IsSelected = True
       Size.Width = 94.000000000000000000
       Size.Height = 30.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = ''
       TabOrder = 0
       Text = #61918' G'#233'n'#233'ral'
-      Visible = False
       ExplicitSize.cx = 94.000000000000000000
       ExplicitSize.cy = 30.000000000000000000
       object Panel10: TPanel
@@ -482,6 +481,138 @@ object Main: TMain
         Size.Height = 131.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 3
+        object Layout_Exit_Patient: TLayout
+          Align = Left
+          Position.X = 129.000000000000000000
+          Size.Width = 129.000000000000000000
+          Size.Height = 131.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object Label16: TLabel
+            StyledSettings = [Size, Style, FontColor]
+            Position.X = 40.000000000000000000
+            Position.Y = 80.000000000000000000
+            Size.Width = 49.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Family = 'Candara'
+            TextSettings.Font.Size = 16.000000000000000000
+            Text = 'Fermer'
+            TabOrder = 1
+            object ShadowEffect10: TShadowEffect
+              Distance = 3.000000000000000000
+              Direction = 45.000000000000000000
+              Softness = 0.200000002980232200
+              Opacity = 0.600000023841857900
+              ShadowColor = claBlack
+            end
+          end
+          object Label15: TLabel
+            Cursor = crHandPoint
+            StyledSettings = [Style]
+            HitTest = True
+            Position.X = 36.000000000000000000
+            Position.Y = 17.000000000000000000
+            Size.Width = 57.000000000000000000
+            Size.Height = 88.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Family = 'FontAwesome'
+            TextSettings.Font.Size = 60.000000000000000000
+            TextSettings.FontColor = xFFD7263D
+            TextSettings.HorzAlign = Center
+            TextSettings.VertAlign = Leading
+            Text = #61453
+            TabOrder = 0
+            OnClick = Label15Click
+            object ColorAnimation6: TColorAnimation
+              AnimationType = InOut
+              Delay = 0.200000002980232200
+              Duration = 0.500000000000000000
+              PropertyName = 'TextSettings.FontColor'
+              StartValue = xFFD7263D
+              StopValue = xFF0197F6
+              Trigger = 'IsMouseOver=true'
+              TriggerInverse = 'IsMouseOver=false'
+            end
+            object ShadowEffect8: TShadowEffect
+              Distance = 3.000000000000000000
+              Direction = 45.000000000000000000
+              Softness = 0.200000002980232200
+              Opacity = 0.600000023841857900
+              ShadowColor = claBlack
+            end
+          end
+        end
+        object Layout5: TLayout
+          Align = Left
+          Size.Width = 129.000000000000000000
+          Size.Height = 131.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          object Label28: TLabel
+            StyledSettings = [Style, FontColor]
+            Position.X = 40.000000000000000000
+            Position.Y = 80.000000000000000000
+            Size.Width = 49.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Family = 'Candara'
+            TextSettings.Font.Size = 17.000000000000000000
+            Text = #201'diter'
+            TabOrder = 1
+            object ShadowEffect19: TShadowEffect
+              Distance = 3.000000000000000000
+              Direction = 45.000000000000000000
+              Softness = 0.200000002980232200
+              Opacity = 0.600000023841857900
+              ShadowColor = claBlack
+            end
+          end
+          object Label27: TLabel
+            StyledSettings = [Style]
+            Position.X = 32.000000000000000000
+            Position.Y = 16.000000000000000000
+            Size.Width = 57.000000000000000000
+            Size.Height = 88.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Family = 'FontAwesome'
+            TextSettings.Font.Size = 50.000000000000000000
+            TextSettings.FontColor = xFFEC4E20
+            TextSettings.HorzAlign = Center
+            TextSettings.VertAlign = Leading
+            Text = #61827
+            TabOrder = 0
+            object ShadowEffect20: TShadowEffect
+              Distance = 3.000000000000000000
+              Direction = 45.000000000000000000
+              Softness = 0.200000002980232200
+              Opacity = 0.600000023841857900
+              ShadowColor = claBlack
+            end
+            object ColorAnimation15: TColorAnimation
+              AnimationType = InOut
+              Delay = 0.200000002980232200
+              Duration = 0.500000000000000000
+              PropertyName = 'TextSettings.FontColor'
+              StartValue = xFFEC4E20
+              StopValue = xFF0197F6
+              Trigger = 'IsMouseOver=true'
+              TriggerInverse = 'IsMouseOver=false'
+            end
+          end
+        end
+        object Label29: TLabel
+          Position.X = 440.000000000000000000
+          Position.Y = 40.000000000000000000
+          Text = 'Label29'
+          TabOrder = 2
+        end
+        object Label30: TLabel
+          Position.X = 432.000000000000000000
+          Position.Y = 80.000000000000000000
+          Text = 'Label30'
+          TabOrder = 3
+        end
       end
     end
     object H_Gen_RDV: TTabItem
@@ -507,6 +638,67 @@ object Main: TMain
         Size.Height = 131.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 3
+        object Layout4: TLayout
+          Align = Left
+          Size.Width = 129.000000000000000000
+          Size.Height = 131.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object Label21: TLabel
+            StyledSettings = [Size, Style, FontColor]
+            Position.X = 40.000000000000000000
+            Position.Y = 80.000000000000000000
+            Size.Width = 49.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Family = 'Candara'
+            TextSettings.Font.Size = 16.000000000000000000
+            Text = 'Fermer'
+            TabOrder = 1
+            object ShadowEffect17: TShadowEffect
+              Distance = 3.000000000000000000
+              Direction = 45.000000000000000000
+              Softness = 0.200000002980232200
+              Opacity = 0.600000023841857900
+              ShadowColor = claBlack
+            end
+          end
+          object Label22: TLabel
+            Cursor = crHandPoint
+            StyledSettings = [Style]
+            HitTest = True
+            Position.X = 36.000000000000000000
+            Position.Y = 17.000000000000000000
+            Size.Width = 57.000000000000000000
+            Size.Height = 88.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Family = 'FontAwesome'
+            TextSettings.Font.Size = 60.000000000000000000
+            TextSettings.FontColor = xFFD7263D
+            TextSettings.HorzAlign = Center
+            TextSettings.VertAlign = Leading
+            Text = #61453
+            TabOrder = 0
+            OnClick = Label22Click
+            object ColorAnimation9: TColorAnimation
+              AnimationType = InOut
+              Delay = 0.200000002980232200
+              Duration = 0.500000000000000000
+              PropertyName = 'TextSettings.FontColor'
+              StartValue = xFFD7263D
+              StopValue = xFF0197F6
+              Trigger = 'IsMouseOver=true'
+              TriggerInverse = 'IsMouseOver=false'
+            end
+            object ShadowEffect18: TShadowEffect
+              Distance = 3.000000000000000000
+              Direction = 45.000000000000000000
+              Softness = 0.200000002980232200
+              Opacity = 0.600000023841857900
+              ShadowColor = claBlack
+            end
+          end
+        end
       end
     end
     object H_Gen_Ordo: TTabItem
@@ -557,6 +749,67 @@ object Main: TMain
         Size.Height = 131.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 3
+        object Layout_Exit_RechercheP: TLayout
+          Align = Left
+          Size.Width = 129.000000000000000000
+          Size.Height = 131.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object Label17: TLabel
+            StyledSettings = [Size, Style, FontColor]
+            Position.X = 40.000000000000000000
+            Position.Y = 80.000000000000000000
+            Size.Width = 49.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Family = 'Candara'
+            TextSettings.Font.Size = 16.000000000000000000
+            Text = 'Fermer'
+            TabOrder = 1
+            object ShadowEffect11: TShadowEffect
+              Distance = 3.000000000000000000
+              Direction = 45.000000000000000000
+              Softness = 0.200000002980232200
+              Opacity = 0.600000023841857900
+              ShadowColor = claBlack
+            end
+          end
+          object Label18: TLabel
+            Cursor = crHandPoint
+            StyledSettings = [Style]
+            HitTest = True
+            Position.X = 36.000000000000000000
+            Position.Y = 17.000000000000000000
+            Size.Width = 57.000000000000000000
+            Size.Height = 88.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Family = 'FontAwesome'
+            TextSettings.Font.Size = 60.000000000000000000
+            TextSettings.FontColor = xFFD7263D
+            TextSettings.HorzAlign = Center
+            TextSettings.VertAlign = Leading
+            Text = #61453
+            TabOrder = 0
+            OnClick = Label18Click
+            object ColorAnimation7: TColorAnimation
+              AnimationType = InOut
+              Delay = 0.200000002980232200
+              Duration = 0.500000000000000000
+              PropertyName = 'TextSettings.FontColor'
+              StartValue = xFFD7263D
+              StopValue = xFF0197F6
+              Trigger = 'IsMouseOver=true'
+              TriggerInverse = 'IsMouseOver=false'
+            end
+            object ShadowEffect14: TShadowEffect
+              Distance = 3.000000000000000000
+              Direction = 45.000000000000000000
+              Softness = 0.200000002980232200
+              Opacity = 0.600000023841857900
+              ShadowColor = claBlack
+            end
+          end
+        end
       end
     end
     object H_Gen_NouveauP: TTabItem
@@ -582,6 +835,67 @@ object Main: TMain
         Size.Height = 131.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 3
+        object Layout3: TLayout
+          Align = Left
+          Size.Width = 129.000000000000000000
+          Size.Height = 131.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object Label19: TLabel
+            StyledSettings = [Size, Style, FontColor]
+            Position.X = 40.000000000000000000
+            Position.Y = 80.000000000000000000
+            Size.Width = 49.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Family = 'Candara'
+            TextSettings.Font.Size = 16.000000000000000000
+            Text = 'Fermer'
+            TabOrder = 1
+            object ShadowEffect15: TShadowEffect
+              Distance = 3.000000000000000000
+              Direction = 45.000000000000000000
+              Softness = 0.200000002980232200
+              Opacity = 0.600000023841857900
+              ShadowColor = claBlack
+            end
+          end
+          object Label20: TLabel
+            Cursor = crHandPoint
+            StyledSettings = [Style]
+            HitTest = True
+            Position.X = 36.000000000000000000
+            Position.Y = 17.000000000000000000
+            Size.Width = 57.000000000000000000
+            Size.Height = 88.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Family = 'FontAwesome'
+            TextSettings.Font.Size = 60.000000000000000000
+            TextSettings.FontColor = xFFD7263D
+            TextSettings.HorzAlign = Center
+            TextSettings.VertAlign = Leading
+            Text = #61453
+            TabOrder = 0
+            OnClick = Label20Click
+            object ColorAnimation8: TColorAnimation
+              AnimationType = InOut
+              Delay = 0.200000002980232200
+              Duration = 0.500000000000000000
+              PropertyName = 'TextSettings.FontColor'
+              StartValue = xFFD7263D
+              StopValue = xFF0197F6
+              Trigger = 'IsMouseOver=true'
+              TriggerInverse = 'IsMouseOver=false'
+            end
+            object ShadowEffect16: TShadowEffect
+              Distance = 3.000000000000000000
+              Direction = 45.000000000000000000
+              Softness = 0.200000002980232200
+              Opacity = 0.600000023841857900
+              ShadowColor = claBlack
+            end
+          end
+        end
       end
     end
   end
@@ -712,10 +1026,12 @@ object Main: TMain
     Size.Height = 531.000000000000000000
     Size.PlatformDefault = False
     StyleLookup = 'tabcontrolstyle'
-    TabIndex = 3
+    TabIndex = 1
     TabOrder = 2
     TabPosition = PlatformDefault
     Sizes = (
+      1059s
+      501s
       1059s
       501s
       1059s
@@ -781,6 +1097,41 @@ object Main: TMain
             Viewport.Width = 504.000000000000000000
             Viewport.Height = 173.000000000000000000
           end
+          object Label_Refresh1: TLabel
+            Anchors = [akTop, akRight]
+            Cursor = crHandPoint
+            StyledSettings = [Style]
+            HitTest = True
+            Position.X = 494.000000000000000000
+            Position.Y = 26.000000000000000000
+            RotationAngle = 360.000000000000000000
+            Size.Width = 22.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Family = 'FontAwesome'
+            TextSettings.Font.Size = 20.000000000000000000
+            TextSettings.FontColor = xFF1398B4
+            Text = #61473
+            TabOrder = 1
+            object ColorAnimation10: TColorAnimation
+              Duration = 0.500000000000000000
+              Interpolation = Back
+              PropertyName = 'TextSettings.FontColor'
+              StartValue = xFF1398B4
+              StopValue = xFF0FC46D
+              Trigger = 'IsMouseOver=true'
+              TriggerInverse = 'IsMouseOver=false'
+            end
+            object FloatAnimation1: TFloatAnimation
+              Delay = 0.200000002980232200
+              Duration = 0.500000000000000000
+              PropertyName = 'RotationAngle'
+              StartValue = 0.000000000000000000
+              StopValue = 360.000000000000000000
+              Trigger = 'IsPressed=true'
+              TriggerInverse = 'IsPressed=false'
+            end
+          end
         end
         object GrouBox3_Table: TGroupBox
           Align = Bottom
@@ -804,6 +1155,41 @@ object Main: TMain
             TabOrder = 0
             Viewport.Width = 504.000000000000000000
             Viewport.Height = 173.000000000000000000
+          end
+          object Label24: TLabel
+            Anchors = [akTop, akRight]
+            Cursor = crHandPoint
+            StyledSettings = [Style]
+            HitTest = True
+            Position.X = 494.000000000000000000
+            Position.Y = 26.000000000000000000
+            RotationAngle = 360.000000000000000000
+            Size.Width = 22.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Family = 'FontAwesome'
+            TextSettings.Font.Size = 20.000000000000000000
+            TextSettings.FontColor = xFF1398B4
+            Text = #61473
+            TabOrder = 1
+            object ColorAnimation12: TColorAnimation
+              Duration = 0.500000000000000000
+              Interpolation = Back
+              PropertyName = 'TextSettings.FontColor'
+              StartValue = xFF1398B4
+              StopValue = xFF0FC46D
+              Trigger = 'IsMouseOver=true'
+              TriggerInverse = 'IsMouseOver=false'
+            end
+            object FloatAnimation3: TFloatAnimation
+              Delay = 0.200000002980232200
+              Duration = 0.500000000000000000
+              PropertyName = 'RotationAngle'
+              StartValue = 0.000000000000000000
+              StopValue = 360.000000000000000000
+              Trigger = 'IsPressed=true'
+              TriggerInverse = 'IsPressed=false'
+            end
           end
         end
       end
@@ -832,9 +1218,45 @@ object Main: TMain
             Size.Width = 508.000000000000000000
             Size.Height = 198.000000000000000000
             Size.PlatformDefault = False
-            TabOrder = 0
+            TabOrder = 1
             Viewport.Width = 504.000000000000000000
             Viewport.Height = 173.000000000000000000
+          end
+          object Label23: TLabel
+            Anchors = [akTop, akRight]
+            Cursor = crHandPoint
+            StyledSettings = [Style]
+            HitTest = True
+            Position.X = 494.000000000000000000
+            Position.Y = 26.000000000000000000
+            RotationAngle = 360.000000000000000000
+            Size.Width = 22.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Family = 'FontAwesome'
+            TextSettings.Font.Size = 20.000000000000000000
+            TextSettings.FontColor = xFF1398B4
+            Text = #61473
+            TabOrder = 0
+            OnClick = Label23Click
+            object ColorAnimation11: TColorAnimation
+              Duration = 0.500000000000000000
+              Interpolation = Back
+              PropertyName = 'TextSettings.FontColor'
+              StartValue = xFF1398B4
+              StopValue = xFF0FC46D
+              Trigger = 'IsMouseOver=true'
+              TriggerInverse = 'IsMouseOver=false'
+            end
+            object FloatAnimation2: TFloatAnimation
+              Delay = 0.200000002980232200
+              Duration = 0.500000000000000000
+              PropertyName = 'RotationAngle'
+              StartValue = 0.000000000000000000
+              StopValue = 360.000000000000000000
+              Trigger = 'IsPressed=true'
+              TriggerInverse = 'IsPressed=false'
+            end
           end
         end
         object GrouBox4_Table: TGroupBox
@@ -860,6 +1282,42 @@ object Main: TMain
             Viewport.Width = 504.000000000000000000
             Viewport.Height = 173.000000000000000000
           end
+          object Label25: TLabel
+            Anchors = [akTop, akRight]
+            Cursor = crHandPoint
+            StyledSettings = [Style]
+            HitTest = True
+            Position.X = 494.000000000000000000
+            Position.Y = 26.000000000000000000
+            RotationAngle = 360.000000000000000000
+            Size.Width = 22.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Family = 'FontAwesome'
+            TextSettings.Font.Size = 20.000000000000000000
+            TextSettings.FontColor = xFF1398B4
+            Text = #61473
+            TabOrder = 1
+            OnClick = Label25Click
+            object ColorAnimation13: TColorAnimation
+              Duration = 0.500000000000000000
+              Interpolation = Back
+              PropertyName = 'TextSettings.FontColor'
+              StartValue = xFF1398B4
+              StopValue = xFF0FC46D
+              Trigger = 'IsMouseOver=true'
+              TriggerInverse = 'IsMouseOver=false'
+            end
+            object FloatAnimation4: TFloatAnimation
+              Delay = 0.200000002980232200
+              Duration = 0.500000000000000000
+              PropertyName = 'RotationAngle'
+              StartValue = 0.000000000000000000
+              StopValue = 360.000000000000000000
+              Trigger = 'IsPressed=true'
+              TriggerInverse = 'IsPressed=false'
+            end
+          end
         end
       end
     end
@@ -871,7 +1329,7 @@ object Main: TMain
       TextSettings.Font.Size = 16.000000000000000000
       TextSettings.FontColor = xFF0197F6
       StyledSettings = [Size, Style]
-      IsSelected = False
+      IsSelected = True
       Size.Width = 88.000000000000000000
       Size.Height = 30.000000000000000000
       Size.PlatformDefault = False
@@ -890,8 +1348,46 @@ object Main: TMain
         Size.Height = 496.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
+        Options = [Editing, ColumnResize, ColLines, RowLines, RowSelect, AlwaysShowSelection, Tabs, Header, HeaderClick, AutoDisplacement]
+        OnCellClick = StringGrid5CellClick
         Viewport.Width = 1055.000000000000000000
         Viewport.Height = 471.000000000000000000
+      end
+      object Label26: TLabel
+        Anchors = [akTop, akRight]
+        Cursor = crHandPoint
+        StyledSettings = [Style]
+        HitTest = True
+        Position.X = 1030.000000000000000000
+        Position.Y = 6.000000000000000000
+        RotationAngle = 360.000000000000000000
+        Size.Width = 22.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'FontAwesome'
+        TextSettings.Font.Size = 20.000000000000000000
+        TextSettings.FontColor = xFF1398B4
+        Text = #61473
+        TabOrder = 1
+        OnClick = Label26Click
+        object ColorAnimation14: TColorAnimation
+          Duration = 0.500000000000000000
+          Interpolation = Back
+          PropertyName = 'TextSettings.FontColor'
+          StartValue = xFF1398B4
+          StopValue = xFF0FC46D
+          Trigger = 'IsMouseOver=true'
+          TriggerInverse = 'IsMouseOver=false'
+        end
+        object FloatAnimation5: TFloatAnimation
+          Delay = 0.200000002980232200
+          Duration = 0.500000000000000000
+          PropertyName = 'RotationAngle'
+          StartValue = 0.000000000000000000
+          StopValue = 360.000000000000000000
+          Trigger = 'IsPressed=true'
+          TriggerInverse = 'IsPressed=false'
+        end
       end
     end
     object Recherche_Patient: TTabItem
@@ -962,7 +1458,7 @@ object Main: TMain
       TextSettings.Font.Size = 16.000000000000000000
       TextSettings.FontColor = xFFF46063
       StyledSettings = [Size, Style]
-      IsSelected = True
+      IsSelected = False
       Size.Width = 155.000000000000000000
       Size.Height = 30.000000000000000000
       Size.PlatformDefault = False
@@ -1085,12 +1581,12 @@ object Main: TMain
                 end
                 inherited Hemog_Label4: TLabel
                   Position.Y = 196.429763793945300000
-                  TabOrder = 13
+                  TabOrder = 11
                 end
                 inherited Hemog_Label3: TLabel
                   Position.Y = 135.556594848632800000
                   Size.Width = 98.000000000000000000
-                  TabOrder = 14
+                  TabOrder = 12
                 end
                 inherited Hemog_Edit3: TEdit
                   TabOrder = 2
@@ -1210,8 +1706,8 @@ object Main: TMain
                   Size.Height = 166.000000000000000000
                   inherited Memo1: TMemo
                     Size.Height = 131.000000000000000000
-                    Viewport.Width = 502.000000000000000000
-                    Viewport.Height = 123.000000000000000000
+                    Viewport.Width = 510.000000000000000000
+                    Viewport.Height = 131.000000000000000000
                   end
                 end
               end
@@ -1839,7 +2335,7 @@ object Main: TMain
           end
           inherited Button2: TButton
             Position.Y = 136.000000000000000000
-            OnClick = Frame_PrincipaleButton2Click
+            OnClick = Button2Click
           end
         end
       end
@@ -1882,5 +2378,955 @@ object Main: TMain
       ExplicitSize.cx = 126.000000000000000000
       ExplicitSize.cy = 30.000000000000000000
     end
+    object TabItem8: TTabItem
+      CustomIcon = <
+        item
+        end>
+      TextSettings.Font.Family = 'FontAwesome'
+      TextSettings.FontColor = xFFEC4E20
+      StyledSettings = [Size, Style]
+      IsSelected = False
+      Size.Width = 114.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = #61827' Edit Patient'
+      Visible = False
+      inline Frame11: TFrame1
+        Align = Top
+        Size.Width = 1059.000000000000000000
+        Size.Height = 200.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        inherited GroupBox_Info: TGroupBox
+          inherited Layout_Top_1: TLayout
+            inherited Layout_Right1: TLayout
+              inherited IP_ComboBox2: TComboBox
+                Position.Y = 3.710144042968750000
+              end
+            end
+            inherited Layout_Left_1: TLayout
+              inherited IP_Label4: TLabel
+                Position.Y = 4.000000000000000000
+                Size.Width = 63.000000000000000000
+              end
+              inherited IP_ComboBox1: TComboBox
+                Position.Y = 4.289855957031250000
+              end
+            end
+          end
+          inherited Layout_Top_3: TLayout
+            inherited Layout_Right3: TLayout
+              inherited IP_Label7: TLabel
+                Size.Width = 79.000000000000000000
+              end
+            end
+            inherited Layout_Left_3: TLayout
+              inherited IP_DateEdit1: TDateEdit
+                Position.Y = 3.710144042968750000
+              end
+            end
+          end
+          inherited Layout_Top_4: TLayout
+            inherited Layout_Right4: TLayout
+              inherited IP_Label6: TLabel
+                Position.Y = 4.000000000000000000
+                Size.Width = 79.000000000000000000
+              end
+              inherited IP_Edit3: TEdit
+                Position.Y = 4.425531387329101000
+              end
+            end
+            inherited Layout_Left_4: TLayout
+              inherited IP_Label2: TLabel
+                Size.Width = 47.000000000000000000
+              end
+              inherited IP_Edit2: TEdit
+                Position.Y = 3.574466705322266000
+              end
+            end
+          end
+          inherited Layout_Top_2: TLayout
+            inherited Layout_Right2: TLayout
+              inherited IP_DateEdit2: TDateEdit
+                Position.Y = 3.710144042968750000
+              end
+            end
+            inherited Layout_Left_2: TLayout
+              inherited IP_Edit1: TEdit
+                Position.Y = 4.289855957031250000
+                Visible = False
+              end
+            end
+          end
+        end
+        inherited GroupBox_Liens: TGroupBox
+          inherited Button1: TButton
+            Position.Y = 32.000000000000000000
+            OnClick = Frame11Button1Click
+          end
+          inherited Button2: TButton
+            Position.Y = 136.000000000000000000
+            OnClick = Frame11Button2Click
+          end
+        end
+      end
+      object TabControl1: TTabControl
+        Align = Client
+        Size.Width = 1059.000000000000000000
+        Size.Height = 301.000000000000000000
+        Size.PlatformDefault = False
+        TabIndex = 6
+        TabOrder = 1
+        TabPosition = PlatformDefault
+        Sizes = (
+          1059s
+          271s
+          1059s
+          271s
+          1059s
+          271s
+          1059s
+          271s
+          1059s
+          271s
+          1059s
+          271s
+          1059s
+          271s)
+        object TabItem9: TTabItem
+          CustomIcon = <
+            item
+            end>
+          IsSelected = False
+          Size.Width = 105.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          Text = 'Information'
+          ExplicitSize.cx = 105.000000000000000000
+          ExplicitSize.cy = 30.000000000000000000
+          inline Frame21: TFrame2
+            Align = Client
+            Size.Width = 1059.000000000000000000
+            Size.Height = 271.000000000000000000
+            Size.PlatformDefault = False
+            inherited GroupBox1: TGroupBox
+              Padding.Left = 5.000000000000000000
+              Padding.Right = 5.000000000000000000
+              Size.Width = 680.000000000000000000
+              Size.Height = 271.000000000000000000
+              TabOrder = 1
+              inherited L_Top_1: TLayout
+                Position.X = 5.000000000000000000
+                Size.Width = 670.000000000000000000
+                inherited AC_Edit1: TEdit
+                  Size.Width = 548.000000000000000000
+                end
+              end
+              inherited L_Top_2: TLayout
+                Position.X = 5.000000000000000000
+                Size.Width = 670.000000000000000000
+                inherited L_Right_2: TLayout
+                  Position.X = 331.000000000000000000
+                end
+              end
+              inherited L_Top_3: TLayout
+                Position.X = 5.000000000000000000
+                Size.Width = 670.000000000000000000
+                inherited L_Right_3: TLayout
+                  Position.X = 331.000000000000000000
+                end
+              end
+              inherited L_Top_4: TLayout
+                Position.X = 5.000000000000000000
+                Size.Width = 670.000000000000000000
+                inherited L_Right_4: TLayout
+                  Position.X = 331.000000000000000000
+                end
+              end
+            end
+            inherited GroupBox2: TGroupBox
+              Position.X = 680.000000000000000000
+              Size.Height = 271.000000000000000000
+              TabOrder = 0
+            end
+          end
+        end
+        object TabItem10: TTabItem
+          CustomIcon = <
+            item
+            end>
+          IsSelected = False
+          Size.Width = 124.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          Text = 'H'#233'mogramme'
+          ExplicitSize.cx = 124.000000000000000000
+          ExplicitSize.cy = 30.000000000000000000
+          inline Frame31: TFrame3
+            Align = Client
+            Size.Width = 1059.000000000000000000
+            Size.Height = 271.000000000000000000
+            Size.PlatformDefault = False
+            inherited Layout_Frame3: TLayout
+              Size.Height = 238.000000000000000000
+              inherited L_Left: TLayout
+                Size.Height = 238.000000000000000000
+                inherited Hemog_Edit4: TEdit
+                  TabOrder = 3
+                  Position.X = 110.000000000000000000
+                  Position.Y = 196.429763793945300000
+                  Size.Width = 410.000000000000000000
+                  inherited Hemog_LabelEdit4: TLabel
+                    Position.X = 393.000000000000000000
+                  end
+                end
+                inherited Hemog_Label4: TLabel
+                  Position.Y = 196.429763793945300000
+                  TabOrder = 10
+                end
+                inherited Hemog_Label3: TLabel
+                  Position.Y = 135.556594848632800000
+                  Size.Width = 98.000000000000000000
+                  TabOrder = 11
+                end
+                inherited Hemog_Edit3: TEdit
+                  TabOrder = 2
+                  Position.X = 110.000000000000000000
+                  Position.Y = 135.454544067382800000
+                  Size.Width = 410.000000000000000000
+                  inherited Hemog_LabelEdit3: TLabel
+                    Position.X = 393.000000000000000000
+                  end
+                end
+                inherited Hemog_Edit2: TEdit
+                  TabOrder = 1
+                  Position.X = 110.000000000000000000
+                  Position.Y = 74.479339599609370000
+                  Size.Width = 410.000000000000000000
+                  inherited Hemog_LabelEdit2: TLabel
+                    Position.X = 353.000000000000000000
+                  end
+                end
+                inherited Hemog_Label2: TLabel
+                  Position.Y = 74.933975219726570000
+                  Size.Width = 98.000000000000000000
+                  TabOrder = 23
+                end
+                inherited Hemog_Label1: TLabel
+                  Position.Y = 14.487602233886720000
+                  TabOrder = 25
+                end
+                inherited Hemog_Edit1: TEdit
+                  Position.X = 110.000000000000000000
+                  Position.Y = 14.487602233886720000
+                  Size.Width = 410.000000000000000000
+                  inherited Hemog_LabelEdit1: TLabel
+                    Position.X = 329.000000000000000000
+                  end
+                end
+              end
+              inherited L_Right: TLayout
+                Size.Height = 238.000000000000000000
+                inherited Hemog_Edit6: TEdit
+                  TabOrder = 2
+                  Position.X = 110.000000000000000000
+                  Position.Y = 135.454544067382800000
+                  Size.Width = 410.000000000000000000
+                  inherited Label19: TLabel
+                    Position.X = 393.000000000000000000
+                  end
+                end
+                inherited Hemog_Label6: TLabel
+                  Position.Y = 74.479339599609370000
+                end
+                inherited Hemog_Edit5: TEdit
+                  Position.X = 110.000000000000000000
+                  Position.Y = 14.487602233886720000
+                  Size.Width = 410.000000000000000000
+                  inherited Label18: TLabel
+                    Position.X = 393.000000000000000000
+                  end
+                end
+                inherited Hemog_Label5: TLabel
+                  Position.Y = 14.487602233886720000
+                end
+                inherited Hemog_Label7: TLabel
+                  Position.Y = 135.454544067382800000
+                end
+                inherited Hemog_Edit7: TEdit
+                  TabOrder = 1
+                  Position.X = 110.000000000000000000
+                  Position.Y = 74.479339599609370000
+                  Size.Width = 410.000000000000000000
+                  inherited Label20: TLabel
+                    Position.X = 345.000000000000000000
+                  end
+                end
+                inherited Hemog_Edit8: TEdit
+                  Position.X = 110.000000000000000000
+                  Position.Y = 196.429763793945300000
+                  Size.Width = 410.000000000000000000
+                  inherited Label21: TLabel
+                    Position.X = 393.000000000000000000
+                  end
+                end
+                inherited Hemog_Label8: TLabel
+                  Position.Y = 196.179244995117200000
+                  Size.Width = 106.000000000000000000
+                end
+              end
+            end
+          end
+        end
+        object TabItem11: TTabItem
+          CustomIcon = <
+            item
+            end>
+          IsSelected = False
+          Size.Width = 131.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          Text = 'H'#233'mostase | VS'
+          ExplicitSize.cx = 131.000000000000000000
+          ExplicitSize.cy = 30.000000000000000000
+          inline Frame41: TFrame4
+            Align = Client
+            Size.Width = 1059.000000000000000000
+            Size.Height = 271.000000000000000000
+            Size.PlatformDefault = False
+            inherited Layout_Frame: TLayout
+              Size.Height = 271.000000000000000000
+              inherited GroupBox3: TGroupBox
+                Size.Height = 271.000000000000000000
+                inherited Hemos_Edit1: TEdit
+                  Position.Y = 32.287273406982420000
+                end
+                inherited Hemos_Edit2: TEdit
+                  Position.Y = 120.978179931640600000
+                end
+                inherited Hemos_Edit3: TEdit
+                  Position.Y = 209.669097900390600000
+                end
+                inherited Hemos_Label3: TLabel
+                  Position.Y = 209.669097900390600000
+                end
+                inherited Hemos_Label2: TLabel
+                  Position.Y = 120.978179931640600000
+                end
+                inherited Hemos_Label1: TLabel
+                  Position.Y = 29.330909729003900000
+                end
+              end
+              inherited GroupBox4: TGroupBox
+                Size.Height = 271.000000000000000000
+                inherited GroupBox5: TGroupBox
+                  Size.Height = 166.000000000000000000
+                  inherited Memo1: TMemo
+                    Size.Height = 131.000000000000000000
+                    Viewport.Width = 510.000000000000000000
+                    Viewport.Height = 131.000000000000000000
+                  end
+                end
+              end
+            end
+          end
+        end
+        object TabItem12: TTabItem
+          CustomIcon = <
+            item
+            end>
+          IsSelected = False
+          Size.Width = 168.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          Text = 'Analyse Biochimique'
+          ExplicitSize.cx = 168.000000000000000000
+          ExplicitSize.cy = 30.000000000000000000
+          inline Frame61: TFrame6
+            Align = Client
+            Size.Width = 1059.000000000000000000
+            Size.Height = 271.000000000000000000
+            Size.PlatformDefault = False
+            inherited Layout0: TLayout
+              Size.Height = 271.000000000000000000
+              inherited Layout1: TLayout
+                Margins.Top = 5.000000000000000000
+                Position.Y = 5.000000000000000000
+                Size.Height = 266.000000000000000000
+                TabOrder = 3
+                inherited Bio_Edit11: TEdit
+                  Position.Y = 14.952728271484370000
+                  inherited Label1: TLabel
+                    TextSettings.Font.Family = '16'
+                  end
+                end
+                inherited Label2: TLabel
+                  Position.Y = 14.952728271484370000
+                  TextSettings.Font.Family = '16'
+                end
+                inherited Bio_Edit12: TEdit
+                  TabOrder = 1
+                  Position.Y = 67.185462951660160000
+                  inherited Label3: TLabel
+                    TextSettings.Font.Family = '16'
+                  end
+                end
+                inherited Label4: TLabel
+                  Position.Y = 67.185462951660160000
+                  TextSettings.Font.Family = '16'
+                end
+                inherited Bio_Edit13: TEdit
+                  TabOrder = 2
+                  Position.Y = 119.418182373046900000
+                  inherited Label5: TLabel
+                    TextSettings.Font.Family = '16'
+                  end
+                end
+                inherited Label6: TLabel
+                  Position.Y = 119.418182373046900000
+                  TextSettings.Font.Family = '16'
+                end
+                inherited Bio_Edit14: TEdit
+                  TabOrder = 3
+                  Position.Y = 171.650924682617200000
+                  inherited Label7: TLabel
+                    TextSettings.Font.Family = '16'
+                  end
+                end
+                inherited Label8: TLabel
+                  Position.Y = 171.650924682617200000
+                  TextSettings.Font.Family = '16'
+                end
+                inherited Bio_Edit15: TEdit
+                  TabOrder = 4
+                  Position.Y = 223.883651733398400000
+                  inherited Label9: TLabel
+                    TextSettings.Font.Family = '16'
+                  end
+                end
+                inherited Label10: TLabel
+                  Position.Y = 223.883651733398400000
+                  TextSettings.Font.Family = '16'
+                  TabOrder = 6
+                end
+                inherited Label51: TLabel
+                  Position.Y = 14.952728271484370000
+                  TextSettings.Font.Family = '16'
+                end
+                inherited Label52: TLabel
+                  Position.Y = 67.185462951660160000
+                  TextSettings.Font.Family = '16'
+                end
+                inherited Label53: TLabel
+                  Position.Y = 119.418182373046900000
+                  TextSettings.Font.Family = '16'
+                end
+                inherited Label54: TLabel
+                  Position.Y = 171.650924682617200000
+                  TextSettings.Font.Family = '16'
+                  TabOrder = 7
+                end
+                inherited Label55: TLabel
+                  Position.Y = 223.883651733398400000
+                  TextSettings.Font.Family = '16'
+                  TabOrder = 5
+                end
+              end
+              inherited Layout2: TLayout
+                Margins.Top = 5.000000000000000000
+                Position.Y = 5.000000000000000000
+                Size.Height = 266.000000000000000000
+                TabOrder = 2
+                inherited Bio_Edit16: TEdit
+                  Position.Y = 14.952728271484370000
+                  inherited Label11: TLabel
+                    TextSettings.Font.Family = '16'
+                  end
+                end
+                inherited Label12: TLabel
+                  Position.Y = 14.952728271484370000
+                  TextSettings.Font.Family = '16'
+                end
+                inherited Bio_Edit17: TEdit
+                  TabOrder = 1
+                  Position.Y = 67.185462951660160000
+                  inherited Label13: TLabel
+                    TextSettings.Font.Family = '16'
+                  end
+                end
+                inherited Label14: TLabel
+                  Position.Y = 67.185462951660160000
+                  TextSettings.Font.Family = '16'
+                end
+                inherited Bio_Edit18: TEdit
+                  TabOrder = 2
+                  Position.Y = 119.418182373046900000
+                  inherited Label15: TLabel
+                    TextSettings.Font.Family = '16'
+                  end
+                end
+                inherited Label16: TLabel
+                  Position.Y = 119.418182373046900000
+                  TextSettings.Font.Family = '16'
+                end
+                inherited Bio_Edit19: TEdit
+                  TabOrder = 3
+                  Position.Y = 171.650924682617200000
+                  inherited Label17: TLabel
+                    TextSettings.Font.Family = '16'
+                  end
+                end
+                inherited Label18: TLabel
+                  Position.Y = 171.650924682617200000
+                  TextSettings.Font.Family = '16'
+                  TabOrder = 5
+                end
+                inherited Label56: TLabel
+                  Position.Y = 14.952728271484370000
+                  TextSettings.Font.Family = '16'
+                end
+                inherited Label57: TLabel
+                  Position.Y = 67.185462951660160000
+                  TextSettings.Font.Family = '16'
+                end
+                inherited Label58: TLabel
+                  Position.Y = 119.418182373046900000
+                  TextSettings.Font.Family = '16'
+                end
+                inherited Label59: TLabel
+                  Position.Y = 171.650924682617200000
+                  TextSettings.Font.Family = '16'
+                  TabOrder = 4
+                end
+              end
+              inherited Layout3: TLayout
+                Margins.Top = 5.000000000000000000
+                Position.Y = 5.000000000000000000
+                Size.Height = 266.000000000000000000
+                TabOrder = 0
+                inherited Bio_Edit1: TEdit
+                  Position.Y = 14.952728271484370000
+                  inherited Label21: TLabel
+                    TextSettings.Font.Family = '16'
+                  end
+                end
+                inherited Label22: TLabel
+                  Position.Y = 14.952728271484370000
+                  TextSettings.Font.Family = '16'
+                end
+                inherited Bio_Edit2: TEdit
+                  TabOrder = 1
+                  Position.Y = 67.185462951660160000
+                  inherited Label23: TLabel
+                    TextSettings.Font.Family = '16'
+                  end
+                end
+                inherited Label24: TLabel
+                  Position.Y = 67.185462951660160000
+                  TextSettings.Font.Family = '16'
+                end
+                inherited Bio_Edit3: TEdit
+                  TabOrder = 2
+                  Position.Y = 119.418182373046900000
+                  inherited Label25: TLabel
+                    TextSettings.Font.Family = '16'
+                  end
+                end
+                inherited Label26: TLabel
+                  Position.Y = 119.418182373046900000
+                  TextSettings.Font.Family = '16'
+                end
+                inherited Bio_Edit4: TEdit
+                  TabOrder = 3
+                  Position.Y = 171.650924682617200000
+                  inherited Label27: TLabel
+                    TextSettings.Font.Family = '16'
+                  end
+                end
+                inherited Label28: TLabel
+                  Position.Y = 171.650924682617200000
+                  TextSettings.Font.Family = '16'
+                end
+                inherited Bio_Edit5: TEdit
+                  TabOrder = 4
+                  Position.Y = 223.883651733398400000
+                  inherited Label29: TLabel
+                    TextSettings.Font.Family = '16'
+                  end
+                end
+                inherited Label30: TLabel
+                  Position.Y = 223.883651733398400000
+                  TextSettings.Font.Family = '16'
+                  TabOrder = 6
+                end
+                inherited Label41: TLabel
+                  Position.Y = 14.952728271484370000
+                  TextSettings.Font.Family = '16'
+                end
+                inherited Label42: TLabel
+                  Position.Y = 67.185462951660160000
+                  TextSettings.Font.Family = '16'
+                end
+                inherited Label43: TLabel
+                  Position.Y = 119.418182373046900000
+                  TextSettings.Font.Family = '16'
+                end
+                inherited Label44: TLabel
+                  Position.Y = 171.650924682617200000
+                  TextSettings.Font.Family = '16'
+                  TabOrder = 7
+                end
+                inherited Label45: TLabel
+                  Position.Y = 223.883651733398400000
+                  TextSettings.Font.Family = '16'
+                  TabOrder = 5
+                end
+              end
+              inherited Layout4: TLayout
+                Margins.Top = 5.000000000000000000
+                Position.Y = 5.000000000000000000
+                Size.Height = 266.000000000000000000
+                TabOrder = 1
+                inherited Bio_Edit6: TEdit
+                  Position.Y = 14.952728271484370000
+                  inherited Label31: TLabel
+                    TextSettings.Font.Family = '16'
+                  end
+                end
+                inherited Label32: TLabel
+                  Position.Y = 14.952728271484370000
+                  TextSettings.Font.Family = '16'
+                end
+                inherited Bio_Edit7: TEdit
+                  TabOrder = 1
+                  Position.Y = 67.185462951660160000
+                  inherited Label33: TLabel
+                    TextSettings.Font.Family = '16'
+                  end
+                end
+                inherited Label34: TLabel
+                  Position.Y = 67.185462951660160000
+                  TextSettings.Font.Family = '16'
+                end
+                inherited Bio_Edit8: TEdit
+                  TabOrder = 2
+                  Position.Y = 119.418182373046900000
+                  inherited Label35: TLabel
+                    TextSettings.Font.Family = '16'
+                  end
+                end
+                inherited Label36: TLabel
+                  Position.Y = 119.418182373046900000
+                  TextSettings.Font.Family = '16'
+                end
+                inherited Bio_Edit9: TEdit
+                  TabOrder = 3
+                  Position.Y = 171.650924682617200000
+                  inherited Label37: TLabel
+                    TextSettings.Font.Family = '16'
+                  end
+                end
+                inherited Label38: TLabel
+                  Position.Y = 171.650924682617200000
+                  TextSettings.Font.Family = '16'
+                end
+                inherited Bio_Edit10: TEdit
+                  TabOrder = 4
+                  Position.Y = 223.883651733398400000
+                  inherited Label39: TLabel
+                    TextSettings.Font.Family = '16'
+                  end
+                end
+                inherited Label40: TLabel
+                  Position.Y = 223.883651733398400000
+                  TextSettings.Font.Family = '16'
+                  TabOrder = 6
+                end
+                inherited Label46: TLabel
+                  Position.Y = 14.952728271484370000
+                  TextSettings.Font.Family = '16'
+                end
+                inherited Label47: TLabel
+                  Position.Y = 67.185462951660160000
+                  TextSettings.Font.Family = '16'
+                end
+                inherited Label48: TLabel
+                  Position.Y = 119.418182373046900000
+                  TextSettings.Font.Family = '16'
+                end
+                inherited Label49: TLabel
+                  Position.Y = 171.650924682617200000
+                  TextSettings.Font.Family = '16'
+                  TabOrder = 7
+                end
+                inherited Label50: TLabel
+                  Position.Y = 223.883651733398400000
+                  TextSettings.Font.Family = '16'
+                  TabOrder = 5
+                end
+              end
+            end
+          end
+        end
+        object TabItem13: TTabItem
+          CustomIcon = <
+            item
+            end>
+          IsSelected = False
+          Size.Width = 89.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          Text = 'S'#233'rologie'
+          ExplicitSize.cx = 89.000000000000000000
+          ExplicitSize.cy = 30.000000000000000000
+          inline Frame51: TFrame5
+            Align = Client
+            Size.Width = 1059.000000000000000000
+            Size.Height = 271.000000000000000000
+            Size.PlatformDefault = False
+            inherited TabControl1: TTabControl
+              Size.Height = 261.000000000000000000
+              Sizes = (
+                1059s
+                231s
+                1059s
+                231s)
+              inherited TabItem8: TTabItem
+                Size.Width = 140.000000000000000000
+                Size.Height = 30.000000000000000000
+                ExplicitSize.cx = 140.000000000000000000
+                ExplicitSize.cy = 30.000000000000000000
+                inherited GroupBox6: TGroupBox
+                  Size.Height = 231.000000000000000000
+                  inherited RB_HA_IgM: TRadioButton
+                    Position.Y = 158.714294433593800000
+                    Size.Height = 22.000000000000000000
+                  end
+                  inherited RB_HA_IgG: TRadioButton
+                    Position.Y = 158.714294433593800000
+                    Size.Height = 22.000000000000000000
+                  end
+                  inherited CB_HA_Anit_VHA: TCheckBox
+                    Position.X = 100.000000000000000000
+                    Size.Width = 97.000000000000000000
+                  end
+                end
+                inherited GroupBox7: TGroupBox
+                  Size.Height = 231.000000000000000000
+                  inherited CB_HB_Anti_VHB: TCheckBox
+                    Position.Y = 65.339279174804680000
+                    Size.Width = 100.000000000000000000
+                  end
+                  inherited CB_HB_Antigene_BHs: TCheckBox
+                    Position.Y = 178.858489990234400000
+                    Size.Height = 22.000000000000000000
+                  end
+                end
+                inherited GroupBox8: TGroupBox
+                  Size.Height = 231.000000000000000000
+                  inherited CB_HC_Anti_VHC: TCheckBox
+                    Position.X = 64.000000000000000000
+                    Position.Y = 106.589279174804700000
+                    Size.Width = 96.000000000000000000
+                  end
+                end
+                inherited GroupBox9: TGroupBox
+                  Size.Height = 231.000000000000000000
+                  inherited CB_VIH_Anti_VIH: TCheckBox
+                    Position.X = 108.000000000000000000
+                    Position.Y = 106.589279174804700000
+                    Size.Width = 97.000000000000000000
+                  end
+                end
+              end
+              inherited TabItem9: TTabItem
+                Size.Width = 279.000000000000000000
+                Size.Height = 30.000000000000000000
+                ExplicitSize.cx = 279.000000000000000000
+                ExplicitSize.cy = 30.000000000000000000
+                inherited GroupBox16: TGroupBox
+                  Size.Height = 231.000000000000000000
+                  inherited GroupBox10: TGroupBox
+                    Size.Height = 191.000000000000000000
+                    inherited CB_MI_Anti_EBV: TCheckBox
+                      Position.X = 167.000000000000000000
+                      Position.Y = 48.891021728515620000
+                      Size.Width = 100.000000000000000000
+                    end
+                    inherited CB_MI_VCA: TCheckBox
+                      Position.X = 34.000000000000000000
+                      Position.Y = 48.993591308593750000
+                      Size.Width = 97.000000000000000000
+                      Size.Height = 22.000000000000000000
+                    end
+                    inherited CB_MI_EBNA: TCheckBox
+                      Position.X = 34.000000000000000000
+                      Position.Y = 143.269226074218800000
+                      Size.Width = 105.000000000000000000
+                      Size.Height = 22.000000000000000000
+                    end
+                    inherited CB_MI_EA: TCheckBox
+                      Position.X = 167.000000000000000000
+                      Position.Y = 143.269226074218800000
+                      Size.Width = 84.000000000000000000
+                      Size.Height = 22.000000000000000000
+                    end
+                  end
+                  inherited GroupBox13: TGroupBox
+                    Size.Height = 191.000000000000000000
+                    inherited CB_RUB_IgM: TCheckBox
+                      Position.X = 45.000000000000000000
+                      Position.Y = 41.647438049316400000
+                      Size.Width = 165.000000000000000000
+                      Size.Height = 22.000000000000000000
+                    end
+                    inherited CB_RUB_IgA: TCheckBox
+                      Position.X = 45.000000000000000000
+                      Position.Y = 95.519233703613290000
+                      Size.Width = 165.000000000000000000
+                      Size.Height = 22.000000000000000000
+                    end
+                    inherited CB_RUB_IgG: TCheckBox
+                      Position.X = 45.000000000000000000
+                      Position.Y = 149.391036987304700000
+                      Size.Width = 165.000000000000000000
+                      Size.Height = 22.000000000000000000
+                    end
+                  end
+                  inherited GroupBox11: TGroupBox
+                    Size.Height = 191.000000000000000000
+                    inherited CB_SFT_Anti_O: TCheckBox
+                      Position.X = 63.000000000000000000
+                      Position.Y = 47.666656494140630000
+                      Size.Width = 83.000000000000000000
+                    end
+                    inherited CB_SFT_Anti_H: TCheckBox
+                      Position.X = 63.000000000000000000
+                      Position.Y = 130.923065185546900000
+                      Size.Width = 83.000000000000000000
+                    end
+                  end
+                end
+                inherited GroupBox17: TGroupBox
+                  Size.Height = 231.000000000000000000
+                  inherited GroupBox15: TGroupBox
+                    Size.Height = 191.000000000000000000
+                    inherited CB_Toxo_Anti_IgM: TCheckBox
+                      Position.X = 80.000000000000000000
+                      Position.Y = 84.500000000000000000
+                      Size.Width = 96.000000000000000000
+                      Size.Height = 22.000000000000000000
+                    end
+                  end
+                end
+              end
+            end
+          end
+        end
+        object TabItem14: TTabItem
+          CustomIcon = <
+            item
+            end>
+          IsSelected = False
+          Size.Width = 109.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          Text = 'Ordonnance'
+          ExplicitSize.cx = 109.000000000000000000
+          ExplicitSize.cy = 30.000000000000000000
+          object StringGrid8: TStringGrid
+            Align = Client
+            CanFocus = True
+            ClipChildren = True
+            Margins.Left = 10.000000000000000000
+            Margins.Right = 10.000000000000000000
+            Margins.Bottom = 10.000000000000000000
+            Size.Width = 1039.000000000000000000
+            Size.Height = 211.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            Viewport.Width = 1035.000000000000000000
+            Viewport.Height = 186.000000000000000000
+          end
+          object Layout6: TLayout
+            Align = Top
+            Size.Width = 1059.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+          end
+        end
+        object TabItem15: TTabItem
+          CustomIcon = <
+            item
+            end>
+          IsSelected = True
+          Size.Width = 153.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          Text = 'Centre de paiment'
+          ExplicitSize.cx = 153.000000000000000000
+          ExplicitSize.cy = 30.000000000000000000
+        end
+      end
+    end
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DataModule1.FDQ_Groupage
+    ScopeMappings = <>
+    Left = 1176
+    Top = 32
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 1092
+    Top = 45
+    object LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      GridControl = StringGrid2
+      Columns = <>
+    end
+    object LinkGridToDataSourceBindSourceDB2: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB2
+      GridControl = StringGrid4
+      Columns = <>
+    end
+    object LinkGridToDataSourceBindSourceDB3: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB3
+      GridControl = StringGrid5
+      Columns = <>
+    end
+  end
+  object BindSourceDB2: TBindSourceDB
+    DataSet = DataModule1.FDQ_Patient
+    ScopeMappings = <>
+    Left = 1160
+    Top = 88
+  end
+  object BindSourceDB3: TBindSourceDB
+    DataSet = DataModule1.FDQ_Patient_Table
+    ScopeMappings = <>
+    Left = 1088
+    Top = 96
   end
 end

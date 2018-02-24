@@ -23,6 +23,9 @@ type
     FDQ_Wilaya: TFDQuery;
     FDQ_Commune: TFDQuery;
     FDQ_Entreprise: TFDQuery;
+    FDQ_Groupage: TFDQuery;
+    FDQ_Patient: TFDQuery;
+    FDQ_Patient_Table: TFDQuery;
     procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }
@@ -122,6 +125,12 @@ begin
       end;
     end;
   end;
+  //Groupage Table
+  FDQ_Groupage.Active := True;
+  //Patient Table
+  FDQ_Patient.Active := True;
+  //Main patient Table
+  FDQ_Patient_Table.Active := True;
 end;
 
 end.
