@@ -26,6 +26,7 @@ type
     FDQ_Groupage: TFDQuery;
     FDQ_Patient: TFDQuery;
     FDQ_Patient_Table: TFDQuery;
+    FDCmnd_Drop_Patient: TFDCommand;
     procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }

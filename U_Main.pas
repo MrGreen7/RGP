@@ -116,12 +116,6 @@ type
     Layout2: TLayout;
     Edit1: TEdit;
     StringGrid7: TStringGrid;
-    Layout_Exit_Patient: TLayout;
-    Label15: TLabel;
-    Label16: TLabel;
-    ColorAnimation6: TColorAnimation;
-    ShadowEffect8: TShadowEffect;
-    ShadowEffect10: TShadowEffect;
     Layout_Exit_RechercheP: TLayout;
     Label17: TLabel;
     ShadowEffect11: TShadowEffect;
@@ -158,7 +152,7 @@ type
     LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource;
     BindSourceDB2: TBindSourceDB;
     LinkGridToDataSourceBindSourceDB2: TLinkGridToDataSource;
-    Label26: TLabel;
+    Refresh_Patient_Table: TLabel;
     ColorAnimation14: TColorAnimation;
     FloatAnimation5: TFloatAnimation;
     BindSourceDB3: TBindSourceDB;
@@ -186,8 +180,102 @@ type
     StringGrid8: TStringGrid;
     Layout6: TLayout;
     TabItem15: TTabItem;
+    Layout_Exit_Patient: TLayout;
+    Label16: TLabel;
+    ShadowEffect10: TShadowEffect;
+    Label15: TLabel;
+    ColorAnimation6: TColorAnimation;
+    ShadowEffect8: TShadowEffect;
+    Layout7: TLayout;
     Label29: TLabel;
+    ShadowEffect21: TShadowEffect;
     Label30: TLabel;
+    ColorAnimation16: TColorAnimation;
+    ShadowEffect22: TShadowEffect;
+    Layout8: TLayout;
+    Label31: TLabel;
+    ShadowEffect23: TShadowEffect;
+    Label32: TLabel;
+    ColorAnimation17: TColorAnimation;
+    ShadowEffect24: TShadowEffect;
+    Layout9: TLayout;
+    Label33: TLabel;
+    ShadowEffect25: TShadowEffect;
+    Label34: TLabel;
+    ShadowEffect26: TShadowEffect;
+    ColorAnimation18: TColorAnimation;
+    Layout10: TLayout;
+    Label35: TLabel;
+    ShadowEffect27: TShadowEffect;
+    Label36: TLabel;
+    ColorAnimation19: TColorAnimation;
+    ShadowEffect28: TShadowEffect;
+    Layout11: TLayout;
+    Label37: TLabel;
+    ColorAnimation20: TColorAnimation;
+    ShadowEffect29: TShadowEffect;
+    Label38: TLabel;
+    ShadowEffect30: TShadowEffect;
+    Layout12: TLayout;
+    Label39: TLabel;
+    ShadowEffect31: TShadowEffect;
+    Label40: TLabel;
+    ShadowEffect32: TShadowEffect;
+    ColorAnimation21: TColorAnimation;
+    Layout13: TLayout;
+    Label41: TLabel;
+    ShadowEffect33: TShadowEffect;
+    Label42: TLabel;
+    ColorAnimation22: TColorAnimation;
+    ShadowEffect34: TShadowEffect;
+    Layout14: TLayout;
+    Label43: TLabel;
+    ColorAnimation23: TColorAnimation;
+    ShadowEffect35: TShadowEffect;
+    Label44: TLabel;
+    ShadowEffect36: TShadowEffect;
+    Layout15: TLayout;
+    Label45: TLabel;
+    ShadowEffect37: TShadowEffect;
+    Label46: TLabel;
+    ShadowEffect38: TShadowEffect;
+    ColorAnimation24: TColorAnimation;
+    Layout16: TLayout;
+    Label47: TLabel;
+    ShadowEffect39: TShadowEffect;
+    Label48: TLabel;
+    ColorAnimation25: TColorAnimation;
+    ShadowEffect40: TShadowEffect;
+    Layout17: TLayout;
+    Label49: TLabel;
+    ColorAnimation26: TColorAnimation;
+    ShadowEffect41: TShadowEffect;
+    Label50: TLabel;
+    ShadowEffect42: TShadowEffect;
+    Layout18: TLayout;
+    Label51: TLabel;
+    ShadowEffect43: TShadowEffect;
+    Label52: TLabel;
+    ShadowEffect44: TShadowEffect;
+    ColorAnimation27: TColorAnimation;
+    Layout19: TLayout;
+    Label53: TLabel;
+    ShadowEffect45: TShadowEffect;
+    Label54: TLabel;
+    ColorAnimation28: TColorAnimation;
+    ShadowEffect46: TShadowEffect;
+    Layout20: TLayout;
+    Label55: TLabel;
+    ColorAnimation29: TColorAnimation;
+    ShadowEffect47: TShadowEffect;
+    Label56: TLabel;
+    ShadowEffect48: TShadowEffect;
+    Layout21: TLayout;
+    Label57: TLabel;
+    ShadowEffect49: TShadowEffect;
+    Label58: TLabel;
+    ColorAnimation30: TColorAnimation;
+    ShadowEffect50: TShadowEffect;
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure P_AccueilClick(Sender: TObject);
     procedure PatientClick(Sender: TObject);
@@ -216,17 +304,40 @@ type
     procedure Label18Click(Sender: TObject);
     procedure Label20Click(Sender: TObject);
     procedure Label22Click(Sender: TObject);
-    procedure Label23Click(Sender: TObject);
-    procedure Label25Click(Sender: TObject);
-    procedure Label26Click(Sender: TObject);
     procedure Frame11Button2Click(Sender: TObject);
     procedure Frame11Button1Click(Sender: TObject);
     procedure StringGrid5CellClick(const Column: TColumn; const Row: Integer);
+    procedure Refresh_Patient_TableMouseUp(Sender: TObject;
+      Button: TMouseButton; Shift: TShiftState; X, Y: Single);
+    procedure Refresh_Patient_TableMouseDown(Sender: TObject;
+      Button: TMouseButton; Shift: TShiftState; X, Y: Single);
+    procedure Label_Refresh1MouseUp(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Single);
+    procedure Label_Refresh1MouseDown(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Single);
+    procedure Label23MouseUp(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Single);
+    procedure Label23MouseDown(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Single);
+    procedure Label24MouseUp(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Single);
+    procedure Label24MouseDown(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Single);
+    procedure Label25MouseUp(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Single);
+    procedure Label25MouseDown(Sender: TObject; Button: TMouseButton;
+      Shift: TShiftState; X, Y: Single);
+    procedure StringGrid5ColResize;
+    procedure Label30Click(Sender: TObject);
+    procedure FloatAnimation5Finish(Sender: TObject);
+    procedure FloatAnimation2Finish(Sender: TObject);
+    procedure FloatAnimation4Finish(Sender: TObject);
   private
     { Private declarations }
     WidthX, HeightX: Integer;
   public
     { Public declarations }
+    Id_Patient, Nom_Patient, Prenom_Patient, Type_Patient: String;
   end;
 
 var
@@ -238,6 +349,24 @@ uses
   U_Option, U_Log, U_Entreprise, Winapi.Windows, U_DataModule;
 {$R *.fmx}
 {$R resources.RES}
+
+procedure TMain.FloatAnimation2Finish(Sender: TObject);
+begin
+  inherited;
+  DataModule1.FDQ_Groupage.Refresh;
+end;
+
+procedure TMain.FloatAnimation4Finish(Sender: TObject);
+begin
+  inherited;
+  DataModule1.FDQ_Patient.Refresh;
+end;
+
+procedure TMain.FloatAnimation5Finish(Sender: TObject);
+begin
+  inherited;
+  DataModule1.FDQ_Patient_Table.Refresh;
+end;
 
 procedure TMain.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
 var
@@ -260,6 +389,7 @@ procedure TMain.FormPaint(Sender: TObject; Canvas: TCanvas;
 begin
   WidthX := Main.Width;
   HeightX := Main.Height;
+  StringGrid5ColResize;
 end;
 
 procedure TMain.FormResize(Sender: TObject);
@@ -302,8 +432,29 @@ begin
   if (LogDlg.ShowModal = mrCancel) then
     Application.Terminate;
   LogDlg.Free;
-  // Frame_Information.WiliyaLoad(Frame_Information.AC_Combobox1);
+  // StringGrid5.Columns[1].Width := 700;
 end;
+
+procedure TMain.StringGrid5ColResize;
+Var
+  i: Integer;
+Begin
+  for i := 0 to 15 do
+  Begin
+    StringGrid5.Columns[i].Width := 120;
+    if (i = 0) then
+      StringGrid5.Columns[i].Width := 80;
+    if (i = 5) then
+      StringGrid5.Columns[i].Width := 70;
+    if (i = 6) then
+      StringGrid5.Columns[i].Width := 70;
+  End;
+  for i := 0 to 2 do
+  Begin
+    StringGrid2.Columns[i].Width := 140;
+    StringGrid4.Columns[i].Width := 140;
+  End;
+End;
 
 procedure TMain.Frame11Button1Click(Sender: TObject);
 begin
@@ -450,22 +601,82 @@ begin
   H_Accueil.IsSelected := True;
 end;
 
-procedure TMain.Label23Click(Sender: TObject);
+procedure TMain.Label23MouseDown(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Single);
 begin
   inherited;
-  DataModule1.FDQ_Groupage.Refresh;
+  FloatAnimation2.enabled := False;
 end;
 
-procedure TMain.Label25Click(Sender: TObject);
+procedure TMain.Label23MouseUp(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Single);
 begin
   inherited;
-  DataModule1.FDQ_Patient.Refresh;
+  FloatAnimation2.enabled := True;
 end;
 
-procedure TMain.Label26Click(Sender: TObject);
+procedure TMain.Label24MouseDown(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Single);
 begin
   inherited;
-  DataModule1.FDQ_Patient_Table.Refresh;
+  FloatAnimation3.enabled := False;
+end;
+
+procedure TMain.Label24MouseUp(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Single);
+begin
+  inherited;
+  FloatAnimation3.enabled := True;
+end;
+
+procedure TMain.Label25MouseDown(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Single);
+begin
+  inherited;
+  FloatAnimation4.enabled := False;
+end;
+
+procedure TMain.Label25MouseUp(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Single);
+begin
+  inherited;
+  FloatAnimation4.enabled := True;
+end;
+
+procedure TMain.Refresh_Patient_TableMouseDown(Sender: TObject;
+  Button: TMouseButton; Shift: TShiftState; X, Y: Single);
+begin
+  inherited;
+  FloatAnimation5.enabled := False;
+end;
+
+procedure TMain.Refresh_Patient_TableMouseUp(Sender: TObject;
+  Button: TMouseButton; Shift: TShiftState; X, Y: Single);
+begin
+  inherited;
+  FloatAnimation5.enabled := True;
+end;
+
+procedure TMain.Label30Click(Sender: TObject);
+begin
+  inherited;
+  if ((Id_Patient <> '') and (Nom_Patient <> '') and (Prenom_Patient <> '') and
+    (Type_Patient <> '')) then
+  Begin
+    With DataModule1.FDCmnd_Drop_Patient do
+    Begin
+      Active := False;
+      CommandText.Clear;
+      CommandText.Text := ('DELETE FROM Patient WHERE Patient_ID="' + Id_Patient
+        + '" and Nom="' + Nom_Patient + '" and Prenom="' + Prenom_Patient +
+        '" and Type="' + Type_Patient + '";');
+      Active := True;
+      Execute;
+      Active := False;
+      CommandText.Clear;
+      FloatAnimation5.OnFinish(FloatAnimation5);
+    End;
+  End;
 end;
 
 procedure TMain.Label4Click(Sender: TObject);
@@ -482,6 +693,20 @@ var
 begin
   OptionDlg := TOption.Create(self);
   OptionDlg.ShowModal;
+end;
+
+procedure TMain.Label_Refresh1MouseDown(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Single);
+begin
+  inherited;
+  FloatAnimation1.enabled := False;
+end;
+
+procedure TMain.Label_Refresh1MouseUp(Sender: TObject; Button: TMouseButton;
+  Shift: TShiftState; X, Y: Single);
+begin
+  inherited;
+  FloatAnimation1.enabled := True;
 end;
 
 procedure TMain.New_PatientClick(Sender: TObject);
@@ -571,17 +796,18 @@ begin
   H_Gen_NouveauP.Visible := False;
   H_Gen_RechercheP.Visible := True;
   H_Gen_RechercheP.IsSelected := True;
-
 end;
 
 procedure TMain.StringGrid5CellClick(const Column: TColumn; const Row: Integer);
 Var
-  TRow, TCol: Integer;
+  TRow: Integer;
 begin
   inherited;
   TRow := StringGrid5.Row;
-  TCol := StringGrid5.Col;
-  Label30.Text := StringGrid5.Cells[TCol, TRow];
+  Id_Patient := StringGrid5.Cells[0, TRow];
+  Nom_Patient := StringGrid5.Cells[1, TRow];
+  Prenom_Patient := StringGrid5.Cells[2, TRow];
+  Type_Patient := StringGrid5.Cells[5, TRow];
 end;
 
 procedure TMain.T_AccueilClick(Sender: TObject);
