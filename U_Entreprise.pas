@@ -252,6 +252,13 @@ begin
   ComboBox1.HitTest := True;
   ComboBox2.HitTest := True;
   ComboBox3.HitTest := True;
+  ComboBox1.Clear;
+  ComboBox2.Clear;
+  ComboBox3.Clear;
+  ComboBox1.Items.Add('EPH');
+  ComboBox1.Items.Add('EPHP');
+  WiliyaLoad(Combobox2);
+  CommuneLoad(Edit_Code_Wilaya, ComboBox3);
   Edit1.HitTest := True;
   Edit2.HitTest := True;
   Edit3.HitTest := True;

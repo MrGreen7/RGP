@@ -259,7 +259,7 @@ object Frame2: TFrame2
       Size.PlatformDefault = False
       TabOrder = 17
     end
-    object Label31: TLabel
+    object Label0: TLabel
       Position.X = 16.000000000000000000
       Position.Y = 37.000000000000000000
       Size.Width = 109.000000000000000000

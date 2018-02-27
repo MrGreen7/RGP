@@ -95,6 +95,7 @@ type
     procedure Clear;
     procedure Insert;
     procedure Edit;
+    procedure OnDataLoad;
     function IsSet: Boolean;
   private
     { Private declarations }
@@ -105,8 +106,48 @@ type
 implementation
 
 Uses
-  U_DataModule;
+  U_DataModule, U_Main;
 {$R *.fmx}
+
+procedure TFrame6.OnDataLoad;
+begin
+  With Main do
+  Begin
+    if (Patient_ID <> '') then
+    Begin
+      With DataModule1.FDQuery2 do
+      begin
+        Active := False;
+        SQL.Clear;
+        SQL.Text := ('Select Patientd_ID From Biochimie Where Patient_ID="'+Patient_ID+'"');
+        Active := True;
+        Open;
+        Bio_Edit1.Text := FieldByName('Glycemie').AsString;
+        Bio_Edit2.Text := FieldByName('Uree_Sang').AsString;
+        Bio_Edit3.Text := FieldByName('Createnine').AsString;
+        Bio_Edit4.Text := FieldByName('Cholesterole').AsString;
+        Bio_Edit5.Text := FieldByName('Triglycerides').AsString;
+        Bio_Edit6.Text := FieldByName('HDL').AsString;
+        Bio_Edit7.Text := FieldByName('LDL').AsString;
+        Bio_Edit8.Text := FieldByName('Acide_Urique').AsString;
+        Bio_Edit9.Text := FieldByName('CRP').AsString;
+        Bio_Edit10.Text := FieldByName('TGO').AsString;
+        Bio_Edit11.Text := FieldByName('TGP').AsString;
+        Bio_Edit12.Text := FieldByName('PAL').AsString;
+        Bio_Edit13.Text := FieldByName('TP').AsString;
+        Bio_Edit14.Text := FieldByName('INR').AsString;
+        Bio_Edit15.Text := FieldByName('BilirubineT').AsString;
+        Bio_Edit16.Text := FieldByName('BilirubineD').AsString;
+        Bio_Edit17.Text := FieldByName('ASLO').AsString;
+        Bio_Edit18.Text := FieldByName('Calcemie').AsString;
+        Bio_Edit19.Text := FieldByName('Albuminemie').AsString;
+        Close;
+        Active := False;
+        SQL.Clear;
+      end;
+    End;
+  End;
+end;
 
 function TFrame6.IsSet;
 begin
@@ -150,6 +191,9 @@ begin
 end;
 
 procedure TFrame6.Insert;
+Var
+  Rand: String;
+  bol: Boolean;
 begin
   With DataModule1.FDQuery1 do
   Begin
@@ -158,6 +202,21 @@ begin
     SQL.Text := 'Select * From Biochimie';
     Active := True;
     Insert;
+    repeat
+    Begin
+      try
+        Rand := DataModule1.GenerateID;
+        Rand := 'B' + Rand;
+        FieldByName('Biochimie_ID').AsString := Rand;
+      except
+        on E: Exception do
+        Begin
+          bol := True;
+        End;
+      end;
+      bol := False;
+    End;
+    until bol = False;
     FieldByName('Glycemie').AsString := Bio_Edit1.Text;
     FieldByName('Uree_Sang').AsString := Bio_Edit2.Text;
     FieldByName('Createnine').AsString := Bio_Edit3.Text;

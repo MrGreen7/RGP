@@ -15,7 +15,7 @@ type
     AC_Label1: TLabel;
     GroupBox2: TGroupBox;
     AC_ComboBox3: TComboBox;
-    Label31: TLabel;
+    Label0: TLabel;
     L_Top_1: TLayout;
     L_Top_2: TLayout;
     L_Right_2: TLayout;
@@ -45,10 +45,11 @@ type
     procedure Edit();
     procedure Clear();
     procedure FrameResize(Sender: TObject);
-    function IsSet: Boolean;
     procedure AC_ComboBox1Change(Sender: TObject);
     procedure Wilaya_CodeChange(Sender: TObject);
     procedure AC_ComboBox1MouseEnter(Sender: TObject);
+    procedure OnDataLoad;
+    function IsSet: Boolean;
   private
     { Private declarations }
   public
@@ -58,8 +59,40 @@ type
 implementation
 
 Uses
-  U_DataModule;
+  U_DataModule, U_Main;
 {$R *.fmx}
+
+procedure TFrame2.OnDataLoad;
+begin
+  //
+  With Main do
+  Begin
+    if (Patient_ID <> '') then
+    Begin
+      With DataModule1.FDQuery2 do
+      begin
+        Active := False;
+        SQL.Clear;
+        SQL.Text := 'Select * From Patient Where Patient_ID="'+Patient_ID+'";';
+        Active := True;
+        Open;
+        AC_Edit1.Text := FieldByName('Adresse').AsString;
+        AC_Edit2.Text := FieldByName('Telephone').AsString;
+        AC_Edit3.Text := FieldByName('Email').AsString;
+        AC_Edit4.Text := FieldByName('Mobile').AsString;
+        AC_Edit5.Text := FieldByName('Fax').AsString;
+        WiliyaLoad(AC_ComboBox1);
+        AC_ComboBox1.ItemIndex := FieldByName('Wilaya_Index').Value;
+        Wilaya_Code.OnChange(Wilaya_Code);
+        AC_ComboBox2.ItemIndex := FieldByName('Commune_Index').Value;
+        AC_ComboBox3.ItemIndex := FieldByName('Groupage_Index').Value;
+        Close;
+        Active := False;
+        SQL.Clear;
+      end;
+    End;
+  End;
+End;
 
 function TFrame2.IsSet;
 begin
@@ -131,11 +164,21 @@ begin
     FieldByName('Mobile').AsString := AC_Edit4.Text;
     FieldByName('Fax').AsString := AC_Edit5.Text;
     if (AC_ComboBox1.ItemIndex <> -1) then
+    Begin
       FieldByName('Wilaya').AsString := AC_ComboBox1.Selected.Text;
+      FieldByName('Wilaya_Index').AsString := IntToStr(AC_ComboBox1.ItemIndex);
+    End;
     if (AC_ComboBox2.ItemIndex <> -1) then
+    Begin
       FieldByName('Commune').AsString := AC_ComboBox2.Selected.Text;
+      FieldByName('Commune_Index').AsString := IntToStr(AC_ComboBox2.ItemIndex);
+    End;
     if (AC_ComboBox3.ItemIndex <> -1) then
+    Begin
       FieldByName('Groupage').AsString := AC_ComboBox3.Selected.Text;
+      FieldByName('groupage_Index').AsString :=
+        IntToStr(AC_ComboBox3.ItemIndex);
+    End;
   End;
 end;
 
@@ -149,11 +192,36 @@ begin
     FieldByName('Mobile').AsString := AC_Edit4.Text;
     FieldByName('Fax').AsString := AC_Edit5.Text;
     if (AC_ComboBox1.ItemIndex <> -1) then
+    Begin
       FieldByName('Wilaya').AsString := AC_ComboBox1.Selected.Text;
+      FieldByName('Wilaya_Index').AsString := IntToStr(AC_ComboBox1.ItemIndex);
+    End
+    else
+    Begin
+      FieldByName('Wilaya').AsString := '';
+      FieldByName('Wilaya_Index').Value := -1;
+    End;
     if (AC_ComboBox2.ItemIndex <> -1) then
+    Begin
       FieldByName('Commune').AsString := AC_ComboBox2.Selected.Text;
+      FieldByName('Commune_Index').AsString := IntToStr(AC_ComboBox2.ItemIndex);
+    End
+    else
+    Begin
+      FieldByName('Commune').AsString := '';
+      FieldByName('Commune_Index').Value := -1;
+    End;
     if (AC_ComboBox3.ItemIndex <> -1) then
+    Begin
       FieldByName('Groupage').AsString := AC_ComboBox3.Selected.Text;
+      FieldByName('Groupage_Index').AsString :=
+        IntToStr(AC_ComboBox3.ItemIndex);
+    End
+    else
+    Begin
+      FieldByName('Groupage').AsString := '';
+      FieldByName('Groupage_Index').Value := -1;
+    End;
   End;
 end;
 

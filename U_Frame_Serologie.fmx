@@ -10,21 +10,20 @@ object Frame5: TFrame5
     Size.Width = 1059.000000000000000000
     Size.Height = 266.000000000000000000
     Size.PlatformDefault = False
-    TabIndex = 0
+    TabIndex = 1
     TabOrder = 0
     TabPosition = Bottom
     Sizes = (
       1059s
-      240s
+      261s
       1059s
-      240s)
+      261s)
     object TabItem8: TTabItem
       CustomIcon = <
         item
         end>
-      IsSelected = True
-      Size.Width = 109.000000000000000000
-      Size.Height = 26.000000000000000000
+      IsSelected = False
+      Size.Height = 5.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = ''
       TabOrder = 0
@@ -34,7 +33,7 @@ object Frame5: TFrame5
       object GroupBox6: TGroupBox
         Align = Left
         Size.Width = 297.000000000000000000
-        Size.Height = 240.000000000000000000
+        Size.Height = 261.000000000000000000
         Size.PlatformDefault = False
         Text = 'La s'#233'rologie de l'#39'h'#233'patite A'
         TabOrder = 3
@@ -42,7 +41,7 @@ object Frame5: TFrame5
           Anchors = []
           Enabled = False
           Position.X = 50.000000000000000000
-          Position.Y = 148.669448852539100000
+          Position.Y = 162.728027343750000000
           Size.Width = 61.000000000000000000
           Size.Height = 24.000000000000000000
           Size.PlatformDefault = False
@@ -53,7 +52,7 @@ object Frame5: TFrame5
           Anchors = []
           Enabled = False
           Position.X = 186.000000000000000000
-          Position.Y = 148.669448852539100000
+          Position.Y = 162.728027343750000000
           Size.Width = 61.000000000000000000
           Size.Height = 24.000000000000000000
           Size.PlatformDefault = False
@@ -75,14 +74,14 @@ object Frame5: TFrame5
         Align = Left
         Position.X = 297.000000000000000000
         Size.Width = 224.000000000000000000
-        Size.Height = 240.000000000000000000
+        Size.Height = 261.000000000000000000
         Size.PlatformDefault = False
         Text = 'La s'#233'rologie de l'#39'h'#233'patite B'
         TabOrder = 0
         object CB_HB_Anti_VHB: TCheckBox
           Anchors = []
           Position.X = 61.000000000000000000
-          Position.Y = 63.303344726562500000
+          Position.Y = 69.673637390136720000
           Size.Width = 85.000000000000000000
           Size.Height = 19.000000000000000000
           Size.PlatformDefault = False
@@ -92,7 +91,7 @@ object Frame5: TFrame5
         object CB_HB_Antigene_BHs: TCheckBox
           Anchors = []
           Position.X = 61.000000000000000000
-          Position.Y = 151.682006835937500000
+          Position.Y = 166.004180908203100000
           Size.Width = 101.000000000000000000
           Size.Height = 24.000000000000000000
           Size.PlatformDefault = False
@@ -104,14 +103,14 @@ object Frame5: TFrame5
         Align = Left
         Position.X = 521.000000000000000000
         Size.Width = 224.000000000000000000
-        Size.Height = 240.000000000000000000
+        Size.Height = 261.000000000000000000
         Size.PlatformDefault = False
         Text = 'La s'#233'rologie de l'#39'h'#233'patite C'
         TabOrder = 2
         object CB_HC_Anti_VHC: TCheckBox
           Anchors = []
           Position.X = 73.000000000000000000
-          Position.Y = 110.500000000000000000
+          Position.Y = 121.000000000000000000
           Size.Width = 77.000000000000000000
           Size.Height = 19.000000000000000000
           Size.PlatformDefault = False
@@ -123,14 +122,14 @@ object Frame5: TFrame5
         Align = Left
         Position.X = 745.000000000000000000
         Size.Width = 312.000000000000000000
-        Size.Height = 240.000000000000000000
+        Size.Height = 261.000000000000000000
         Size.PlatformDefault = False
         Text = 'La s'#233'rologie du VIH / Sida'
         TabOrder = 1
         object CB_VIH_Anti_VIH: TCheckBox
           Anchors = []
           Position.X = 119.500000000000000000
-          Position.Y = 110.500000000000000000
+          Position.Y = 121.000000000000000000
           Size.Width = 73.000000000000000000
           Size.Height = 19.000000000000000000
           Size.PlatformDefault = False
@@ -143,9 +142,8 @@ object Frame5: TFrame5
       CustomIcon = <
         item
         end>
-      IsSelected = False
-      Size.Width = 214.000000000000000000
-      Size.Height = 26.000000000000000000
+      IsSelected = True
+      Size.Height = 5.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = ''
       TabOrder = 0
@@ -159,7 +157,7 @@ object Frame5: TFrame5
         Padding.Right = 10.000000000000000000
         Padding.Bottom = 10.000000000000000000
         Size.Width = 784.000000000000000000
-        Size.Height = 240.000000000000000000
+        Size.Height = 261.000000000000000000
         Size.PlatformDefault = False
         Text = 'La s'#233'rologie bact'#233'rienne'
         TabOrder = 0
@@ -167,7 +165,7 @@ object Frame5: TFrame5
           Align = Client
           Margins.Top = 20.000000000000000000
           Size.Width = 301.000000000000000000
-          Size.Height = 200.000000000000000000
+          Size.Height = 221.000000000000000000
           Size.PlatformDefault = False
           Text = 'La mononucl'#233'ose infectieuse'
           TabOrder = 0
@@ -175,7 +173,7 @@ object Frame5: TFrame5
             Anchors = []
             Hint = 'anti-Epstein-Barr virus '
             Position.X = 181.000000000000000000
-            Position.Y = 28.221107482910160000
+            Position.Y = 32.864318847656250000
             Size.Width = 80.000000000000000000
             Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
@@ -187,7 +185,7 @@ object Frame5: TFrame5
           object CB_MI_VCA: TCheckBox
             Anchors = []
             Position.X = 48.000000000000000000
-            Position.Y = 140.783920288085900000
+            Position.Y = 157.246231079101600000
             Size.Width = 77.000000000000000000
             Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
@@ -197,7 +195,7 @@ object Frame5: TFrame5
           object CB_MI_EBNA: TCheckBox
             Anchors = []
             Position.X = 40.000000000000000000
-            Position.Y = 28.221107482910160000
+            Position.Y = 32.864318847656250000
             Size.Width = 77.000000000000000000
             Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
@@ -207,7 +205,7 @@ object Frame5: TFrame5
           object CB_MI_EA: TCheckBox
             Anchors = []
             Position.X = 181.000000000000000000
-            Position.Y = 140.783920288085900000
+            Position.Y = 157.246231079101600000
             Size.Width = 64.000000000000000000
             Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
@@ -221,14 +219,14 @@ object Frame5: TFrame5
           Position.X = 10.000000000000000000
           Position.Y = 30.000000000000000000
           Size.Width = 254.000000000000000000
-          Size.Height = 200.000000000000000000
+          Size.Height = 221.000000000000000000
           Size.PlatformDefault = False
           Text = 'La s'#233'rologie de la rub'#233'ole'
           TabOrder = 2
           object CB_RUB_IgM: TCheckBox
             Anchors = []
             Position.X = 60.000000000000000000
-            Position.Y = 24.201004028320310000
+            Position.Y = 28.422109603881840000
             Size.Width = 133.000000000000000000
             Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
@@ -238,7 +236,7 @@ object Frame5: TFrame5
           object CB_RUB_IgA: TCheckBox
             Anchors = []
             Position.X = 60.000000000000000000
-            Position.Y = 84.502510070800780000
+            Position.Y = 95.055274963378910000
             Size.Width = 125.000000000000000000
             Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
@@ -248,7 +246,7 @@ object Frame5: TFrame5
           object CB_RUB_IgG: TCheckBox
             Anchors = []
             Position.X = 60.000000000000000000
-            Position.Y = 144.804016113281200000
+            Position.Y = 161.688430786132800000
             Size.Width = 125.000000000000000000
             Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
@@ -262,14 +260,14 @@ object Frame5: TFrame5
           Position.X = 264.000000000000000000
           Position.Y = 30.000000000000000000
           Size.Width = 209.000000000000000000
-          Size.Height = 200.000000000000000000
+          Size.Height = 221.000000000000000000
           Size.PlatformDefault = False
           Text = 'salmonelloses (fi'#232'vre typho'#239'de)'
           TabOrder = 1
           object CB_SFT_Anti_O: TCheckBox
             Anchors = []
             Position.X = 70.000000000000000000
-            Position.Y = 50.331657409667970000
+            Position.Y = 57.296474456787110000
             Size.Width = 69.000000000000000000
             Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
@@ -279,7 +277,7 @@ object Frame5: TFrame5
           object CB_SFT_Anti_H: TCheckBox
             Anchors = []
             Position.X = 70.000000000000000000
-            Position.Y = 117.668334960937500000
+            Position.Y = 131.703506469726600000
             Size.Width = 61.000000000000000000
             Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
@@ -296,21 +294,21 @@ object Frame5: TFrame5
         Padding.Bottom = 10.000000000000000000
         Position.X = 784.000000000000000000
         Size.Width = 275.000000000000000000
-        Size.Height = 240.000000000000000000
+        Size.Height = 261.000000000000000000
         Size.PlatformDefault = False
         Text = 'La s'#233'rologie parasitaire'
         TabOrder = 1
         object GroupBox15: TGroupBox
           Align = Client
           Size.Width = 255.000000000000000000
-          Size.Height = 200.000000000000000000
+          Size.Height = 221.000000000000000000
           Size.PlatformDefault = False
           Text = 'La s'#233'rologie de la toxoplasmose'
           TabOrder = 0
           object CB_Toxo_Anti_IgM: TCheckBox
             Anchors = []
             Position.X = 89.000000000000000000
-            Position.Y = 84.502510070800780000
+            Position.Y = 95.055274963378910000
             Size.Width = 76.000000000000000000
             Size.Height = 32.000000000000000000
             Size.PlatformDefault = False

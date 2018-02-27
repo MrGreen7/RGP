@@ -16,7 +16,8 @@ uses
   U_Frame_Inf_Principale, U_Frame_Information, U_Frame_Hemogramme,
   U_Frame_Hemostase, U_Frame_Biochimic, U_Frame_Serologie, FMX.Filter.Effects,
   Data.Bind.EngExt, FMX.Bind.DBEngExt, FMX.Bind.Grid, System.Bindings.Outputs,
-  FMX.Bind.Editors, Data.Bind.Components, Data.Bind.Grid, Data.Bind.DBScope;
+  FMX.Bind.Editors, Data.Bind.Components, Data.Bind.Grid, Data.Bind.DBScope,
+  FMX.Menus;
 
 type
   TMain = class(TBase_Form)
@@ -25,38 +26,9 @@ type
     H_Editeur: TTabItem;
     ListT: TTabControl;
     Medical: TTabItem;
-    Label3: TLabel;
-    Label1: TLabel;
-    Label2: TLabel;
-    Label4: TLabel;
-    Label5: TLabel;
-    Label8: TLabel;
-    Panel1: TPanel;
-    Panel3: TPanel;
-    Panel2: TPanel;
-    Label6: TLabel;
-    Label7: TLabel;
-    Label9: TLabel;
     Panel4: TPanel;
     Panel5: TPanel;
     Panel6: TPanel;
-    ShadowEffect1: TShadowEffect;
-    ShadowEffect2: TShadowEffect;
-    ShadowEffect4: TShadowEffect;
-    ShadowEffect5: TShadowEffect;
-    ShadowEffect7: TShadowEffect;
-    ShadowEffect9: TShadowEffect;
-    Label12: TLabel;
-    ShadowEffect12: TShadowEffect;
-    Label13: TLabel;
-    ShadowEffect13: TShadowEffect;
-    Panel7: TPanel;
-    Label10: TLabel;
-    ShadowEffect3: TShadowEffect;
-    Label11: TLabel;
-    ShadowEffect6: TShadowEffect;
-    Label14: TLabel;
-    Line1: TLine;
     MainT: TTabControl;
     P_Accueil: TTabItem;
     Patient: TTabItem;
@@ -82,11 +54,6 @@ type
     H_Gen_NouveauP: TTabItem;
     Panel12: TPanel;
     Panel13: TPanel;
-    ColorAnimation1: TColorAnimation;
-    ColorAnimation2: TColorAnimation;
-    ColorAnimation3: TColorAnimation;
-    ColorAnimation4: TColorAnimation;
-    ColorAnimation5: TColorAnimation;
     TabControl_NouveauP: TTabControl;
     TabItem1: TTabItem;
     TabItem6: TTabItem;
@@ -114,7 +81,6 @@ type
     L_Top_Ordonnance: TLayout;
     Layout1: TLayout;
     Layout2: TLayout;
-    Edit1: TEdit;
     StringGrid7: TStringGrid;
     Layout_Exit_RechercheP: TLayout;
     Label17: TLabel;
@@ -128,12 +94,6 @@ type
     Label20: TLabel;
     ColorAnimation8: TColorAnimation;
     ShadowEffect16: TShadowEffect;
-    Layout4: TLayout;
-    Label21: TLabel;
-    ShadowEffect17: TShadowEffect;
-    Label22: TLabel;
-    ColorAnimation9: TColorAnimation;
-    ShadowEffect18: TShadowEffect;
     Label_Refresh1: TLabel;
     ColorAnimation10: TColorAnimation;
     FloatAnimation1: TFloatAnimation;
@@ -157,65 +117,7 @@ type
     FloatAnimation5: TFloatAnimation;
     BindSourceDB3: TBindSourceDB;
     LinkGridToDataSourceBindSourceDB3: TLinkGridToDataSource;
-    Layout5: TLayout;
-    Label27: TLabel;
-    Label28: TLabel;
-    ShadowEffect19: TShadowEffect;
-    ShadowEffect20: TShadowEffect;
-    ColorAnimation15: TColorAnimation;
-    TabItem8: TTabItem;
-    Frame11: TFrame1;
-    TabControl1: TTabControl;
-    TabItem9: TTabItem;
-    Frame21: TFrame2;
-    TabItem10: TTabItem;
-    Frame31: TFrame3;
-    TabItem11: TTabItem;
-    Frame41: TFrame4;
-    TabItem12: TTabItem;
-    Frame61: TFrame6;
-    TabItem13: TTabItem;
-    Frame51: TFrame5;
-    TabItem14: TTabItem;
-    StringGrid8: TStringGrid;
-    Layout6: TLayout;
-    TabItem15: TTabItem;
-    Layout_Exit_Patient: TLayout;
-    Label16: TLabel;
-    ShadowEffect10: TShadowEffect;
-    Label15: TLabel;
-    ColorAnimation6: TColorAnimation;
-    ShadowEffect8: TShadowEffect;
-    Layout7: TLayout;
-    Label29: TLabel;
-    ShadowEffect21: TShadowEffect;
-    Label30: TLabel;
-    ColorAnimation16: TColorAnimation;
-    ShadowEffect22: TShadowEffect;
-    Layout8: TLayout;
-    Label31: TLabel;
-    ShadowEffect23: TShadowEffect;
-    Label32: TLabel;
-    ColorAnimation17: TColorAnimation;
-    ShadowEffect24: TShadowEffect;
-    Layout9: TLayout;
-    Label33: TLabel;
-    ShadowEffect25: TShadowEffect;
-    Label34: TLabel;
-    ShadowEffect26: TShadowEffect;
-    ColorAnimation18: TColorAnimation;
-    Layout10: TLayout;
-    Label35: TLabel;
-    ShadowEffect27: TShadowEffect;
-    Label36: TLabel;
-    ColorAnimation19: TColorAnimation;
-    ShadowEffect28: TShadowEffect;
-    Layout11: TLayout;
-    Label37: TLabel;
-    ColorAnimation20: TColorAnimation;
-    ShadowEffect29: TShadowEffect;
-    Label38: TLabel;
-    ShadowEffect30: TShadowEffect;
+    Edit_Patient: TTabItem;
     Layout12: TLayout;
     Label39: TLabel;
     ShadowEffect31: TShadowEffect;
@@ -252,18 +154,6 @@ type
     ShadowEffect41: TShadowEffect;
     Label50: TLabel;
     ShadowEffect42: TShadowEffect;
-    Layout18: TLayout;
-    Label51: TLabel;
-    ShadowEffect43: TShadowEffect;
-    Label52: TLabel;
-    ShadowEffect44: TShadowEffect;
-    ColorAnimation27: TColorAnimation;
-    Layout19: TLayout;
-    Label53: TLabel;
-    ShadowEffect45: TShadowEffect;
-    Label54: TLabel;
-    ColorAnimation28: TColorAnimation;
-    ShadowEffect46: TShadowEffect;
     Layout20: TLayout;
     Label55: TLabel;
     ColorAnimation29: TColorAnimation;
@@ -276,6 +166,194 @@ type
     Label58: TLabel;
     ColorAnimation30: TColorAnimation;
     ShadowEffect50: TShadowEffect;
+    Frame_EP_Principale: TFrame1;
+    TabControl1: TTabControl;
+    TabItem8: TTabItem;
+    Frame_EP_Information: TFrame2;
+    TabItem9: TTabItem;
+    TabItem10: TTabItem;
+    TabItem11: TTabItem;
+    TabItem12: TTabItem;
+    TabItem13: TTabItem;
+    TabItem14: TTabItem;
+    Frame_EP_Hemogramme: TFrame3;
+    Frame_EP_Hemostase: TFrame4;
+    Frame_EP_Biochimic: TFrame6;
+    Frame_EP_Serologie: TFrame5;
+    Layout: TLayout;
+    Layout_Exit_Patient: TLayout;
+    Label16: TLabel;
+    ShadowEffect10: TShadowEffect;
+    Label15: TLabel;
+    ColorAnimation6: TColorAnimation;
+    ShadowEffect8: TShadowEffect;
+    Layout5: TLayout;
+    Label28: TLabel;
+    ShadowEffect19: TShadowEffect;
+    Label27: TLabel;
+    ShadowEffect20: TShadowEffect;
+    ColorAnimation15: TColorAnimation;
+    Layout7: TLayout;
+    Label29: TLabel;
+    ShadowEffect21: TShadowEffect;
+    Label30: TLabel;
+    ColorAnimation16: TColorAnimation;
+    ShadowEffect22: TShadowEffect;
+    Layout8: TLayout;
+    Label32: TLabel;
+    ColorAnimation17: TColorAnimation;
+    ShadowEffect24: TShadowEffect;
+    Label31: TLabel;
+    ShadowEffect23: TShadowEffect;
+    Line2: TLine;
+    Line3: TLine;
+    Line4: TLine;
+    Line5: TLine;
+    Layout6: TLayout;
+    Layout22: TLayout;
+    Label4: TLabel;
+    ShadowEffect9: TShadowEffect;
+    ColorAnimation2: TColorAnimation;
+    Label5: TLabel;
+    ShadowEffect7: TShadowEffect;
+    Label8: TLabel;
+    Layout23: TLayout;
+    Label12: TLabel;
+    ShadowEffect12: TShadowEffect;
+    ColorAnimation4: TColorAnimation;
+    Label13: TLabel;
+    ShadowEffect13: TShadowEffect;
+    Label6: TLabel;
+    ShadowEffect4: TShadowEffect;
+    ColorAnimation3: TColorAnimation;
+    Label7: TLabel;
+    ShadowEffect5: TShadowEffect;
+    Label9: TLabel;
+    Line1: TLine;
+    Layout24: TLayout;
+    Label10: TLabel;
+    ShadowEffect3: TShadowEffect;
+    ColorAnimation5: TColorAnimation;
+    Label11: TLabel;
+    ShadowEffect6: TShadowEffect;
+    Label14: TLabel;
+    Layout25: TLayout;
+    Label1: TLabel;
+    ShadowEffect1: TShadowEffect;
+    ColorAnimation1: TColorAnimation;
+    Label2: TLabel;
+    ShadowEffect2: TShadowEffect;
+    Label3: TLabel;
+    Line6: TLine;
+    Line7: TLine;
+    Line8: TLine;
+    Line9: TLine;
+    Layout26: TLayout;
+    Layout27: TLayout;
+    Layout10: TLayout;
+    Label35: TLabel;
+    ShadowEffect27: TShadowEffect;
+    Label36: TLabel;
+    ColorAnimation19: TColorAnimation;
+    ShadowEffect28: TShadowEffect;
+    Layout11: TLayout;
+    Label37: TLabel;
+    ColorAnimation20: TColorAnimation;
+    ShadowEffect29: TShadowEffect;
+    Label38: TLabel;
+    ShadowEffect30: TShadowEffect;
+    Layout4: TLayout;
+    Label21: TLabel;
+    ShadowEffect17: TShadowEffect;
+    Label22: TLabel;
+    ColorAnimation9: TColorAnimation;
+    ShadowEffect18: TShadowEffect;
+    Layout9: TLayout;
+    Label33: TLabel;
+    ShadowEffect25: TShadowEffect;
+    Label34: TLabel;
+    ShadowEffect26: TShadowEffect;
+    ColorAnimation18: TColorAnimation;
+    Layout28: TLayout;
+    Layout29: TLayout;
+    Layout30: TLayout;
+    StatusBar1: TStatusBar;
+    Label26: TLabel;
+    Label59: TLabel;
+    Label60: TLabel;
+    Status_Edit1: TEdit;
+    Status_Edit2: TEdit;
+    Status_Edit3: TEdit;
+    Layout19: TLayout;
+    Label53: TLabel;
+    ShadowEffect45: TShadowEffect;
+    Label54: TLabel;
+    ColorAnimation28: TColorAnimation;
+    ShadowEffect46: TShadowEffect;
+    Layout18: TLayout;
+    Label52: TLabel;
+    ShadowEffect44: TShadowEffect;
+    ColorAnimation27: TColorAnimation;
+    Label51: TLabel;
+    ShadowEffect43: TShadowEffect;
+    Label61: TLabel;
+    ShadowEffect51: TShadowEffect;
+    ColorAnimation31: TColorAnimation;
+    Label63: TLabel;
+    ShadowEffect53: TShadowEffect;
+    Label65: TLabel;
+    ShadowEffect55: TShadowEffect;
+    ColorAnimation33: TColorAnimation;
+    Label66: TLabel;
+    ShadowEffect56: TShadowEffect;
+    Label62: TLabel;
+    ShadowEffect52: TShadowEffect;
+    Line10: TLine;
+    Line11: TLine;
+    Line12: TLine;
+    Line13: TLine;
+    Label64: TLabel;
+    PopupMenu1: TPopupMenu;
+    MenuItem1: TMenuItem;
+    MenuItem2: TMenuItem;
+    MenuItem3: TMenuItem;
+    MenuItem4: TMenuItem;
+    GroupBox1: TGroupBox;
+    Layout31: TLayout;
+    Edit1: TEdit;
+    BindSourceDB4: TBindSourceDB;
+    LinkGridToDataSourceBindSourceDB4: TLinkGridToDataSource;
+    Line14: TLine;
+    Line15: TLine;
+    Layout32: TLayout;
+    Label67: TLabel;
+    ShadowEffect54: TShadowEffect;
+    Label68: TLabel;
+    Label69: TLabel;
+    ColorAnimation32: TColorAnimation;
+    ShadowEffect57: TShadowEffect;
+    Layout33: TLayout;
+    Label70: TLabel;
+    ShadowEffect58: TShadowEffect;
+    Label71: TLabel;
+    ColorAnimation34: TColorAnimation;
+    ShadowEffect59: TShadowEffect;
+    Layout34: TLayout;
+    Label72: TLabel;
+    ShadowEffect60: TShadowEffect;
+    Label73: TLabel;
+    ShadowEffect61: TShadowEffect;
+    ColorAnimation35: TColorAnimation;
+    Line16: TLine;
+    Line17: TLine;
+    Line18: TLine;
+    Line19: TLine;
+    Layout35: TLayout;
+    Label74: TLabel;
+    ShadowEffect62: TShadowEffect;
+    Label75: TLabel;
+    ColorAnimation36: TColorAnimation;
+    ShadowEffect63: TShadowEffect;
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure P_AccueilClick(Sender: TObject);
     procedure PatientClick(Sender: TObject);
@@ -328,16 +406,30 @@ type
     procedure Label25MouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Single);
     procedure StringGrid5ColResize;
-    procedure Label30Click(Sender: TObject);
     procedure FloatAnimation5Finish(Sender: TObject);
     procedure FloatAnimation2Finish(Sender: TObject);
+    procedure Nouveau_PatientResize(Sender: TObject);
+    procedure Edit_PatientResize(Sender: TObject);
+    procedure Frame_EP_PrincipaleButton3Click(Sender: TObject);
+    procedure Frame_EP_PrincipaleButton1Click(Sender: TObject);
+    procedure StatusBar;
     procedure FloatAnimation4Finish(Sender: TObject);
+    procedure Label65Click(Sender: TObject);
+    procedure Label61Click(Sender: TObject);
+    procedure Label54Click(Sender: TObject);
+    procedure Label55Click(Sender: TObject);
+    procedure Label52Click(Sender: TObject);
+    procedure StringGrid5CellDblClick(const Column: TColumn;
+      const Row: Integer);
+    procedure Label32Click(Sender: TObject);
+    procedure Edit1Change(Sender: TObject);
+    procedure Label30Click(Sender: TObject);
   private
     { Private declarations }
     WidthX, HeightX: Integer;
   public
     { Public declarations }
-    Id_Patient, Nom_Patient, Prenom_Patient, Type_Patient: String;
+    Patient_ID: String;
   end;
 
 var
@@ -346,26 +438,68 @@ var
 implementation
 
 uses
-  U_Option, U_Log, U_Entreprise, Winapi.Windows, U_DataModule;
+  U_Option, U_Log, U_Entreprise, Winapi.Windows, U_DataModule,
+  FireDAC.Comp.Client;
 {$R *.fmx}
 {$R resources.RES}
+
+procedure Filter(Query: TFDQuery; const Field, Search: String);
+Begin
+  Assert(Assigned(Query), 'No Query');
+  if (Search = '') then
+    Query.Filtered := False
+  else
+  Begin
+    Query.Filter := Field + ' LIKE ' + QuotedStr(Search + '*');
+    Query.Filtered := True;
+  End;
+End;
+
+procedure TMain.Edit1Change(Sender: TObject);
+begin
+  With DataModule1 do
+  Begin
+    FDQ_Recherche.SQL.Clear;
+    FDQ_Recherche.SQL.Text := ('Select * From Patient');
+    FDQ_Recherche.Active := True;
+    Filter(FDQ_Recherche, 'Nom', Edit1.Text);
+  end;
+end;
+
+procedure TMain.Edit_PatientResize(Sender: TObject);
+begin
+  inherited;
+  Frame_EP_Principale.OnResize(Frame_EP_Principale);
+  Frame_EP_Information.OnResize(Frame_EP_Information);
+  Frame_EP_Hemogramme.OnResize(Frame_EP_Hemogramme);
+  Frame_EP_Hemostase.OnResize(Frame_EP_Hemostase);
+  Frame_EP_Biochimic.OnResize(Frame_EP_Biochimic);
+  Frame_EP_Serologie.OnResize(Frame_EP_Serologie);
+end;
 
 procedure TMain.FloatAnimation2Finish(Sender: TObject);
 begin
   inherited;
-  DataModule1.FDQ_Groupage.Refresh;
+  DataModule1.FDQ_Groupage.Active := False;
+  DataModule1.FDQ_Groupage.Active := True;
+  StringGrid5ColResize;
 end;
 
 procedure TMain.FloatAnimation4Finish(Sender: TObject);
 begin
   inherited;
-  DataModule1.FDQ_Patient.Refresh;
+  DataModule1.FDQ_Patient.Active := False;
+  DataModule1.FDQ_Patient.Active := True;
+  StringGrid5ColResize;
 end;
 
 procedure TMain.FloatAnimation5Finish(Sender: TObject);
 begin
   inherited;
-  DataModule1.FDQ_Patient_Table.Refresh;
+  DataModule1.FDQ_Patient_Table.Active := False;
+  DataModule1.FDQ_Patient_Table.Active := True;
+  StringGrid5ColResize;
+  StatusBar;
 end;
 
 procedure TMain.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
@@ -395,13 +529,8 @@ end;
 procedure TMain.FormResize(Sender: TObject);
 begin
   // Frame resize
-  Frame_Principale.OnResize(Frame_Principale);
-  Frame_Information.OnResize(Frame_Information);
-  Frame_Hemogramme.OnResize(Frame_Hemogramme);
-  Frame_Hemostase.OnResize(Frame_Hemostase);
-  Frame_Biochimic.OnResize(Frame_Biochimic);
-  Frame_Serologie.OnResize(Frame_Serologie);
-
+  Nouveau_Patient.OnResize(Nouveau_Patient);
+  Edit_Patient.OnResize(Edit_Patient);
   //
   P_Accueil.OnResize(P_Accueil);
   // Minmum Size for MainForm -- U_Main.pas --
@@ -423,6 +552,33 @@ begin
 
 end;
 
+procedure TMain.StatusBar;
+Begin
+  With DataModule1.FDQ_Status_Patient do
+  Begin
+    Active := False;
+    SQL.Clear;
+    SQL.Text := 'Select count(*) From Patient';
+    Active := True;
+    Open;
+    Status_Edit1.Text := IntToStr(Fields[0].AsInteger);
+    Active := False;
+    SQL.Clear;
+    SQL.Text := 'Select Count(*) From Patient Where Type="Externe"';
+    Active := True;
+    Open;
+    Status_Edit2.Text := IntToStr(Fields[0].AsInteger);
+    Active := False;
+    SQL.Clear;
+    SQL.Text := 'Select Count(*) From Patient Where type="Interne"';
+    Active := True;
+    Open;
+    Status_Edit3.Text := IntToStr(Fields[0].AsInteger);
+    Active := False;
+    SQL.Clear;
+  End;
+End;
+
 procedure TMain.FormShow(Sender: TObject);
 var
   LogDlg: TLog;
@@ -432,7 +588,7 @@ begin
   if (LogDlg.ShowModal = mrCancel) then
     Application.Terminate;
   LogDlg.Free;
-  // StringGrid5.Columns[1].Width := 700;
+  StatusBar;
 end;
 
 procedure TMain.StringGrid5ColResize;
@@ -464,14 +620,14 @@ begin
     with DataModule1.FDQuery1 do
     Begin
       Active := False;
-      SQl.Clear;
-      SQl.Text := ('Select * From Patient');
+      SQL.Clear;
+      SQL.Text := ('Select * From Patient');
       Active := True;
       Edit;
       Frame_Principale.Insert;
       Frame_Information.Insert;
       Post;
-      SQl.Clear;
+      SQL.Clear;
       Active := False;
     End;
     Frame_Hemogramme.Edit;
@@ -497,6 +653,32 @@ begin
     Frame_Serologie.Clear;
 end;
 
+procedure TMain.Frame_EP_PrincipaleButton1Click(Sender: TObject);
+begin
+  inherited;
+  With DataModule1.FDQuery1 do
+  Begin
+    Active := False;
+    SQL.Clear;
+    SQL.Text := 'Select * From Patient Where Patient_ID="' + Patient_ID + '";';
+    Active := True;
+    Edit;
+    Frame_EP_Principale.Edit;
+    Frame_EP_Information.Edit;
+    Post;
+    Active := False;
+    SQL.Clear;
+  End;
+end;
+
+procedure TMain.Frame_EP_PrincipaleButton3Click(Sender: TObject);
+begin
+  inherited;
+  Edit_Patient.Visible := False;
+  Patient.IsSelected := True;
+  H_Gen_Patient.IsSelected := True;
+end;
+
 procedure TMain.Frame_PrincipaleButton1Click(Sender: TObject);
 begin
   inherited;
@@ -505,14 +687,14 @@ begin
     with DataModule1.FDQuery1 do
     Begin
       Active := False;
-      SQl.Clear;
-      SQl.Text := ('Select * From Patient');
+      SQL.Clear;
+      SQL.Text := ('Select * From Patient');
       Active := True;
       Insert;
       Frame_Principale.Insert;
       Frame_Information.Insert;
       Post;
-      SQl.Clear;
+      SQL.Clear;
       Active := False;
     End;
     if (Frame_Hemogramme.IsSet = True) then
@@ -643,6 +825,24 @@ begin
   FloatAnimation4.enabled := True;
 end;
 
+procedure TMain.Label30Click(Sender: TObject);
+begin
+  inherited;
+  Patient_RechercheClick(self);
+end;
+
+procedure TMain.Label32Click(Sender: TObject);
+Var
+  P: TPointF;
+begin
+  inherited;
+  P.X := -5;
+  P.Y := Label32.Height;
+  P := Label32.LocalToAbsolute(P);
+  P := ClientToScreen(P);
+  PopupMenu1.Popup(P.X, P.Y);
+end;
+
 procedure TMain.Refresh_Patient_TableMouseDown(Sender: TObject;
   Button: TMouseButton; Shift: TShiftState; X, Y: Single);
 begin
@@ -657,19 +857,43 @@ begin
   FloatAnimation5.enabled := True;
 end;
 
-procedure TMain.Label30Click(Sender: TObject);
+procedure TMain.Label4Click(Sender: TObject);
+var
+  FenetreDlg: TFenetre;
+begin
+  FenetreDlg := TFenetre.Create(self);
+  FenetreDlg.ShowModal;
+end;
+
+procedure TMain.Label52Click(Sender: TObject);
 begin
   inherited;
-  if ((Id_Patient <> '') and (Nom_Patient <> '') and (Prenom_Patient <> '') and
-    (Type_Patient <> '')) then
+  New_PatientClick(self);
+end;
+
+procedure TMain.Label54Click(Sender: TObject);
+begin
+  inherited;
+  Button2Click(self);
+end;
+
+procedure TMain.Label55Click(Sender: TObject);
+begin
+  inherited;
+  Frame_PrincipaleButton1Click(self);
+end;
+
+procedure TMain.Label61Click(Sender: TObject);
+begin
+  inherited;
+  if (Patient_ID <> '') then
   Begin
     With DataModule1.FDCmnd_Drop_Patient do
     Begin
       Active := False;
       CommandText.Clear;
-      CommandText.Text := ('DELETE FROM Patient WHERE Patient_ID="' + Id_Patient
-        + '" and Nom="' + Nom_Patient + '" and Prenom="' + Prenom_Patient +
-        '" and Type="' + Type_Patient + '";');
+      CommandText.Text := ('DELETE FROM Patient WHERE Patient_ID="' +
+        Patient_ID + '";');
       Active := True;
       Execute;
       Active := False;
@@ -679,12 +903,17 @@ begin
   End;
 end;
 
-procedure TMain.Label4Click(Sender: TObject);
-var
-  FenetreDlg: TFenetre;
+procedure TMain.Label65Click(Sender: TObject);
 begin
-  FenetreDlg := TFenetre.Create(self);
-  FenetreDlg.ShowModal;
+  inherited;
+  if (Patient_ID <> '') then
+  Begin
+    Edit_Patient.Visible := True;
+    Edit_Patient.IsSelected := True;
+    H_Accueil.IsSelected := True;
+    Frame_EP_Principale.onDataLoad;
+    Frame_EP_Information.onDataLoad;
+  End;
 end;
 
 procedure TMain.Label6Click(Sender: TObject);
@@ -725,6 +954,17 @@ begin
   H_Gen_NouveauP.Visible := True;
   H_Gen_RechercheP.Visible := False;
   H_Gen_NouveauP.IsSelected := True;
+end;
+
+procedure TMain.Nouveau_PatientResize(Sender: TObject);
+begin
+  inherited;
+  Frame_Principale.OnResize(Frame_Principale);
+  Frame_Information.OnResize(Frame_Information);
+  Frame_Hemogramme.OnResize(Frame_Hemogramme);
+  Frame_Hemostase.OnResize(Frame_Hemostase);
+  Frame_Biochimic.OnResize(Frame_Biochimic);
+  Frame_Serologie.OnResize(Frame_Serologie);
 end;
 
 procedure TMain.OrdonnanceClick(Sender: TObject);
@@ -804,10 +1044,15 @@ Var
 begin
   inherited;
   TRow := StringGrid5.Row;
-  Id_Patient := StringGrid5.Cells[0, TRow];
-  Nom_Patient := StringGrid5.Cells[1, TRow];
-  Prenom_Patient := StringGrid5.Cells[2, TRow];
-  Type_Patient := StringGrid5.Cells[5, TRow];
+  Patient_ID := StringGrid5.cells[0, TRow];
+  // Asign Variables
+end;
+
+procedure TMain.StringGrid5CellDblClick(const Column: TColumn;
+  const Row: Integer);
+begin
+  inherited;
+  Label65Click(self);
 end;
 
 procedure TMain.T_AccueilClick(Sender: TObject);

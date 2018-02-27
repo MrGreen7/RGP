@@ -33,6 +33,7 @@ type
     procedure Clear;
     procedure Insert;
     procedure Edit;
+    procedure OnDataLoad;
     function IsSet: Boolean;
   private
     { Private declarations }
@@ -43,8 +44,34 @@ type
 implementation
 
 Uses
-  U_DataModule;
+  U_DataModule, U_Main;
 {$R *.fmx}
+
+procedure TFrame4.OnDataLoad;
+begin
+  With Main do
+  Begin
+    if (Patient_ID <> '') then
+    Begin
+      With DataModule1.FDQuery2 do
+      begin
+        Active := False;
+        SQL.Clear;
+        SQL.Text := ('Select Patient_ID From Hemostase_VS Where Patient_ID="'+Patient_ID+'"');
+        Active := True;
+        Open;
+        Hemos_Edit1.Text := FieldByName('TS').AsString;
+        Hemos_Edit2.Text := FieldByName('TCK').AsString;
+        Hemos_Edit3.Text := FieldByName('TP').AsString;
+        Hemos_Edit4.Text := FieldByName('VS').AsString;
+        Memo1.Text := FieldByName('Note').AsString;
+        Close;
+        Active := False;
+        SQL.Clear;
+      end;
+    End;
+  End;
+end;
 
 function TFrame4.IsSet;
 begin
@@ -52,7 +79,7 @@ begin
     (Hemos_Edit3.Text = '') and (Hemos_Edit4.Text = '') and (Memo1.Text = ''))
   then
   begin
-    Result := false;
+    Result := False;
   end
   else
     Result := True;
@@ -69,21 +96,39 @@ begin
 end;
 
 procedure TFrame4.Insert;
+Var
+  Rand: String;
+  bol: Boolean;
 begin
   With DataModule1.FDQuery1 do
   Begin
-    Active := false;
+    Active := False;
     SQL.Clear;
     SQL.Text := 'Select * From Hemostase_VS';
     Active := True;
     Insert;
+    repeat
+    Begin
+      try
+        Rand := DataModule1.GenerateID;
+        Rand := 'V' + Rand;
+        FieldByName('HemoS_VS_ID').AsString := Rand;
+      except
+        on E: Exception do
+        Begin
+          bol := True;
+        End;
+      end;
+      bol := False;
+    End;
+    until bol = False;
     FieldByName('TS').AsString := Hemos_Edit1.Text;
     FieldByName('TCK').AsString := Hemos_Edit2.Text;
     FieldByName('TP').AsString := Hemos_Edit3.Text;
     FieldByName('VS').AsString := Hemos_Edit4.Text;
     FieldByName('Note').AsString := Memo1.Text;
     Post;
-    Active := false;
+    Active := False;
     SQL.Clear;
   End;
 end;
@@ -92,7 +137,7 @@ procedure TFrame4.Edit;
 begin
   With DataModule1.FDQuery1 do
   Begin
-    Active := false;
+    Active := False;
     SQL.Clear;
     SQL.Text := 'Select * From Hemostase-VS';
     Active := True;
@@ -103,7 +148,7 @@ begin
     FieldByName('VS').AsString := Hemos_Edit4.Text;
     FieldByName('Note').AsString := Memo1.Text;
     Post;
-    Active := false;
+    Active := False;
     SQL.Clear;
   End;
 end;

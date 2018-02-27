@@ -134,7 +134,7 @@ object Frame1: TFrame1
           TabOrder = 6
           OnChange = IP_ComboBox3Change
           object InnerGlowEffect3Combo3: TInnerGlowEffect
-            Softness = 0.400000005960464400
+            Softness = 0.400000005960464500
             GlowColor = xFFD7263D
             Opacity = 0.899999976158142100
             Enabled = False
@@ -159,7 +159,6 @@ object Frame1: TFrame1
         end
         object IP_DateEdit1: TDateEdit
           Date = 43152.000000000000000000
-          DateFormatKind = Long
           Anchors = [akLeft, akRight]
           Position.X = 90.000000000000000000
           Position.Y = 3.710144758224487000
@@ -206,7 +205,7 @@ object Frame1: TFrame1
           Size.PlatformDefault = False
           OnChange = IP_Edit3Change
           object InnerGlowEffectEdit3: TInnerGlowEffect
-            Softness = 0.400000005960464400
+            Softness = 0.400000005960464500
             GlowColor = xFFD7263D
             Opacity = 0.899999976158142100
             Enabled = False
@@ -239,7 +238,7 @@ object Frame1: TFrame1
           Size.PlatformDefault = False
           OnChange = IP_Edit2Change
           object InnerGlowEffectEdit2: TInnerGlowEffect
-            Softness = 0.400000005960464400
+            Softness = 0.400000005960464500
             GlowColor = xFFD7263D
             Opacity = 0.899999976158142100
             Enabled = False
@@ -274,7 +273,6 @@ object Frame1: TFrame1
         end
         object IP_DateEdit2: TDateEdit
           Date = 43126.000000000000000000
-          DateFormatKind = Long
           Anchors = [akLeft, akRight]
           Position.X = 90.000000000000000000
           Position.Y = 3.710144996643066000
@@ -340,6 +338,15 @@ object Frame1: TFrame1
       Size.PlatformDefault = False
       TabOrder = 1
       Text = 'Vid'#233
+    end
+    object Button3: TButton
+      Position.X = 73.000000000000000000
+      Position.Y = 79.000000000000000000
+      Size.Width = 145.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Annuler'
     end
   end
 end
