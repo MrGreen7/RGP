@@ -93,8 +93,8 @@ type
     Layout0: TLayout;
     procedure FrameResize(Sender: TObject);
     procedure Clear;
-    procedure Insert;
-    procedure Edit;
+    procedure Insert(const RandD: String);
+    procedure Edit(const RandD: String);
     procedure OnDataLoad;
     function IsSet: Boolean;
   private
@@ -119,7 +119,8 @@ begin
       begin
         Active := False;
         SQL.Clear;
-        SQL.Text := ('Select Patientd_ID From Biochimie Where Patient_ID="'+Patient_ID+'"');
+        SQL.Text := ('Select * From Biochimie Where Patient_ID="' +
+          Patient_ID + '"');
         Active := True;
         Open;
         Bio_Edit1.Text := FieldByName('Glycemie').AsString;
@@ -190,7 +191,7 @@ begin
   Bio_Edit19.Text := '';
 end;
 
-procedure TFrame6.Insert;
+procedure TFrame6.Insert(const RandD: String);
 Var
   Rand: String;
   bol: Boolean;
@@ -207,16 +208,17 @@ begin
       try
         Rand := DataModule1.GenerateID;
         Rand := 'B' + Rand;
-        FieldByName('Biochimie_ID').AsString := Rand;
+        FieldByName('Biochimi_ID').AsString := Rand;
       except
         on E: Exception do
         Begin
           bol := True;
         End;
       end;
-      bol := False;
     End;
+    bol := False;
     until bol = False;
+    FieldByName('Patient_ID').AsString := RandD;
     FieldByName('Glycemie').AsString := Bio_Edit1.Text;
     FieldByName('Uree_Sang').AsString := Bio_Edit2.Text;
     FieldByName('Createnine').AsString := Bio_Edit3.Text;
@@ -242,15 +244,33 @@ begin
   End;
 end;
 
-procedure TFrame6.Edit;
+procedure TFrame6.Edit(const RandD: String);
+Var
+  Rand: String;
+  bol: Boolean;
 begin
   With DataModule1.FDQuery1 do
   Begin
     Active := False;
     SQL.Clear;
-    SQL.Text := 'Select * From Biochimie';
+    SQL.Text := 'Select * From Biochimie Where Patient_ID="'+Main.Patient_ID+'"';
     Active := True;
     Edit;
+    repeat
+    Begin
+      try
+        Rand := DataModule1.GenerateID;
+        Rand := 'B' + Rand;
+        FieldByName('Biochimi_ID').AsString := Rand;
+      except
+        on E: Exception do
+        Begin
+          bol := True;
+        End;
+      end;
+    End;
+    bol := False;
+    until bol = False;
     FieldByName('Glycemie').AsString := Bio_Edit1.Text;
     FieldByName('Uree_Sang').AsString := Bio_Edit2.Text;
     FieldByName('Createnine').AsString := Bio_Edit3.Text;

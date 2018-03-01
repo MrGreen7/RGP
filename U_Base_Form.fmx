@@ -12,12 +12,11 @@ object Base_Form: TBase_Form
     end
     item
       Color = xFFCCEEEB
-      Offset = 0.456521749496460000
+      Offset = 0.698757767677307100
     end>
-  Fill.Gradient.StartPosition.X = 0.500000000000000000
-  Fill.Gradient.StartPosition.Y = 1.000000000000000000
-  Fill.Gradient.StopPosition.X = 0.499999970197677600
-  Fill.Gradient.StopPosition.Y = 0.000000000000000000
+  Fill.Gradient.StartPosition.Y = 0.366025418043136600
+  Fill.Gradient.StopPosition.X = 1.000000000000000000
+  Fill.Gradient.StopPosition.Y = 0.633974611759185800
   Position = DesktopCenter
   StyleBook = DataModule1.Windows10
   FormFactor.Width = 320

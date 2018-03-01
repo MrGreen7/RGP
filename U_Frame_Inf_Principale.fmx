@@ -18,6 +18,7 @@ object Frame1: TFrame1
   end
   object GroupBox_Info: TGroupBox
     Align = Client
+    StyledSettings = [Style, FontColor, Other]
     Padding.Left = 5.000000000000000000
     Padding.Top = 20.000000000000000000
     Padding.Right = 5.000000000000000000
@@ -25,6 +26,8 @@ object Frame1: TFrame1
     Size.Height = 200.000000000000000000
     Size.PlatformDefault = False
     Text = 'Information principale'
+    TextSettings.Font.Family = 'Candara'
+    TextSettings.Font.Size = 14.000000000000000000
     TabOrder = 1
     object Layout_Top_1: TLayout
       Align = Top
@@ -43,11 +46,14 @@ object Frame1: TFrame1
         TabOrder = 7
         object IP_Label8: TLabel
           Anchors = [akLeft]
+          StyledSettings = [Style, FontColor]
           Position.X = 10.000000000000000000
           Position.Y = 3.710144996643066000
           Size.Width = 45.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
           Text = 'Sexe'
           TabOrder = 0
         end
@@ -72,11 +78,14 @@ object Frame1: TFrame1
         TabOrder = 5
         object IP_Label4: TLabel
           Anchors = [akLeft]
+          StyledSettings = [Style, FontColor]
           Position.X = 10.000000000000000000
           Position.Y = 4.289855003356934000
           Size.Width = 55.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
           Text = #201'tat civil'
           TabOrder = 3
         end
@@ -113,11 +122,14 @@ object Frame1: TFrame1
         TabOrder = 5
         object IP_Label7: TLabel
           Anchors = [akLeft]
+          StyledSettings = [Style, FontColor]
           Position.X = 10.000000000000000000
           Position.Y = 4.000000000000000000
           Size.Width = 71.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
           Text = 'Type'
           TabOrder = 2
         end
@@ -134,7 +146,7 @@ object Frame1: TFrame1
           TabOrder = 6
           OnChange = IP_ComboBox3Change
           object InnerGlowEffect3Combo3: TInnerGlowEffect
-            Softness = 0.400000005960464500
+            Softness = 0.400000005960464400
             GlowColor = xFFD7263D
             Opacity = 0.899999976158142100
             Enabled = False
@@ -149,11 +161,14 @@ object Frame1: TFrame1
         TabOrder = 4
         object IP_Label3: TLabel
           Anchors = [akLeft]
+          StyledSettings = [Style, FontColor]
           Position.X = 10.000000000000000000
           Position.Y = 3.710144996643066000
           Size.Width = 40.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
           Text = 'N'#233' le'
           TabOrder = 8
         end
@@ -165,7 +180,10 @@ object Frame1: TFrame1
           Size.Width = 207.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
+          StyledSettings = [Style, FontColor]
           TabOrder = 3
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
         end
       end
     end
@@ -186,11 +204,14 @@ object Frame1: TFrame1
         TabOrder = 3
         object IP_Label6: TLabel
           Anchors = [akLeft]
+          StyledSettings = [Style, FontColor]
           Position.X = 10.000000000000000000
           Position.Y = 3.574468135833740000
           Size.Width = 55.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
           Text = 'Pr'#233'nom'
           TabOrder = 3
         end
@@ -198,14 +219,17 @@ object Frame1: TFrame1
           Touch.InteractiveGestures = [LongTap, DoubleTap]
           Anchors = [akLeft, akRight]
           TabOrder = 2
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
           Position.X = 90.000000000000000000
           Position.Y = 4.425531864166260000
           Size.Width = 207.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
+          StyledSettings = [Style, FontColor]
           OnChange = IP_Edit3Change
           object InnerGlowEffectEdit3: TInnerGlowEffect
-            Softness = 0.400000005960464500
+            Softness = 0.400000005960464400
             GlowColor = xFFD7263D
             Opacity = 0.899999976158142100
             Enabled = False
@@ -219,11 +243,14 @@ object Frame1: TFrame1
         Size.PlatformDefault = False
         TabOrder = 2
         object IP_Label2: TLabel
+          StyledSettings = [Style, FontColor]
           Position.X = 10.000000000000000000
           Position.Y = 8.000000000000000000
           Size.Width = 33.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
           Text = 'Nom'
           TabOrder = 12
         end
@@ -231,14 +258,17 @@ object Frame1: TFrame1
           Touch.InteractiveGestures = [LongTap, DoubleTap]
           Anchors = [akLeft, akRight]
           TabOrder = 1
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
           Position.X = 90.000000000000000000
           Position.Y = 3.574468135833740000
           Size.Width = 207.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
+          StyledSettings = [Style, FontColor]
           OnChange = IP_Edit2Change
           object InnerGlowEffectEdit2: TInnerGlowEffect
-            Softness = 0.400000005960464500
+            Softness = 0.400000005960464400
             GlowColor = xFFD7263D
             Opacity = 0.899999976158142100
             Enabled = False
@@ -263,11 +293,14 @@ object Frame1: TFrame1
         TabOrder = 1
         object IP_Label5: TLabel
           Anchors = [akLeft]
+          StyledSettings = [Style, FontColor]
           Position.X = 10.000000000000000000
           Position.Y = 3.710144996643066000
           Size.Width = 61.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
           Text = 'Admit le'
           TabOrder = 3
         end
@@ -279,7 +312,10 @@ object Frame1: TFrame1
           Size.Width = 207.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
+          StyledSettings = [Style, FontColor]
           TabOrder = 0
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
         end
       end
       object Layout_Left_2: TLayout
@@ -290,11 +326,14 @@ object Frame1: TFrame1
         TabOrder = 0
         object IP_Label1: TLabel
           Anchors = [akLeft]
+          StyledSettings = [Style, FontColor]
           Position.X = 10.000000000000000000
           Position.Y = 4.289855003356934000
           Size.Width = 49.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
           Text = 'Code'
           TabOrder = 12
         end
@@ -303,25 +342,32 @@ object Frame1: TFrame1
           Anchors = [akLeft, akRight]
           TabOrder = 0
           ReadOnly = True
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
           Position.X = 90.000000000000000000
           Position.Y = 4.289855003356934000
           HitTest = False
           Size.Width = 207.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
+          StyledSettings = [Style, FontColor]
         end
       end
     end
   end
   object GroupBox_Liens: TGroupBox
     Align = Right
+    StyledSettings = [Style, FontColor, Other]
     Position.X = 768.000000000000000000
     Size.Width = 291.000000000000000000
     Size.Height = 200.000000000000000000
     Size.PlatformDefault = False
     Text = 'Liens'
+    TextSettings.Font.Family = 'Candara'
+    TextSettings.Font.Size = 14.000000000000000000
     TabOrder = 3
     object Button1: TButton
+      StyledSettings = [Style, FontColor]
       Position.X = 73.000000000000000000
       Position.Y = 27.000000000000000000
       Size.Width = 145.000000000000000000
@@ -329,8 +375,11 @@ object Frame1: TFrame1
       Size.PlatformDefault = False
       TabOrder = 0
       Text = 'OK'
+      TextSettings.Font.Family = 'Candara'
+      TextSettings.Font.Size = 14.000000000000000000
     end
     object Button2: TButton
+      StyledSettings = [Style, FontColor]
       Position.X = 73.000000000000000000
       Position.Y = 131.000000000000000000
       Size.Width = 145.000000000000000000
@@ -338,8 +387,11 @@ object Frame1: TFrame1
       Size.PlatformDefault = False
       TabOrder = 1
       Text = 'Vid'#233
+      TextSettings.Font.Family = 'Candara'
+      TextSettings.Font.Size = 14.000000000000000000
     end
     object Button3: TButton
+      StyledSettings = [Style, FontColor]
       Position.X = 73.000000000000000000
       Position.Y = 79.000000000000000000
       Size.Width = 145.000000000000000000
@@ -347,6 +399,8 @@ object Frame1: TFrame1
       Size.PlatformDefault = False
       TabOrder = 2
       Text = 'Annuler'
+      TextSettings.Font.Family = 'Candara'
+      TextSettings.Font.Size = 14.000000000000000000
     end
   end
 end

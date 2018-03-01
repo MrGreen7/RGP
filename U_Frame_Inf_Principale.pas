@@ -49,8 +49,8 @@ type
     InnerGlowEffect3Combo3: TInnerGlowEffect;
     Button3: TButton;
     function SetEdit: Boolean;
-    procedure Edit();
-    procedure Insert();
+    function Edit(): String;
+    function Insert(): String;
     procedure Clear();
     procedure FrameResize(Sender: TObject);
     procedure IP_Edit2Change(Sender: TObject);
@@ -117,11 +117,14 @@ begin
     Result := True;
 end;
 
-procedure TFrame1.Edit;
+function TFrame1.Edit: String;
+Var
+  Rand: String;
 begin
   With DataModule1.FDQuery1 do
   Begin
     // Anitialize The Query
+    Rand := FieldByName('Patient_ID').AsString;
     FieldByName('Nom').AsString := IP_Edit2.Text;
     FieldByName('Prenom').AsString := IP_Edit3.Text;
     FieldByName('Date_de_Nai').AsString := IP_DateEdit1.Text;
@@ -158,9 +161,10 @@ begin
       FieldByName('Type_Index').Value := -1;
     End;
   End;
+  Result := Rand;
 end;
 
-procedure TFrame1.Insert;
+function TFrame1.Insert: String;
 Var
   Rand: String;
   bol: Boolean;
@@ -181,8 +185,8 @@ begin
           bol := True;
         End;
       end;
-      bol := False;
     End;
+    bol := False;
     until bol = False;
     FieldByName('Nom').AsString := IP_Edit2.Text;
     FieldByName('Prenom').AsString := IP_Edit3.Text;
@@ -205,6 +209,7 @@ begin
       FieldByName('type_Index').AsString := IntToStr(IP_ComboBox2.ItemIndex);
     end;
   End;
+  Result := Rand;
 end;
 
 procedure TFrame1.IP_ComboBox3Change(Sender: TObject);

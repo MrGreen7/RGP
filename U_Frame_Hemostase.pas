@@ -31,8 +31,8 @@ type
     Layout_Frame: TLayout;
     procedure FrameResize(Sender: TObject);
     procedure Clear;
-    procedure Insert;
-    procedure Edit;
+    procedure Insert(const RandD: String);
+    procedure Edit(const RandD: String);
     procedure OnDataLoad;
     function IsSet: Boolean;
   private
@@ -57,7 +57,8 @@ begin
       begin
         Active := False;
         SQL.Clear;
-        SQL.Text := ('Select Patient_ID From Hemostase_VS Where Patient_ID="'+Patient_ID+'"');
+        SQL.Text := ('Select * From Hemostase_VS Where Patient_ID="' +
+          Patient_ID + '"');
         Active := True;
         Open;
         Hemos_Edit1.Text := FieldByName('TS').AsString;
@@ -95,7 +96,7 @@ begin
   Memo1.Text := '';
 end;
 
-procedure TFrame4.Insert;
+procedure TFrame4.Insert(const RandD: String);
 Var
   Rand: String;
   bol: Boolean;
@@ -104,7 +105,7 @@ begin
   Begin
     Active := False;
     SQL.Clear;
-    SQL.Text := 'Select * From Hemostase_VS';
+    SQL.Text := 'Select * From Hemostase_VS Where Patient_ID="'+Main.Patient_ID+'"';
     Active := True;
     Insert;
     repeat
@@ -119,9 +120,10 @@ begin
           bol := True;
         End;
       end;
-      bol := False;
     End;
+    bol := False;
     until bol = False;
+    FieldByName('Patient_ID').AsString := RandD;
     FieldByName('TS').AsString := Hemos_Edit1.Text;
     FieldByName('TCK').AsString := Hemos_Edit2.Text;
     FieldByName('TP').AsString := Hemos_Edit3.Text;
@@ -133,15 +135,33 @@ begin
   End;
 end;
 
-procedure TFrame4.Edit;
+procedure TFrame4.Edit(const RandD: String);
+Var
+  Rand: String;
+  bol: Boolean;
 begin
   With DataModule1.FDQuery1 do
   Begin
     Active := False;
     SQL.Clear;
-    SQL.Text := 'Select * From Hemostase-VS';
+    SQL.Text := 'Select * From Hemostase_VS Where Patient_ID="'+Main.Patient_ID+'"';
     Active := True;
     Edit;
+    repeat
+    Begin
+      try
+        Rand := DataModule1.GenerateID;
+        Rand := 'V' + Rand;
+        FieldByName('HemoS_VS_ID').AsString := Rand;
+      except
+        on E: Exception do
+        Begin
+          bol := True;
+        End;
+      end;
+    End;
+    bol := False;
+    until bol = False;
     FieldByName('TS').AsString := Hemos_Edit1.Text;
     FieldByName('TCK').AsString := Hemos_Edit2.Text;
     FieldByName('TP').AsString := Hemos_Edit3.Text;

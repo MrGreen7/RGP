@@ -64,7 +64,6 @@ Uses
 
 procedure TFrame2.OnDataLoad;
 begin
-  //
   With Main do
   Begin
     if (Patient_ID <> '') then
@@ -73,7 +72,8 @@ begin
       begin
         Active := False;
         SQL.Clear;
-        SQL.Text := 'Select * From Patient Where Patient_ID="'+Patient_ID+'";';
+        SQL.Text := 'Select * From Patient Where Patient_ID="' +
+          Patient_ID + '";';
         Active := True;
         Open;
         AC_Edit1.Text := FieldByName('Adresse').AsString;

@@ -17,7 +17,7 @@ uses
   U_Frame_Hemostase, U_Frame_Biochimic, U_Frame_Serologie, FMX.Filter.Effects,
   Data.Bind.EngExt, FMX.Bind.DBEngExt, FMX.Bind.Grid, System.Bindings.Outputs,
   FMX.Bind.Editors, Data.Bind.Components, Data.Bind.Grid, Data.Bind.DBScope,
-  FMX.Menus;
+  FMX.Menus, U_Frame_Ordonnance;
 
 type
   TMain = class(TBase_Form)
@@ -77,8 +77,6 @@ type
     GrouBox2_Table: TGroupBox;
     GrouBox4_Table: TGroupBox;
     StringGrid4: TStringGrid;
-    StringGrid6: TStringGrid;
-    L_Top_Ordonnance: TLayout;
     Layout1: TLayout;
     Layout2: TLayout;
     StringGrid7: TStringGrid;
@@ -354,6 +352,19 @@ type
     Label75: TLabel;
     ColorAnimation36: TColorAnimation;
     ShadowEffect63: TShadowEffect;
+    GroupBox2: TGroupBox;
+    RB_Nom: TRadioButton;
+    RB_Prenom: TRadioButton;
+    GroupBox3: TGroupBox;
+    RB_Interne: TRadioButton;
+    RB_Externe: TRadioButton;
+    Label76: TLabel;
+    Label77: TLabel;
+    GroupBox4: TGroupBox;
+    Edit_Search_Commune: TEdit;
+    Edit_Search_Wilaya: TEdit;
+    Frame_Ordonnance: TFrame7;
+    Frame_EP_Ordonnance: TFrame7;
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure P_AccueilClick(Sender: TObject);
     procedure PatientClick(Sender: TObject);
@@ -422,8 +433,16 @@ type
     procedure StringGrid5CellDblClick(const Column: TColumn;
       const Row: Integer);
     procedure Label32Click(Sender: TObject);
-    procedure Edit1Change(Sender: TObject);
     procedure Label30Click(Sender: TObject);
+    procedure Edit1ChangeTracking(Sender: TObject);
+    procedure GroupBox3DblClick(Sender: TObject);
+    procedure Label76Click(Sender: TObject);
+    procedure Label77Click(Sender: TObject);
+    procedure Label48Click(Sender: TObject);
+    procedure StringGrid7CellClick(const Column: TColumn; const Row: Integer);
+    procedure StringGrid7CellDblClick(const Column: TColumn;
+      const Row: Integer);
+    procedure Frame_EP_PrincipaleButton2Click(Sender: TObject);
   private
     { Private declarations }
     WidthX, HeightX: Integer;
@@ -443,27 +462,69 @@ uses
 {$R *.fmx}
 {$R resources.RES}
 
-procedure Filter(Query: TFDQuery; const Field, Search: String);
+procedure Filter(Query: TFDQuery; const Field, TypeT, Wilaya, Commune,
+  Search: String; Strbol: Boolean);
+Var
+  Where, andt: String;
 Begin
-  Assert(Assigned(Query), 'No Query');
-  if (Search = '') then
-    Query.Filtered := False
+  if ((TypeT = '') and (Wilaya = '') and (Commune = '')) then
+  Begin
+    Where := '';
+    andt := '';
+  End
   else
   Begin
-    Query.Filter := Field + ' LIKE ' + QuotedStr(Search + '*');
+    Where := ' Where';
+    andt := ' and';
+  End;
+  Assert(Assigned(Query), 'No Query');
+  if (Search = '') then
+  Begin
+    Query.Filtered := False;
+    Query.Active := False;
+  End
+  else
+  Begin
+    Query.SQl.Clear;
+    Query.SQl.Text :=
+      ('Select Patient_ID, Nom, Prenom, Date_de_Nai, Date_de_Entre, Type, Sexe, Etat_Civil, Wilaya, Commune, Adresse, Mobile, Email, Groupage, Telephone, Fax From Patient '+Where+TypeT+AndT+Wilaya+Andt+Commune+';');
+    if (Strbol = True) then
+      Query.Active := False
+    Else
+      Query.Active := True;
+    Query.Filter := (Field + ' Like ' + QuotedStr('%' + Search + '%'));
     Query.Filtered := True;
   End;
 End;
 
-procedure TMain.Edit1Change(Sender: TObject);
+procedure TMain.Edit1ChangeTracking(Sender: TObject);
+Var
+  Str, TypeT, Wilaya, Commune: String;
+  Strbol: Boolean;
 begin
-  With DataModule1 do
+  inherited;
+  if (RB_Nom.IsChecked = True) then
+    Str := 'Nom';
+  if (RB_Prenom.IsChecked = True) then
+    Str := 'Prenom';
+  if (RB_Interne.IsChecked = True) then
   Begin
-    FDQ_Recherche.SQL.Clear;
-    FDQ_Recherche.SQL.Text := ('Select * From Patient');
-    FDQ_Recherche.Active := True;
-    Filter(FDQ_Recherche, 'Nom', Edit1.Text);
-  end;
+    TypeT := ' Type="Interne"';
+    if (Edit1.Text = '') then
+      Strbol := True;
+  End;
+  if (RB_Externe.IsChecked = True) then
+  Begin
+    TypeT := ' Type="Externe"';
+    if (Edit1.Text = '') then
+      Strbol := True;
+  End;
+  if (Edit_Search_Wilaya.Text <> '') then
+    Wilaya := ' Wilaya Like "%' + Edit_Search_Wilaya.Text + '%"';
+  if (Edit_Search_Commune.Text <> '') then
+    Commune := ' Commune Like "%' + Edit_Search_Commune.Text + '%"';
+  Filter(DataModule1.FDQ_Recherche, Str, TypeT, Wilaya, Commune,
+    Edit1.Text, Strbol);
 end;
 
 procedure TMain.Edit_PatientResize(Sender: TObject);
@@ -475,6 +536,7 @@ begin
   Frame_EP_Hemostase.OnResize(Frame_EP_Hemostase);
   Frame_EP_Biochimic.OnResize(Frame_EP_Biochimic);
   Frame_EP_Serologie.OnResize(Frame_EP_Serologie);
+  //Frame_EP_Ordonnance.OnResize(Frame_EP_Ordonnance);
 end;
 
 procedure TMain.FloatAnimation2Finish(Sender: TObject);
@@ -557,25 +619,25 @@ Begin
   With DataModule1.FDQ_Status_Patient do
   Begin
     Active := False;
-    SQL.Clear;
-    SQL.Text := 'Select count(*) From Patient';
+    SQl.Clear;
+    SQl.Text := 'Select count(*) From Patient';
     Active := True;
     Open;
     Status_Edit1.Text := IntToStr(Fields[0].AsInteger);
     Active := False;
-    SQL.Clear;
-    SQL.Text := 'Select Count(*) From Patient Where Type="Externe"';
+    SQl.Clear;
+    SQl.Text := 'Select Count(*) From Patient Where Type="Externe"';
     Active := True;
     Open;
     Status_Edit2.Text := IntToStr(Fields[0].AsInteger);
     Active := False;
-    SQL.Clear;
-    SQL.Text := 'Select Count(*) From Patient Where type="Interne"';
+    SQl.Clear;
+    SQl.Text := 'Select Count(*) From Patient Where type="Interne"';
     Active := True;
     Open;
     Status_Edit3.Text := IntToStr(Fields[0].AsInteger);
     Active := False;
-    SQL.Clear;
+    SQl.Clear;
   End;
 End;
 
@@ -612,6 +674,23 @@ Begin
   End;
 End;
 
+procedure TMain.StringGrid7CellClick(const Column: TColumn; const Row: Integer);
+Var
+  tRow: Integer;
+begin
+  inherited;
+  Patient_ID := '';
+  tRow := StringGrid7.Row;
+  Patient_ID := StringGrid7.cells[0, tRow];
+end;
+
+procedure TMain.StringGrid7CellDblClick(const Column: TColumn;
+  const Row: Integer);
+begin
+  inherited;
+  Label48Click(self);
+end;
+
 procedure TMain.Frame11Button1Click(Sender: TObject);
 begin
   inherited;
@@ -620,55 +699,82 @@ begin
     with DataModule1.FDQuery1 do
     Begin
       Active := False;
-      SQL.Clear;
-      SQL.Text := ('Select * From Patient');
+      SQl.Clear;
+      SQl.Text := ('Select * From Patient');
       Active := True;
       Edit;
       Frame_Principale.Insert;
       Frame_Information.Insert;
       Post;
-      SQL.Clear;
+      SQl.Clear;
       Active := False;
     End;
-    Frame_Hemogramme.Edit;
-    Frame_Hemostase.Edit;
-    Frame_Serologie.Edit;
-    Frame_Biochimic.Edit;
+    // Frame_Hemogramme.Edit;
+    // Frame_Hemostase.Edit;
+    // Frame_Serologie.Edit;
+    // Frame_Biochimic.Edit;
   end;
 end;
 
 procedure TMain.Frame11Button2Click(Sender: TObject);
 begin
-  inherited;
-  Frame_Principale.Clear();
-  if (TabItem1.IsSelected = True) then
+  inherited; {
+    Frame_Principale.Clear();
+    if (TabItem1.IsSelected = True) then
     Frame_Information.Clear;
-  if (TabItem2.IsSelected = True) then
+    if (TabItem2.IsSelected = True) then
     Frame_Hemogramme.Clear;
-  if (TabItem3.IsSelected = True) then
+    if (TabItem3.IsSelected = True) then
     Frame_Hemostase.Clear;
-  if (TabItem4.IsSelected = True) then
+    if (TabItem4.IsSelected = True) then
     Frame_Biochimic.Clear;
-  if (TabItem5.IsSelected = True) then
-    Frame_Serologie.Clear;
+    if (TabItem5.IsSelected = True) then
+    Frame_Serologie.Clear; }
 end;
 
 procedure TMain.Frame_EP_PrincipaleButton1Click(Sender: TObject);
+Var
+  ID: String;
 begin
   inherited;
   With DataModule1.FDQuery1 do
   Begin
     Active := False;
-    SQL.Clear;
-    SQL.Text := 'Select * From Patient Where Patient_ID="' + Patient_ID + '";';
+    SQl.Clear;
+    SQl.Text := 'Select * From Patient Where Patient_ID="' + Patient_ID + '";';
     Active := True;
     Edit;
-    Frame_EP_Principale.Edit;
+    // Frame_EP_Principale.Edit;
+    ID := Frame_EP_Principale.Edit;
     Frame_EP_Information.Edit;
     Post;
     Active := False;
-    SQL.Clear;
+    SQl.Clear;
+    if (Frame_EP_Hemogramme.IsSet = True) then
+      Frame_EP_Hemogramme.Edit(ID);
+    if (Frame_EP_Hemostase.IsSet = True) then
+      Frame_EP_Hemostase.Edit(ID);
+    if (Frame_EP_Serologie.IsSet = True) then
+      Frame_EP_Serologie.Edit(ID);
+    if (Frame_EP_Biochimic.IsSet) then
+      Frame_EP_Biochimic.Edit(ID);
   End;
+end;
+
+procedure TMain.Frame_EP_PrincipaleButton2Click(Sender: TObject);
+begin
+  inherited;
+  Frame_Principale.Clear();
+  if (TabItem8.IsSelected = True) then
+    Frame_EP_Information.Clear;
+  if (TabItem9.IsSelected = True) then
+    Frame_EP_Hemogramme.Clear;
+  if (TabItem10.IsSelected = True) then
+    Frame_EP_Hemostase.Clear;
+  if (TabItem11.IsSelected = True) then
+    Frame_EP_Biochimic.Clear;
+  if (TabItem12.IsSelected = True) then
+    Frame_EP_Serologie.Clear;
 end;
 
 procedure TMain.Frame_EP_PrincipaleButton3Click(Sender: TObject);
@@ -680,6 +786,8 @@ begin
 end;
 
 procedure TMain.Frame_PrincipaleButton1Click(Sender: TObject);
+Var
+  ID: String;
 begin
   inherited;
   if (Frame_Principale.SetEdit = True) then
@@ -687,25 +795,28 @@ begin
     with DataModule1.FDQuery1 do
     Begin
       Active := False;
-      SQL.Clear;
-      SQL.Text := ('Select * From Patient');
+      SQl.Clear;
+      SQl.Text := ('Select * From Patient');
       Active := True;
       Insert;
-      Frame_Principale.Insert;
+      ID := Frame_Principale.Insert;
       Frame_Information.Insert;
       Post;
-      SQL.Clear;
+      SQl.Clear;
       Active := False;
     End;
-    if (Frame_Hemogramme.IsSet = True) then
-      Frame_Hemogramme.Insert;
-    if (Frame_Hemostase.IsSet = True) then
-      Frame_Hemostase.Insert;
-    if (Frame_Serologie.IsSet = True) then
-      Frame_Serologie.Insert;
-    if (Frame_Biochimic.IsSet = True) then
-      Frame_Biochimic.Insert;
+    Frame_Hemogramme.Insert(ID);
+    Frame_Hemostase.Insert(ID);
+    Frame_Serologie.Insert(ID);
+    Frame_Biochimic.Insert(ID);
   end;
+end;
+
+procedure TMain.GroupBox3DblClick(Sender: TObject);
+begin
+  inherited;
+  RB_Interne.IsChecked := False;
+  RB_Externe.IsChecked := False;
 end;
 
 procedure TMain.Button2Click(Sender: TObject);
@@ -857,6 +968,16 @@ begin
   FloatAnimation5.enabled := True;
 end;
 
+procedure TMain.Label48Click(Sender: TObject);
+begin
+  inherited;
+  Edit_Patient.Visible := True;
+  Edit_Patient.IsSelected := True;
+  H_Accueil.IsSelected := True;
+  Frame_EP_Principale.OnDataLoad;
+  Frame_EP_Information.OnDataLoad;
+end;
+
 procedure TMain.Label4Click(Sender: TObject);
 var
   FenetreDlg: TFenetre;
@@ -911,8 +1032,17 @@ begin
     Edit_Patient.Visible := True;
     Edit_Patient.IsSelected := True;
     H_Accueil.IsSelected := True;
-    Frame_EP_Principale.onDataLoad;
-    Frame_EP_Information.onDataLoad;
+    Frame_EP_Principale.OnDataLoad;
+    Frame_EP_Information.OnDataLoad;
+    Frame_EP_Hemogramme.OnDataLoad;
+    Frame_EP_Hemostase.OnDataLoad;
+    Frame_EP_Serologie.OnDataLoad;
+    Frame_EP_Biochimic.OnDataLoad;
+  End
+  else
+  Begin
+    Showmessage
+      ('Sil vous plait choisir une patient ou double clicker sur un patient de table');
   End;
 end;
 
@@ -922,6 +1052,42 @@ var
 begin
   OptionDlg := TOption.Create(self);
   OptionDlg.ShowModal;
+end;
+
+procedure TMain.Label76Click(Sender: TObject);
+begin
+  inherited;
+  if (Label76.RotationAngle = 180) then
+  Begin
+    GroupBox1.Align := TAlignLayout.None;
+    GroupBox1.Height := (GroupBox1.Height - 78);
+    GroupBox2.Visible := False;
+    GroupBox3.Visible := False;
+    Label76.RotationAngle := 0;
+    Layout2.Height := (Layout2.Height - 57);
+  End
+  else if (Label76.RotationAngle = 0) then
+  Begin
+    GroupBox1.Align := TAlignLayout.Client;
+    GroupBox1.Height := (GroupBox1.Height + 78);
+    GroupBox2.Visible := True;
+    GroupBox3.Visible := True;
+    Label76.RotationAngle := 180;
+    Layout2.Height := (Layout2.Height + 57);
+  End;
+end;
+
+procedure TMain.Label77Click(Sender: TObject);
+begin
+  inherited;
+  if (Label77.RotationAngle = 180) then
+  Begin
+
+  End
+  else if (Label77.RotationAngle = 0) then
+  Begin
+
+  End;
 end;
 
 procedure TMain.Label_Refresh1MouseDown(Sender: TObject; Button: TMouseButton;
@@ -965,6 +1131,7 @@ begin
   Frame_Hemostase.OnResize(Frame_Hemostase);
   Frame_Biochimic.OnResize(Frame_Biochimic);
   Frame_Serologie.OnResize(Frame_Serologie);
+  //Frame_Ordonnance.OnResize(Frame_Ordonnance);
 end;
 
 procedure TMain.OrdonnanceClick(Sender: TObject);
@@ -1040,11 +1207,12 @@ end;
 
 procedure TMain.StringGrid5CellClick(const Column: TColumn; const Row: Integer);
 Var
-  TRow: Integer;
+  tRow: Integer;
 begin
   inherited;
-  TRow := StringGrid5.Row;
-  Patient_ID := StringGrid5.cells[0, TRow];
+  Patient_ID := '';
+  tRow := StringGrid5.Row;
+  Patient_ID := StringGrid5.cells[0, tRow];
   // Asign Variables
 end;
 

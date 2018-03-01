@@ -478,10 +478,6 @@ Visible=False
 Coordinates=1852,1346,123,36
 Visible=False
 
-[StringGrid6]
-Coordinates=357,166,80,36
-Visible=False
-
 [Frame_Principale.IP_Label4]
 Coordinates=1688,10,177,36
 Visible=False
@@ -500,10 +496,6 @@ Visible=False
 
 [L_Right_P_Accueil]
 Coordinates=1649,1346,123,36
-Visible=False
-
-[L_Top_Ordonnance]
-Coordinates=1511,1346,128,36
 Visible=False
 
 [Frame_Information.L_Top_1]
@@ -1234,7 +1226,7 @@ Coordinates=2181,10,60,36
 Visible=False
 
 []
-Coordinates=1181,710,40,33
+Coordinates=1511,1346,128,36
 Visible=False
 
 [StringGrid2]
@@ -2863,7 +2855,7 @@ Coordinates=743,1752,60,36
 Visible=False
 
 [DataModule1.FDQ_Recherche]
-Coordinates=1320,160,190,58
+Coordinates=1320,160,190,36
 Visible=True
 
 [ColorAnimation31]
@@ -2928,4 +2920,97 @@ Visible=False
 
 [BindSourceDB4]
 Coordinates=1320,250,176,80
+
+[Label70]
+Coordinates=107,271,60,58
+
+[Label71]
+Coordinates=38,271,60,58
+
+[Line16]
+Coordinates=1504,1752,53,36
+
+[Layout34]
+Coordinates=1435,1752,67,36
+
+[Label69]
+Coordinates=2824,1,60,58
+
+[ShadowEffect63]
+Coordinates=3506,1848,108,36
+
+[ShadowEffect57]
+Coordinates=3397,1848,108,36
+
+[ShadowEffect62]
+Coordinates=3288,1848,108,36
+
+[ColorAnimation35]
+Coordinates=4932,716,117,36
+
+[ShadowEffect58]
+Coordinates=3179,1848,108,36
+
+[Layout35]
+Coordinates=1366,1752,67,36
+
+[Label75]
+Coordinates=176,271,60,58
+
+[ShadowEffect59]
+Coordinates=3070,1848,108,36
+
+[Line18]
+Coordinates=3011,1848,53,36
+
+[Label72]
+Coordinates=336,1608,60,58
+
+[ColorAnimation36]
+Coordinates=4932,771,117,36
+
+[Line14]
+Coordinates=2952,1848,53,36
+
+[Label73]
+Coordinates=555,1328,60,58
+
+[Label68]
+Coordinates=2824,386,60,58
+
+[ShadowEffect61]
+Coordinates=2843,1848,108,36
+
+[Line17]
+Coordinates=2784,1848,53,36
+
+[ShadowEffect60]
+Coordinates=2675,1848,108,36
+
+[Line15]
+Coordinates=2616,1848,53,36
+
+[Label74]
+Coordinates=41,175,60,58
+
+[Label67]
+Coordinates=221,175,60,58
+
+[Layout33]
+Coordinates=2547,1848,67,36
+
+[Line19]
+Coordinates=2488,1848,53,36
+
+[ShadowEffect54]
+Coordinates=2379,1848,108,36
+
+[ColorAnimation34]
+Coordinates=4932,826,117,36
+
+[Layout32]
+Coordinates=2310,1848,67,36
+
+[ColorAnimation32]
+Coordinates=4932,881,117,36
 

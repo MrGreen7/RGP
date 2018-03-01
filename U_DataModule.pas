@@ -95,21 +95,22 @@ begin
   Patient :=
     ('CREATE TABLE `Patient` (`Patient_ID` varchar ( 7 ) NOT NULL UNIQUE,`Nom`	Varchar ( 15 ),`Prenom`	varchar ( 20 ),`Date_de_Nai`	varchar ( 10 ),`Date_de_Entre`	varchar ( 10 ),`Type`	varchar ( 100 ),`Sexe`	varchar ( 5 ),`Etat_Civil`	varchar ( 13 ),'
     + '`Wilaya`	varchar ( 20 ),`Commune`	varchar ( 20 ),`Adresse`	varchar ( 50 ),`Mobile`	INTEGER,`Email`	varchar ( 35 ),`Groupage`	varchar ( 5 ),`Telephone`	Integer ( 9 ),`Fax`	Integer ( 13 ),`Type_Index`	INTEGER,`Sexe_Index`	INTEGER,`Etat_Civil_Index`	INTEGER,'
-    + '`Groupage_Index`	INTEGER,`Wilaya_Index`	Integer,`Commune_Index`	Integer,`ID`	varchar ( 7 ),PRIMARY KEY(`Patient_ID`),FOREIGN KEY(`ID`) REFERENCES `User`(`ID`));');
+    + '`Groupage_Index`	INTEGER,`Wilaya_Index`	Integer,`Commune_Index`	Integer, PRIMARY KEY(`Patient_ID`));');
   Biochimie :=
-    ('CREATE TABLE `Biochimie` (`Biochimi_ID`	INTEGER NOT NULL UNIQUE,`Glycemie`	INTEGER,`Uree_Sang`	INTEGER,`Createnine`	INTEGER,`Cholesterole`	INTEGER,`Triglycerides`	INTEGER,`HDL`	INTEGER,'
+    ('CREATE TABLE `Biochimie` (`Biochimi_ID`	varchar ( 7 ) NOT NULL UNIQUE,`Glycemie`	INTEGER,`Uree_Sang`	INTEGER,`Createnine`	INTEGER,`Cholesterole`	INTEGER,`Triglycerides`	INTEGER,`HDL`	INTEGER,'
     + '`LDL`	INTEGER,`Acide_Urique`	INTEGER,`CRP`	INTEGER,`TGO`	INTEGER,`TGP`	INTEGER,`PAL`	INTEGER,`TP`	INTEGER,`INR`	INTEGER,`BilirubineT`	INTEGER,`BilirubineD`	INTEGER,`ASLO`	INTEGER,'
-    + '	`Calcemie`	INTEGER,`Albuminemie`	INTEGER,`Patient_ID`	varchar ( 7 ),PRIMARY KEY(`Biochimi_ID`),FOREIGN KEY(`Patient_ID`) REFERENCES `Patient`(`Patient_ID`));');
+    + '	`Calcemie`	INTEGER,`Albuminemie`	INTEGER,`Patient_ID`	varchar ( 7 ),PRIMARY KEY(`Biochimi_ID`),FOREIGN KEY(`Patient_ID`) REFERENCES `Patient`(`Patient_ID`) ON DELETE CASCADE);');
   Hemogramme :=
-    ('CREATE TABLE `Hemogramme` (`HemoG_ID`	INTEGER NOT NULL UNIQUE,`Hematies`	INTEGER,`Hemoglobine`	INTEGER,`Hematocrite`	INTEGER,`VGM`	INTEGER,`TCMH`	INTEGER,`CCMH`	INTEGER,'
-    + '`Leucocytes`	INTEGER,`Reticulocytes`	INTEGER,`Patient_ID`	varchar ( 7 ),PRIMARY KEY(`HemoG_ID`),FOREIGN KEY(`Patient_ID`) REFERENCES `Patient`(`Patient_ID`));');
+    ('CREATE TABLE `Hemogramme` (`HemoG_ID`	varchar ( 7 ) NOT NULL UNIQUE,`Hematies`	INTEGER,`Hemoglobine`	INTEGER,`Hematocrite`	INTEGER,`VGM`	INTEGER,`TCMH`	INTEGER,`CCMH`	INTEGER,'
+    + '`Leucocytes`	INTEGER,`Reticulocytes`	INTEGER,`Patient_ID`	varchar ( 7 ),PRIMARY KEY(`HemoG_ID`),FOREIGN KEY(`Patient_ID`) REFERENCES `Patient`(`Patient_ID`) ON DELETE CASCADE);');
   Hemostase_VS :=
-    ('CREATE TABLE `Hemostase_VS` (`HemoS_VS_ID`	INTEGER NOT NULL UNIQUE,`TS`	INTEGER,`TCK`	INTEGER,`TP`	INTEGER,`VS`	INTEGER,`Note`	BLOB,`Patient_ID`	varchar ( 7 ),FOREIGN KEY(`Patient_ID`) REFERENCES `Patient`(`Patient_ID`),PRIMARY KEY(`HemoS_VS_ID`));');
+    ('CREATE TABLE `Hemostase_VS` (`HemoS_VS_ID` varchar ( 7 ) NOT NULL UNIQUE,`TS`	INTEGER,`TCK`	INTEGER,`TP`	INTEGER,'
+    + '`VS`	INTEGER,`Note`	BLOB,`Patient_ID`	varchar ( 7 ),FOREIGN KEY(`Patient_ID`) REFERENCES `Patient`(`Patient_ID`) ON DELETE CASCADE,PRIMARY KEY(`HemoS_VS_ID`));');
   Serologie :=
-    ('CREATE TABLE `Serologie` (`Serologie_ID`	INTEGER NOT NULL UNIQUE,`HA_Anti-VHA`	boolean,`HA_IgG`	boolean,`HA_IgM`	boolean,'
+    ('CREATE TABLE `Serologie` (`Serologie_ID`	varchar ( 7 ) NOT NULL UNIQUE,`HA_Anti-VHA`	boolean,`HA_IgG`	boolean,`HA_IgM`	boolean,'
     + '`HB_Anti-VHB`	Boolean,`HB_Antigene_HBs`	boolean,`HC_Anit-VHC`	boolean,`VIH_Anti-VIH`	boolean,`RUB_Anti_M`	boolean,`RUB_Anti_A`	boolean,'
     + '`RUB_Anti_G`	boolean,`Salm_Anti_H`	boolean,`Salm_Anti_O`	boolean,`Mono_Anti_EBV`	boolean,`Mono_Anti_G_Anti_VCA`	boolean,`Mono_Anti_G_Anti_EBNA`	boolean,`Mono_Anti_G_Anti_EA`	boolean,'
-    + '`Toxo_Anti_M`	boolean,`Patient_ID`	varchar ( 7 ),PRIMARY KEY(`Serologie_ID`),FOREIGN KEY(`Patient_ID`) REFERENCES `Patient`(`Patient_ID`));');
+    + '`Toxo_Anti_M`	boolean,`Patient_ID` varchar ( 7 ),PRIMARY KEY(`Serologie_ID`),FOREIGN KEY(`Patient_ID`) REFERENCES `Patient`(`Patient_ID`) ON DELETE CASCADE);');
   // Database Anitialse and Location
   DirPath := GetEnvironmentVariable('AppData');
   CreateDir(DirPath + '\RGP_Data');
@@ -178,6 +179,8 @@ begin
   FDQ_Patient.Active := True;
   // Main patient Table
   FDQ_Patient_Table.Active := True;
+  // Search Query
+  // FDQ_Recherche.Active := True;
 end;
 
 end.

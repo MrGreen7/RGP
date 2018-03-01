@@ -41,8 +41,8 @@ type
     Layout_Frame3: TLayout;
     procedure FrameResize(Sender: TObject);
     procedure Clear;
-    procedure Insert;
-    procedure Edit;
+    procedure Insert(const RandD: String);
+    procedure Edit(const RandD: String);
     procedure OnDataLoad;
     function IsSet: Boolean;
   private
@@ -61,14 +61,14 @@ procedure TFrame3.OnDataLoad;
 begin
   With Main do
   Begin
-    if (Patient_ID <> '')
-    then
+    if (Patient_ID <> '') then
     Begin
       With DataModule1.FDQuery2 do
       begin
         Active := False;
         SQL.Clear;
-        SQL.Text := ('Select Patient_Id From Hemogramme Where Patient_ID="'+Patient_ID+'"');
+        SQL.Text := ('Select * From Hemogramme Where Patient_ID="' +
+          Patient_ID + '"');
         Active := True;
         Open;
         Hemog_Edit1.Text := FieldByName('Hematies').AsString;
@@ -112,7 +112,7 @@ begin
   Hemog_Edit8.Text := '';
 end;
 
-procedure TFrame3.Insert;
+procedure TFrame3.Insert(const RandD: String);
 Var
   Rand: String;
   bol: Boolean;
@@ -137,9 +137,10 @@ begin
           bol := True;
         End;
       end;
-      bol := False;
     End;
+    bol := False;
     until bol = False;
+    FieldByName('Patient_ID').AsString := RandD;
     FieldByName('Hematies').AsString := Hemog_Edit1.Text;
     FieldByName('Hemoglobine').AsString := Hemog_Edit2.Text;
     FieldByName('Hematocrite').AsString := Hemog_Edit3.Text;
@@ -154,16 +155,34 @@ begin
   End;
 end;
 
-procedure TFrame3.Edit;
+procedure TFrame3.Edit(const RandD: String);
+Var
+  Rand: String;
+  bol: Boolean;
 begin
-
   With DataModule1.FDQuery1 do
   Begin
     Active := False;
     SQL.Clear;
-    SQL.Text := 'Select * From Hemogramme';
+    SQL.Text := 'Select * From Hemogramme Where Patient_ID="' +
+      Main.Patient_ID + '";';
     Active := True;
     Edit;
+    repeat
+    Begin
+      try
+        Rand := DataModule1.GenerateID;
+        Rand := 'G' + Rand;
+        FieldByName('HemoG_ID').AsString := Rand;
+      except
+        on E: Exception do
+        Begin
+          bol := True;
+        End;
+      end;
+    End;
+    bol := False;
+    until bol = False;
     FieldByName('Hematies').AsString := Hemog_Edit1.Text;
     FieldByName('Hemoglobine').AsString := Hemog_Edit2.Text;
     FieldByName('Hematocrite').AsString := Hemog_Edit3.Text;

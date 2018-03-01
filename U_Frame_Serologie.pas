@@ -41,8 +41,8 @@ type
     CB_SFT_Anti_O: TCheckBox;
     CB_SFT_Anti_H: TCheckBox;
     procedure Clear;
-    procedure Insert;
-    procedure Edit;
+    procedure Insert(const RandD: String);
+    procedure Edit(const RandD: String);
     procedure FrameResize(Sender: TObject);
     procedure CB_HA_Anit_VHAChange(Sender: TObject);
     procedure OnDataLoad;
@@ -69,92 +69,92 @@ begin
       begin
         Active := False;
         SQL.Clear;
-        SQL.Text := ('Select Patient_ID From Serologie Where Patient_ID="' +
+        SQL.Text := ('Select * From Serologie Where Patient_ID="' +
           Patient_ID + '"');
         Active := True;
         Open;
         // HA - #VHA
-        if (FieldByName('HA_Anti-VHA').AsString = IntToStr(1)) then
+        if (FieldByName('HA_Anti-VHA').AsBoolean = True) then
           CB_HA_Anit_VHA.IsChecked := True
         else
-          CB_HA_Anit_VHA.IsChecked := True;
+          CB_HA_Anit_VHA.IsChecked := False;
         // HA - IgM
-        if (FieldByName('HA_IgM').AsString = IntToStr(1)) then
+        if (FieldByName('HA_IgM').AsBoolean = True) then
           RB_HA_IgM.IsChecked := True
         else
           RB_HA_IgM.IsChecked := False;
         // Ha - IgG
-        if (FieldByName('HA_IgG').AsString = IntToStr(1)) then
+        if (FieldByName('HA_IgG').AsBoolean = True) then
           RB_HA_IgG.IsChecked := True
         else
           RB_HA_IgG.IsChecked := False;
         // HB - #VHB
-        if (FieldByName('HB_Anti-VHB').AsString = IntToStr(1)) then
+        if (FieldByName('HB_Anti-VHB').AsBoolean = True) then
           CB_HB_Anti_VHB.IsChecked := True
         else
           CB_HB_Anti_VHB.IsChecked := False;
         // HB - #HBs
-        if (FieldByName('HB_Antigene_HBs').AsString = IntToStr(1)) then
+        if (FieldByName('HB_Antigene_HBs').AsBoolean = True) then
           CB_HB_Antigene_BHs.IsChecked := True
         else
           CB_HB_Antigene_BHs.IsChecked := False;
         // HC
-        if (FieldByName('HC_Anit-VHC').AsString = IntToStr(1)) then
+        if (FieldByName('HC_Anit-VHC').AsBoolean = True) then
           CB_HC_Anti_VHC.IsChecked := True
         else
           CB_HC_Anti_VHC.IsChecked := False;
         // VIH
-        if (FieldByName('VIH_Anti-VIH').AsString = IntToStr(1)) then
+        if (FieldByName('VIH_Anti-VIH').AsBoolean = True) then
           CB_VIH_Anti_VIH.IsChecked := True
         else
           CB_VIH_Anti_VIH.IsChecked := False;
         // RUB - IgA
-        if (FieldByName('RUB_Anti_A').AsString = IntToStr(1)) then
+        if (FieldByName('RUB_Anti_A').AsBoolean = True) then
           CB_RUB_IgA.IsChecked := True
         else
           CB_RUB_IgA.IsChecked := False;
         // RUB - IgG
-        if (FieldByName('RUB_Anti_G').AsString = IntToStr(1)) then
+        if (FieldByName('RUB_Anti_G').AsBoolean = True) then
           CB_RUB_IgG.IsChecked := True
         else
           CB_RUB_IgG.IsChecked := False;
         // RUB - IgM
-        if (FieldByName('RUB_Anti_M').AsString = IntToStr(1)) then
+        if (FieldByName('RUB_Anti_M').AsBoolean = True) then
           CB_RUB_IgM.IsChecked := True
         else
           CB_RUB_IgM.IsChecked := False;
         // Salmonelloses - #O
-        if (FieldByName('Salm_Anti_O').AsString = IntToStr(1)) then
+        if (FieldByName('Salm_Anti_O').AsBoolean = True) then
           CB_SFT_Anti_O.IsChecked := True
         else
           CB_SFT_Anti_O.IsChecked := False;
         // Salmonelloses - #H
-        if (FieldByName('Salm_Anti_H').AsString = IntToStr(1)) then
+        if (FieldByName('Salm_Anti_H').AsBoolean = True) then
           CB_SFT_Anti_H.IsChecked := True
         else
           CB_SFT_Anti_H.IsChecked := False;
         // Mono - #EBV
-        if (FieldByName('Mono_Anti_EBV').AsString = IntToStr(1)) then
+        if (FieldByName('Mono_Anti_EBV').AsBoolean = True) then
           CB_MI_Anti_EBV.IsChecked := True
         else
           CB_MI_Anti_EBV.IsChecked := False;
         // Mono - EBNA
-        if (FieldByName('Mono_Anti_G_Anti_EBNA').AsString = IntToStr(1)) then
+        if (FieldByName('Mono_Anti_G_Anti_EBNA').AsBoolean = True) then
           CB_MI_EBNA.IsChecked := True
         else
           CB_MI_EBNA.IsChecked := False;
         // Mono - VCA
-        if (FieldByName('Mono_Anti_G_Anti_VCA').AsString = IntToStr(1)) then
+        if (FieldByName('Mono_Anti_G_Anti_VCA').AsBoolean = True) then
           CB_MI_VCA.IsChecked := True
         else
           CB_MI_VCA.IsChecked := False;
         // Mono - EA
-        if (FieldByName('Mono_Anti_G_Anti_EA').AsString = IntToStr(1)) then
+        if (FieldByName('Mono_Anti_G_Anti_EA').AsBoolean = True) then
           CB_MI_EA.IsChecked := True
         else
           CB_MI_EA.IsChecked := False;
         // Toxo
-        if (FieldByName('Toxo_Anti_M').AsString = IntToStr(1)) then
+        if (FieldByName('Toxo_Anti_M').AsBoolean = True) then
           CB_Toxo_Anti_IgM.IsChecked := True
         else
           CB_Toxo_Anti_IgM.IsChecked := False;
@@ -214,7 +214,7 @@ BEgin
   CB_Toxo_Anti_IgM.IsChecked := False;
 End;
 
-procedure TFrame5.Insert;
+procedure TFrame5.Insert(const RandD: String);
 Var
   Rand: String;
   bol: Boolean;
@@ -238,9 +238,10 @@ begin
           bol := True;
         End;
       end;
-      bol := False;
     End;
+    bol := False;
     until bol = False;
+    FieldByName('Patient_ID').AsString := RandD;
     FieldByName('HA_Anti-VHA').AsBoolean := CB_HA_Anit_VHA.IsChecked;
     FieldByName('HA_IgG').AsBoolean := RB_HA_IgG.IsChecked;
     FieldByName('HA_IgM').AsBoolean := RB_HA_IgM.IsChecked;
@@ -264,15 +265,34 @@ begin
   End;
 end;
 
-procedure TFrame5.Edit;
+procedure TFrame5.Edit(const RandD: String);
+Var
+  Rand: String;
+  bol: Boolean;
 begin
   With DataModule1.FDQuery1 do
   Begin
     Active := False;
     SQL.Clear;
-    SQL.Text := 'Select * From Serologie';
+    SQL.Text := 'Select * From Serologie Where Patient_ID="' +
+      Main.Patient_ID + '"';
     Active := True;
     Edit;
+    repeat
+    Begin
+      try
+        Rand := DataModule1.GenerateID;
+        Rand := 'S' + Rand;
+        FieldByName('Serologie_ID').AsString := Rand;
+      except
+        on E: Exception do
+        Begin
+          bol := True;
+        End;
+      end;
+    End;
+    bol := False;
+    until bol = False;
     FieldByName('HA_Anti-VHA').AsBoolean := CB_HA_Anit_VHA.IsChecked;
     FieldByName('HA_IgG').AsBoolean := RB_HA_IgG.IsChecked;
     FieldByName('HA_IgM').AsBoolean := RB_HA_IgM.IsChecked;
@@ -302,6 +322,11 @@ begin
   Begin
     RB_HA_IgM.Enabled := True;
     RB_HA_IgG.Enabled := True;
+  End
+  else
+  Begin
+    RB_HA_IgM.Enabled := False;
+    RB_HA_IgG.Enabled := False;
   End;
 end;
 

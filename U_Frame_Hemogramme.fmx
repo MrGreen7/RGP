@@ -36,31 +36,39 @@ object Frame3: TFrame3
         Anchors = [akLeft, akRight]
         TabOrder = 6
         MaxLength = 9
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 16.000000000000000000
         Position.X = 95.000000000000000000
         Position.Y = 200.000000000000000000
         Size.Width = 417.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
         TextPrompt = 'Volume globulaire moyen'
+        StyledSettings = [Style, FontColor]
         object Hemog_LabelEdit4: TLabel
           Align = Right
-          StyledSettings = [Family, Style, FontColor]
+          StyledSettings = [Style, FontColor]
           Position.X = 400.000000000000000000
           Size.Width = 17.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
           Text = #181#179
           TabOrder = 0
         end
       end
       object Hemog_Label4: TLabel
         Anchors = [akLeft]
+        StyledSettings = [Style, FontColor]
         Hint = 'Volume globulaire moyen'
         Position.X = 15.000000000000000000
         Position.Y = 200.000000000000000000
         Size.Width = 45.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 14.000000000000000000
         Text = 'VGM'
         ParentShowHint = False
         ShowHint = True
@@ -68,11 +76,14 @@ object Frame3: TFrame3
       end
       object Hemog_Label3: TLabel
         Anchors = [akLeft]
+        StyledSettings = [Style, FontColor]
         Position.X = 15.000000000000000000
         Position.Y = 138.000000000000000000
         Size.Width = 79.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 14.000000000000000000
         Text = 'H'#233'matocrite'
         TabOrder = 24
       end
@@ -81,18 +92,23 @@ object Frame3: TFrame3
         Anchors = [akLeft, akRight]
         TabOrder = 4
         MaxLength = 9
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 16.000000000000000000
         Position.X = 95.000000000000000000
         Position.Y = 138.000000000000000000
         Size.Width = 417.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        StyledSettings = [Style, FontColor]
         object Hemog_LabelEdit3: TLabel
           Align = Right
-          StyledSettings = [Family, Style, FontColor]
+          StyledSettings = [Style, FontColor]
           Position.X = 400.000000000000000000
           Size.Width = 17.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
           Text = '%'
           TabOrder = 0
         end
@@ -102,39 +118,50 @@ object Frame3: TFrame3
         Anchors = [akLeft, akRight]
         TabOrder = 2
         MaxLength = 9
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 16.000000000000000000
         Position.X = 95.000000000000000000
         Position.Y = 76.000000000000000000
         Size.Width = 417.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        StyledSettings = [Style, FontColor]
         object Hemog_LabelEdit2: TLabel
           Align = Right
-          StyledSettings = [Family, Style, FontColor]
+          StyledSettings = [Style, FontColor]
           Position.X = 360.000000000000000000
           Size.Width = 57.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
           Text = 'g/100ml'
           TabOrder = 0
         end
       end
       object Hemog_Label2: TLabel
         Anchors = [akLeft]
+        StyledSettings = [Style, FontColor]
         Position.X = 15.000000000000000000
         Position.Y = 76.000000000000000000
         Size.Width = 79.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 14.000000000000000000
         Text = 'H'#233'moglobin'
         TabOrder = 26
       end
       object Hemog_Label1: TLabel
         Anchors = [akLeft]
+        StyledSettings = [Style, FontColor]
         Position.X = 15.000000000000000000
         Position.Y = 15.000000000000000000
         Size.Width = 77.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 14.000000000000000000
         Text = 'H'#233'maties'
         TabOrder = 28
       end
@@ -143,18 +170,23 @@ object Frame3: TFrame3
         Anchors = [akLeft, akRight]
         TabOrder = 0
         MaxLength = 9
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 16.000000000000000000
         Position.X = 95.000000000000000000
         Position.Y = 15.000000000000000000
         Size.Width = 417.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        StyledSettings = [Style, FontColor]
         object Hemog_LabelEdit1: TLabel
           Align = Right
-          StyledSettings = [Family, Style, FontColor]
+          StyledSettings = [Style, FontColor]
           Position.X = 336.000000000000000000
           Size.Width = 81.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
           Text = 'millions/mm3'
           TabOrder = 0
         end
@@ -172,30 +204,38 @@ object Frame3: TFrame3
         Anchors = [akLeft, akRight]
         TabOrder = 1
         MaxLength = 9
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 16.000000000000000000
         Position.X = 95.000000000000000000
         Position.Y = 138.000000000000000000
         Size.Width = 417.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
         TextPrompt = 'Teneur corpusculaire moyenne en h'#233'moglobine'
+        StyledSettings = [Style, FontColor]
         object Label19: TLabel
           Align = Right
-          StyledSettings = [Family, Style, FontColor]
+          StyledSettings = [Style, FontColor]
           Position.X = 400.000000000000000000
           Size.Width = 17.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
           Text = '%'
           TabOrder = 0
         end
       end
       object Hemog_Label6: TLabel
         Anchors = [akLeft]
+        StyledSettings = [Style, FontColor]
         Position.X = 15.000000000000000000
         Position.Y = 76.000000000000000000
         Size.Width = 101.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 14.000000000000000000
         Text = 'CCMH'
         TabOrder = 19
       end
@@ -204,40 +244,51 @@ object Frame3: TFrame3
         Anchors = [akLeft, akRight]
         TabOrder = 0
         MaxLength = 9
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 16.000000000000000000
         Position.X = 95.000000000000000000
         Position.Y = 15.000000000000000000
         Size.Width = 417.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
         TextPrompt = 'Concentration corpusculaire moyenne en h'#233'moglobine'
+        StyledSettings = [Style, FontColor]
         object Label18: TLabel
           Align = Right
-          StyledSettings = [Family, Style, FontColor]
+          StyledSettings = [Style, FontColor]
           Position.X = 400.000000000000000000
           Size.Width = 17.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
           Text = #961'g'
           TabOrder = 0
         end
       end
       object Hemog_Label5: TLabel
         Anchors = [akLeft]
+        StyledSettings = [Style, FontColor]
         Position.X = 15.000000000000000000
         Position.Y = 15.000000000000000000
         Size.Width = 77.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 14.000000000000000000
         Text = 'TCMH'
         TabOrder = 20
       end
       object Hemog_Label7: TLabel
         Anchors = [akLeft]
+        StyledSettings = [Style, FontColor]
         Position.X = 15.000000000000000000
         Position.Y = 138.000000000000000000
         Size.Width = 82.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 14.000000000000000000
         Text = 'Leucocytes'
         TabOrder = 18
       end
@@ -246,18 +297,23 @@ object Frame3: TFrame3
         Anchors = [akLeft, akRight]
         TabOrder = 2
         MaxLength = 9
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 16.000000000000000000
         Position.X = 95.000000000000000000
         Position.Y = 76.000000000000000000
         Size.Width = 417.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        StyledSettings = [Style, FontColor]
         object Label20: TLabel
           Align = Right
-          StyledSettings = [Family, Style, FontColor]
+          StyledSettings = [Style, FontColor]
           Position.X = 352.000000000000000000
           Size.Width = 65.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
           Text = 'mm3 * 10'#179
           TabOrder = 0
         end
@@ -267,30 +323,38 @@ object Frame3: TFrame3
         Anchors = [akLeft, akRight]
         TabOrder = 3
         MaxLength = 9
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 16.000000000000000000
         Position.X = 95.000000000000000000
         Position.Y = 200.000000000000000000
         Size.Width = 417.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        StyledSettings = [Style, FontColor]
         object Label21: TLabel
           Align = Right
-          StyledSettings = [Family, Style, FontColor]
+          StyledSettings = [Style, FontColor]
           Position.X = 400.000000000000000000
           Size.Width = 17.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 14.000000000000000000
           Text = '%'
           TabOrder = 0
         end
       end
       object Hemog_Label8: TLabel
         Anchors = [akLeft]
+        StyledSettings = [Style, FontColor]
         Hint = 'Volume globulaire moyen'
         Position.X = 15.000000000000000000
         Position.Y = 200.000000000000000000
         Size.Width = 82.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
+        TextSettings.Font.Size = 14.000000000000000000
         Text = 'R'#233'ticulocytes'
         ParentShowHint = False
         ShowHint = True

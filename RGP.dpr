@@ -17,7 +17,8 @@ uses
   U_Frame_Hemogramme in 'U_Frame_Hemogramme.pas' {Frame3: TFrame},
   U_Frame_Hemostase in 'U_Frame_Hemostase.pas' {Frame4: TFrame},
   U_Frame_Serologie in 'U_Frame_Serologie.pas' {Frame5: TFrame},
-  U_Frame_Biochimic in 'U_Frame_Biochimic.pas' {Frame6: TFrame};
+  U_Frame_Biochimic in 'U_Frame_Biochimic.pas' {Frame6: TFrame},
+  U_Frame_Ordonnance in 'U_Frame_Ordonnance.pas' {Frame7: TFrame};
 
 {$R *.res}
 

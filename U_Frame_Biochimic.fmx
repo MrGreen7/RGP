@@ -21,18 +21,21 @@ object Frame6: TFrame6
         Anchors = [akLeft, akRight]
         TabOrder = 0
         MaxLength = 8
+        TextSettings.Font.Family = 'Candara'
         Position.X = 76.000000000000000000
         Position.Y = 16.000000000000000000
         Size.Width = 125.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        StyledSettings = [Size, Style, FontColor]
         object Label1: TLabel
           Align = Right
-          StyledSettings = [Family, Style, FontColor]
+          StyledSettings = [Style, FontColor]
           Position.X = 95.000000000000000000
           Size.Width = 30.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
           TextSettings.Font.Size = 11.000000000000000000
           TextSettings.HorzAlign = Center
           Text = 'U/L'
@@ -41,13 +44,14 @@ object Frame6: TFrame6
       end
       object Label2: TLabel
         Anchors = [akRight]
-        StyledSettings = [Family, Style, FontColor]
+        StyledSettings = [Style, FontColor]
         Hint = 'Value Usuelle - F : Female M : Male'
         Position.X = 202.000000000000000000
         Position.Y = 16.000000000000000000
         Size.Width = 60.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 11.000000000000000000
         TextSettings.HorzAlign = Center
         Text = 'F: until 31   M: until 38'
@@ -60,18 +64,21 @@ object Frame6: TFrame6
         Anchors = [akLeft, akRight]
         TabOrder = 2
         MaxLength = 8
+        TextSettings.Font.Family = 'Candara'
         Position.X = 76.000000000000000000
         Position.Y = 70.000000000000000000
         Size.Width = 125.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        StyledSettings = [Size, Style, FontColor]
         object Label3: TLabel
           Align = Right
-          StyledSettings = [Family, Style, FontColor]
+          StyledSettings = [Style, FontColor]
           Position.X = 95.000000000000000000
           Size.Width = 30.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
           TextSettings.Font.Size = 11.000000000000000000
           TextSettings.HorzAlign = Center
           Text = 'U/L'
@@ -80,13 +87,14 @@ object Frame6: TFrame6
       end
       object Label4: TLabel
         Anchors = [akRight]
-        StyledSettings = [Family, Style, FontColor]
+        StyledSettings = [Style, FontColor]
         Hint = 'Value Usuelle - C : Children A : Adult'
         Position.X = 202.000000000000000000
         Position.Y = 70.000000000000000000
         Size.Width = 60.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 11.000000000000000000
         TextSettings.HorzAlign = Center
         Text = 'C: until 650   A: 70-300'
@@ -99,18 +107,21 @@ object Frame6: TFrame6
         Anchors = [akLeft, akRight]
         TabOrder = 4
         MaxLength = 8
+        TextSettings.Font.Family = 'Candara'
         Position.X = 76.000000000000000000
         Position.Y = 124.000000000000000000
         Size.Width = 125.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        StyledSettings = [Size, Style, FontColor]
         object Label5: TLabel
           Align = Right
-          StyledSettings = [Family, Style, FontColor]
+          StyledSettings = [Style, FontColor]
           Position.X = 95.000000000000000000
           Size.Width = 30.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
           TextSettings.Font.Size = 11.000000000000000000
           TextSettings.HorzAlign = Center
           Text = '%'
@@ -119,13 +130,14 @@ object Frame6: TFrame6
       end
       object Label6: TLabel
         Anchors = [akRight]
-        StyledSettings = [Family, Style, FontColor]
+        StyledSettings = [Style, FontColor]
         Hint = 'Value Usuelle'
         Position.X = 202.000000000000000000
         Position.Y = 124.000000000000000000
         Size.Width = 60.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 11.000000000000000000
         TextSettings.HorzAlign = Center
         Text = '73-100'
@@ -138,18 +150,21 @@ object Frame6: TFrame6
         Anchors = [akLeft, akRight]
         TabOrder = 5
         MaxLength = 8
+        TextSettings.Font.Family = 'Candara'
         Position.X = 76.000000000000000000
         Position.Y = 178.000000000000000000
         Size.Width = 125.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        StyledSettings = [Size, Style, FontColor]
         object Label7: TLabel
           Align = Right
-          StyledSettings = [Family, Style, FontColor]
+          StyledSettings = [Style, FontColor]
           Position.X = 95.000000000000000000
           Size.Width = 30.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
           TextSettings.Font.Size = 11.000000000000000000
           TextSettings.HorzAlign = Center
           Text = '-'
@@ -176,18 +191,21 @@ object Frame6: TFrame6
         Anchors = [akLeft, akRight]
         TabOrder = 7
         MaxLength = 8
+        TextSettings.Font.Family = 'Candara'
         Position.X = 76.000000000000000000
         Position.Y = 232.000000000000000000
         Size.Width = 125.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        StyledSettings = [Size, Style, FontColor]
         object Label9: TLabel
           Align = Right
-          StyledSettings = [Family, Style, FontColor]
+          StyledSettings = [Style, FontColor]
           Position.X = 95.000000000000000000
           Size.Width = 30.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
           TextSettings.Font.Size = 11.000000000000000000
           TextSettings.HorzAlign = Center
           Text = 'mg/L'
@@ -196,13 +214,14 @@ object Frame6: TFrame6
       end
       object Label10: TLabel
         Anchors = [akRight]
-        StyledSettings = [Family, Style, FontColor]
+        StyledSettings = [Style, FontColor]
         Hint = 'Value Usuelle'
         Position.X = 202.000000000000000000
         Position.Y = 232.000000000000000000
         Size.Width = 60.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 11.000000000000000000
         TextSettings.HorzAlign = Center
         Text = '2-10'
@@ -212,13 +231,14 @@ object Frame6: TFrame6
       end
       object Label51: TLabel
         Anchors = [akLeft]
-        StyledSettings = [Family, Style, FontColor]
+        StyledSettings = [Style, FontColor]
         Hint = 'Glutamyl-Pyruvate-Transaminase'
         Position.X = 6.000000000000000000
         Position.Y = 16.000000000000000000
         Size.Width = 65.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 11.000000000000000000
         Text = 'TGP'
         ParentShowHint = False
@@ -227,13 +247,14 @@ object Frame6: TFrame6
       end
       object Label52: TLabel
         Anchors = [akLeft]
-        StyledSettings = [Family, Style, FontColor]
+        StyledSettings = [Style, FontColor]
         Hint = 'Les Phosphatases Alcalines'
         Position.X = 6.000000000000000000
         Position.Y = 70.000000000000000000
         Size.Width = 65.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 11.000000000000000000
         Text = 'PAL'
         ParentShowHint = False
@@ -242,25 +263,27 @@ object Frame6: TFrame6
       end
       object Label53: TLabel
         Anchors = [akLeft]
-        StyledSettings = [Family, Style, FontColor]
+        StyledSettings = [Style, FontColor]
         Position.X = 6.000000000000000000
         Position.Y = 124.000000000000000000
         Size.Width = 65.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 11.000000000000000000
         Text = 'TP'
         TabOrder = 9
       end
       object Label54: TLabel
         Anchors = [akLeft]
-        StyledSettings = [Family, Style, FontColor]
+        StyledSettings = [Style, FontColor]
         Hint = 'International Normalized Ratio'
         Position.X = 6.000000000000000000
         Position.Y = 178.000000000000000000
         Size.Width = 65.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 11.000000000000000000
         Text = 'INR'
         ParentShowHint = False
@@ -269,12 +292,13 @@ object Frame6: TFrame6
       end
       object Label55: TLabel
         Anchors = [akLeft]
-        StyledSettings = [Family, Style, FontColor]
+        StyledSettings = [Style, FontColor]
         Position.X = 6.000000000000000000
         Position.Y = 232.000000000000000000
         Size.Width = 65.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 11.000000000000000000
         Text = 'Bilirubine   T'
         TabOrder = 1
@@ -292,18 +316,21 @@ object Frame6: TFrame6
         Anchors = [akLeft, akRight]
         TabOrder = 0
         MaxLength = 8
+        TextSettings.Font.Family = 'Candara'
         Position.X = 76.000000000000000000
         Position.Y = 16.000000000000000000
         Size.Width = 125.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        StyledSettings = [Size, Style, FontColor]
         object Label11: TLabel
           Align = Right
-          StyledSettings = [Family, Style, FontColor]
+          StyledSettings = [Style, FontColor]
           Position.X = 95.000000000000000000
           Size.Width = 30.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
           TextSettings.Font.Size = 11.000000000000000000
           TextSettings.HorzAlign = Center
           Text = 'mg/L'
@@ -312,13 +339,14 @@ object Frame6: TFrame6
       end
       object Label12: TLabel
         Anchors = [akRight]
-        StyledSettings = [Family, Style, FontColor]
+        StyledSettings = [Style, FontColor]
         Hint = 'Value Usuelle'
         Position.X = 202.000000000000000000
         Position.Y = 16.000000000000000000
         Size.Width = 60.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 11.000000000000000000
         TextSettings.HorzAlign = Center
         Text = '0-02'
@@ -331,18 +359,21 @@ object Frame6: TFrame6
         Anchors = [akLeft, akRight]
         TabOrder = 2
         MaxLength = 8
+        TextSettings.Font.Family = 'Candara'
         Position.X = 76.000000000000000000
         Position.Y = 70.000000000000000000
         Size.Width = 125.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        StyledSettings = [Size, Style, FontColor]
         object Label13: TLabel
           Align = Right
-          StyledSettings = [Family, Style, FontColor]
+          StyledSettings = [Style, FontColor]
           Position.X = 95.000000000000000000
           Size.Width = 30.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
           TextSettings.Font.Size = 11.000000000000000000
           TextSettings.HorzAlign = Center
           Text = '-'
@@ -369,18 +400,21 @@ object Frame6: TFrame6
         Anchors = [akLeft, akRight]
         TabOrder = 4
         MaxLength = 8
+        TextSettings.Font.Family = 'Candara'
         Position.X = 76.000000000000000000
         Position.Y = 124.000000000000000000
         Size.Width = 125.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        StyledSettings = [Size, Style, FontColor]
         object Label15: TLabel
           Align = Right
-          StyledSettings = [Family, Style, FontColor]
+          StyledSettings = [Style, FontColor]
           Position.X = 95.000000000000000000
           Size.Width = 30.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
           TextSettings.Font.Size = 11.000000000000000000
           TextSettings.HorzAlign = Center
           Text = 'mg/L'
@@ -389,13 +423,14 @@ object Frame6: TFrame6
       end
       object Label16: TLabel
         Anchors = [akRight]
-        StyledSettings = [Family, Style, FontColor]
+        StyledSettings = [Style, FontColor]
         Hint = 'Value Usuelle'
         Position.X = 202.000000000000000000
         Position.Y = 124.000000000000000000
         Size.Width = 60.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 11.000000000000000000
         TextSettings.HorzAlign = Center
         Text = '80-106'
@@ -408,18 +443,21 @@ object Frame6: TFrame6
         Anchors = [akLeft, akRight]
         TabOrder = 5
         MaxLength = 8
+        TextSettings.Font.Family = 'Candara'
         Position.X = 76.000000000000000000
         Position.Y = 178.000000000000000000
         Size.Width = 125.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        StyledSettings = [Size, Style, FontColor]
         object Label17: TLabel
           Align = Right
-          StyledSettings = [Family, Style, FontColor]
+          StyledSettings = [Style, FontColor]
           Position.X = 95.000000000000000000
           Size.Width = 30.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
           TextSettings.Font.Size = 11.000000000000000000
           TextSettings.HorzAlign = Center
           Text = 'mg/L'
@@ -428,13 +466,14 @@ object Frame6: TFrame6
       end
       object Label18: TLabel
         Anchors = [akRight]
-        StyledSettings = [Family, Style, FontColor]
+        StyledSettings = [Style, FontColor]
         Hint = 'Value Usuelle'
         Position.X = 202.000000000000000000
         Position.Y = 178.000000000000000000
         Size.Width = 60.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 11.000000000000000000
         TextSettings.HorzAlign = Center
         Text = '35-50'
@@ -444,48 +483,52 @@ object Frame6: TFrame6
       end
       object Label56: TLabel
         Anchors = [akLeft]
-        StyledSettings = [Family, Style, FontColor]
+        StyledSettings = [Style, FontColor]
         Position.X = 6.000000000000000000
         Position.Y = 16.000000000000000000
         Size.Width = 65.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 11.000000000000000000
         Text = 'Bilirubine   D'
         TabOrder = 10
       end
       object Label57: TLabel
         Anchors = [akLeft]
-        StyledSettings = [Family, Style, FontColor]
+        StyledSettings = [Style, FontColor]
         Position.X = 6.000000000000000000
         Position.Y = 70.000000000000000000
         Size.Width = 65.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 11.000000000000000000
         Text = 'ASLO'
         TabOrder = 8
       end
       object Label58: TLabel
         Anchors = [akLeft]
-        StyledSettings = [Family, Style, FontColor]
+        StyledSettings = [Style, FontColor]
         Position.X = 6.000000000000000000
         Position.Y = 124.000000000000000000
         Size.Width = 65.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 11.000000000000000000
         Text = 'Calc'#233'mie'
         TabOrder = 6
       end
       object Label59: TLabel
         Anchors = [akLeft]
-        StyledSettings = [Family, Style, FontColor]
+        StyledSettings = [Style, FontColor]
         Position.X = 6.000000000000000000
         Position.Y = 178.000000000000000000
         Size.Width = 75.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 11.000000000000000000
         Text = 'Albumin'#233'mie'
         TabOrder = 1
@@ -502,18 +545,21 @@ object Frame6: TFrame6
         Anchors = [akLeft, akRight]
         TabOrder = 0
         MaxLength = 8
+        TextSettings.Font.Family = 'Candara'
         Position.X = 76.000000000000000000
         Position.Y = 16.000000000000000000
         Size.Width = 125.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        StyledSettings = [Size, Style, FontColor]
         object Label21: TLabel
           Align = Right
-          StyledSettings = [Family, Style, FontColor]
+          StyledSettings = [Style, FontColor]
           Position.X = 95.000000000000000000
           Size.Width = 30.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
           TextSettings.Font.Size = 11.000000000000000000
           TextSettings.HorzAlign = Center
           Text = 'g/L'
@@ -522,13 +568,14 @@ object Frame6: TFrame6
       end
       object Label22: TLabel
         Anchors = [akRight]
-        StyledSettings = [Family, Style, FontColor]
+        StyledSettings = [Style, FontColor]
         Hint = 'Value Usuelle'
         Position.X = 202.000000000000000000
         Position.Y = 16.000000000000000000
         Size.Width = 60.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 11.000000000000000000
         TextSettings.HorzAlign = Center
         Text = '0.70-1.20'
@@ -541,18 +588,21 @@ object Frame6: TFrame6
         Anchors = [akLeft, akRight]
         TabOrder = 2
         MaxLength = 8
+        TextSettings.Font.Family = 'Candara'
         Position.X = 76.000000000000000000
         Position.Y = 70.000000000000000000
         Size.Width = 125.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        StyledSettings = [Size, Style, FontColor]
         object Label23: TLabel
           Align = Right
-          StyledSettings = [Family, Style, FontColor]
+          StyledSettings = [Style, FontColor]
           Position.X = 95.000000000000000000
           Size.Width = 30.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
           TextSettings.Font.Size = 11.000000000000000000
           TextSettings.HorzAlign = Center
           Text = 'g/L'
@@ -561,13 +611,14 @@ object Frame6: TFrame6
       end
       object Label24: TLabel
         Anchors = [akRight]
-        StyledSettings = [Family, Style, FontColor]
+        StyledSettings = [Style, FontColor]
         Hint = 'Value Usuelle'
         Position.X = 202.000000000000000000
         Position.Y = 70.000000000000000000
         Size.Width = 60.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 11.000000000000000000
         TextSettings.HorzAlign = Center
         Text = '0.15-.40'
@@ -580,18 +631,21 @@ object Frame6: TFrame6
         Anchors = [akLeft, akRight]
         TabOrder = 4
         MaxLength = 8
+        TextSettings.Font.Family = 'Candara'
         Position.X = 76.000000000000000000
         Position.Y = 124.000000000000000000
         Size.Width = 125.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        StyledSettings = [Size, Style, FontColor]
         object Label25: TLabel
           Align = Right
-          StyledSettings = [Family, Style, FontColor]
+          StyledSettings = [Style, FontColor]
           Position.X = 95.000000000000000000
           Size.Width = 30.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
           TextSettings.Font.Size = 11.000000000000000000
           TextSettings.HorzAlign = Center
           Text = 'mg/L'
@@ -600,13 +654,14 @@ object Frame6: TFrame6
       end
       object Label26: TLabel
         Anchors = [akRight]
-        StyledSettings = [Family, Style, FontColor]
+        StyledSettings = [Style, FontColor]
         Hint = 'Value Usuelle'
         Position.X = 202.000000000000000000
         Position.Y = 124.000000000000000000
         Size.Width = 60.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 11.000000000000000000
         TextSettings.HorzAlign = Center
         Text = '07-14'
@@ -619,18 +674,21 @@ object Frame6: TFrame6
         Anchors = [akLeft, akRight]
         TabOrder = 6
         MaxLength = 8
+        TextSettings.Font.Family = 'Candara'
         Position.X = 76.000000000000000000
         Position.Y = 178.000000000000000000
         Size.Width = 125.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        StyledSettings = [Size, Style, FontColor]
         object Label27: TLabel
           Align = Right
-          StyledSettings = [Family, Style, FontColor]
+          StyledSettings = [Style, FontColor]
           Position.X = 95.000000000000000000
           Size.Width = 30.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
           TextSettings.Font.Size = 11.000000000000000000
           TextSettings.HorzAlign = Center
           Text = 'g/L'
@@ -639,13 +697,14 @@ object Frame6: TFrame6
       end
       object Label28: TLabel
         Anchors = [akRight]
-        StyledSettings = [Family, Style, FontColor]
+        StyledSettings = [Style, FontColor]
         Hint = 'Value Usuelle'
         Position.X = 202.000000000000000000
         Position.Y = 178.000000000000000000
         Size.Width = 60.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 11.000000000000000000
         TextSettings.HorzAlign = Center
         Text = '1.40-2.20'
@@ -658,18 +717,21 @@ object Frame6: TFrame6
         Anchors = [akLeft, akRight]
         TabOrder = 7
         MaxLength = 8
+        TextSettings.Font.Family = 'Candara'
         Position.X = 76.000000000000000000
         Position.Y = 232.000000000000000000
         Size.Width = 125.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        StyledSettings = [Size, Style, FontColor]
         object Label29: TLabel
           Align = Right
-          StyledSettings = [Family, Style, FontColor]
+          StyledSettings = [Style, FontColor]
           Position.X = 95.000000000000000000
           Size.Width = 30.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
           TextSettings.Font.Size = 11.000000000000000000
           TextSettings.HorzAlign = Center
           Text = 'g/L'
@@ -678,13 +740,14 @@ object Frame6: TFrame6
       end
       object Label30: TLabel
         Anchors = [akRight]
-        StyledSettings = [Family, Style, FontColor]
+        StyledSettings = [Style, FontColor]
         Hint = 'Value Usuelle'
         Position.X = 202.000000000000000000
         Position.Y = 232.000000000000000000
         Size.Width = 60.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 11.000000000000000000
         TextSettings.HorzAlign = Center
         Text = '1.10-1.50'
@@ -694,60 +757,65 @@ object Frame6: TFrame6
       end
       object Label41: TLabel
         Anchors = [akLeft]
-        StyledSettings = [Family, Style, FontColor]
+        StyledSettings = [Style, FontColor]
         Position.X = 6.000000000000000000
         Position.Y = 16.000000000000000000
         Size.Width = 65.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 11.000000000000000000
         Text = 'Glyc'#233'mie'
         TabOrder = 13
       end
       object Label42: TLabel
         Anchors = [akLeft]
-        StyledSettings = [Family, Style, FontColor]
+        StyledSettings = [Style, FontColor]
         Position.X = 6.000000000000000000
         Position.Y = 70.000000000000000000
         Size.Width = 65.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 11.000000000000000000
         Text = 'Ur'#233'e sanguine'
         TabOrder = 11
       end
       object Label43: TLabel
         Anchors = [akLeft]
-        StyledSettings = [Family, Style, FontColor]
+        StyledSettings = [Style, FontColor]
         Position.X = 6.000000000000000000
         Position.Y = 124.000000000000000000
         Size.Width = 65.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 11.000000000000000000
         Text = 'Cr'#233'atinine'
         TabOrder = 9
       end
       object Label44: TLabel
         Anchors = [akLeft]
-        StyledSettings = [Family, Style, FontColor]
+        StyledSettings = [Style, FontColor]
         Position.X = 6.000000000000000000
         Position.Y = 178.000000000000000000
         Size.Width = 65.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 11.000000000000000000
         Text = 'Cholest'#233'rol'
         TabOrder = 5
       end
       object Label45: TLabel
         Anchors = [akLeft]
-        StyledSettings = [Family, Style, FontColor]
+        StyledSettings = [Style, FontColor]
         Position.X = 6.000000000000000000
         Position.Y = 232.000000000000000000
         Size.Width = 75.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 11.000000000000000000
         Text = 'Triglyc'#233'rides'
         TabOrder = 1
@@ -765,18 +833,21 @@ object Frame6: TFrame6
         Anchors = [akLeft, akRight]
         TabOrder = 0
         MaxLength = 8
+        TextSettings.Font.Family = 'Candara'
         Position.X = 76.000000000000000000
         Position.Y = 16.000000000000000000
         Size.Width = 125.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        StyledSettings = [Size, Style, FontColor]
         object Label31: TLabel
           Align = Right
-          StyledSettings = [Family, Style, FontColor]
+          StyledSettings = [Style, FontColor]
           Position.X = 95.000000000000000000
           Size.Width = 30.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
           TextSettings.Font.Size = 11.000000000000000000
           TextSettings.HorzAlign = Center
           Text = 'g/L'
@@ -785,13 +856,14 @@ object Frame6: TFrame6
       end
       object Label32: TLabel
         Anchors = [akRight]
-        StyledSettings = [Family, Style, FontColor]
+        StyledSettings = [Style, FontColor]
         Hint = 'Value Usuelle'
         Position.X = 202.000000000000000000
         Position.Y = 16.000000000000000000
         Size.Width = 60.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 11.000000000000000000
         TextSettings.HorzAlign = Center
         Text = 'INF a 0.35'
@@ -804,18 +876,21 @@ object Frame6: TFrame6
         Anchors = [akLeft, akRight]
         TabOrder = 2
         MaxLength = 8
+        TextSettings.Font.Family = 'Candara'
         Position.X = 76.000000000000000000
         Position.Y = 70.000000000000000000
         Size.Width = 125.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        StyledSettings = [Size, Style, FontColor]
         object Label33: TLabel
           Align = Right
-          StyledSettings = [Family, Style, FontColor]
+          StyledSettings = [Style, FontColor]
           Position.X = 95.000000000000000000
           Size.Width = 30.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
           TextSettings.Font.Size = 11.000000000000000000
           TextSettings.HorzAlign = Center
           Text = 'g/L'
@@ -824,13 +899,14 @@ object Frame6: TFrame6
       end
       object Label34: TLabel
         Anchors = [akRight]
-        StyledSettings = [Family, Style, FontColor]
+        StyledSettings = [Style, FontColor]
         Hint = 'Value Usuelle'
         Position.X = 202.000000000000000000
         Position.Y = 70.000000000000000000
         Size.Width = 60.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 11.000000000000000000
         TextSettings.HorzAlign = Center
         Text = 'INF a 0.30'
@@ -843,18 +919,21 @@ object Frame6: TFrame6
         Anchors = [akLeft, akRight]
         TabOrder = 4
         MaxLength = 8
+        TextSettings.Font.Family = 'Candara'
         Position.X = 76.000000000000000000
         Position.Y = 124.000000000000000000
         Size.Width = 125.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        StyledSettings = [Size, Style, FontColor]
         object Label35: TLabel
           Align = Right
-          StyledSettings = [Family, Style, FontColor]
+          StyledSettings = [Style, FontColor]
           Position.X = 95.000000000000000000
           Size.Width = 30.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
           TextSettings.Font.Size = 11.000000000000000000
           TextSettings.HorzAlign = Center
           Text = 'mg/L'
@@ -863,16 +942,17 @@ object Frame6: TFrame6
       end
       object Label36: TLabel
         Anchors = [akRight]
-        StyledSettings = [Family, Style, FontColor]
+        StyledSettings = [Style, FontColor]
         Hint = 'Value Usuelle  - F : Female M : Male'
         Position.X = 202.000000000000000000
         Position.Y = 124.000000000000000000
         Size.Width = 60.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 11.000000000000000000
         TextSettings.HorzAlign = Center
-        Text = 'F : 25-60   M: 37-70'
+        Text = 'F : 25-60     M: 37-70'
         ParentShowHint = False
         ShowHint = True
         TabOrder = 10
@@ -882,18 +962,21 @@ object Frame6: TFrame6
         Anchors = [akLeft, akRight]
         TabOrder = 6
         MaxLength = 8
+        TextSettings.Font.Family = 'Candara'
         Position.X = 76.000000000000000000
         Position.Y = 178.000000000000000000
         Size.Width = 125.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        StyledSettings = [Size, Style, FontColor]
         object Label37: TLabel
           Align = Right
-          StyledSettings = [Family, Style, FontColor]
+          StyledSettings = [Style, FontColor]
           Position.X = 95.000000000000000000
           Size.Width = 30.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
           TextSettings.Font.Size = 11.000000000000000000
           TextSettings.HorzAlign = Center
           Text = 'mg/L'
@@ -902,13 +985,14 @@ object Frame6: TFrame6
       end
       object Label38: TLabel
         Anchors = [akRight]
-        StyledSettings = [Family, Style, FontColor]
+        StyledSettings = [Style, FontColor]
         Hint = 'Value Usuelle'
         Position.X = 202.000000000000000000
         Position.Y = 178.000000000000000000
         Size.Width = 60.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 11.000000000000000000
         TextSettings.HorzAlign = Center
         Text = '< 6'
@@ -921,18 +1005,21 @@ object Frame6: TFrame6
         Anchors = [akLeft, akRight]
         TabOrder = 7
         MaxLength = 8
+        TextSettings.Font.Family = 'Candara'
         Position.X = 76.000000000000000000
         Position.Y = 232.000000000000000000
         Size.Width = 125.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        StyledSettings = [Size, Style, FontColor]
         object Label39: TLabel
           Align = Right
-          StyledSettings = [Family, Style, FontColor]
+          StyledSettings = [Style, FontColor]
           Position.X = 95.000000000000000000
           Size.Width = 30.000000000000000000
           Size.Height = 32.000000000000000000
           Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Candara'
           TextSettings.Font.Size = 11.000000000000000000
           TextSettings.HorzAlign = Center
           Text = 'U/L'
@@ -941,13 +1028,14 @@ object Frame6: TFrame6
       end
       object Label40: TLabel
         Anchors = [akRight]
-        StyledSettings = [Family, Style, FontColor]
+        StyledSettings = [Style, FontColor]
         Hint = 'Value Usuelle - F : Female M : Male'
         Position.X = 202.000000000000000000
         Position.Y = 232.000000000000000000
         Size.Width = 60.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 11.000000000000000000
         TextSettings.HorzAlign = Center
         Text = 'F: until 31   M: until 38'
@@ -957,13 +1045,14 @@ object Frame6: TFrame6
       end
       object Label46: TLabel
         Anchors = [akLeft]
-        StyledSettings = [Family, Style, FontColor]
+        StyledSettings = [Style, FontColor]
         Hint = 'Bon cholest'#233'rol (HDL)'
         Position.X = 6.000000000000000000
         Position.Y = 16.000000000000000000
         Size.Width = 65.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 11.000000000000000000
         Text = 'HDL'
         ParentShowHint = False
@@ -972,13 +1061,14 @@ object Frame6: TFrame6
       end
       object Label47: TLabel
         Anchors = [akLeft]
-        StyledSettings = [Family, Style, FontColor]
+        StyledSettings = [Style, FontColor]
         Hint = 'Mauvais cholest'#233'rol (HDL)'
         Position.X = 6.000000000000000000
         Position.Y = 70.000000000000000000
         Size.Width = 65.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 11.000000000000000000
         Text = 'LDL'
         ParentShowHint = False
@@ -987,25 +1077,27 @@ object Frame6: TFrame6
       end
       object Label48: TLabel
         Anchors = [akLeft]
-        StyledSettings = [Family, Style, FontColor]
+        StyledSettings = [Style, FontColor]
         Position.X = 6.000000000000000000
         Position.Y = 124.000000000000000000
         Size.Width = 65.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 11.000000000000000000
         Text = 'Acide urique'
         TabOrder = 9
       end
       object Label49: TLabel
         Anchors = [akLeft]
-        StyledSettings = [Family, Style, FontColor]
+        StyledSettings = [Style, FontColor]
         Hint = 'Prot'#233'ine C r'#233'active (CRP)'
         Position.X = 6.000000000000000000
         Position.Y = 178.000000000000000000
         Size.Width = 65.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 11.000000000000000000
         Text = 'CRP'
         ParentShowHint = False
@@ -1014,13 +1106,14 @@ object Frame6: TFrame6
       end
       object Label50: TLabel
         Anchors = [akLeft]
-        StyledSettings = [Family, Style, FontColor]
+        StyledSettings = [Style, FontColor]
         Hint = 'Glutamyl-Oxaloac'#233'tate-Transf'#233'rase'
         Position.X = 6.000000000000000000
         Position.Y = 232.000000000000000000
         Size.Width = 65.000000000000000000
         Size.Height = 32.000000000000000000
         Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Candara'
         TextSettings.Font.Size = 11.000000000000000000
         Text = 'TGO'
         ParentShowHint = False
