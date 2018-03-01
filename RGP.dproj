@@ -389,6 +389,22 @@
             <FormType>fmx</FormType>
             <DesignClass>TFrame</DesignClass>
         </DCCReference>
+        <DCCReference Include="U_Biochimie.pas">
+            <Form>Biochimie</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="U_Serologie.pas">
+            <Form>Serologie</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="U_Hemogramme.pas">
+            <Form>Hemogramme</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="U_Hemostase.pas">
+            <Form>Hemostase</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

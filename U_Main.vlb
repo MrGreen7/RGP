@@ -850,10 +850,6 @@ Visible=False
 Coordinates=2290,1254,71,36
 Visible=False
 
-[T_Ordo]
-Coordinates=2222,1254,58,36
-Visible=False
-
 [Frame_Principale]
 Coordinates=2097,1254,115,36
 Visible=False
@@ -1226,7 +1222,7 @@ Coordinates=2181,10,60,36
 Visible=False
 
 []
-Coordinates=1511,1346,128,36
+Coordinates=2222,1254,58,36
 Visible=False
 
 [StringGrid2]
@@ -3013,4 +3009,7 @@ Coordinates=2310,1848,67,36
 
 [ColorAnimation32]
 Coordinates=4932,881,117,36
+
+[DataModule1.FDQ_Ordonnance]
+Visible=False
 

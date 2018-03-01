@@ -42,7 +42,6 @@ type
     T_Patient: TTreeViewItem;
     Patient_Recherche: TTreeViewItem;
     T_RDV: TTreeViewItem;
-    T_Ordo: TTreeViewItem;
     New_Patient: TTreeViewItem;
     StringGrid5: TStringGrid;
     Panel9: TPanel;
@@ -365,6 +364,20 @@ type
     Edit_Search_Wilaya: TEdit;
     Frame_Ordonnance: TFrame7;
     Frame_EP_Ordonnance: TFrame7;
+    TreeViewItem1: TTreeViewItem;
+    TreeViewItem2: TTreeViewItem;
+    TreeViewItem3: TTreeViewItem;
+    TreeViewItem4: TTreeViewItem;
+    TreeViewItem5: TTreeViewItem;
+    TreeViewItem6: TTreeViewItem;
+    Line20: TLine;
+    Line21: TLine;
+    Line22: TLine;
+    Line23: TLine;
+    Line24: TLine;
+    Line25: TLine;
+    Line26: TLine;
+    Line27: TLine;
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure P_AccueilClick(Sender: TObject);
     procedure PatientClick(Sender: TObject);
@@ -373,7 +386,6 @@ type
     procedure T_AccueilClick(Sender: TObject);
     procedure T_PatientClick(Sender: TObject);
     procedure T_RDVClick(Sender: TObject);
-    procedure T_OrdoClick(Sender: TObject);
     procedure Recherche_PatientClick(Sender: TObject);
     procedure Nouveau_PatientClick(Sender: TObject);
     procedure Patient_RechercheClick(Sender: TObject);
@@ -443,12 +455,14 @@ type
     procedure StringGrid7CellDblClick(const Column: TColumn;
       const Row: Integer);
     procedure Frame_EP_PrincipaleButton2Click(Sender: TObject);
+    procedure Frame_OrdonnanceButton2Click(Sender: TObject);
+    procedure TreeViewItem6Click(Sender: TObject);
   private
     { Private declarations }
     WidthX, HeightX: Integer;
   public
     { Public declarations }
-    Patient_ID: String;
+    Patient_ID, IDs: String;
   end;
 
 var
@@ -487,7 +501,8 @@ Begin
   Begin
     Query.SQl.Clear;
     Query.SQl.Text :=
-      ('Select Patient_ID, Nom, Prenom, Date_de_Nai, Date_de_Entre, Type, Sexe, Etat_Civil, Wilaya, Commune, Adresse, Mobile, Email, Groupage, Telephone, Fax From Patient '+Where+TypeT+AndT+Wilaya+Andt+Commune+';');
+      ('Select Patient_ID, Nom, Prenom, Date_de_Nai, Date_de_Entre, Type, Sexe, Etat_Civil, Wilaya, Commune, Adresse, Mobile, Email, Groupage, Telephone, Fax From Patient '
+      + Where + TypeT + andt + Wilaya + andt + Commune + ';');
     if (Strbol = True) then
       Query.Active := False
     Else
@@ -536,7 +551,7 @@ begin
   Frame_EP_Hemostase.OnResize(Frame_EP_Hemostase);
   Frame_EP_Biochimic.OnResize(Frame_EP_Biochimic);
   Frame_EP_Serologie.OnResize(Frame_EP_Serologie);
-  //Frame_EP_Ordonnance.OnResize(Frame_EP_Ordonnance);
+  // Frame_EP_Ordonnance.OnResize(Frame_EP_Ordonnance);
 end;
 
 procedure TMain.FloatAnimation2Finish(Sender: TObject);
@@ -785,6 +800,12 @@ begin
   H_Gen_Patient.IsSelected := True;
 end;
 
+procedure TMain.Frame_OrdonnanceButton2Click(Sender: TObject);
+begin
+  inherited;
+  Frame_Ordonnance.Insert;
+end;
+
 procedure TMain.Frame_PrincipaleButton1Click(Sender: TObject);
 Var
   ID: String;
@@ -809,6 +830,7 @@ begin
     Frame_Hemostase.Insert(ID);
     Frame_Serologie.Insert(ID);
     Frame_Biochimic.Insert(ID);
+    Frame_Ordonnance.ID(ID);
   end;
 end;
 
@@ -1038,6 +1060,7 @@ begin
     Frame_EP_Hemostase.OnDataLoad;
     Frame_EP_Serologie.OnDataLoad;
     Frame_EP_Biochimic.OnDataLoad;
+    Frame_EP_Ordonnance.OnDataLoad;
   End
   else
   Begin
@@ -1063,6 +1086,7 @@ begin
     GroupBox1.Height := (GroupBox1.Height - 78);
     GroupBox2.Visible := False;
     GroupBox3.Visible := False;
+    GroupBox4.Visible := False;
     Label76.RotationAngle := 0;
     Layout2.Height := (Layout2.Height - 57);
   End
@@ -1072,6 +1096,7 @@ begin
     GroupBox1.Height := (GroupBox1.Height + 78);
     GroupBox2.Visible := True;
     GroupBox3.Visible := True;
+    GroupBox4.Visible := True;
     Label76.RotationAngle := 180;
     Layout2.Height := (Layout2.Height + 57);
   End;
@@ -1131,7 +1156,7 @@ begin
   Frame_Hemostase.OnResize(Frame_Hemostase);
   Frame_Biochimic.OnResize(Frame_Biochimic);
   Frame_Serologie.OnResize(Frame_Serologie);
-  //Frame_Ordonnance.OnResize(Frame_Ordonnance);
+  // Frame_Ordonnance.OnResize(Frame_Ordonnance);
 end;
 
 procedure TMain.OrdonnanceClick(Sender: TObject);
@@ -1223,18 +1248,19 @@ begin
   Label65Click(self);
 end;
 
+procedure TMain.TreeViewItem6Click(Sender: TObject);
+begin
+  inherited;
+  Ordonnance.Visible := True;
+  Ordonnance.OnClick(Ordonnance);
+  Ordonnance.IsSelected := True;
+end;
+
 procedure TMain.T_AccueilClick(Sender: TObject);
 begin
   P_Accueil.Visible := True;
   P_Accueil.OnClick(P_Accueil);
   P_Accueil.IsSelected := True;
-end;
-
-procedure TMain.T_OrdoClick(Sender: TObject);
-begin
-  Ordonnance.Visible := True;
-  Ordonnance.OnClick(Ordonnance);
-  Ordonnance.IsSelected := True;
 end;
 
 procedure TMain.T_PatientClick(Sender: TObject);

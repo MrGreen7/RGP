@@ -90,8 +90,16 @@ begin
         IP_Edit3.Text := FieldByName('Prenom').AsString;
         IP_DateEdit1.Text := FieldByName('Date_de_Nai').AsString;
         IP_DateEdit2.Text := FieldByName('date_de_Entre').AsString;
-        IP_ComboBox1.ItemIndex := FieldByName('Etat_Civil_Index').Value;
-        IP_ComboBox2.ItemIndex := FieldByName('Sexe_Index').Value;
+        try
+          IP_ComboBox1.ItemIndex := FieldByName('Etat_Civil_Index').Value;
+        except
+          on E: Exception do
+        end;
+        try
+          IP_ComboBox2.ItemIndex := FieldByName('Sexe_Index').Value;
+        except
+          on E: Exception do
+        end;
         IP_ComboBox3.ItemIndex := FieldByName('Type_Index').Value;
         Close;
         Active := False;

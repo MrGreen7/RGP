@@ -26,7 +26,7 @@ object Main: TMain
     Size.Height = 161.000000000000000000
     Size.PlatformDefault = False
     StyleLookup = 'tabcontrolstyle'
-    TabIndex = 2
+    TabIndex = 1
     TabOrder = 0
     TabPosition = PlatformDefault
     Sizes = (
@@ -508,7 +508,7 @@ object Main: TMain
       TextSettings.Font.Family = 'FontAwesome'
       TextSettings.Font.Size = 16.000000000000000000
       StyledSettings = [Style, FontColor]
-      IsSelected = False
+      IsSelected = True
       Size.Width = 89.000000000000000000
       Size.Height = 30.000000000000000000
       Size.PlatformDefault = False
@@ -831,13 +831,14 @@ object Main: TMain
       TextSettings.Font.Family = 'FontAwesome'
       TextSettings.Font.Size = 16.000000000000000000
       StyledSettings = [Size, Style, FontColor]
-      IsSelected = True
+      IsSelected = False
       Size.Width = 94.000000000000000000
       Size.Height = 30.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = ''
       TabOrder = 0
       Text = #61918' G'#233'n'#233'ral'
+      Visible = False
       ExplicitSize.cx = 94.000000000000000000
       ExplicitSize.cy = 30.000000000000000000
       object Panel10: TPanel
@@ -1646,6 +1647,42 @@ object Main: TMain
             end
           end
         end
+        object Line24: TLine
+          LineType = Left
+          Opacity = 0.800000011920928900
+          Position.X = 128.000000000000000000
+          Position.Y = -6.000000000000000000
+          Size.Width = 9.000000000000000000
+          Size.Height = 137.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object Line25: TLine
+          LineType = Left
+          Opacity = 0.800000011920928900
+          Position.X = 257.000000000000000000
+          Position.Y = -6.000000000000000000
+          Size.Width = 9.000000000000000000
+          Size.Height = 137.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object Line26: TLine
+          LineType = Left
+          Opacity = 0.800000011920928900
+          Position.X = 387.000000000000000000
+          Position.Y = -6.000000000000000000
+          Size.Width = 9.000000000000000000
+          Size.Height = 137.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object Line27: TLine
+          LineType = Left
+          Opacity = 0.800000011920928900
+          Position.X = 515.000000000000000000
+          Position.Y = -6.000000000000000000
+          Size.Width = 9.000000000000000000
+          Size.Height = 137.000000000000000000
+          Size.PlatformDefault = False
+        end
       end
     end
     object H_Gen_Ordo: TTabItem
@@ -1940,6 +1977,7 @@ object Main: TMain
       StyleLookup = ''
       TabOrder = 0
       Text = #61918' G'#233'n'#233'ral'
+      Visible = False
       ExplicitSize.cx = 94.000000000000000000
       ExplicitSize.cy = 30.000000000000000000
       object Panel12: TPanel
@@ -2071,6 +2109,7 @@ object Main: TMain
               AnimationType = InOut
               Delay = 0.200000002980232200
               Duration = 0.500000000000000000
+              Inverse = True
               PropertyName = 'TextSettings.FontColor'
               StartValue = xFFEC4E20
               StopValue = xFF0197F6
@@ -2205,6 +2244,42 @@ object Main: TMain
             end
           end
         end
+        object Line20: TLine
+          LineType = Left
+          Opacity = 0.800000011920928900
+          Position.X = 128.000000000000000000
+          Position.Y = -6.000000000000000000
+          Size.Width = 9.000000000000000000
+          Size.Height = 137.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object Line21: TLine
+          LineType = Left
+          Opacity = 0.800000011920928900
+          Position.X = 257.000000000000000000
+          Position.Y = -6.000000000000000000
+          Size.Width = 9.000000000000000000
+          Size.Height = 137.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object Line22: TLine
+          LineType = Left
+          Opacity = 0.800000011920928900
+          Position.X = 387.000000000000000000
+          Position.Y = -6.000000000000000000
+          Size.Width = 9.000000000000000000
+          Size.Height = 137.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object Line23: TLine
+          LineType = Left
+          Opacity = 0.800000011920928900
+          Position.X = 515.000000000000000000
+          Position.Y = -6.000000000000000000
+          Size.Width = 9.000000000000000000
+          Size.Height = 137.000000000000000000
+          Size.PlatformDefault = False
+        end
       end
     end
     object H_Gen_NouveauP: TTabItem
@@ -2221,6 +2296,7 @@ object Main: TMain
       StyleLookup = ''
       TabOrder = 0
       Text = #61918' G'#233'n'#233'ral'
+      Visible = False
       ExplicitSize.cx = 94.000000000000000000
       ExplicitSize.cy = 30.000000000000000000
       object Panel13: TPanel
@@ -2552,21 +2628,69 @@ object Main: TMain
             IsExpanded = False
             IsSelected = False
             TabOrder = 2
-            Text = #61555' Rendez vous patenits'
+            Text = #61555' Rendez vous pateints'
             OnClick = T_RDVClick
           end
-          object T_Ordo: TTreeViewItem
-            Cursor = crHandPoint
+          object TreeViewItem1: TTreeViewItem
             StyledSettings = [Size, Style]
             TextSettings.Font.Family = 'FontAwesome'
-            TextSettings.Font.Size = 16.000000000000000000
-            TextSettings.FontColor = xFF5E0D60
+            TextSettings.FontColor = xFFB36A46
             IsChecked = False
-            IsExpanded = False
+            IsExpanded = True
             IsSelected = False
             TabOrder = 3
-            Text = #61680' Ordonnance'
-            OnClick = T_OrdoClick
+            Text = 'Analyses'
+            object TreeViewItem6: TTreeViewItem
+              StyledSettings = [Size, Style]
+              TextSettings.Font.Family = 'FontAwesome'
+              TextSettings.FontColor = xFF5E0D60
+              IsChecked = False
+              IsExpanded = False
+              IsSelected = False
+              TabOrder = 4
+              Text = #61680' Ordonnance'
+              OnClick = TreeViewItem6Click
+            end
+            object TreeViewItem2: TTreeViewItem
+              StyledSettings = [Size, Style]
+              TextSettings.Font.Family = 'FontAwesome'
+              TextSettings.FontColor = xFF6F1A07
+              IsChecked = False
+              IsExpanded = False
+              IsSelected = False
+              TabOrder = 0
+              Text = #61681' Hemogramme'
+            end
+            object TreeViewItem3: TTreeViewItem
+              StyledSettings = [Size, Style]
+              TextSettings.Font.Family = 'FontAwesome'
+              TextSettings.FontColor = xFF3D2B3D
+              IsChecked = False
+              IsExpanded = False
+              IsSelected = False
+              TabOrder = 1
+              Text = #61635' Biochimic'
+            end
+            object TreeViewItem4: TTreeViewItem
+              StyledSettings = [Size, Style]
+              TextSettings.Font.Family = 'FontAwesome'
+              TextSettings.FontColor = xFF83781B
+              IsChecked = False
+              IsExpanded = False
+              IsSelected = False
+              TabOrder = 2
+              Text = #61506' Serologie'
+            end
+            object TreeViewItem5: TTreeViewItem
+              StyledSettings = [Size, Style]
+              TextSettings.Font.Family = 'FontAwesome'
+              TextSettings.FontColor = xFF9055A2
+              IsChecked = False
+              IsExpanded = False
+              IsSelected = True
+              TabOrder = 3
+              Text = #61982' Hemostase | VS'
+            end
           end
         end
       end
@@ -2578,7 +2702,7 @@ object Main: TMain
     Size.Height = 531.000000000000000000
     Size.PlatformDefault = False
     StyleLookup = 'tabcontrolstyle'
-    TabIndex = 6
+    TabIndex = 4
     TabOrder = 2
     TabPosition = PlatformDefault
     Sizes = (
@@ -2921,6 +3045,7 @@ object Main: TMain
       StyleLookup = ''
       TabOrder = 0
       Text = #61981' Patient'
+      Visible = False
       OnClick = PatientClick
       ExplicitSize.cx = 88.000000000000000000
       ExplicitSize.cy = 30.000000000000000000
@@ -3076,6 +3201,7 @@ object Main: TMain
       StyleLookup = ''
       TabOrder = 0
       Text = #61442' Recherche patient'
+      Visible = False
       OnClick = Recherche_PatientClick
       ExplicitSize.cx = 167.000000000000000000
       ExplicitSize.cy = 30.000000000000000000
@@ -3318,6 +3444,7 @@ object Main: TMain
       StyleLookup = ''
       TabOrder = 0
       Text = #61870' Nouveau patient'
+      Visible = False
       OnClick = Nouveau_PatientClick
       OnResize = Nouveau_PatientResize
       ExplicitSize.cx = 155.000000000000000000
@@ -3327,7 +3454,7 @@ object Main: TMain
         Size.Width = 1059.000000000000000000
         Size.Height = 301.000000000000000000
         Size.PlatformDefault = False
-        TabIndex = 5
+        TabIndex = 0
         TabOrder = 1
         TabPosition = PlatformDefault
         Sizes = (
@@ -3349,13 +3476,16 @@ object Main: TMain
           CustomIcon = <
             item
             end>
-          IsSelected = False
-          Size.Width = 105.000000000000000000
+          TextSettings.Font.Family = 'FontAwesome'
+          TextSettings.FontColor = xFF0B5351
+          StyledSettings = [Size, Style]
+          IsSelected = True
+          Size.Width = 126.000000000000000000
           Size.Height = 30.000000000000000000
           Size.PlatformDefault = False
           StyleLookup = ''
           TabOrder = 0
-          Text = 'Information'
+          Text = #61597' Information'
           ExplicitSize.cx = 105.000000000000000000
           ExplicitSize.cy = 30.000000000000000000
           inline Frame_Information: TFrame2
@@ -3406,13 +3536,16 @@ object Main: TMain
           CustomIcon = <
             item
             end>
+          TextSettings.Font.Family = 'FontAwesome'
+          TextSettings.FontColor = xFF6F1A07
+          StyledSettings = [Size, Style]
           IsSelected = False
-          Size.Width = 124.000000000000000000
+          Size.Width = 140.000000000000000000
           Size.Height = 30.000000000000000000
           Size.PlatformDefault = False
           StyleLookup = ''
           TabOrder = 0
-          Text = 'H'#233'mogramme'
+          Text = #61681' Hemogramme'
           ExplicitSize.cx = 124.000000000000000000
           ExplicitSize.cy = 30.000000000000000000
           inline Frame_Hemogramme: TFrame3
@@ -3541,13 +3674,16 @@ object Main: TMain
           CustomIcon = <
             item
             end>
+          TextSettings.Font.Family = 'FontAwesome'
+          TextSettings.FontColor = xFF9055A2
+          StyledSettings = [Size, Style]
           IsSelected = False
-          Size.Width = 131.000000000000000000
+          Size.Width = 150.000000000000000000
           Size.Height = 30.000000000000000000
           Size.PlatformDefault = False
           StyleLookup = ''
           TabOrder = 0
-          Text = 'H'#233'mostase | VS'
+          Text = #61982' Hemostase | VS'
           ExplicitSize.cx = 131.000000000000000000
           ExplicitSize.cy = 30.000000000000000000
           inline Frame_Hemostase: TFrame4
@@ -3578,13 +3714,16 @@ object Main: TMain
           CustomIcon = <
             item
             end>
+          TextSettings.Font.Family = 'FontAwesome'
+          TextSettings.FontColor = xFF3D2B3D
+          StyledSettings = [Size, Style]
           IsSelected = False
-          Size.Width = 168.000000000000000000
+          Size.Width = 186.000000000000000000
           Size.Height = 30.000000000000000000
           Size.PlatformDefault = False
           StyleLookup = ''
           TabOrder = 0
-          Text = 'Analyse Biochimique'
+          Text = #61635' Analyse Biochimique'
           ExplicitSize.cx = 168.000000000000000000
           ExplicitSize.cy = 30.000000000000000000
           inline Frame_Biochimic: TFrame6
@@ -3824,13 +3963,16 @@ object Main: TMain
           CustomIcon = <
             item
             end>
+          TextSettings.Font.Family = 'FontAwesome'
+          TextSettings.FontColor = xFF83781B
+          StyledSettings = [Size, Style]
           IsSelected = False
-          Size.Width = 89.000000000000000000
+          Size.Width = 106.000000000000000000
           Size.Height = 30.000000000000000000
           Size.PlatformDefault = False
           StyleLookup = ''
           TabOrder = 0
-          Text = 'S'#233'rologie'
+          Text = #61506' Serologie'
           ExplicitSize.cx = 89.000000000000000000
           ExplicitSize.cy = 30.000000000000000000
           inline Frame_Serologie: TFrame5
@@ -3981,13 +4123,16 @@ object Main: TMain
           CustomIcon = <
             item
             end>
-          IsSelected = True
-          Size.Width = 109.000000000000000000
+          TextSettings.Font.Family = 'FontAwesome'
+          TextSettings.FontColor = xFF5E0D60
+          StyledSettings = [Size, Style]
+          IsSelected = False
+          Size.Width = 126.000000000000000000
           Size.Height = 30.000000000000000000
           Size.PlatformDefault = False
           StyleLookup = ''
           TabOrder = 0
-          Text = 'Ordonnance'
+          Text = #61680' Ordonnance'
           ExplicitSize.cx = 109.000000000000000000
           ExplicitSize.cy = 30.000000000000000000
           inline Frame_Ordonnance: TFrame7
@@ -3995,11 +4140,6 @@ object Main: TMain
             Size.Width = 1059.000000000000000000
             Size.Height = 271.000000000000000000
             Size.PlatformDefault = False
-            inherited StringGrid6: TStringGrid
-              Size.Height = 211.000000000000000000
-              Viewport.Width = 1039.000000000000000000
-              Viewport.Height = 211.000000000000000000
-            end
             inherited L_Top_Ordonnance: TLayout
               inherited Layout1: TLayout
                 inherited ComboBox1: TComboBox
@@ -4018,16 +4158,33 @@ object Main: TMain
                   end
                 end
                 inherited Layout5: TLayout
-                  inherited Edit3: TEdit
-                    Size.Height = 32.000000000000000000
-                  end
-                end
-                inherited Layout6: TLayout
                   inherited Edit4: TEdit
                     Size.Height = 32.000000000000000000
                   end
                 end
+                inherited Layout6: TLayout
+                  inherited Edit3: TEdit
+                    Size.Height = 32.000000000000000000
+                  end
+                end
               end
+            end
+            inherited Layout7: TLayout
+              inherited Button2: TButton
+                OnClick = Frame_OrdonnanceButton2Click
+              end
+            end
+            inherited StringGridBindSourceDB1: TStringGrid
+              Viewport.Width = 1055.000000000000000000
+              Viewport.Height = 157.000000000000000000
+            end
+            inherited BindSourceDB1: TBindSourceDB
+              Left = 1000
+              Top = 96
+            end
+            inherited BindingsList1: TBindingsList
+              Left = 948
+              Top = 29
             end
           end
         end
@@ -4139,14 +4296,13 @@ object Main: TMain
       TextSettings.Font.Size = 16.000000000000000000
       TextSettings.FontColor = xFF6DB425
       StyledSettings = [Size, Style]
-      IsSelected = False
+      IsSelected = True
       Size.Width = 129.000000000000000000
       Size.Height = 30.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = ''
       TabOrder = 0
       Text = #61555' Rendez vous'
-      Visible = False
       OnClick = RDVClick
       ExplicitSize.cx = 129.000000000000000000
       ExplicitSize.cy = 30.000000000000000000
@@ -4178,13 +4334,14 @@ object Main: TMain
       TextSettings.Font.Family = 'FontAwesome'
       TextSettings.FontColor = xFFEC4E20
       StyledSettings = [Size, Style]
-      IsSelected = True
+      IsSelected = False
       Size.Width = 114.000000000000000000
       Size.Height = 30.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = ''
       TabOrder = 0
       Text = #61827' Edit Patient'
+      Visible = False
       OnResize = Edit_PatientResize
       ExplicitSize.cx = 114.000000000000000000
       ExplicitSize.cy = 30.000000000000000000
@@ -4238,7 +4395,7 @@ object Main: TMain
         Size.Width = 1059.000000000000000000
         Size.Height = 301.000000000000000000
         Size.PlatformDefault = False
-        TabIndex = 5
+        TabIndex = 0
         TabOrder = 1
         TabPosition = PlatformDefault
         Sizes = (
@@ -4260,13 +4417,16 @@ object Main: TMain
           CustomIcon = <
             item
             end>
-          IsSelected = False
-          Size.Width = 105.000000000000000000
+          TextSettings.Font.Family = 'FontAwesome'
+          TextSettings.FontColor = xFF0B5351
+          StyledSettings = [Size, Style]
+          IsSelected = True
+          Size.Width = 126.000000000000000000
           Size.Height = 30.000000000000000000
           Size.PlatformDefault = False
           StyleLookup = ''
           TabOrder = 0
-          Text = 'Information'
+          Text = #61597' Information'
           ExplicitSize.cx = 105.000000000000000000
           ExplicitSize.cy = 30.000000000000000000
           inline Frame_EP_Information: TFrame2
@@ -4312,13 +4472,16 @@ object Main: TMain
           CustomIcon = <
             item
             end>
+          TextSettings.Font.Family = 'FontAwesome'
+          TextSettings.FontColor = xFF6F1A07
+          StyledSettings = [Size, Style]
           IsSelected = False
-          Size.Width = 124.000000000000000000
+          Size.Width = 140.000000000000000000
           Size.Height = 30.000000000000000000
           Size.PlatformDefault = False
           StyleLookup = ''
           TabOrder = 0
-          Text = 'H'#233'mogramme'
+          Text = #61681' Hemogramme'
           ExplicitSize.cx = 124.000000000000000000
           ExplicitSize.cy = 30.000000000000000000
           inline Frame_EP_Hemogramme: TFrame3
@@ -4422,13 +4585,16 @@ object Main: TMain
           CustomIcon = <
             item
             end>
+          TextSettings.Font.Family = 'FontAwesome'
+          TextSettings.FontColor = xFF9055A2
+          StyledSettings = [Size, Style]
           IsSelected = False
-          Size.Width = 131.000000000000000000
+          Size.Width = 150.000000000000000000
           Size.Height = 30.000000000000000000
           Size.PlatformDefault = False
           StyleLookup = ''
           TabOrder = 0
-          Text = 'H'#233'mostase | VS'
+          Text = #61982' Hemostase | VS'
           ExplicitSize.cx = 131.000000000000000000
           ExplicitSize.cy = 30.000000000000000000
           inline Frame_EP_Hemostase: TFrame4
@@ -4477,13 +4643,16 @@ object Main: TMain
           CustomIcon = <
             item
             end>
+          TextSettings.Font.Family = 'FontAwesome'
+          TextSettings.FontColor = xFF3D2B3D
+          StyledSettings = [Size, Style]
           IsSelected = False
-          Size.Width = 168.000000000000000000
+          Size.Width = 186.000000000000000000
           Size.Height = 30.000000000000000000
           Size.PlatformDefault = False
           StyleLookup = ''
           TabOrder = 0
-          Text = 'Analyse Biochimique'
+          Text = #61635' Analyse Biochimique'
           ExplicitSize.cx = 168.000000000000000000
           ExplicitSize.cy = 30.000000000000000000
           inline Frame_EP_Biochimic: TFrame6
@@ -4495,6 +4664,7 @@ object Main: TMain
               Size.Height = 271.000000000000000000
               inherited Layout1: TLayout
                 Size.Height = 271.000000000000000000
+                TabOrder = 3
                 inherited Bio_Edit11: TEdit
                   Position.Y = 15.534545898437500000
                 end
@@ -4543,6 +4713,7 @@ object Main: TMain
               end
               inherited Layout2: TLayout
                 Size.Height = 271.000000000000000000
+                TabOrder = 2
                 inherited Bio_Edit16: TEdit
                   Position.Y = 15.534545898437500000
                 end
@@ -4582,6 +4753,7 @@ object Main: TMain
               end
               inherited Layout3: TLayout
                 Size.Height = 271.000000000000000000
+                TabOrder = 0
                 inherited Bio_Edit1: TEdit
                   Position.Y = 15.534545898437500000
                 end
@@ -4630,6 +4802,7 @@ object Main: TMain
               end
               inherited Layout4: TLayout
                 Size.Height = 271.000000000000000000
+                TabOrder = 1
                 inherited Bio_Edit6: TEdit
                   Position.Y = 15.534545898437500000
                 end
@@ -4683,13 +4856,16 @@ object Main: TMain
           CustomIcon = <
             item
             end>
+          TextSettings.Font.Family = 'FontAwesome'
+          TextSettings.FontColor = xFF83781B
+          StyledSettings = [Size, Style]
           IsSelected = False
-          Size.Width = 89.000000000000000000
+          Size.Width = 106.000000000000000000
           Size.Height = 30.000000000000000000
           Size.PlatformDefault = False
           StyleLookup = ''
           TabOrder = 0
-          Text = 'S'#233'rologie'
+          Text = #61506' Serologie'
           ExplicitSize.cx = 89.000000000000000000
           ExplicitSize.cy = 30.000000000000000000
           inline Frame_EP_Serologie: TFrame5
@@ -4804,13 +4980,16 @@ object Main: TMain
           CustomIcon = <
             item
             end>
-          IsSelected = True
-          Size.Width = 109.000000000000000000
+          TextSettings.Font.Family = 'FontAwesome'
+          TextSettings.FontColor = xFF5E0D60
+          StyledSettings = [Size, Style]
+          IsSelected = False
+          Size.Width = 126.000000000000000000
           Size.Height = 30.000000000000000000
           Size.PlatformDefault = False
           StyleLookup = ''
           TabOrder = 0
-          Text = 'Ordonnance'
+          Text = #61680' Ordonnance'
           ExplicitSize.cx = 109.000000000000000000
           ExplicitSize.cy = 30.000000000000000000
           inline Frame_EP_Ordonnance: TFrame7
@@ -4818,11 +4997,6 @@ object Main: TMain
             Size.Width = 1059.000000000000000000
             Size.Height = 271.000000000000000000
             Size.PlatformDefault = False
-            inherited StringGrid6: TStringGrid
-              Size.Height = 211.000000000000000000
-              Viewport.Width = 1039.000000000000000000
-              Viewport.Height = 211.000000000000000000
-            end
             inherited L_Top_Ordonnance: TLayout
               inherited Layout1: TLayout
                 inherited ComboBox1: TComboBox
@@ -4841,16 +5015,28 @@ object Main: TMain
                   end
                 end
                 inherited Layout5: TLayout
-                  inherited Edit3: TEdit
-                    Size.Height = 32.000000000000000000
-                  end
-                end
-                inherited Layout6: TLayout
                   inherited Edit4: TEdit
                     Size.Height = 32.000000000000000000
                   end
                 end
+                inherited Layout6: TLayout
+                  inherited Edit3: TEdit
+                    Size.Height = 32.000000000000000000
+                  end
+                end
               end
+            end
+            inherited StringGridBindSourceDB1: TStringGrid
+              Viewport.Width = 1055.000000000000000000
+              Viewport.Height = 157.000000000000000000
+            end
+            inherited BindSourceDB1: TBindSourceDB
+              Left = 888
+              Top = 48
+            end
+            inherited BindingsList1: TBindingsList
+              Left = 996
+              Top = 13
             end
           end
         end
@@ -4873,7 +5059,7 @@ object Main: TMain
   end
   object PopupMenu1: TPopupMenu
     Left = 912
-    Top = 62
+    Top = 118
     object MenuItem1: TMenuItem
       Text = 'Hemogramme'
     end

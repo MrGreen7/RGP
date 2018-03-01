@@ -18,7 +18,11 @@ uses
   U_Frame_Hemostase in 'U_Frame_Hemostase.pas' {Frame4: TFrame},
   U_Frame_Serologie in 'U_Frame_Serologie.pas' {Frame5: TFrame},
   U_Frame_Biochimic in 'U_Frame_Biochimic.pas' {Frame6: TFrame},
-  U_Frame_Ordonnance in 'U_Frame_Ordonnance.pas' {Frame7: TFrame};
+  U_Frame_Ordonnance in 'U_Frame_Ordonnance.pas' {Frame7: TFrame},
+  U_Biochimie in 'U_Biochimie.pas' {Biochimie},
+  U_Serologie in 'U_Serologie.pas' {Serologie},
+  U_Hemogramme in 'U_Hemogramme.pas' {Hemogramme},
+  U_Hemostase in 'U_Hemostase.pas' {Hemostase};
 
 {$R *.res}
 
@@ -28,6 +32,8 @@ begin
   Application.CreateForm(TDataModule1, DataModule1);
   Application.CreateForm(TBase_Form, Base_Form);
   Application.CreateForm(TBase_Print, Base_Print);
+  Application.CreateForm(TBiochimie, Biochimie);
+  Application.CreateForm(THemogramme, Hemogramme);
   Application.Run;
 end.
 

@@ -82,10 +82,22 @@ begin
         AC_Edit4.Text := FieldByName('Mobile').AsString;
         AC_Edit5.Text := FieldByName('Fax').AsString;
         WiliyaLoad(AC_ComboBox1);
-        AC_ComboBox1.ItemIndex := FieldByName('Wilaya_Index').Value;
+        try
+          AC_ComboBox1.ItemIndex := FieldByName('Wilaya_Index').Value;
+        except
+          on E: Exception do
+        end;
         Wilaya_Code.OnChange(Wilaya_Code);
-        AC_ComboBox2.ItemIndex := FieldByName('Commune_Index').Value;
-        AC_ComboBox3.ItemIndex := FieldByName('Groupage_Index').Value;
+        try
+          AC_ComboBox2.ItemIndex := FieldByName('Commune_Index').Value;
+        except
+          on E: Exception do
+        end;
+        try
+          AC_ComboBox3.ItemIndex := FieldByName('Groupage_Index').Value;
+        except
+          on E: Exception do
+        end;
         Close;
         Active := False;
         SQL.Clear;

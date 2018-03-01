@@ -146,7 +146,7 @@ object Frame1: TFrame1
           TabOrder = 6
           OnChange = IP_ComboBox3Change
           object InnerGlowEffect3Combo3: TInnerGlowEffect
-            Softness = 0.400000005960464400
+            Softness = 0.400000005960464500
             GlowColor = xFFD7263D
             Opacity = 0.899999976158142100
             Enabled = False
@@ -229,7 +229,7 @@ object Frame1: TFrame1
           StyledSettings = [Style, FontColor]
           OnChange = IP_Edit3Change
           object InnerGlowEffectEdit3: TInnerGlowEffect
-            Softness = 0.400000005960464400
+            Softness = 0.400000005960464500
             GlowColor = xFFD7263D
             Opacity = 0.899999976158142100
             Enabled = False
@@ -268,7 +268,7 @@ object Frame1: TFrame1
           StyledSettings = [Style, FontColor]
           OnChange = IP_Edit2Change
           object InnerGlowEffectEdit2: TInnerGlowEffect
-            Softness = 0.400000005960464400
+            Softness = 0.400000005960464500
             GlowColor = xFFD7263D
             Opacity = 0.899999976158142100
             Enabled = False

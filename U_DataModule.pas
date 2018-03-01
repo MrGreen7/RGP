@@ -31,6 +31,7 @@ type
     FDQuery2: TFDQuery;
     FDQ_Status_Patient: TFDQuery;
     FDQ_Recherche: TFDQuery;
+    FDQ_Ordonnance: TFDQuery;
     procedure DataModuleCreate(Sender: TObject);
     function GenerateID: String;
   private
@@ -80,8 +81,8 @@ end;
 procedure TDataModule1.DataModuleCreate(Sender: TObject);
 var
   Path, PathInf, DirPath, HexPass, Db_Entrprise: string;
-  Contact, Patient, Biochimie, Entreprise, Hemogramme, Hemostase_VS,
-    Serologie: String;
+  Contact, Patient, Biochimie, Entreprise, Hemogramme, Hemostase_VS, Serologie,
+    Ordonnance: String;
   Rand: String;
   bol: Boolean;
 begin
@@ -111,6 +112,9 @@ begin
     + '`HB_Anti-VHB`	Boolean,`HB_Antigene_HBs`	boolean,`HC_Anit-VHC`	boolean,`VIH_Anti-VIH`	boolean,`RUB_Anti_M`	boolean,`RUB_Anti_A`	boolean,'
     + '`RUB_Anti_G`	boolean,`Salm_Anti_H`	boolean,`Salm_Anti_O`	boolean,`Mono_Anti_EBV`	boolean,`Mono_Anti_G_Anti_VCA`	boolean,`Mono_Anti_G_Anti_EBNA`	boolean,`Mono_Anti_G_Anti_EA`	boolean,'
     + '`Toxo_Anti_M`	boolean,`Patient_ID` varchar ( 7 ),PRIMARY KEY(`Serologie_ID`),FOREIGN KEY(`Patient_ID`) REFERENCES `Patient`(`Patient_ID`) ON DELETE CASCADE);');
+  Ordonnance :=
+    ('CREATE TABLE `Ordonnance` (`Ordo_ID`	varchar(7) NOT NULL UNIQUE,`Medicament`	varchar(150),`Dose`	INTEGER,`Prise`	INTEGER,`Jour`	INTEGER,`Pendent`	INTEGER,'
+    + '`Patient_ID`	varchar(7),PRIMARY KEY(`Ordo_ID`),FOREIGN KEY(`Patient_ID`) REFERENCES `Patient`(`Patient_ID`) ON DELETE CASCADE);');
   // Database Anitialse and Location
   DirPath := GetEnvironmentVariable('AppData');
   CreateDir(DirPath + '\RGP_Data');
@@ -137,7 +141,7 @@ begin
         FDCommand1.Connection := FDConnection1;
         FDCommand1.CommandText.Text :=
           (Contact + Patient + Biochimie + Entreprise + Hemogramme +
-          Hemostase_VS + Serologie);
+          Hemostase_VS + Serologie + Ordonnance);
         FDCommand1.Execute();
         with FDQuery1 do
         begin

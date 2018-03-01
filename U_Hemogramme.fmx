@@ -1,0 +1,133 @@
+object Hemogramme: THemogramme
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 444
+  ClientWidth = 843
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Panel1: TPanel
+    Align = Top
+    Size.Width = 843.000000000000000000
+    Size.Height = 81.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Edit1: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 0
+      Position.X = 96.000000000000000000
+      Position.Y = 24.000000000000000000
+      Size.Width = 657.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TextPrompt = 'Nom de Patient'
+    end
+  end
+  inline Frame31: TFrame3
+    Align = Client
+    Size.Width = 843.000000000000000000
+    Size.Height = 363.000000000000000000
+    Size.PlatformDefault = False
+    inherited L_Top: TLayout
+      Size.Width = 843.000000000000000000
+      inherited Label32: TLabel
+        Position.X = 314.000000000000000000
+      end
+    end
+    inherited Layout_Frame3: TLayout
+      Size.Width = 843.000000000000000000
+      Size.Height = 330.000000000000000000
+      inherited L_Left: TLayout
+        Size.Width = 420.000000000000000000
+        Size.Height = 330.000000000000000000
+        inherited Hemog_Edit4: TEdit
+          Position.Y = 278.545440673828100000
+          Size.Width = 309.000000000000000000
+          inherited Hemog_LabelEdit4: TLabel
+            Position.X = 292.000000000000000000
+          end
+        end
+        inherited Hemog_Label4: TLabel
+          Position.Y = 278.545440673828100000
+        end
+        inherited Hemog_Label3: TLabel
+          Position.Y = 194.000000000000000000
+        end
+        inherited Hemog_Edit3: TEdit
+          Position.Y = 194.000000000000000000
+          Size.Width = 309.000000000000000000
+          inherited Hemog_LabelEdit3: TLabel
+            Position.X = 292.000000000000000000
+          end
+        end
+        inherited Hemog_Edit2: TEdit
+          Position.Y = 109.454544067382800000
+          Size.Width = 309.000000000000000000
+          inherited Hemog_LabelEdit2: TLabel
+            Position.X = 252.000000000000000000
+          end
+        end
+        inherited Hemog_Label2: TLabel
+          Position.Y = 109.454544067382800000
+        end
+        inherited Hemog_Label1: TLabel
+          Position.Y = 26.272727966308600000
+        end
+        inherited Hemog_Edit1: TEdit
+          Position.Y = 26.272727966308600000
+          Size.Width = 309.000000000000000000
+          inherited Hemog_LabelEdit1: TLabel
+            Position.X = 228.000000000000000000
+          end
+        end
+      end
+      inherited L_Right: TLayout
+        Position.X = 423.000000000000000000
+        Size.Width = 420.000000000000000000
+        Size.Height = 330.000000000000000000
+        inherited Hemog_Edit6: TEdit
+          Position.Y = 194.000000000000000000
+          Size.Width = 309.000000000000000000
+          inherited Label19: TLabel
+            Position.X = 292.000000000000000000
+          end
+        end
+        inherited Hemog_Label6: TLabel
+          Position.Y = 109.454544067382800000
+        end
+        inherited Hemog_Edit5: TEdit
+          Position.Y = 26.272727966308600000
+          Size.Width = 309.000000000000000000
+          inherited Label18: TLabel
+            Position.X = 292.000000000000000000
+          end
+        end
+        inherited Hemog_Label5: TLabel
+          Position.Y = 26.272727966308600000
+        end
+        inherited Hemog_Label7: TLabel
+          Position.Y = 194.000000000000000000
+        end
+        inherited Hemog_Edit7: TEdit
+          Position.Y = 109.454544067382800000
+          Size.Width = 309.000000000000000000
+          inherited Label20: TLabel
+            Position.X = 244.000000000000000000
+          end
+        end
+        inherited Hemog_Edit8: TEdit
+          Position.Y = 278.545440673828100000
+          Size.Width = 309.000000000000000000
+          inherited Label21: TLabel
+            Position.X = 292.000000000000000000
+          end
+        end
+        inherited Hemog_Label8: TLabel
+          Position.Y = 278.545440673828100000
+        end
+      end
+    end
+  end
+end
