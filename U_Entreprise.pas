@@ -223,14 +223,8 @@ begin
       Active := False;
     end;
   end;
-  try
-    Entreprise.Close;
-  except
-    on E: Exception do
-    begin
-      Entreprise.Free;
-    end;
-  end;
+    Showmessage('Les iformation a été Enregistrer');
+    ModalResult := mrClose;
 end;
 
 procedure TEntreprise.Button2Click(Sender: TObject);

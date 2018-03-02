@@ -88,11 +88,11 @@ var
 begin
   // Asigne Tables to Varibales
   Entreprise :=
-    ('CREATE TABLE `Entreprise` (`ID_EntreP`	INTEGER NOT NULL PRIMARY KEY UNIQUE,`Form_Juridique`	varchar ( 10 ),'
+    ('CREATE TABLE `Entreprise` (`ID_EntreP` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,`Form_Juridique`	varchar ( 10 ),'
     + '`Libelle`	varchar ( 40 ),`Libelle_Sec`	varchar ( 40 ),`Wilaya`	varchar ( 20 ),`Code_de_Wilaya`	Integer ( 3 ),`Commune`	varchar ( 20 ),'
     + '`Code_Postal`	Integer ( 7 ),`Adresse`	varchar ( 100 ),`Telephone`	Integer ( 13 ),`Mobile`	Integer ( 13 ),`Fax`	Integer ( 13 ),`Email`	varchar ( 30 ),`Web`	varchar ( 40 ));');
   Contact :=
-    ('CREATE TABLE `User` (`ID`	varchar ( 7 ) NOT NULL UNIQUE,`Nom`	varchar ( 20 ),`Pseudo`	varchar ( 10 ),`Mot_de_pass`	varchar ( 12 ),PRIMARY KEY(`ID`));');
+    ('CREATE TABLE `User` (`ID`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,`Nom`	varchar ( 20 ),`Pseudo`	varchar ( 10 ),`Mot_de_pass`	varchar ( 12 ));');
   Patient :=
     ('CREATE TABLE `Patient` (`Patient_ID` varchar ( 7 ) NOT NULL UNIQUE,`Nom`	Varchar ( 15 ),`Prenom`	varchar ( 20 ),`Date_de_Nai`	varchar ( 10 ),`Date_de_Entre`	varchar ( 10 ),`Type`	varchar ( 100 ),`Sexe`	varchar ( 5 ),`Etat_Civil`	varchar ( 13 ),'
     + '`Wilaya`	varchar ( 20 ),`Commune`	varchar ( 20 ),`Adresse`	varchar ( 50 ),`Mobile`	INTEGER,`Email`	varchar ( 35 ),`Groupage`	varchar ( 5 ),`Telephone`	Integer ( 9 ),`Fax`	Integer ( 13 ),`Type_Index`	INTEGER,`Sexe_Index`	INTEGER,`Etat_Civil_Index`	INTEGER,'

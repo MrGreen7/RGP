@@ -89,29 +89,33 @@ begin
   begin
     With DataModule1.FDQ_Ordonnance do
     Begin
-      for Rand in Tub do
+      try
+        for Rand in Tub do
+        Begin
+          Active := False;
+          SQL.Clear;
+          SQL.Text := ('Select Patient_ID From Ordonnance Where Ordo_ID="' +
+            Rand + '"');
+          Active := True;
+          Edit;
+          FieldByName('Patient_ID').AsString := RandD;
+          Post;
+          Active := False;
+          SQL.Clear;
+        End;
+      except
+        on E: Exception do
+      end;
+      With DataModule1.FDQ_Ordonnance do
       Begin
-        Active := False;
         SQL.Clear;
-        SQL.Text := ('Select Patient_ID From Ordonnance Where Ordo_ID="' +
-          Rand + '"');
+        SQL.Text :=
+          ('Select Medicament, Dose, Prise, Jour, Pendent From Ordonnance Where Patient_ID="'
+          + RandD + '";');
         Active := True;
-        Edit;
-        FieldByName('Patient_ID').AsString := RandD;
-        Post;
-        Active := False;
-        SQL.Clear;
+        StringGridResize;
       End;
-    End;
-    With DataModule1.FDQ_Ordonnance do
-    Begin
-      SQL.Clear;
-      SQL.Text :=
-        ('Select Medicament, Dose, Prise, Jour, Pendent From Ordonnance Where Patient_ID="'
-        + RandD + '";');
-      Active := True;
-      StringGridResize;
-    End;
+    end;
   end;
 end;
 

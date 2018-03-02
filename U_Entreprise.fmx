@@ -71,20 +71,26 @@ object Entreprise: TEntreprise
     object Edit1: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
       TabOrder = 1
+      TextSettings.Font.Family = 'Candara'
+      TextSettings.Font.Size = 16.000000000000000000
       Position.X = 200.000000000000000000
       Position.Y = 68.000000000000000000
       Size.Width = 385.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
+      StyledSettings = [Style, FontColor]
     end
     object Edit2: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
       TabOrder = 2
+      TextSettings.Font.Family = 'Candara'
+      TextSettings.Font.Size = 16.000000000000000000
       Position.X = 200.000000000000000000
       Position.Y = 104.000000000000000000
       Size.Width = 385.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
+      StyledSettings = [Style, FontColor]
     end
   end
   object ID_Contact: TTabControl
@@ -181,11 +187,14 @@ object Entreprise: TEntreprise
         object Edit3: TEdit
           Touch.InteractiveGestures = [LongTap, DoubleTap]
           TabOrder = 5
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 16.000000000000000000
           Position.X = 95.000000000000000000
           Position.Y = 120.000000000000000000
           Size.Width = 577.000000000000000000
           Size.Height = 22.000000000000000000
           Size.PlatformDefault = False
+          StyledSettings = [Style, FontColor]
         end
         object Label12: TLabel
           StyledSettings = [FontColor]
@@ -217,10 +226,13 @@ object Entreprise: TEntreprise
           TabStop = False
           Cursor = crDefault
           ReadOnly = True
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 16.000000000000000000
           TextSettings.HorzAlign = Center
           Position.X = 256.000000000000000000
           Position.Y = 76.000000000000000000
           HitTest = False
+          StyledSettings = [Style, FontColor]
           OnChange = Edit_Code_WilayaChange
         end
         object Edit_Code_Postal: TEdit
@@ -229,10 +241,13 @@ object Entreprise: TEntreprise
           TabStop = False
           Cursor = crDefault
           ReadOnly = True
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 16.000000000000000000
           TextSettings.HorzAlign = Center
           Position.X = 576.000000000000000000
           Position.Y = 76.000000000000000000
           HitTest = False
+          StyledSettings = [Style, FontColor]
         end
       end
       object GroupBox3: TGroupBox
@@ -309,50 +324,65 @@ object Entreprise: TEntreprise
           TabOrder = 6
           MaxLength = 9
           FilterChar = '+0123456789'
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 16.000000000000000000
           Position.X = 96.000000000000000000
           Position.Y = 40.000000000000000000
           Size.Width = 257.000000000000000000
           Size.Height = 22.000000000000000000
           Size.PlatformDefault = False
+          StyledSettings = [Style, FontColor]
         end
         object Edit6: TEdit
           Touch.InteractiveGestures = [LongTap, DoubleTap]
           TabOrder = 8
           FilterChar = '+0123456789'
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 16.000000000000000000
           Position.X = 96.000000000000000000
           Position.Y = 68.000000000000000000
           Size.Width = 257.000000000000000000
           Size.Height = 22.000000000000000000
           Size.PlatformDefault = False
+          StyledSettings = [Style, FontColor]
         end
         object Edit8: TEdit
           Touch.InteractiveGestures = [LongTap, DoubleTap]
           TabOrder = 10
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 16.000000000000000000
           Position.X = 96.000000000000000000
           Position.Y = 96.000000000000000000
           Size.Width = 257.000000000000000000
           Size.Height = 22.000000000000000000
           Size.PlatformDefault = False
+          StyledSettings = [Style, FontColor]
         end
         object Edit5: TEdit
           Touch.InteractiveGestures = [LongTap, DoubleTap]
           TabOrder = 7
           MaxLength = 13
           FilterChar = '+0123456789'
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 16.000000000000000000
           Position.X = 512.000000000000000000
           Position.Y = 32.000000000000000000
           Size.Width = 161.000000000000000000
           Size.Height = 22.000000000000000000
           Size.PlatformDefault = False
+          StyledSettings = [Style, FontColor]
         end
         object Edit7: TEdit
           Touch.InteractiveGestures = [LongTap, DoubleTap]
           TabOrder = 9
+          TextSettings.Font.Family = 'Candara'
+          TextSettings.Font.Size = 16.000000000000000000
           Position.X = 512.000000000000000000
           Position.Y = 68.000000000000000000
           Size.Width = 161.000000000000000000
           Size.Height = 22.000000000000000000
           Size.PlatformDefault = False
+          StyledSettings = [Style, FontColor]
         end
       end
       object Button1: TButton

@@ -862,7 +862,7 @@ var
   EntrepriseDlg: TEntreprise;
 begin
   EntrepriseDlg := TEntreprise.Create(self);
-  if (EntrepriseDlg.ShowModal = mrCancel) then
+  if (EntrepriseDlg.ShowModal = mrClose) then
     EntrepriseDlg.Free;
 end;
 
@@ -1042,7 +1042,12 @@ begin
       Active := False;
       CommandText.Clear;
       FloatAnimation5.OnFinish(FloatAnimation5);
+      Patient_ID := '';
     End;
+  End
+  else
+  Begin
+    ShowMessage('Sil vous plait choisir une patient ou double clicker sur un patient');
   End;
 end;
 
@@ -1065,7 +1070,7 @@ begin
   else
   Begin
     Showmessage
-      ('Sil vous plait choisir une patient ou double clicker sur un patient de table');
+      ('Sil vous plait choisir une patient ou double clicker sur un patient');
   End;
 end;
 
